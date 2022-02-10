@@ -1,0 +1,45 @@
+<header>
+  <div class="logo">
+    <div class="glitch">
+    
+      {% if language == 'en' %}
+      <a href="/">Ivan Dianov</a>
+      {% else %}
+      <a href="/ru/">Иван Дианов</a>
+      {% endif %}
+
+    </div>
+
+    
+    {# end menu #}
+  </div>
+  <div class="nav-menu">
+    {% for page in search.pages('menu!=undefined','menu') %}
+    {% if language == page.data.language %}
+    <a class="nav-item" href="{{ page.data.url }}">
+      {{ page.data.title }}
+    </a>
+    {% endif %}
+    {% endfor %}
+    {% set isPageOnAntiLangFound = false %}
+    {% for page in search.pages() %}
+      {% if language != page.data.language %}
+      {% set that = page.src.path | lastPart %}
+      {% set this = srcPath | lastPart %}
+        {% if this == that %}
+        {% set isPageOnAntiLangFound = true %}
+      <a class="nav-item" href="{{ page.data.url }}">
+        {{ language | antiLang | capitalize }}
+      </a>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if isPageOnAntiLangFound == false %}
+      {% if language == 'en' %}
+      <a class="nav-item" href="/ru">Ru</a>
+      {% else %}
+      <a class="nav-item" href="/">En</a>
+      {% endif %}
+    {% endif %}
+  </div>
+</header>

@@ -1,8 +1,8 @@
 ---
-layout: layouts/default.njk
+menu: 2
+title: About
+url: /about/
 ---
-
-[click](click)
 
 My name is Ivan Dianov [eye-van dee-ah-nev], I explore complexity by writing code.
 

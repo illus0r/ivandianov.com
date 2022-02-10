@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link async="" rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+
+</head>
+  <body>
+    
+    <header>
+  <div class="logo">
+    <div class="glitch">
+    
+      
+      <a href="/">Ivan Dianov</a>
+      
+
+    </div>
+
+    
+    
+  </div>
+  <div class="nav-menu">
+    
+    
+    <a class="nav-item" href="/click/">
+      Click
+    </a>
+    
+    
+    
+    
+    
+    <a class="nav-item" href="/about/">
+      About
+    </a>
+    
+    
+    
+    
+      
+      
+      
+        
+        
+      <a class="nav-item" href="/ru/concept-of-id/">
+        Ru
+      </a>
+      
+      
+    
+      
+    
+      
+      
+      
+        
+      
+    
+      
+      
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+    
+  </div>
+</header>
+    <main role="main" class="wrap prose">
+      
+
+<article class="text" role="main">
+    <div class="post-header">
+    <h1 class="post-name">The concept of ID in shaders</h1>
+    </div>
+    <section class="post-content">
+        <p><img src="/assets/media/2021-09-03-10-49-32.png" alt=""></p>
+<p>Расскажу про концепцию идентификатора в шейдерах и покажу, на что она способна.</p>
+<p>Идея простая:</p>
+<ol start="0">
+<li>Задаём начальный id. Например, пусть будет равен единице.</li>
+<li>делим изображение на части по некоторому критерию, зависимому от id, полученному на предыдущем шаге. Получаем новые идентификаторы.</li>
+<li>Повторяем пункт 1 несколько раз, каждый раз увеличивая количиство возможных id и тем самым усложняя картинку.</li>
+<li>Используем id для расчёта цвета, текстуры, чего угодно.</li>
+</ol>
+<!--
+Начнём постепенно.
+
+```glsl
+// получаем нормализованные координаты
+vec2 uv = FC.xy/r;
+
+// назначаем уникальные идентификаторы от 0 до 1, они зависят от горизонтального положения пикселя
+float id=floor(uv.x*3.)/3.;
+
+// назначаем каждому пикселю цвет, зависящий от id
+// тут я использую пару функций, предоставляемых редактором, код можно посмотреть в репозитории https://github.com/doxas/twigl
+o.rgb=hsv(fsnoise(vec2(id)),1.,1.);
+```
+
+![](/assets/media/2021-09-02-11-15-28.png)
+https://bit.ly/3gVo0CL
+
+```glsl
+vec2 uv = FC.xy/r;
+
+float id;
+id=floor(uv.x*3.)/3.;
+
+// разделим пиксели по другому критерию, зависящему от предыдущего значения id
+id=floor(uv.y*3.+id)/3.;
+
+o.rgb=hsv(fsnoise(vec2(id)),1.,1.);
+```
+![](/assets/media/2021-09-02-11-19-29.png)
+https://bit.ly/3jEmcQw
+
+
+```glsl
+vec2 uv = FC.xy/r;
+
+float id;
+id=floor(uv.x*3.)/3.;
+id=floor(uv.y*3.+id)/3.;
+
+// продолжаем делить пространство
+id=floor(uv.x*18.*id)/3.;
+id=floor(uv.y*9.*id)/3.;
+
+o.rgb=hsv(fsnoise(vec2(id)),1.,1.);
+```
+https://bit.ly/3yEjP4m
+![](/assets/media/2021-09-02-11-24-23.png)
+
+Стало очень шумно, хочется сгруппировать некоторые крошечные сегменты. Для этого вычислим яркость группы в середине процесса деления:
+
+```glsl
+vec2 uv = FC.xy/r;
+
+float id;
+id=floor(uv.x*3.)/3.;
+id=floor(uv.y*3.+id)/3.;
+
+// используем айди для вычисления яркости группы
+float shade = fsnoise(vec2(id));
+
+id=floor(uv.x*18.*id)/3.;
+id=floor(uv.y*9.*id)/3.;
+
+o.rgb=hsv(fsnoise(vec2(id)),1.,1.)*shade;
+```
+https://bit.ly/3DPoBjp
+![](/assets/media/2021-09-02-11-30-18.png)
+
+О, нет. Оказалось, что айдишники групп второго уровня совпадают внутри групп первого уровня. Это видно по горизонтальным полоскам, имеющим одинаковую яркость.
+
+Хочется сделать айдишник (и яркость цвета) уникальным для каждой группы. Тут есть два пути: аккуратный и хаотичный.-->
+<p>Определять айдишник можно аккуратно или хаотично.</p>
+<h3>Аккуратный способ сегментации</h3>
+<p>Допустим, мы каждый раз делим картинку на три части. Тогда при первом делении сделаем айдишники частей 0, 1/3, 2/3. При втором делении каждой части натрое, прибавим к уже найденным айдишникам уменьшенные значения: 0, 1/9, 2/9.
+Каждое следующее деление должно менять айдишник с меньшим и меньшим шагом.</p>
+<p>Весь интервал id должен укладываться в один шаг дискретизации предыдущего деления.</p>
+<p>Так каждый из айдишников будет уникальным, ура. Попробуем в коде:</p>
+<pre><code>vec2 uv = FC.xy/r;
+
+float id=0., k=1.;
+
+uv=fract(uv)*3.;
+
+id+=floor(uv.x)/3.; // делим на три столбца
+k/=3.;
+id+=k*floor(uv.y)/3.; // делим на три строки
+k/=3.;
+
+uv=fract(uv)*3.;
+
+id+=k*floor(uv.x)/3.; // делим на три столбца
+k/=3.;
+id+=k*floor(uv.y)/3.;  // делим на три строки
+k/=3.;
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-02-12-03-24.png" alt=""></p>
+<p>Мы видим, что каждый сегмент имеет свой уникальный цвет, но для этого приходится использовать мультипликатор k, что не всегда удобно. Часто бывает достаточно хаотического подхода.</p>
+<h3>Хаотический способ сегментации</h3>
+<p>Тупо рандомим айдишник, добавляя в seed для рандома предыдущее значение айдишника. Видим, что сетка получается хаотичной,  может у каких-то регионов айдишники и совпадут, но вероятность маленькая.</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x))</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">0.</span>;
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-02-12-10-49.png" alt=""></p>
+<h2>Изменчивость сегментов</h2>
+<p>Пристегните ремни. Сейчас самое крутое. Можно сделать настройки последующих разбиений зависимыми от текущего айдишника. Буум!</p>
+<p>Например, тут число разбиений может варьировать в зависимости от айди:</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">0.</span>;
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+<span class="hljs-comment">//                 ↓ чем меньше, тем гуще</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-23-52.png" alt=""></p>
+<p>Можно повторять и повторять разбиение сколько угодно. Или лучше добавить цикл, чтобы не копипастить.</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">1.</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">3</span>;i++){
+  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+}
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-28-11.png" alt=""></p>
+<p>Если добавить увеличить число повторов до 5, останется один мусор:</p>
+<p><img src="/assets/media/2021-09-03-10-29-17.png" alt=""></p>
+<p>Но ведь мы можем сделать число повторов цикла также зависимым от id!</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">1.</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
+  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; id&lt;<span class="hljs-number">.5</span>) <span class="hljs-keyword">break</span>;
+}
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-31-37.png" alt=""></p>
+<p>Картинка потемнела, это что-то вроде ошибки выжившего. Мы вылетаем из цикла, когда айдишник меньше .5, а у таких цвет получается тёмным. Это исправляется заменой условия id&lt;.5 на rnd(id)&lt;.5</p>
+<p><img src="/assets/media/2021-09-03-10-33-51.png" alt=""></p>
+<p>А теперь, когда приём освоен, можно идти и веселиться по-полной.</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-meta">#define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))</span>
+
+<span class="hljs-type">vec2</span> uv = (FC.xy*<span class="hljs-number">2.</span>-r)/r.x;
+
+<span class="hljs-type">float</span> id=<span class="hljs-built_in">floor</span>(<span class="hljs-built_in">length</span>(uv)*<span class="hljs-number">8.</span>)+<span class="hljs-number">1.</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
+  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; rnd(id)&lt;<span class="hljs-number">.5</span>) <span class="hljs-keyword">break</span>;
+  uv*=rot(PI/<span class="hljs-number">4.</span>+t*(rnd(id)<span class="hljs-number">-.5</span>));
+  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+}
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-49-32.png" alt="">
+<a href="https://bit.ly/3BE99o9">Посмотрите ссылку</a>, оно ещё и крутится! Скорость вращения каждого кусочка, конечно же, зависит от его айдишника.</p>
+
+    </section>
+</article>
+    </main>
+
+    <footer>
+  <section class="copyright">
+    © <a href="/">Ivan Dianov</a> 2021—2022 · <a href="https://twitter.com/i_dianov">Twitter</a>
+  </section>
+</footer>
+
+	
+</body></html>
