@@ -2,6 +2,7 @@
 menu: 1
 title: Click
 url: /click/
+draft: true
 ---
 
 ![](https://user-images.githubusercontent.com/797993/148524591-a4383168-bc60-4ca5-a0b3-f4d33cd44397.png)
