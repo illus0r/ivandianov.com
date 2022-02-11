@@ -433,7 +433,14 @@ mark {
 }
 
 
-code,
+code {
+  background-color: #eee;
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
+}
+
+
+pre code,
 tt {
   padding: 0.3em 0.5em;
   font-family: 'IBM Plex Mono', monospace;
