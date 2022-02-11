@@ -10,6 +10,8 @@ I'll tell you about the concept of id in shaders and show you what it is for. If
 
 The code in the article is for [twigl.app](https://bit.ly/3Jl0Gdj) editor in “geekest (es300)” mode.
 
+***
+
 The purpose of the trick is to make the picture more complicated and gain control over each of the tiny parts.
 
 I will first outline the algorithm, and then illustrate the trick with code and pictures. The algorithm is as follows:
