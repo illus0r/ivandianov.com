@@ -1,5 +1,5 @@
 import lume from "https:/deno.land/x/lume@v1.5.1/mod.ts";
-// import code_highlight from "https:/deno.land/x/lume@v1.5.1/plugins/code_highlight.ts";
+import code_highlight from "https:/deno.land/x/lume@v1.5.1/plugins/code_highlight.ts";
 import postcss from "lume/plugins/postcss.ts";
 import date from "lume/plugins/date.ts";
 
@@ -11,7 +11,7 @@ site.filter("antiLang", (value) => (value=='ru')?'en':'ru');
 
 site.preprocess([".html"], (page) => page.data.srcPath = page.src.path);
 
-// site.use(code_highlight());
+site.use(code_highlight());
 site.use(postcss());
 site.use(date());
 
