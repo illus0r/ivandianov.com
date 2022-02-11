@@ -489,11 +489,13 @@ main {
 }
 
 .logo {
-	font-size: 3em;
-	width: 100%;
-  position: relative;
+	/* font-size: 3em; */
+	font-size: 1.3em;
   height: 100%;
+  position: relative;
+	width: 100%;
 }
+
 
 .logo.small {
   background-color: #86D0F2;
