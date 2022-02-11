@@ -3,7 +3,9 @@ import code_highlight from "https:/deno.land/x/lume@v1.5.1/plugins/code_highligh
 import postcss from "lume/plugins/postcss.ts";
 import date from "lume/plugins/date.ts";
 
-const site = lume();
+const site = lume({
+    location: new URL("https://ivandianov.com"),
+});
 site.filter("lastPart", (value) => value.split('/').at(-1));
 site.filter("urlWithoutLang", (value) => value.replace(/^\/ru/,''));
 site.filter("keys", (value) => Object.keys(value));
