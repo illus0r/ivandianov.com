@@ -8,6 +8,8 @@ date: 2021-09-02 09:59:00
 
 I'll tell you about the concept of id in shaders and show you what it is for. If you're not familiar with shaders, start with [The Book of Shaders](https://thebookofshaders.com/) — the best tutorial on the subject.
 
+The code in the article is for [twigl.app](https://bit.ly/3Jl0Gdj) editor in “geekest (es300)” mode.
+
 The purpose of the trick is to make the picture more complicated and gain control over each of the tiny parts.
 
 I will first outline the algorithm, and then illustrate the trick with code and pictures. The algorithm is as follows:
@@ -28,7 +30,7 @@ Each next division should change ids on a smaller and smaller value.
 
 With this algorithm, we can guarantee the uniqueness of each and every id, hooray. Let's try to repeat the idea in code:
 
-``` glsl
+```
 vec2 uv = FC.xy/r;
 
 float id=0., k=1.;
@@ -60,8 +62,7 @@ Last time we carefully added three different values to different subsegments of 
 Здесь мы также используем предыдущее значение айдишника сегмента, чтобы найти айдишкики трёх кусочков. Разница в используемой функции, тут это псевдорандоNow we are also going to use the previous value of id to find subsegment ids. The difference is in the function we use: now we use a pseudo-random one, that takes any number (seed) as input and returns a random number from 0 to 1. The trick is that for the same argument (seed) it returns the same random value.м: функция, которая принимает на вход любое число (seed) и возвращает случайное число от 0 до 1. Прикол в том, что для одного и того же аргумента seed она возвращает одно и то же случайное значение.
 
 ```
-↓ subsegment id             ↓ segment id
-
+↓ subsegment id              ↓ segment id
 id = rnd( floor(uv.y) / 3. + id )
          └─────────────────────┘  seed
          └────────────────┘ thing, 
