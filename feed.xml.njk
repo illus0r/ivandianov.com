@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ site.title }}</title>
+	<subtitle>{{ site.description }}</subtitle>
+	<link href="{{ url | url(true) }}" rel="self"/>
+	<link href="{{ "/" | url(true) }}"/>
+	{% set lastPage = search.pages() | last %}
+	<updated>{{ lastPage.data.date | date("ATOM") }}</updated>
+	<id>{{ "/" | url(true) }}</id>
+	<author>
+		<name xml:lang="en">Ivan Dianov</name>
+		<name xml:lang="ru">Иван Дианов</name>
+		<email>zor667@gmail.com</email>
+	</author>
+	{% for post in search.pages("type=post", "date=desc", 10) %}
+	<entry xml:lang="{{ post.data.language }}">
+		<title>{{ post.data.title }}</title>
+		<link href="{{ post.data.url | url(true) }}"/>
+		<updated>{{ post.data.date | date("ATOM") }}</updated>
+		<id>{{ post.data.url | url(true) }}</id>
+		<content type="html">{{ post.data.content | md | htmlUrl(true) }}</content>
+	</entry>
+	{% endfor %}
+</feed>
