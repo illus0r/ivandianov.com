@@ -19,4 +19,4 @@ site.use(date());
 site.copy('assets/media');
 site.copy('CNAME');
 
-export default site; 
+export default site;
