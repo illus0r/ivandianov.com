@@ -61,7 +61,7 @@ We see that each segment has its own unique color, but we have to use the multip
 
 Last time we carefully added three different values to different subsegments of each segment.
 
-Здесь мы также используем предыдущее значение айдишника сегмента, чтобы найти айдишкики трёх кусочков. Разница в используемой функции, тут это псевдорандоNow we are also going to use the previous value of id to find subsegment ids. The difference is in the function we use: now we use a pseudo-random one, that takes any number (seed) as input and returns a random number from 0 to 1. The trick is that for the same argument (seed) it returns the same random value.м: функция, которая принимает на вход любое число (seed) и возвращает случайное число от 0 до 1. Прикол в том, что для одного и того же аргумента seed она возвращает одно и то же случайное значение.
+Now we are also going to use the previous value of id to find subsegment ids. The difference is in the function we use: now we use a pseudo-random one, that takes any number (seed) as input and returns a random number from 0 to 1. The trick is that for the same argument (seed) it returns the same random value.
 
 ```
 ↓ subsegment id              ↓ segment id
