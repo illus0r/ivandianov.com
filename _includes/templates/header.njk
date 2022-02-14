@@ -18,13 +18,23 @@
     {# end menu #}
   </div>
   <div class="nav-menu">
+
     {% for page in search.pages('menu!=undefined','menu') %}
     {% if language == page.data.language %}
+    {% if page.data.url != url %}
     <a class="nav-item" href="{{ page.data.url }}">
       {{ page.data.title }}
     </a>
+    {% else %}
+    <a class="nav-item nav-item-active" href="{{ page.data.url }}">
+      {{ page.data.title }}
+    </a>
+    {% endif %}
+
     {% endif %}
     {% endfor %}
+
+    {# RU/EN switch if translation exists #}
     {% set isPageOnAntiLangFound = false %}
     {% for page in search.pages() %}
       {% if language != page.data.language %}
@@ -38,6 +48,8 @@
       {% endif %}
       {% endif %}
     {% endfor %}
+
+    {# RU/EN switch if translation is not found #}
     {% if isPageOnAntiLangFound == false %}
       {% if language == 'en' %}
       <a class="nav-item" href="/ru">Ru</a>

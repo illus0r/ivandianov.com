@@ -537,8 +537,12 @@ main {
 	margin-left: 0.8em;
 	height: 1.4em;
 	display: block;
-	cursor: pointer;
-	
+	cursor: pointer;	
+}
+
+.nav-item-active, .nav-item-active:hover {
+  color: black;
+  border: none;
 }
 
 .lang {
