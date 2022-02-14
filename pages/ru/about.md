@@ -1,5 +1,5 @@
 ---
-menu: 2
+menu: 10
 title: Про меня
 url: /ru/about/
 ---
