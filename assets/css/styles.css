@@ -490,20 +490,20 @@ main {
 }
 
 .logo {
-	/* font-size: 3em; */
-	font-size: 1.3em;
+  font-size: 1.3em;
   height: 100%;
   position: relative;
+  white-space: nowrap;
 	width: 100%;
 }
 
 
-.logo.small {
+/* .logo.small {
   background-color: #86D0F2;
 }
 .logo.medium {
   background-color: rgba(var(--hover-RGB), 1);
-}
+} */
 
 .glitch {
   position: absolute;
@@ -608,11 +608,11 @@ footer {
 			width: 100%;
 		}
 
-		.logo {
+		/* .logo {
 			font-size: 2em;
 			margin-top: -0.3em;
       white-space: nowrap;
-		}
+		} */
 
     footer {
       padding: 0.3em;
@@ -631,3 +631,37 @@ footer {
   margin-top: 80px;
   margin-left: 0;
 }
+
+.works-section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  grid-auto-flow: row;
+}
+
+@media (min-width: 600px) {
+  .works-section{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .works-section{
+    gap: 16px;
+  }
+}
+
+.works-section>a, .works-section>a>img{
+  display: block;
+  line-height: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+}
+
+.works-section a:first-child{
+  grid-row-start: span 2;
+  grid-column-start: span 2;
+}
+/* @media (min-width: 600px) {
+} */
