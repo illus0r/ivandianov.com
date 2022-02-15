@@ -1,41 +1,11 @@
 <header>
-  <div class="logo">
-    <div class="glitch">
-    
-      {% if language == 'en' %}
-      {# <a href="/"> #}
-      Ivan Dianov
-      {# </a> #}
-      {% else %}
-      {# <a href="/ru/"> #}
-      Иван Дианов
-      {# </a> #}
-      {% endif %}
-
-    </div>
-
-    
-    {# end menu #}
-  </div>
   <div class="nav-menu">
-
-    {% for page in search.pages('menu!=undefined','menu') %}
-    {% if language == page.data.language %}
-    {% if page.data.url != url %}
-    <a class="nav-item" href="{{ page.data.url }}">
-      {{ page.data.title }}
-    </a>
-    {% else %}
-    <a class="nav-item nav-item-active" href="{{ page.data.url }}">
-      {{ page.data.title }}
-    </a>
-    {% endif %}
-
-    {% endif %}
-    {% endfor %}
-
-    {# RU/EN switch if translation exists #}
+    <div class="logo">
+        {% if language == 'en' %}Ivan Dianov{% else %}Иван Дианов{% endif %}
+    </div>
+        {# RU/EN switch if translation exists #}
     {% set isPageOnAntiLangFound = false %}
+
     {% for page in search.pages() %}
       {% if language != page.data.language %}
       {% set that = page.src.path | lastPart %}
@@ -57,5 +27,19 @@
       <a class="nav-item" href="/">En</a>
       {% endif %}
     {% endif %}
+
+    {% for page in search.pages('menu!=undefined','menu=desc') %}
+      {% if language == page.data.language %}
+        {% if page.data.url != url %}
+        <a class="nav-item" href="{{ page.data.url }}">
+          {{ page.data.title }}
+        </a>
+        {% else %}
+        <a class="nav-item nav-item-active" href="{{ page.data.url }}">
+          {{ page.data.title }}
+        </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </div>
 </header>
