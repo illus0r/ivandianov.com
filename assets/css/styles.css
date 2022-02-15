@@ -472,6 +472,15 @@ table.plain tbody > tr:nth-child(odd) > th {
 }
 
 
+main {
+	margin-top: 2em;
+}
+
+.blog-posts {
+	margin-top: 3em;
+}
+
+
 header {
   padding: 0.5em;
 	display: flex;
@@ -481,50 +490,12 @@ header {
 	height: 5em;
 }
 
-main {
-	margin-top: 2em;
-}
-
-.blog-posts {
-	margin-top: 3em;
-}
-
 .logo {
   font-size: 1.3em;
   height: 100%;
   position: relative;
   white-space: nowrap;
 	width: 100%;
-}
-
-
-/* .logo.small {
-  background-color: #86D0F2;
-}
-.logo.medium {
-  background-color: rgba(var(--hover-RGB), 1);
-} */
-
-.glitch {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* transform: translate(-50%, -50%); */
-  text-decoration: none;
-  color: rgba(var(--text-RGB), 1);
-}
-
-
-.small .glitch {
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-.medium .glitch {
-  font-size: 40px;
-  letter-spacing: 2px;
-  text-align: center;
-  color: #4222F1;
 }
 
 .nav-menu {
@@ -668,5 +639,8 @@ footer {
   grid-row-start: span 2;
   grid-column-start: span 2;
 }
-/* @media (min-width: 600px) {
-} */
+@media (max-width: 600px) {
+  .nav-menu *{
+    /* display: none; */
+  }
+}
