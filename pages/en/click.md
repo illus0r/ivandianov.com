@@ -16,3 +16,5 @@ I was inspired by Ringers, in which people see animals and other characters. I w
 To make the sculptures, I used technique of hybrid voxel raymarching, so we can say, the sculptures are made of colored void in a reflected space. Some of them may seem impossible due to the lack of perspective, but sooner or later it all clicks! It helps to keep in mind that all shapes are symmetrical.
 
 The script uses modern features of GPU so it's supposed to work only on desktop: Chrome, Firefox or Safari
+
+Thanks for everyone who helped me with testing and sharing their artistic advice. Special thanks for Shvembldr, who encouraged me to develop this idea, to Piter Pasma who shared his secret techniques and to Stranger, who was sharing his expertize and supported me all the way long. And, surely, I want to thank the team of Artblocks for their endless patience and support.
