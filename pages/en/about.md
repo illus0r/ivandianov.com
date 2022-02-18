@@ -4,9 +4,12 @@ title: About
 url: /about/
 ---
 
-My name is Ivan Dianov [eye-van dee-ah-nev], I explore complexity by writing code.
 
-There are processes, such as the climate change or the development of a human body, in which simple interactions of pieces lead to complex and unpredictable behavior of the system as a whole.
+![](/assets/media/photo.jpg){style=width:256px}
+
+Hi! I'm [eye-van dee-ah-nev], teacher of generative art at [HSE University](https://www.hse.ru/en/), founder of the Russian generative art community [genclub.club](https://genclub.club/).
+
+I explore complexity by writing code. There are processes, such as the climate change or the development of a human body, in which simple interactions of pieces lead to complex and unpredictable behavior of the system as a whole.
 
 Computer simulation allows us to handle complexity, tweak parameters and observe the surprising patterns that emerge. I’m obsessed with writing code and experimenting with multi-agent systems, cellular automata, and generative grammars.
 
