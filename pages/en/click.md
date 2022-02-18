@@ -5,7 +5,8 @@ url: /click/
 draft: true
 ---
 
-![](https://user-images.githubusercontent.com/797993/148524591-a4383168-bc60-4ca5-a0b3-f4d33cd44397.png)
+![](https://user-images.githubusercontent.com/797993/154452298-2f65a051-b3f3-44e4-92f2-e19b7e6a9711.jpg)
+64 first mints from [the Artblocks test platform](https://artist-staging.artblocks.io/project/38) {.caption}
 
 # Click
 
