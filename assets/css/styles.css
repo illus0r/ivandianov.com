@@ -516,9 +516,9 @@ footer {
 	margin-top: 7em;
 }
 
-.text {
+/* .text {
   width: 70%;
-}
+} */
 
 .post-title {
 	font-size: 2em;
@@ -569,10 +569,6 @@ footer {
 			width: 98%;
 		}
 
-		.text {
-			width: 100%;
-		}
-
 		/* .logo {
 			font-size: 2em;
 			margin-top: -0.3em;
@@ -614,6 +610,9 @@ footer {
 @media (min-width: 1024px) {
   .works-section{
     gap: 16px;
+  }
+  .text {
+    width: 80%;
   }
 }
 

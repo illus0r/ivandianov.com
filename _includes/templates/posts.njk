@@ -1,5 +1,5 @@
 <section class="blog-posts">
-  {% for post in search.pages("type=post language="+language) %}
+  {% for post in search.pages("type=post language="+language, "date=desc") %}
    <div class="post-item">
      <div class="time">{{ post.data.date | date('yyyy MMM dd') }}</div>
      <h2 class="post-title">
