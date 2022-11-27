@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo This event is a pull request that had an assignee removed.
+
       - uses: actions/checkout@v2
 
       - name: Setup Deno environment
