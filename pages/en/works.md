@@ -8,6 +8,21 @@ url: /works/
 
 Almost all of these things react to mouse or produce a new art for each click. If objkt.com doesn't show a picture, you need to activate advanced mode in the right column.
 
+## Click
+
+The project focuses on how easily one assigns meaning to seemingly random combinations of blocks, giving them personality and creating emotional connections.
+
+[![](/assets/media/2022-11-27-16-54-49.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000135)
+[![](/assets/media/2022-11-27-16-51-30.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000463)
+[![](/assets/media/2022-11-27-16-55-01.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000524)
+[![](/assets/media/2022-11-27-16-52-37.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000103)
+[![](/assets/media/2022-11-27-16-52-51.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000763)
+[![](/assets/media/2022-11-27-16-53-04.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000923)
+[![](/assets/media/2022-11-27-16-53-38.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000860)
+[![](/assets/media/2022-11-27-16-54-36.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000719)
+[![](/assets/media/2022-11-27-16-55-14.png)](https://www.artblocks.io/collections/presents/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/263/tokens/263000521)
+{.works-section}
+
 ## The Box series
 
 [![](/assets/media/2022-02-14-21-03-45.png)](https://objkt.com/asset/hicetnunc/61017)
