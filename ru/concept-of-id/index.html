@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Концепт ID в шейдерах</title>
+    <link async="" rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+
+</head>
+  <body>
+    
+    <header>
+  <div class="nav-menu">
+    <div class="logo">
+        Иван Дианов
+    </div>
+        
+    
+
+    
+      
+      
+      
+        
+        
+      <a class="nav-item" href="/concept-of-id/">
+        En
+      </a>
+      
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      
+      
+        
+      
+    
+      
+      
+      
+        
+      
+    
+      
+      
+      
+        
+      
+    
+      
+      
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    
+
+    
+      
+    
+      
+    
+      
+        
+        <a class="nav-item" href="/ru/about/">
+          Про меня
+        </a>
+        
+      
+    
+      
+    
+      
+        
+        <a class="nav-item" href="/ru/works/">
+          Работы
+        </a>
+        
+      
+    
+      
+    
+      
+        
+        <a class="nav-item" href="/ru/">
+          Блог
+        </a>
+        
+      
+    
+  </div>
+</header>
+    <main role="main" class="wrap prose">
+      <article class="text" role="main">
+    <div class="post-header">
+    <h1 class="post-name">Концепт ID в шейдерах</h1>
+    </div>
+    <section class="post-content">
+        <p><img src="/assets/media/2021-09-03-10-49-32.png" alt=""></p>
+<p>Расскажу про концепцию идентификатора в шейдерах и покажу, на что она способна. Если вы не знакомы с шейдерами и вам ничего непонятно, начните с <a href="https://thebookofshaders.com/">книги шейдеров</a> — лучшего учебника по сабжу.</p>
+<p>Примеры кода из статьи можно запустить <a href="https://bit.ly/3Jl0Gdj">в клёвом редакторе Твигл</a>, в режиме geekest (es300)</p>
+<hr>
+<p>Цель приёма — усложнить картинку и получить контроль над каждым из крошечных участков.</p>
+<p>Сперва опишу алгоритм, потом проиллюстрирую приём кодом и картинками. Алгоритм такой:</p>
+<ol start="0">
+<li>Задаём всем пикселям одинаковый начальный id. Например, пусть будет равен единице.</li>
+<li>Делим пиксели на группы. То, в какую группу попадёт пиксель, зависит от его id, полученному на предыдущем шаге. Получаем новые идентификаторы.</li>
+<li>Повторяем пункт 1 несколько раз, каждый раз увеличивая число возможных id и усложняя картинку.</li>
+<li>Используем id для расчёта цвета, текстуры, скорости анимации, чего угодно.</li>
+</ol>
+<p>Есть два способа вычислять id: аккуратный и хаотичный. Затестим оба:</p>
+<h3>Аккуратный способ сегментации</h3>
+<p>Допустим, мы хотим каждый раз делить картинку на три части. А ещё допустим, что мы аккуратные и хотим гарантировать, что ни у каких двух сегментов айдишники не совпадут, сколько бы их ни было.</p>
+<p>Есть способ добиться желаемого: при первом делении раздадим каждой части айдишники от 0 до 1, чтобы они были «на одинаковом расстоянии» друг от друга:  <code>id = 0</code>, <code>id = 1/3</code>, <code>id = 2/3</code>. При следующем делении каждой трети ещё на три части, прибавим к уже найденным айдишникам уменьшенные значения: <code>id = id + 0</code>, <code>id = id + 1/9</code>, <code>id = id + 2/9</code>.
+Каждое следующее деление должно менять айдишник с меньшим и меньшим шагом.</p>
+<p>При таком алгоритме мы можем гарантировать уникальность каждого айдишника, ура. Попробуем повторить идею в коде:</p>
+<pre><code>vec2 uv = FC.xy/r;
+
+float id=0., k=1.;
+
+uv=fract(uv)*3.;
+
+id+=floor(uv.x)/3.; // делим на три столбца
+k/=3.;
+id+=k*floor(uv.y)/3.; // делим на три строки
+k/=3.;
+
+uv=fract(uv)*3.;
+
+id+=k*floor(uv.x)/3.; // делим на три столбца
+k/=3.;
+id+=k*floor(uv.y)/3.;  // делим на три строки
+k/=3.;
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-02-12-03-24.png" alt=""></p>
+<p>Мы видим, что каждый сегмент имеет свой уникальный цвет, но для этого приходится использовать мультипликатор k, что не всегда удобно. Часто бывает достаточно хаотического подхода.</p>
+<h3>Хаотический способ сегментации</h3>
+<p>В прошлый раз мы аккуратно прибаляли к разным частям сегмента три разных значения.</p>
+<p>Здесь мы также используем предыдущее значение айдишника сегмента, чтобы найти айдишкики трёх кусочков. Разница в используемой функции, тут это псевдорандом: функция, которая принимает на вход любое число (seed) и возвращает случайное число от 0 до 1. Прикол в том, что для одного и того же аргумента seed она возвращает одно и то же случайное значение.</p>
+<pre><code>↓ id подсегмента             ↓ id сегмента
+id = rnd( floor(uv.y) / 3. + id )
+         └─────────────────────┘  seed
+         └────────────────┘ штука,
+         которая делает seed разным
+         для разных частей сегмента
+</code></pre>
+<p>Код:</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x))</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">0.</span>;
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-02-12-10-49.png" alt=""></p>
+<p>Видим, что сетка получается хаотичной, может у каких-то регионов айдишники и совпадут, но вероятность маленькая.</p>
+<h2>Изменчивость сегментов</h2>
+<p>Пристегните ремни. Сейчас самое крутое. Можно сделать настройки последующих разбиений зависимыми от текущего айдишника. Буум!</p>
+<p>Например, тут число разбиений может варьировать в зависимости от айди:</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">0.</span>;
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+
+<span class="hljs-comment">//                 ↓ чем меньше, тем гуще</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три столбца</span>
+id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-23-52.png" alt=""></p>
+<p>Можно повторять и повторять разбиение сколько угодно. Или лучше добавить цикл, чтобы не копипастить.</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">1.</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">3</span>;i++){
+  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+}
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-28-11.png" alt=""></p>
+<p>Если увеличить число повторов до 5, останется один мусор:</p>
+<p><img src="/assets/media/2021-09-03-10-29-17.png" alt=""></p>
+<p>Но ведь мы можем сделать число повторов цикла также зависимым от id!</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-type">vec2</span> uv = FC.xy/r;
+
+<span class="hljs-type">float</span> id=<span class="hljs-number">1.</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
+  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; id&lt;<span class="hljs-number">.5</span>) <span class="hljs-keyword">break</span>;
+}
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-31-37.png" alt=""></p>
+<p>Картинка потемнела, это что-то вроде ошибки выжившего. Мы вылетаем из цикла, когда айдишник меньше .5, а у таких цвет получается тёмным. Это исправляется заменой условия <code>id &lt; .5</code> на <code>rnd(id) &lt; .5</code></p>
+<p><img src="/assets/media/2021-09-03-10-33-51.png" alt=""></p>
+<p>А теперь, когда приём освоен, можно идти и веселиться по-полной.</p>
+<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
+<span class="hljs-meta">#define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))</span>
+
+<span class="hljs-type">vec2</span> uv = (FC.xy*<span class="hljs-number">2.</span>-r)/r.x;
+
+<span class="hljs-type">float</span> id=<span class="hljs-built_in">floor</span>(<span class="hljs-built_in">length</span>(uv)*<span class="hljs-number">8.</span>)+<span class="hljs-number">1.</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
+  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; rnd(id)&lt;<span class="hljs-number">.5</span>) <span class="hljs-keyword">break</span>;
+  uv*=rot(PI/<span class="hljs-number">4.</span>+t*(rnd(id)<span class="hljs-number">-.5</span>));
+  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
+  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+}
+
+o+=id;
+</code></pre>
+<p><img src="/assets/media/2021-09-03-10-49-32.png" alt="">
+<a href="https://bit.ly/3BE99o9">Посмотрите ссылку</a>, оно ещё и крутится! Скорость вращения каждого кусочка, конечно же, зависит от его айдишника.</p>
+
+    </section>
+</article>
+
+<script src="https://utteranc.es/client.js" repo="illus0r/ivandianov.com" issue-term="pathname" label="blog-comment" theme="github-light" crossorigin="anonymous" async="">
+</script>
+    </main>
+
+    <footer>
+  <section class="copyright">
+    © <a href="/ru/">Иван Дианов</a> 2021—2022 ·
+    <a href="https://twitter.com/i_dianov">Twitter</a>
+    · <a href="https://objkt.com/profile/ivandianov/created">Objkt</a>
+    
+      · <a href="https://t.me/ivandianov">Канал в телеге</a>
+    
+    
+  </section>
+</footer>
+
+	
+</body></html>
