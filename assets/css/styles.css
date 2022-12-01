@@ -312,8 +312,9 @@ a.link-button:hover {
   transition-timing-function: ease-out;
 }
 
-img {
+img, video {
   width: 100%;
+  max-width: 100%;
 }
 
 ol,
