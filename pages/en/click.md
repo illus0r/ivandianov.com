@@ -21,3 +21,11 @@ draft: true
 > The script uses modern features of GPU so it's supposed to work only on desktop: Chrome, Firefox or Safari
 
 Thanks to [Shvembldr](https://twitter.com/shvembldr) for encouraging me to develop this idea and sharing his artistic advice, to [Piter Pasma](https://twitter.com/piterpasma) for teaching his secret techniques and to [Stranger](https://twitter.com/stranger_intheq) for sharing his webgl expertize and supportting me all the way long. And, surely, I want to thank the team of Artblocks for their endless patience and support!
+
+
+---
+
+Ideas for the post:
+- voxel rendering
+- js data to glsl
+- 
