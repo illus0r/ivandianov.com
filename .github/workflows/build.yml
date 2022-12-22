@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: echo This event is a pull request that had an assignee removed.
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
