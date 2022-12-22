@@ -1,19 +1,17 @@
-name: deno deploy
-
-on:
-  push:
-    branches: [ main ]
+name: Deploy
+on: [push]
 
 jobs:
-  build:
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
-      contents: read
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
@@ -21,10 +19,11 @@ jobs:
           deno-version: v1.x
 
       - name: Build site
-        run: |
-          deno run -A https://deno.land/x/lume/ci.ts
-      - name: Deploy to Deno Deploy
+        run: deno task build
+
+      - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: kus
-          entrypoint: server.ts
+          project: oscarotero-lume-blog-demo
+          entrypoint: https://deno.land/std@0.167.0/http/file_server.ts
+          root: ./_site
