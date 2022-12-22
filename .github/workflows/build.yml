@@ -1,5 +1,4 @@
-
-name: Publish
+name: deno deploy
 
 on:
   push:
@@ -8,23 +7,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
-      - run: echo This event is a pull request that had an assignee removed.
-
-      - uses: actions/checkout@v3
+      - name: Clone repository
+        uses: actions/checkout@v2
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
 
-      - name: Run lume
+      - name: Build site
         run: |
           deno run -A https://deno.land/x/lume/ci.ts
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
         with:
-          build_dir: _site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          project: kus
+          entrypoint: server.ts
