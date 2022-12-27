@@ -2,6 +2,7 @@
   "imports": {
     "lume": "https://deno.land/x/lume@v1.11.4/mod.ts",
     "lume/": "https://deno.land/x/lume@v1.11.4/",
-    "https://deno.land/x/lume/": "https://deno.land/x/lume@v1.11.4/"
+    "https://deno.land/x/lume/": "https://deno.land/x/lume@v1.11.4/",
+    "unicode": "https://deno.land/x/punycode/punycode.js"
   }
 }
