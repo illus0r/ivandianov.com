@@ -8,14 +8,20 @@ permissions:
   contents: read
   pages: write
   id-token: write
+name: Publish on GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
-    name: Deploy
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
 
     steps:
       - name: Clone repository
@@ -36,7 +42,18 @@ jobs:
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
           path: '_site'
 
       - name: Deploy to GitHub Pages
