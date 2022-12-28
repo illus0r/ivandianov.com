@@ -1,9 +1,0 @@
-{
-  "importMap": "import_map.json",
-  "tasks": {
-    "build": "deno task lume",
-    "serve": "deno task lume -s",
-    "lume": "deno eval \"import 'lume/task.ts'\" --",
-    "deploy": "deno task build && rsync -r _site/ user@my-site.com:~/www"
-  }
-}

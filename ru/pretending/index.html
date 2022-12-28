@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Как въехать в&nbsp;трансформации пространства</title>
+    <link async="" rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+
+</head>
+  <body>
+    
+    <header>
+  <div class="nav-menu">
+    <div class="logo">
+        Иван Дианов
+    </div>
+        
+    
+
+    
+      
+    
+      
+      
+      
+        
+      
+    
+      
+    
+      
+      
+      
+        
+      
+    
+      
+    
+      
+      
+      
+        
+      
+    
+      
+    
+      
+      
+      
+        
+      
+    
+      
+      
+      
+        
+      
+    
+      
+    
+      
+    
+      
+      
+      
+        
+      
+    
+
+    
+    
+      
+      <a class="nav-item" href="/">En</a>
+      
+    
+
+    
+      
+        
+        <a class="nav-item" href="/ru/about/">
+          Про меня
+        </a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+        <a class="nav-item" href="/ru/works/">
+          Работы
+        </a>
+        
+      
+    
+      
+    
+      
+        
+        <a class="nav-item" href="/ru/">
+          Блог
+        </a>
+        
+      
+    
+      
+    
+  </div>
+</header>
+    <main role="main" class="wrap prose">
+      <article class="text" role="main">
+    <div class="post-header">
+    <h1 class="post-name">Как въехать в&nbsp;трансформации пространства</h1>
+    </div>
+    <section class="post-content">
+        <p>В школе мы проходили графики разных функций, например, параболы: <code>y = x²</code>. Я никак не мог понять, почему при увеличении x, например <code>y = (x + 1)²</code> график сдвигается влево. Интуиция говорила, что должен вправо сдвигаться!</p>
+<p>Дальше хуже: оказалось, что при умножении икса <code>y = (2x)²</code> график не растягивается вдоль оси x а наоборот, сужается.</p>
+<p><img src="/assets/media/2022-07-06-14-33-35.png" alt=""></p>
+<p>Если не верите, <a href="https://www.desmos.com/calculator/plcsrckgof">проверьте сами</a>.</p>
+<p>Когда начал копать шейдеры, оказалось, что школьные проблемы до сих пор не решены. Поэтому первый год я подбирал нужный оператор методом тыка: плюс не помог, окей, поставим минус.</p>
+<p>Сейчас, вроде, разобрался, сейчас расскажу.</p>
+<p>Возьмём шейдер, который рисует кружочек:</p>
+<p><img src="/assets/media/2022-07-06-15-28-04.png" alt=""></p>
+<pre><code class="language-GLSL">precision highp float;
+uniform vec2 resolution;
+out vec4 outColor;
+
+void main(){
+  vec2 uv=(gl_FragCoord.xy*2.-resolution)/resolution.y*2.; // find UV coordinates of a pixel
+  outColor.rg+=fract(uv); // draw grid while space is not transformed yet
+  outColor.b=1.; // nice colors!
+  
+  // TRANSFORMATIONS WILL BE HERE
+  
+  outColor+=step(length(uv),1.); // draw circle in transformed space
+  // it's like pixel is saying “if my distance to the origin is less than 1, I go white”
+}
+</code></pre>
+<p><a href="https://bit.ly/3OP90VN" :="" class="caption">bit.ly/3OP90VN</a></p>
+<p>Действительно, <code>uv*=2.;</code> уменьшает картинку:</p>
+<p :="" class="caption"><img src="/assets/media/2022-07-06-15-29-33.png" alt="">
+<a href="https://bit.ly/3PbJyK9">https://bit.ly/3PbJyK9</a></p>
+<p>а <code>uv/=2.;</code> растягивает её:</p>
+<p :="" class="caption"><img src="/assets/media/2022-07-06-15-34-52.png" alt="">
+<a href="https://bit.ly/3yKkCDU">https://bit.ly/3yKkCDU</a></p>
+<p>Аналогично <code>uv.x += 1.;</code>. сдвигает график влево, а <code>uv.x -= 1.</code> — вправо. Где логика, где разум?</p>
+<p>На какое-то время я думал, что нашёл спасение в вот такой формулировке:</p>
+<blockquote>
+<p>Когда мы трансформируем координаты, мы меняем не картинку а пространство. Например, если делаем <code>uv*=2.;</code>, все изменения в пространстве начинают происходить в два раза быстрее, вот кружок и уменьшается.</p>
+</blockquote>
+<p>Но пользоваться такой мыслью при программировании было сложно. Наконец придумалась более удобная:</p>
+<blockquote>
+<p>Когда мы меняем координаты точки, она начинает притворяться другой точкой с новыми координатами.</p>
+</blockquote>
+<p>Допустим, пиксель. Вычисляем его uv координаты и получаем (0, 0.5). После умножения каждого компонента на 2 этот пиксель притворится точкой (0, 1), а это правый край нашей единичной окружности. Значит наш пиксель этот край и покажет.</p>
+<p>Получилось, что край окружности стал в два раза ближе к центру, чем был бы без трансформации.</p>
+<p>Упражнения:
+Возьмите исходный шейдер с кружком и добавьте трансформацию, чтобы окружность:</p>
+<ul>
+<li>сдвинулась вниз на 1.;</li>
+<li>скукожилась по оси y в 4 раза;</li>
+<li>стала с радиусом 0.5 и с центром в (0.5, 0.5)</li>
+</ul>
+<hr>
+<p><em>Что думаете про такой способ думать о трансформациях пространства? Что осталось непонятным? А может, вы знаете, как проще трансформации объяснить? Расскажите тут в комментариях или напишите <a href="https://t.me/ivan_dianov">мне в телеграм</a>.</em></p>
+
+    </section>
+</article>
+
+<script src="https://utteranc.es/client.js" repo="illus0r/ivandianov.com" issue-term="pathname" label="blog-comment" theme="github-light" crossorigin="anonymous" async="">
+</script>
+    </main>
+
+    <footer>
+  <section class="copyright">
+    © <a href="/ru/">Иван Дианов</a> 2021—2022 ·
+    <a href="https://twitter.com/i_dianov">Twitter</a>
+    · <a href="https://objkt.com/profile/ivandianov/created">Objkt</a>
+    
+      · <a href="https://t.me/ivandianov">Канал в телеге</a>
+    
+    
+  </section>
+</footer>
+
+	
+</body></html>

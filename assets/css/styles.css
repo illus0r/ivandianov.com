@@ -19,11 +19,14 @@
     2.  General
 */
 
+
 /* Reset */
+
 
 html {
   box-sizing: border-box;
 }
+
 
 *,
 *:before,
@@ -31,9 +34,11 @@ html {
   box-sizing: inherit;
 }
 
+
 body {
   margin: 0;
 }
+
 
 article,
 aside,
@@ -59,11 +64,13 @@ nav {
   --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
 }
 
+
 @media screen and (min-width: 1500px) {
   :root {
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }
 }
+
 
 :root {
   --fluid-min-scale-0: var(--fluid-min-ratio);
@@ -105,12 +112,14 @@ nav {
 
 /* Typography */
 
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   font: 400 var(--fluid-0) / 1.5 'IBM Plex Mono', monospaced;
 }
+
 
 h1,
 h2,
@@ -121,20 +130,25 @@ h4 {
   margin: 0.5em 0;
 }
 
+
 h1 {
   font-size: var(--fluid-4);;
 }
 
+
 h2 {
   font-size: var(--fluid-3);
 }
+
 
 /* .prose > p:first-of-type {
   font-size: var(--fluid-1);
   line-height: 1.5;
 } */
 
+
 /* Grid */
+
 
 .wrap {
   /* padding-right: var(--fluid-0);
@@ -145,17 +159,21 @@ h2 {
   width: 90%;
 }
 
+
 .insulate {
   padding-bottom: var(--fluid-5);
   padding-top: var(--fluid-5);
 }
 
+
 /* Addtive spacing */
+
 
 :root {
   --prose-bottom-gap: 0.5em;
   --prose-top-gap: 0.5em;
 }
+
 
 .additive-spacing {
   display: flex;
@@ -163,10 +181,12 @@ h2 {
   align-items: flex-start;
 }
 
+
 .additive-spacing > * {
   margin-bottom: var(--prose-bottom-gap);
   margin-top: var(--prose-top-gap);
 }
+
 
 .additive-spacing > h1,
 .additive-spacing > h2,
@@ -176,13 +196,16 @@ h2 {
   --prose-top-gap: 0.75em;
 }
 
+
 .additive-spacing > :first-child {
   margin-top: 0;
 }
 
+
 .additive-spacing > :last-child {
   margin-bottom: 0;
 }
+
 
 .additive-spacing > hr,
 .additive-spacing > hr:last-child {
@@ -193,6 +216,7 @@ h2 {
 /* ==========================================================================
    1. Fonts and variables
    ========================================================================== */
+
 
 /* @font-face {
 	font-family: "PPNeueMachina";
@@ -216,7 +240,6 @@ h2 {
 } */
 
 
-
 :root {
 	--background-RGB: 255, 255, 255;
 	--text-RGB: 32, 32, 32;
@@ -227,14 +250,17 @@ h2 {
 	--surface-RGB: 250, 245, 255;
 }
 
+
 /* ==========================================================================
    2. General - Setting up base styles
    ========================================================================== */
+
 
 html {
   height: 100%;
   max-height: 100%;
 }
+
 
 body {
   height: 100%;
@@ -243,13 +269,10 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   color: rgba(var(--text-RGB), 1);
   background: rgba(var(--background-RGB), 1);
-	
-
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
   -o-font-feature-settings: 'kern' 1;
   font-feature-settings: 'kern' 1;
 }
+
 
 h1,
 h2,
@@ -257,14 +280,13 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   margin-top: 1em;
   margin-bottom: 0.4em;
   font-family: 'IBM Plex Mono', monospace;
 }
+
 
 a {
   color: rgba(var(--link-RGB), 1);
@@ -276,6 +298,7 @@ a {
   transition-duration: 0s;
   transition-timing-function: ease-out;
 }
+
 
 a:hover {
   color: rgba(var(--hover-RGB), 1);
@@ -301,6 +324,7 @@ a.link-button {
   transition-timing-function: ease-out;
 }
 
+
 a.link-button:hover {
   color: rgba(var(--hover-RGB), 1);
   transition: color ease 0s;
@@ -312,15 +336,18 @@ a.link-button:hover {
   transition-timing-function: ease-out;
 }
 
+
 img, video {
   width: 100%;
   max-width: 100%;
 }
 
+
 ol,
 ul {
   padding-left: 2em;
 }
+
 
 ol ol,
 ul ul,
@@ -329,6 +356,7 @@ ol ul {
   margin: 0 0 0.4em 0;
   padding-left: 0.3em;
 }
+
 
 dl dt {
   float: left;
@@ -341,18 +369,22 @@ dl dt {
   margin-bottom: 1em;
 }
 
+
 dl dd {
   margin-left: 200px;
   margin-bottom: 1em
 }
 
+
 li {
   margin: 0.2em 0;
 }
 
+
 li li {
   margin: 0;
 }
+
 
 hr {
   display: block;
@@ -363,16 +395,18 @@ hr {
   padding: 0;
 }
 
+
 blockquote {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   
   padding: 0 0 0 1em;
 }
 
+
 blockquote p {
   margin: 0.8em 0;
 }
+
 
 blockquote small {
   display: inline-block;
@@ -381,27 +415,33 @@ blockquote small {
   color: #CCC;
 }
 
+
 blockquote small:before {
   content: "\2014 \00A0";
 }
+
 
 blockquote cite {
   font-weight: 700;
 }
 
+
 blockquote cite a {
   font-weight: normal;
 }
 
+
 mark {
   background-color: #FFC336;
 }
+
 
 code {
   background-color: #eee;
   padding: 0.1em 0.2em;
   border-radius: 2px;
 }
+
 
 pre code,
 tt {
@@ -412,6 +452,7 @@ tt {
   /* border: #c6c8c9 1px solid; */
   /* border-radius: 2px; */
 }
+
 
 pre {
   /* -moz-box-sizing: border-box; */
@@ -426,6 +467,7 @@ pre {
   margin-bottom: 0;
 }
 
+
 pre code,
 tt {
   font-size: inherit;
@@ -436,14 +478,15 @@ tt {
   padding: 0;
 }
 
+
 table {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 1.75em 0;
   width: 100%;
   max-width: 100%;
   background-color: transparent;
 }
+
 
 table th,
 table td {
@@ -463,6 +506,7 @@ table thead:first-child tr:first-child td {
   border-top: 0;
 }
 
+
 table tbody + tbody {
   border-top: #EFEFEF 2px solid;
 }
@@ -478,6 +522,7 @@ main {
 	margin-top: 2em;
 }
 
+
 .blog-posts {
 	margin-top: 3em;
 }
@@ -489,14 +534,17 @@ header {
 	padding-bottom: 4.5em;
 }
 
+
 .logo {
   float: left;
   white-space: nowrap;
 }
 
+
 .nav-menu {
 	font-size: 1.3em;
 }
+
 
 .nav-item {
 	margin-left: 0.8em;
@@ -507,19 +555,23 @@ header {
 	cursor: pointer;	
 }
 
+
 .nav-item-active, .nav-item-active:hover {
   color: black;
   border: none;
 }
+
 
 footer {
   padding: 1em;
 	margin-top: 7em;
 }
 
+
 /* .text {
   width: 70%;
 } */
+
 
 .post-title {
 	font-size: 2em;
@@ -527,20 +579,24 @@ footer {
 	font-weight: 400;
 }
 
+
 .post-item {
 	margin-bottom: 2em;
 }
+
 
 .time {
 	padding-left: 0em;
 	color: rgba(var(--text-RGB), 0.5);
 }
 
+
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   margin-top: 4em;
 }
+
 
 .project-item {
   width: 50%;
@@ -554,7 +610,7 @@ footer {
    ==========================================================================  */
 
 
-   @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 
     header {
       padding: 0.3em;
@@ -590,10 +646,12 @@ footer {
 
   }
 
+
 .utterances {
   margin-top: 80px;
   margin-left: 0;
 }
+
 
 .works-section{
   display: grid;
@@ -602,11 +660,13 @@ footer {
   grid-auto-flow: row;
 }
 
+
 @media (min-width: 600px) {
   .works-section{
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 
 @media (min-width: 1024px) {
   .works-section{
@@ -617,6 +677,7 @@ footer {
   }
 }
 
+
 .works-section>a, .works-section>a>img{
   display: block;
   line-height: 0;
@@ -625,17 +686,23 @@ footer {
   border: none;
 }
 
+
 .works-section a:first-child{
   grid-row-start: span 2;
   grid-column-start: span 2;
 }
+
+
 @media (max-width: 600px) {
   .nav-menu *{
     /* display: none; */
   }
 }
 
+
 /* image caption */
+
+
 .caption {
   font-size: .7em;
   line-height: 1.3em;
