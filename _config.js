@@ -1,5 +1,5 @@
 import lume from "lume/mod.ts";
-import code_highlight from "https:/deno.land/x/lume@v1.11.4/plugins/code_highlight.ts";
+import code_highlight from "lume/plugins/code_highlight.ts";
 import postcss from "lume/plugins/postcss.ts";
 import date from "lume/plugins/date.ts";
 
