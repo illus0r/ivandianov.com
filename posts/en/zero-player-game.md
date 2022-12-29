@@ -58,5 +58,7 @@ Then you can make up coloring rules, combine different rules, switch the rules h
 <video controls>
   <source src="/assets/media/ivanomata-oculus.mp4" type="video/mp4">
 </video>
-
+<!-- 
 ## Going big
+
+It's not possible  -->
