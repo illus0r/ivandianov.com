@@ -2,7 +2,6 @@
 title: Zero-player game
 url: /zero-player-game/
 date: 2022-12-18 02:43:00
-draft: true
 ---
 
 ![](/assets/media/2022-11-26-15-22-41.png)
