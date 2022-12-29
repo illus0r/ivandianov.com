@@ -8,16 +8,9 @@ date: 2022-12-18 02:43:00
 
 ## Idea
 
-"Zero-player game" is a generative art piece that explores the concept of evolution through the lens of tissue development. Inspired by the intricate processes of biology, this piece utilizes a set of predetermined rules to create a visual representation of how tissues grow and change over time. The name "Zero-player game" speaks to the idea that complexity can emerge from simple things and rules, and also serves as a playful nod to the fact that this art piece operates without any human intervention. Despite its complex appearance, "Zero-player game" is a self-generating piece that relies on its own internal logic to evolve and change. With its striking visual elements and thought-provoking themes, "Zero-player game" is a must-see for anyone interested in the intersection of art and science.
+"Zero-player game" is a work that combines the nostalgia of 8bit games with the complexity of tissues development. Its name speaks to the idea that complexity can emerge from simple things and rules.
 
----
-
-
-"Zero-player game" is a generative art piece that explores the concept of evolution and the development of tissues through a set of predetermined rules.
-
-But the name "Zero-player game" has a deeper meaning as well. It speaks to the idea that complexity can emerge from simple things and rules, much like how tissues evolve and grow according to a specific set of guidelines. It also serves as a tongue-in-cheek reference to the fact that this is a generative art piece, meaning there is no actual player controlling the action. Instead, the piece unfolds and evolves on its own, creating a truly one-of-a-kind experience.
-
-Overall, "Zero-player game" is a captivating and thought-provoking work that combines the nostalgia of 8bit games with the complexity of evolutionary biology.
+It presents a new kind of cellular automata with increasing resolution.
 
 ## Ignition
 
