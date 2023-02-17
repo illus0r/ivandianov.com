@@ -531,7 +531,7 @@ footer {
 	margin-bottom: 2em;
 }
 
-.time {
+.meta {
 	padding-left: 0em;
 	color: rgba(var(--text-RGB), 0.5);
 }
@@ -640,4 +640,21 @@ footer {
   font-size: .7em;
   line-height: 1.3em;
   margin-top: .5em;
+}
+
+.progress{
+  background-color: #eee;
+  display: inline-block;
+	height: 1em;
+	width: 1em;
+	position: relative;
+	vertical-align: -9%;
+}
+.progress .done{
+	background-color: rgba(var(--text-RGB), 0.5);
+  display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
 }
