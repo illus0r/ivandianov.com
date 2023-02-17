@@ -1,13 +1,14 @@
 <section class="blog-posts">
-  {% for post in search.pages("type=post language="+language, "date=desc") %}
-   <div class="post-item">
-     <div class="time">{{ post.data.date | date('yyyy MMM dd') }}</div>
-     <h2 class="post-title">
-       <a href="{{ post.data.url }}">
-        {{ post.data.title }}
-       </a>
-     </h2>
-   {# </div> #}
-
-    {% endfor %}
+	{% for post in search.pages("type=post language="+language, "date=desc") %}
+	<div class="post-item">
+		<div class='meta'>
+			{% include "templates/progress.njk" %}<span class="time">{{ post.data.date | date('yyyy MMM dd') }}</span>
+		</div>
+		<h2 class="post-title">
+			<a href="{{ post.data.url }}">
+				{{ post.data.title }}
+			</a>
+		</h2>
+	</div>
+	{% endfor %}
 </section>
