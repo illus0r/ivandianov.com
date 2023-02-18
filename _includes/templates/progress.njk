@@ -11,4 +11,4 @@
 {% endif %}
 {% set progress = post.data.progress %}
 {% set angle = progress * 360 // 4 %}
-<span class="progress" style="--progress: {{ angle }}deg;" title="{{ title }}"></span>
+<span class="progress" style="--progress: {{ angle }}deg;"></span> {{ title }}
