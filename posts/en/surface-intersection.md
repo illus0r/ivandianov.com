@@ -2,7 +2,7 @@
 title: Surface intersection
 date: 2022-02-17 11:05:00
 draft: true
-progress: 5
+progress: 1
 ---
 
 ![](/assets/media/2022-02-17-11-09-37.png)

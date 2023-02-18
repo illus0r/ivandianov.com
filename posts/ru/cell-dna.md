@@ -1,7 +1,7 @@
 ---
-title: Концепт ID в шейдерах
+title: Эволюционный клеточный автомат
 date: 2021-09-02 09:59:00
-progress: 5
+progress: 1
 draft: true
 ---
 

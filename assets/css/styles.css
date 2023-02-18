@@ -642,19 +642,37 @@ footer {
   margin-top: .5em;
 }
 
+/* .progress{ */
+/*   background-color: #eee; */
+/*   display: inline-block; */
+/* 	height: 1em; */
+/* 	width: 1em; */
+/* 	position: relative; */
+/* } */
+/* .progress .done{ */
+/* 	background-color: rgba(var(--text-RGB), 0.5); */
+/*   display: inline-block; */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	height: 100%; */
+/* } */
+
 .progress{
-  background-color: #eee;
-  display: inline-block;
 	height: 1em;
-	width: 1em;
-	position: relative;
+	padding: .1em;
 	vertical-align: -9%;
-}
-.progress .done{
-	background-color: rgba(var(--text-RGB), 0.5);
+	width: 1em;
+  background: conic-gradient(gray var(--progress), #eee 0deg);
+  border-radius: 50%;
   display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
+}
+
+.progress::before{
+	background: #fff;
+	border-radius: 50%;
+	content: '';
+	display: block;
 	height: 100%;
+	width: 100%;
 }
