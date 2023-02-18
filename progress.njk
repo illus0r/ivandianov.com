@@ -1,0 +1,13 @@
+<span class="progress">
+{% if language == 'en' %}
+	{% if post.data.progress == 3 %}𝍭 Readable
+	{% elif post.data.progress == 2 %}𝍫 In progress
+	{% else %}𝍩 Draft
+	{% endif %}
+{% elif language == 'ru' %}
+	{% if post.data.progress == 3 %}𝍭 Читабельно
+	{% elif post.data.progress == 2 %}𝍫 В процессе
+	{% else %}𝍩 Черновик
+	{% endif %}
+{% endif %}
+</span>
