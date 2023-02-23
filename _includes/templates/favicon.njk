@@ -1,0 +1,18 @@
+<link id="favicon" rel="icon">
+<script>
+		let w = 3
+		let h = 5
+    let svg = `<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="1 0 ${w*2} ${h}"	>`
+		for(let x = 0; x < w; x++) {
+			for(let y = 0; y < h; y++) {
+				let color = Math.random() > 0.5 ? "#000" : "#fff"
+				svg += `<rect x="${w-x}" y="${y}" width="1" height="1" fill="${color}"/>`
+				svg += `<rect x="${w+x}" y="${y}" width="1" height="1" fill="${color}"/>`
+			}
+		}
+
+    svg+=`</svg>`
+console.log('svg:',svg)
+
+    document.getElementById("favicon").setAttribute("href", `data:image/svg+xml,${encodeURIComponent(svg)}`)
+</script>
