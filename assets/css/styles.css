@@ -531,6 +531,16 @@ footer {
 	margin-bottom: 2em;
 }
 
+.post-header {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+.post-header h1 {
+	margin-top: 0em;
+	margin-bottom: 0em;
+	line-height: 1em;
+}
+
 .meta {
 	padding-left: 0em;
 	color: rgba(var(--text-RGB), 0.5);
