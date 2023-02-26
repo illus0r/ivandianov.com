@@ -23,11 +23,14 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
+- 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
+- 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
 - 2021, АМА в Вастрик клубе про генеративный арт, [https://www.youtube.com/watch?v=Lgp2eJrh7YU](https://www.youtube.com/watch?v=Lgp2eJrh7YU)
 - 2021, Митап и мастер-класс про генеративное искусство, ИТ-34, Иван Дианов, Денис Запорожан [https://www.youtube.com/watch?v=PSW8_ZkcPrk](https://www.youtube.com/watch?v=PSW8_ZkcPrk)
 
 ## Публикации
-- 2020, Интервью в дата-арт журнале Market cafe magazine [https://www.marketcafemag.com/product/market-cafe-magazine-issue-6-1](https://www.marketcafemag.com/product/market-cafe-magazine-issue-6-1)
+- 2020, Интервью в дата-арт журнале Market cafe magazine [https://www.marketcafemag.com/previous-issues/issue-6](https://www.marketcafemag.com/previous-issues/issue-6)
 - 2019, Процесс создания визуализации съеденных пирогов [https://medium.com/nightingale/easy-as-pie-chart-85182f213bda](https://medium.com/nightingale/easy-as-pie-chart-85182f213bda)
 - 2019, Визуализация дерева приматов, история создания проекта, [https://habr.com/ru/post/430324/](https://habr.com/ru/post/430324/)
 - 2016, Круглендарь 2016 — плакат-ежедневник, [https://habr.com/ru/post/388271/](https://habr.com/ru/post/388271/)
