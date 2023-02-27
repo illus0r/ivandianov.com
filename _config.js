@@ -2,6 +2,7 @@ import lume from "lume/mod.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 import postcss from "lume/plugins/postcss.ts";
 import date from "lume/plugins/date.ts";
+import katex from "lume/plugins/katex.ts";
 
 const site = lume({
     location: new URL("https://ivandianov.com"),
@@ -16,6 +17,7 @@ site.preprocess([".html"], (page) => page.data.srcPath = page.src.path);
 site.use(code_highlight());
 site.use(postcss());
 site.use(date());
+site.use(katex());
 
 
 site.copy('assets/media');
