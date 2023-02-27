@@ -25,11 +25,7 @@ progress: 1
 
 <iframe src="https://editor.p5js.org/illus0r/full/_Ln1BsDwd" width=400 height=444></iframe>
 
-Недописанный скетч, показывающий для 2д случая {: .caption}
-
-```math
-c = \pm\sqrt{a^2 + b^2}
-```
+Недописанный скетч для 2д случая {: .caption}
 
 
 ## Ускорение с помощью SDF-текстуры
