@@ -23,6 +23,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2023,  Соавтор и ведущий четырёхнедельного курса генеративного дизайна, [https://course.genclub.club](https://course.genclub.club)
 - 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
 - 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
 - 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
