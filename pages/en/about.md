@@ -4,7 +4,6 @@ title: About
 url: /about/
 ---
 
-
 ![](/assets/media/photo.jpg){style=width:256px}
 
 Hi! I'm [eye-van dee-ah-nev], teacher of generative art at [HSE University](https://www.hse.ru/en/), founder of a generative art community [genclub.club](https://genclub.club/).
