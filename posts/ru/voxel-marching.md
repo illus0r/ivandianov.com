@@ -42,7 +42,7 @@ progress: 1
 
 вот такой СДФ:
 
-<video controls><source src="/assets/media/voxel-marching-sdf.mp4" type="video/mp4"></video>
+<video controls muted loop preload="auto"><source src="/assets/media/voxel-marching-sdf.mp4" type="video/mp4"></video>
 
 На самом деле я использую 2д текстуру для его хранения. Чтобы это получилось, я разрезаю объёмную карту на горизонтальные слои в один воксель и кладу их слева направо. Получается текстура высотой voxSize и шириной voxSize²
 
