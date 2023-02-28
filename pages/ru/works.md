@@ -8,7 +8,7 @@ url: /ru/works/
 
 Почти все эти штуки реагируют на мышку или выдают новый арт на каждый клик. Если сайт objkt.com не показывает картинку, надо активировать advanced mode в правой колонке.
 
-А ещё есть куча разношёрстных работ [на айКлаудсе](https://www.icloud.com/sharedalbum/#B0o532ODWJJGYHF)
+А ещё есть [куча разношёрстных работ](https://www.icloud.com/sharedalbum/#B0o532ODWJJGYHF).
 
 ## Click
 
