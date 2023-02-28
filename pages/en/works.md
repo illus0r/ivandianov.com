@@ -8,6 +8,8 @@ url: /works/
 
 Almost all of these things react to mouse or produce a new art for each click. If objkt.com doesn't show a picture, you need to activate advanced mode in the right column.
 
+[And there's a lot of ragtag works](https://www.icloud.com/sharedalbum/#B0o532ODWJJGYHF).
+
 ## Click
 
 The project focuses on how easily one assigns meaning to seemingly random combinations of blocks, giving them personality and creating emotional connections.
