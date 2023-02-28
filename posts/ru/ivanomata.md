@@ -49,7 +49,7 @@ progress: 3
 
 Дальше можно придумать правила раскрашивания, совмещать результаты работы нескольких автоматов с разными правилами, менять правила на полдороге, накладывать картинку на её предыдущие итерации, веселиться по-полной!
 
-<video controls>
+<video controls muted loop preload="auto">
   <source src="/assets/media/ivanomata-oculus.mp4" type="video/mp4">
 </video>
 
