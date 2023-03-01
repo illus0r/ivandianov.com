@@ -1,5 +1,5 @@
 ---
-menu: 10
+menu: 20
 title: About
 url: /about/
 ---
