@@ -1,0 +1,22 @@
+---
+title: Blog
+url: /blog/
+menu: 0
+---
+
+<h1>Blog</h1>
+<p>Some articles are drafts and some are almost finished. Look at the icons next to the headings, they give a hint.</p>
+
+{% include "templates/posts.njk" %}
+
+ {# <div class="project-grid"> #}
+{# {% assign items = site.projects | sort: 'date' %}
+{% for item in items reversed %}
+
+    <div class="project-item">
+      <img src="{{item.img-url}}">
+      <span>{{item.title}}</span>
+    </div>
+    {% endfor %}
+  </div>
+#}
