@@ -42,12 +42,11 @@ url: /ru/about/
 
 ## Проекты
 
-- 2020, Проект о датавиз-грамоте Бар-о-пай, https://park.intuition.team/park/bar-or-pie
-- 2020, Разговорометр, https://park.intuition.team/park/razgovorometr
-- 2020, Флотерея, превращает имя в попловок, https://park.intuition.team/park/floattery
-- 2020, Пре-лого, Yomqo, https://www.instagram.com/p/CFzvEzuBI-o/
-- 2020, Пре-лого, promo campaign or a digital agency, https://www.instagram.com/p/CEZpGRuBsgt/
-- 2020, Пре-лого, Iterate, https://www.instagram.com/p/CD_lZrZhrGG/
-- 2020, Пре-лого, Open eye, https://www.instagram.com/p/CDRLL05hu2x/
+- 2020, Проект о датавиз-грамоте Бар-о-пай, [https://park.intuition.team/park/bar-or-pie](https://park.intuition.team/park/bar-or-pie)
+- 2020, Разговорометр, [https://park.intuition.team/park/razgovorometr](https://park.intuition.team/park/razgovorometr)
+- 2020, Флотерея, превращает имя в попловок, [https://park.intuition.team/park/floattery](https://park.intuition.team/park/floattery)
+- 2020, Пре-лого, Yomqo, [https://www.instagram.com/p/CFzvEzuBI-o/](https://www.instagram.com/p/CFzvEzuBI-o/)
+- 2020, Пре-лого, promo campaign or a digital agency, [https://www.instagram.com/p/CEZpGRuBsgt/](https://www.instagram.com/p/CEZpGRuBsgt/)
+- 2020, Пре-лого, Iterate, [https://www.instagram.com/p/CD_lZrZhrGG/](https://www.instagram.com/p/CD_lZrZhrGG/)
+- 2020, Пре-лого, Open eye, [https://www.instagram.com/p/CDRLL05hu2x/](https://www.instagram.com/p/CDRLL05hu2x/)
 - 2019, Победа на хакатоне DataAudit с проектом ЖКХантер
-
