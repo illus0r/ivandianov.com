@@ -29,6 +29,7 @@ url: /ru/about/
 - 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
 - 2021, АМА в Вастрик клубе про генеративный арт, [https://www.youtube.com/watch?v=Lgp2eJrh7YU](https://www.youtube.com/watch?v=Lgp2eJrh7YU)
 - 2021, Митап и мастер-класс про генеративное искусство, ИТ-34, Иван Дианов, Денис Запорожан [https://www.youtube.com/watch?v=PSW8_ZkcPrk](https://www.youtube.com/watch?v=PSW8_ZkcPrk)
+- 2020, Мастер-класс по программированию анимации на p5, https://vk.com/wall85504912_1630
 
 ## Публикации
 - 2020, Интервью в дата-арт журнале Market cafe magazine [https://www.marketcafemag.com/previous-issues/issue-6](https://www.marketcafemag.com/previous-issues/issue-6)
@@ -38,4 +39,15 @@ url: /ru/about/
 - 2015, Круглендарь 2015, [https://habr.com/ru/post/375075/](https://habr.com/ru/post/375075/)
 - 2014, Круглендарь на 2014 год, [https://habr.com/ru/post/209550/](https://habr.com/ru/post/209550/)
 - 2013, Инкскейп и первая версия круглендаря, [https://habr.com/ru/post/168697/](https://habr.com/ru/post/168697/)
+
+## Проекты
+
+- 2020, Проект о датавиз-грамоте Бар-о-пай, https://park.intuition.team/park/bar-or-pie
+- 2020, Разговорометр, https://park.intuition.team/park/razgovorometr
+- 2020, Флотерея, превращает имя в попловок, https://park.intuition.team/park/floattery
+- 2020, Пре-лого, Yomqo, https://www.instagram.com/p/CFzvEzuBI-o/
+- 2020, Пре-лого, promo campaign or a digital agency, https://www.instagram.com/p/CEZpGRuBsgt/
+- 2020, Пре-лого, Iterate, https://www.instagram.com/p/CD_lZrZhrGG/
+- 2020, Пре-лого, Open eye, https://www.instagram.com/p/CDRLL05hu2x/
+- 2019, Победа на хакатоне DataAudit с проектом ЖКХантер
 
