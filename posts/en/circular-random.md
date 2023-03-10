@@ -72,6 +72,12 @@ You see, the cherry area on the horizontal axis is huge, but coconut area is as 
 
 Blame on parabola! We need a circle here:
 
+```
+let optionsIndex = Math.floor((1-sqrt(1-Math.random()**2)) * options.length);
+```
+
+Here's how it is different:
+
 <iframe src="https://editor.p5js.org/illus0r/full/UcT0w4H6r" width=400 height=444></iframe>
 
 Pay attention, how tiny the coconut stripe is! Let's run the test again:
