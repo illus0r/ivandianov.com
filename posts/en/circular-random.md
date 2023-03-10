@@ -4,7 +4,7 @@ date: 2023-03-10 02:00:00
 progress: 3
 ---
 
-Imagine you want make a generative project. You want the work to have one of 8 traits and you make it like this:
+Imagine you want to make a generative project. You want the work to have one of 8 traits and you achieve it like this:
 
 ```
 let options=['🍒','🍓','🍇','🍎','🍋','🍍','🍏','🥥',]
@@ -12,7 +12,7 @@ let optionsIndex = Math.floor(Math.random() * options.length)
 let trait = options[optionsIndex]
 ```
 
-Then you run your script 100 times and record statistics.
+Then you run your script many times and print statistics.
 
 ```
 let options = ["🍒", "🍓", "🍇", "🍎", "🍋", "🍍", "🍏", "🥥"];
@@ -28,7 +28,6 @@ for(let i=0;i<8;i++){
 ```
 
 That's what you get:
-<!-- https://editor.p5js.org/illus0r/sketches/EWUPWVhcC -->
 
 ```
 🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒 
@@ -41,14 +40,15 @@ That's what you get:
 🥥🥥🥥🥥🥥🥥🥥🥥🥥🥥🥥🥥🥥 
 ```
 Apples got lucky this time {: .caption}
+<!-- https://editor.p5js.org/illus0r/sketches/EWUPWVhcC -->
 
-Then you decide you need coconuts to be more rare than cherries. No, you want coconuts to be the most rare trait in your project! One in hundreds! Therefore you modify your random function to squared random:
+Then you decide you need coconuts to be more rare than cherries. No, you want coconuts to be the most rare trait in your project! One in hundreds! Therefore you change your random function to squared:
 
 ```
 let optionsIndex = Math.floor(Math.random()**2 * options.length);
 ```
 
-And you get this:
+And you get a distribution similar to this:
 
 ```
 🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒🍒 
@@ -60,7 +60,8 @@ And you get this:
 🍏🍏🍏🍏🍏🍏 
 🥥🥥🥥🥥🥥🥥🥥
 ```
-Cherries are the most common now! Isn't it great? But wait, coconut was meant to be the rarest, but they are as rare as the bottom half of the list!
+
+Cherries are the most common now! Isn't it great? Wait, coconut was meant to be the rarest, but they are as rare as the bottom half of the list!
 
 <!-- The thing is `Math.random()**2` near 1 is almost straight: -->
 
