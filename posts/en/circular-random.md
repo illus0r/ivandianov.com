@@ -26,6 +26,7 @@ for(let i=0;i<8;i++){
   console.log(options[i].repeat(stats[i]))
 }
 ```
+Yes, you are right, line #5 is useless {: .caption}
 
 That's what you get:
 
