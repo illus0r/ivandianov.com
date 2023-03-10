@@ -76,7 +76,7 @@ You see, the cherry area on the horizontal axis is huge, but coconut area is as 
 Blame on parabola! We need a circle here:
 
 ```
-let optionsIndex = Math.floor((1-sqrt(1-Math.random()**2)) * options.length);
+let optionsIndex = Math.floor((1-Math.sqrt(1-Math.random()**2)) * options.length);
 ```
 
 Here's how it is different:
