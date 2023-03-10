@@ -61,6 +61,7 @@ And you get a distribution similar to this:
 🍏🍏🍏🍏🍏🍏 
 🥥🥥🥥🥥🥥🥥🥥
 ```
+No way, apples {: .caption}
 
 Cherries are the most common now! Isn't it great? Wait, coconut was meant to be the rarest, but they are as rare as the bottom half of the list!
 
