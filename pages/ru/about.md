@@ -23,7 +23,10 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
-- 2023,  Соавтор и ведущий четырёхнедельного курса генеративного дизайна, [https://course.genclub.club](https://course.genclub.club)
+- 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
+- 2023, Revision royale jam, 
+- 2023, Ливкодинг на Долидзе 77, [https://t.me/ivandianov/594](https://t.me/ivandianov/594) 
+- 2023, Соавтор и ведущий четырёхнедельного курса генеративного дизайна, [https://course.genclub.club](https://course.genclub.club)
 - 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
 - 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
 - 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
