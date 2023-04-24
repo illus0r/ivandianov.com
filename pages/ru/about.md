@@ -25,7 +25,7 @@ url: /ru/about/
 ## Выступления
 - 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
 - 2023, Revision royale jam, [https://youtu.be/4PLvWh8-z2M?t=4109](https://youtu.be/4PLvWh8-z2M?t=4109)
-- 2023, Ливкодинг на Долидзе 77, [https://t.me/ivandianov/594](https://t.me/ivandianov/594) 
+- 2023, Ливкодинг на Долидзе 77, [https://www.youtube.com/watch?v=QH-iuX4mSs0](https://www.youtube.com/watch?v=QH-iuX4mSs0&t=1843s) 
 - 2023, Соавтор и ведущий четырёхнедельного курса генеративного дизайна, [https://course.genclub.club](https://course.genclub.club)
 - 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
 - 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
@@ -45,6 +45,8 @@ url: /ru/about/
 
 ## Проекты
 
+- 2021, Ролик для трека Ilya Birman: All-Encompassing [https://www.youtube.com/watch?v=OQGk758rG_o](https://www.youtube.com/watch?v=OQGk758rG_o)
+- 2021, Ролик для трека Ilya Birman: Roses Are Grey [https://www.youtube.com/watch?v=JhPQy6UrJlU&list=RDMM](https://www.youtube.com/watch?v=JhPQy6UrJlU)
 - 2020, Проект о датавиз-грамоте Бар-о-пай, [https://park.intuition.team/park/bar-or-pie](https://park.intuition.team/park/bar-or-pie)
 - 2020, Разговорометр, [https://park.intuition.team/park/razgovorometr](https://park.intuition.team/park/razgovorometr)
 - 2020, Флотерея, превращает имя в попловок, [https://park.intuition.team/park/floattery](https://park.intuition.team/park/floattery)
