@@ -18,7 +18,7 @@ url: /ru/about/
 
 ## Выставки и аукционы
 - 2022, Пример использования генеративного алгоритма  И.  Дианова был представлен в рамках Шоу-кейса «Нейроэстетика и будущее музеев» в рамках открытого лектория «Культура 2.0», на площадке: Санкт-Петербургского государственного музея театрального и музыкального искусства, 10.11.2022, Санкт-Петербург [https://culturalforum.ru/events/neyroestetika-i-budushchee-muzeev](https://culturalforum.ru/events/neyroestetika-i-budushchee-muzeev)
-- 2022, перворманс «Повторение пространства» (live-coding) на выставке Программируемое Искусство, [https://kholmy.vzmoscow.ru/itart](https://kholmy.vzmoscow.ru/itart)
+- 2022, Перфоманс «Повторение пространства» (live-coding) на выставке Программируемое Искусство, [https://kholmy.vzmoscow.ru/itart](https://kholmy.vzmoscow.ru/itart)
 - 2021, Пекинский аукцион Poly, лот 2118, [https://mp.weixin.qq.com/s/m0PoS9bh70tSy8SfXQ5BYw](https://mp.weixin.qq.com/s/m0PoS9bh70tSy8SfXQ5BYw)
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
