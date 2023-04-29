@@ -23,6 +23,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2023, livecoding at sessions
 - 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
 - 2023, Revision royale jam, [https://youtu.be/4PLvWh8-z2M?t=4109](https://youtu.be/4PLvWh8-z2M?t=4109)
 - 2023, Ливкодинг на Долидзе 77, [https://www.youtube.com/watch?v=QH-iuX4mSs0](https://www.youtube.com/watch?v=QH-iuX4mSs0&t=1843s) 
