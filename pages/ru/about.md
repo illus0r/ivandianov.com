@@ -48,6 +48,7 @@ url: /ru/about/
 
 - 2021, Ролик для трека Ilya Birman: All-Encompassing [https://www.youtube.com/watch?v=OQGk758rG_o](https://www.youtube.com/watch?v=OQGk758rG_o)
 - 2021, Ролик для трека Ilya Birman: Roses Are Grey [https://www.youtube.com/watch?v=JhPQy6UrJlU&list=RDMM](https://www.youtube.com/watch?v=JhPQy6UrJlU)
+- 2021, Abyss — видеоклип, написанный кодом [https://t.me/ivandianov/208](https://t.me/ivandianov/208)
 - 2020, Проект о датавиз-грамоте Бар-о-пай, [https://park.intuition.team/park/bar-or-pie](https://park.intuition.team/park/bar-or-pie)
 - 2020, Разговорометр, [https://park.intuition.team/park/razgovorometr](https://park.intuition.team/park/razgovorometr)
 - 2020, Флотерея, превращает имя в попловок, [https://park.intuition.team/park/floattery](https://park.intuition.team/park/floattery)
