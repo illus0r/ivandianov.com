@@ -154,6 +154,8 @@ function resize(){
 		u_tx.forEach(tx=>gl.deleteTexture(tx))
 	}
 	let [w,h] = [innerWidth, innerHeight]
+	w/=2
+	h/=2
 	rsz(gl,w,h)
 	u_tx=[0,0].map((_,i)=>new Tx(gl, {w:w,h:h,loc:i,filter:gl.LINEAR_MIPMAP_LINEAR}))
 }
