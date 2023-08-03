@@ -25,6 +25,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2023, выступление на фестивале Лес https://www.youtube.com/watch?v=h6oZfEDzqHs
 - 2023, livecoding for shader jam at Sessions
 - 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
 - 2023, Revision royale jam, [https://youtu.be/4PLvWh8-z2M?t=4109](https://youtu.be/4PLvWh8-z2M?t=4109)
