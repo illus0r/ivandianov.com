@@ -60,3 +60,19 @@ url: /ru/about/
 - 2020, Пре-лого, Iterate, [https://www.instagram.com/p/CD_lZrZhrGG/](https://www.instagram.com/p/CD_lZrZhrGG/)
 - 2020, Пре-лого, Open eye, [https://www.instagram.com/p/CDRLL05hu2x/](https://www.instagram.com/p/CDRLL05hu2x/)
 - 2019, Победа на хакатоне DataAudit с проектом ЖКХантер
+
+## Отзывы
+
+### О работе над коммерческими проектами
+
+Я была очень рада поработать с тобой - ты комфортный в общении человек, очень хорошо и понятно объясняешь, искренне вовлечён в задачу и стараешься не просто сделать по ТЗ, а предложить решение с учетом запроса на финальный результат. Ценное качество)
+
+Анастасия Берман, продюсер [студии ONY](https://ony.ru)
+{: .caption}
+
+### Об обучении
+
+I've greatly benefited from taking GLSL/shader classes with Ivan. Although many resources are available online for beginner learners, the more advanced topics are not as easily accessible. Together we set up a personalized program for the classes, fitting my prior knowledge and learning goals. Ivan is an engaging teacher, often visualizing more complex topics or breaking things down into clear steps.
+
+[Anna Lucia](https://www.instagram.com/anna.lucia.codes/), generative artist
+{: .caption}
