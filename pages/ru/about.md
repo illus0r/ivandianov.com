@@ -25,6 +25,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2023, 1 место [в финале](https://demodulation.retroscene.org/competition/?competition_id=27) и [отборочном туре](https://demodulation.retroscene.org/competition/?competition_id=26) Shadershow battle на Демодуляции 
 - 2023, выступление на фестивале Лес https://www.youtube.com/watch?v=h6oZfEDzqHs
 - 2023, livecoding for shader jam at Sessions
 - 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
