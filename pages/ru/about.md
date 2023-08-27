@@ -35,6 +35,7 @@ url: /ru/about/
 - 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
 - 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
 - 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
+- 2022, Перформанс ГЕНЕРАТИВ: модульные синтезаторы и лайвкодинг визуала [https://t.me/ivandianov/438](https://t.me/ivandianov/438)
 - 2021, АМА в Вастрик клубе про генеративный арт, [https://www.youtube.com/watch?v=Lgp2eJrh7YU](https://www.youtube.com/watch?v=Lgp2eJrh7YU)
 - 2021, Митап и мастер-класс про генеративное искусство, ИТ-34, Иван Дианов, Денис Запорожан [https://www.youtube.com/watch?v=PSW8_ZkcPrk](https://www.youtube.com/watch?v=PSW8_ZkcPrk)
 - 2020, Мастер-класс по программированию анимации на p5, https://vk.com/wall85504912_1630
