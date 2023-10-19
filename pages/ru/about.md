@@ -4,7 +4,7 @@ title: Про меня
 url: /ru/about/
 ---
 
-Я Ваня, преподаю дата-арт в Вышке, веду [курс генеративного дизайна](http://course.genclub.club/), устраиваю шейдерно-генеративные лив-кодинг перформансы. Это когда я прямо на сцене пишу код, и он рисует картинку, которая меняется под музыку.
+Я Ваня, преподаю дата-арт в университете [«Высшая школа экономики»](https://www.hse.ru) , веду [курс генеративного дизайна](https://setka.design), устраиваю шейдерно-генеративные лив-кодинг перформансы. Это когда я прямо на сцене пишу код, и он рисует картинку, которая меняется под музыку.
 
 Несколько лет назад основал [Генклуб 😱](https://genclub.club), он очень удачно основался. В нём полно крутых ребят, все всё генерируют и прутся.
 
@@ -26,7 +26,7 @@ url: /ru/about/
 
 ## Выступления
 - 2023, 1 место [в финале](https://demodulation.retroscene.org/competition/?competition_id=27) и [отборочном туре](https://demodulation.retroscene.org/competition/?competition_id=26) Shadershow battle на Демодуляции 
-- 2023, выступление на фестивале Лес https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be
+- 2023, выступление на фестивале Лес [https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be](https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be)
 - 2023, livecoding for shader jam at Sessions
 - 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
 - 2023, Revision royale jam, [https://youtu.be/4PLvWh8-z2M?t=4109](https://youtu.be/4PLvWh8-z2M?t=4109)
@@ -67,14 +67,14 @@ url: /ru/about/
 
 ### О работе над коммерческими проектами
 
-Я была очень рада поработать с тобой - ты комфортный в общении человек, очень хорошо и понятно объясняешь, искренне вовлечён в задачу и стараешься не просто сделать по ТЗ, а предложить решение с учетом запроса на финальный результат. Ценное качество)
+> Я была очень рада поработать с тобой - ты комфортный в общении человек, очень хорошо и понятно объясняешь, искренне вовлечён в задачу и стараешься не просто сделать по ТЗ, а предложить решение с учетом запроса на финальный результат. Ценное качество)
 
 Анастасия Берман, продюсер [студии ONY](https://ony.ru)
 {: .caption}
 
 ### Об обучении
 
-I've greatly benefited from taking GLSL/shader classes with Ivan. Although many resources are available online for beginner learners, the more advanced topics are not as easily accessible. Together we set up a personalized program for the classes, fitting my prior knowledge and learning goals. Ivan is an engaging teacher, often visualizing more complex topics or breaking things down into clear steps.
+> I've greatly benefited from taking GLSL/shader classes with Ivan. Although many resources are available online for beginner learners, the more advanced topics are not as easily accessible. Together we set up a personalized program for the classes, fitting my prior knowledge and learning goals. Ivan is an engaging teacher, often visualizing more complex topics or breaking things down into clear steps.
 
 [Anna Lucia](https://www.instagram.com/anna.lucia.codes/), generative artist
 {: .caption}
