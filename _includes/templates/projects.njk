@@ -1,0 +1,22 @@
+<div class="projects">
+{% for project in search.pages("url^=/projects/") %}
+
+<div class='project'>
+<a href="{{ project.data.url }}">
+
+{% set regExp = r/.*(jpe?g)|(png)|(gif)$/gi %}
+{% if regExp.test(project.data.cover) %}
+<img class="cover" src="{{ project.data.cover }}"/>
+{% endif %}
+
+{% set regExp = r/.*(mov)|(mp4)|(avi)|(mkv)$/gi %}
+{% if regExp.test(project.data.cover) %}
+<video class="cover" autoplay muted loop><source src="{{ project.data.cover }}" type="video/mp4"></video>
+{% endif %}
+
+{#<h3>{{ project.data.title }}</h3>#}
+
+</a>
+</div>
+{% endfor %}
+</div>

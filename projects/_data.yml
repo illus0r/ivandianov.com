@@ -1,0 +1,4 @@
+type: project
+language: en
+project: true
+layout: layouts/project.njk
