@@ -2,9 +2,16 @@
 menu: 5
 title: Works
 url: /works/
+templateEngine: [njk, md]
 ---
 
-# Works
+# Commercial
+
+
+{% include "templates/projects.njk" %}
+
+
+# NFT
 
 Almost all of these things react to mouse or produce a new art for each click. If objkt.com doesn't show a picture, you need to activate advanced mode in the right column.
 
