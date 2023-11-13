@@ -3,12 +3,12 @@ title: Asemic calligraphy
 cover: /assets/media/calligraphy.jpg
 ---
 
-![](/assets/media/calligraphy1.jpg){. style=width:60%}
-![](/assets/media/calligraphy2.jpg)
-![](/assets/media/calligraphy3.jpg)
-![](/assets/media/calligraphy4.jpg)
-![](/assets/media/calligraphy5.jpg)
-![](/assets/media/calligraphy6.jpg)
+![](/assets/media/calligraphy3.jpg){. style=width:800px}
+![](/assets/media/calligraphy1.jpg){. style=width:800px}
+![](/assets/media/calligraphy2.jpg){. style=width:400px}
+![](/assets/media/calligraphy4.jpg){. style=width:400px}
+![](/assets/media/calligraphy6.jpg){. style=width:400px}
+![](/assets/media/calligraphy5.jpg){. style=width:400px}
 {.gallery}
 
 </div>
