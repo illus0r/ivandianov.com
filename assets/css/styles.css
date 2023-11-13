@@ -758,6 +758,24 @@ iframe.background {
 	top: 0;
 	left: 0;
 }
+.gallery {
+	margin: 2em 0;
+	display: flex;
+	align-items: start;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+.gallery > * {
+  width: calc(50% - 24px);
+  /* margin-right: 24px; */
+  /* margin-bottom: 24px; */
+  box-sizing: border-box;
+}
+/* .gallery > img { */
+/*   width: 100%; */
+/*   height: auto; */
+/*   max-width: 256px; */
+/* } */
 
 @media (max-width: 768px) {
   .projects {
