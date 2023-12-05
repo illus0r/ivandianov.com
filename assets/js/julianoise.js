@@ -1,24 +1,12 @@
 "use strict";
 
-import {loadText} from './shdr/loadText.js'
-import {Gl} from './shdr/gl.js'
-import {Pr} from './shdr/pr.js'
-import {Tx} from './shdr/tx.js'
-import {rsz} from './shdr/rsz.js'
+import {Gl} from '/assets/js/shdr/gl.js'
+import {Pr} from '/assets/js/shdr/pr.js'
+import {Tx} from '/assets/js/shdr/tx.js'
+import {rsz} from '/assets/js/shdr/rsz.js'
 
 let isPlaying = true
-let rndjs=[...Array(4)].map(_=>[fxrand()])
 let mouse = [.5, .5];
-// let paletteId = fxrand()*palettes.length | 0
-let palette = [ "#000001", "#1D2B52", "#7E2552", "#008750", "#AB5235", "#5F574E", "#C2C3C8", "#FFF1E7", "#FF014D", "#FFA300", "#FFEC28", "#01E435", "#30ADFF", "#83769D", "#FF77A7", "#FFCCAB",// 	'#1A1C2C', '#5D275D', '#B13E53', '#EF7D57', '#FFCD75', '#A7F070', '#38B764', '#257179', '#29366F', '#3B5DC9', '#41A6F6', '#73EFF7', '#F4F4F4', '#94B0C2', '#566C86', '#333C57',
-].sort(_=>fxrand()-.5).slice(0,5)
-palette = palette.map(color => {
-  color = color.slice(1)
-  color = color.match(/(.{2})/g).map(v=>Number("0x"+v)/255)
-  return color
-})
-// palette=palette.flat()
-console.log('palette:',palette)
 
 let gl = new Gl('canvas')
 
@@ -31,7 +19,6 @@ uniform float pass;
 uniform float time;
 uniform vec2 res;
 uniform vec2 mouse;
-uniform float rndjs[4];
 out vec4 o;
 
 #define c(r,i) mat2(r,i,-(i),r)
@@ -39,6 +26,7 @@ out vec4 o;
 #define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))
 
 float noise(vec2 uv){
+	vec2 uvI=uv;
 	uv = abs(mod(uv,2.)-1.)-.5;
 	mat2 z = c2(uv);
 	mat2 a = c(-0.696, 0.136);
@@ -47,9 +35,24 @@ float noise(vec2 uv){
 		z = inverse(z*z+a);
 	}
 	uv = z[0];
-	uv = fract(uv-.5+time*.1)-.5;
+	uv = fract(uv-.5+time*.1+mouse*.1)-.5;
 	return length(uv)*sqrt(2.);
 }
+
+// float sdf(vec2 p){
+// 	// n.x = noise(uv)-.5;
+// 	// n.y = noise(uv*rot(3.14/4.))-.5;
+// 	// /* n.y = noise(uv+.1)-.5; */
+// 	// n.z = .2;
+// 	// n = normalize(n);
+// 	return (noise(p))*(noise(p*rot(3.14/4.)));
+// }
+
+// vec2 normal(vec2 p){
+// 	float d=sdf(p); vec2 e=vec2(0,.0001);
+// 	return normalize(vec2(d-sdf(p-e.xy),d-sdf(p-e.yx)));
+// }
+
 
 void main(){
 	vec2 uv = (gl_FragCoord.xy*2.-res)/res.y*1.;
@@ -62,9 +65,12 @@ void main(){
 	n.z = .2;
 	n = normalize(n);
 
-	vec3 l = normalize(vec3(0,.2,.5));
+	vec3 l = normalize(normalize(vec3(mouse*.5-.5,.5))+vec3(uv*.5,0));
+	o.rgb = n;
+	o.g*=.2;
 	o.rgb+=pow(max(dot(n, l),0.),200.);
 	o.rgb+=pow(max(dot(n, l),0.),2.)*.5;
+	o=smoothstep(0.,1.,o);
 	/* o+=sin(o.r*80.)*.1; */
 
 	o.a=1.;
@@ -119,8 +125,6 @@ function frame() {// ← 6
 				'tx': u_tx[0],
 				'frame': u_frame,
 				'mouse': mouse,
-				'rndjs': rndjs,
-				'palette': palette,
 			})
 			pr.draw(u_tx[1])
 			u_tx.reverse()
@@ -131,7 +135,6 @@ function frame() {// ← 6
 			'res': [u_tx[0].w,u_tx[0].h],
 			'tx': u_tx[0],
 			'frame': u_frame,
-			'rndjs': rndjs,
 		})
 		prDr.draw()
 	}
