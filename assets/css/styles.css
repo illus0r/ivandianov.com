@@ -720,7 +720,7 @@ html.index footer {
 	text-shadow: 1px 2px black;
 	pointer-events: auto;
 }
-iframe.background {
+canvas#julianoise {
 	position: fixed;
 	top: 0;
 	left: 0;

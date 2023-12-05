@@ -22,6 +22,7 @@ site.use(katex());
 
 site.copy('assets/media');
 site.copy('assets/iframe');
+site.copy("assets/js");
 site.copy('CNAME');
 
 export default site;

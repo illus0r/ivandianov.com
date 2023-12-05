@@ -27,9 +27,12 @@ export function Pr(gl, fsStr, vsStr) {
 	let vs = gl.createShader(gl.VERTEX_SHADER)
 	gl.shaderSource(vs,vsStr)
 	gl.compileShader(vs)
+	let vsEr = gl.getShaderInfoLog(vs); vsEr !== "" && console.log(vsEr)
+
 	let fs = gl.createShader(gl.FRAGMENT_SHADER)
 	gl.shaderSource(fs,fsStr)
 	gl.compileShader(fs)
+	let fsEr = gl.getShaderInfoLog(fs); fsEr !== "" && console.log(fsEr)
 
 	let pr = gl.createProgram()
 	gl.attachShader(pr,vs)
