@@ -25,6 +25,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2023, Лайвкодинг, Inércia Demoparty, Shader Royale Jam [https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc](https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc)
 - 2023, 1 место [в финале](https://demodulation.retroscene.org/competition/?competition_id=27) и [отборочном туре](https://demodulation.retroscene.org/competition/?competition_id=26) Shadershow battle на Демодуляции 
 - 2023, выступление на фестивале Лес [https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be](https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be)
 - 2023, livecoding for shader jam at Sessions
@@ -51,17 +52,23 @@ url: /ru/about/
 
 ## Проекты
 
+- 2022, Сооснователь образовательного проекта Сетка [https://setka.design](https://setka.design)
 - 2021, Ролик для трека Ilya Birman: All-Encompassing [https://www.youtube.com/watch?v=OQGk758rG_o](https://www.youtube.com/watch?v=OQGk758rG_o)
 - 2021, Ролик для трека Ilya Birman: Roses Are Grey [https://www.youtube.com/watch?v=JhPQy6UrJlU&list=RDMM](https://www.youtube.com/watch?v=JhPQy6UrJlU)
 - 2021, Abyss — видеоклип, написанный кодом [https://t.me/ivandianov/208](https://t.me/ivandianov/208)
 - 2020, Проект о датавиз-грамоте Бар-о-пай, [https://park.intuition.team/park/bar-or-pie](https://park.intuition.team/park/bar-or-pie)
+- 2020, основал Генклуб — русскоязычное сообщество про генеративный арт, [https://genclub.club](https://genclub.club)
 - 2020, Разговорометр, [https://park.intuition.team/park/razgovorometr](https://park.intuition.team/park/razgovorometr)
 - 2020, Флотерея, превращает имя в попловок, [https://park.intuition.team/park/floattery](https://park.intuition.team/park/floattery)
 - 2020, Пре-лого, Yomqo, [https://www.instagram.com/p/CFzvEzuBI-o/](https://www.instagram.com/p/CFzvEzuBI-o/)
 - 2020, Пре-лого, promo campaign or a digital agency, [https://www.instagram.com/p/CEZpGRuBsgt/](https://www.instagram.com/p/CEZpGRuBsgt/)
 - 2020, Пре-лого, Iterate, [https://www.instagram.com/p/CD_lZrZhrGG/](https://www.instagram.com/p/CD_lZrZhrGG/)
 - 2020, Пре-лого, Open eye, [https://www.instagram.com/p/CDRLL05hu2x/](https://www.instagram.com/p/CDRLL05hu2x/)
+- 2020, Думабинго, проект о лоббизме в госдуме, [https://dumabingo.ru/](https://dumabingo.ru/)
+- 2020, Нейроджи, Самообновляющийся нейро-стикерпак для телеграма, [https://dianov.org/neuroji/](https://dianov.org/neuroji/)
 - 2019, Победа на хакатоне DataAudit с проектом ЖКХантер
+- 2019, МосКофе, карта кофейных мест Москвы, [https://cafe.dianov.org/](https://cafe.dianov.org/)
+- 2013...2074, Круглендарь, генеративный плакат-ежедневник, [https://kruglendar.ru/](https://kruglendar.ru/)
 
 ## Отзывы
 
