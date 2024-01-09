@@ -25,6 +25,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2024, митап «Генеративное искусство и Дата-арт» [https://www.youtube.com/watch?v=grpkRTEKqEY](https://www.youtube.com/watch?v=grpkRTEKqEY)
 - 2023, Лайвкодинг, Inércia Demoparty, Shader Royale Jam [https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc](https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc)
 - 2023, 1 место [в финале](https://demodulation.retroscene.org/competition/?competition_id=27) и [отборочном туре](https://demodulation.retroscene.org/competition/?competition_id=26) Shadershow battle на Демодуляции 
 - 2023, выступление на фестивале Лес [https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be](https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be)
@@ -35,7 +36,7 @@ url: /ru/about/
 - 2023, Соавтор и ведущий четырёхнедельного курса генеративного дизайна, [https://course.genclub.club](https://course.genclub.club)
 - 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
 - 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
-- 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
+- 2022, CAFe demofest, Воркшоп: Первый шейдер в bonzomatic, [youtube.com/watch?v=8OoG-l3Wl8c&t=5s](https://www.youtube.com/watch?v=8OoG-l3Wl8c&t=5s), [https://cafeparty.org.ru/2022/seminars/](https://cafeparty.org.ru/2022/seminars/)
 - 2022, Перформанс ГЕНЕРАТИВ: модульные синтезаторы и лайвкодинг визуала [https://t.me/ivandianov/438](https://t.me/ivandianov/438)
 - 2021, АМА в Вастрик клубе про генеративный арт, [https://www.youtube.com/watch?v=Lgp2eJrh7YU](https://www.youtube.com/watch?v=Lgp2eJrh7YU)
 - 2021, Митап и мастер-класс про генеративное искусство, ИТ-34, Иван Дианов, Денис Запорожан [https://www.youtube.com/watch?v=PSW8_ZkcPrk](https://www.youtube.com/watch?v=PSW8_ZkcPrk)
