@@ -5,7 +5,7 @@ cover: /assets/media/pereverstka.jpg
 
 Poster Generator for Igor Shtang's “Pereverstka”
 
-![](/assets/media/pereverstka1.jpeg)
+![](/assets/media/pereverstka1.gif)
 
 The layout is built on a grid of 15 square modules: 5×3.
 
