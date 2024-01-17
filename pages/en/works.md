@@ -7,6 +7,16 @@ templateEngine: [njk, md]
 
 # Commercial
 
+You can hire me! I specialize in:
+- **Crafting generative branding.** I establish the visual constants of the brand, and create a generator to produce an endless array of branded graphics.
+- **Creating interactive animations for websites** using WebGL and p5.js to deliver a captivating wow effect aligned with the brand identity.
+- **Developing tools for automating design tasks**, whether it's generating a large number of unique avatars, social media covers, business cards, or badges.
+
+If you think generative graphics could enhance your project, I'd love to schedule a call to introduce myself and provide more details!
+
+Send me a message via <a href="https://forms.gle/VTS6tGEpyLuzXBAF7">this short form</a> or email to <a href="mailto:zor667@gmail.com">zor667@gmail.com</a>
+
+<br>
 
 {% include "templates/projects.njk" %}
 
