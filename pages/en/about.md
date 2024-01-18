@@ -15,3 +15,8 @@ Computer simulation allows us to handle complexity, tweak parameters and observe
 I also use bugs in my code to create artistic effects. The bug is a symbol of the complexity of the world and of the limited consciousness of a human being. Our world is made up of countless mistakes, layered on top of each other. Even evolution is all about DNA replication errors.
 
 The whole world has gone wrong and will continue to move unpredictably. It is not to be resisted, it is to be enjoyed.
+
+# Contacts
+
+Telegram <a href='https://t.me/ivan_dianov'>@ivan_dianov</a>  
+Email <a href='mailto:zor667@gmail.com'>zor667@gmail.com</a>
