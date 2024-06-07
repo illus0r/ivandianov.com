@@ -31,7 +31,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
-- 2024, митап «Генеративное искусство и Дата-арт» [https://www.youtube.com/watch?v=grpkRTEKqEY](https://www.youtube.com/watch?v=grpkRTEKqEY)
+- 2024, Генеративная графика для лайв сессии экспериментального звука soft rave, https://universal-meteoroid-066.notion.site/soft-rave-161e01a201c04bc98e7e2b821ab41303
 - 2023, Лайвкодинг, Inércia Demoparty, Shader Royale Jam [https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc](https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc)
 - 2023, 1 место [в финале](https://demodulation.retroscene.org/competition/?competition_id=27) и [отборочном туре](https://demodulation.retroscene.org/competition/?competition_id=26) Shadershow battle на Демодуляции 
 - 2023, выступление на фестивале Лес [https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be](https://www.youtube.com/watch?v=WfPLgg_Zd2Q&feature=youtu.be)
@@ -84,6 +84,11 @@ url: /ru/about/
 > Я была очень рада поработать с тобой - ты комфортный в общении человек, очень хорошо и понятно объясняешь, искренне вовлечён в задачу и стараешься не просто сделать по ТЗ, а предложить решение с учетом запроса на финальный результат. Ценное качество)
 
 Анастасия Берман, продюсер [студии ONY](https://ony.ru)
+{: .caption}
+
+> Ваня, привет! Только что прошла защита, огромный поклон тебе до самой земли за то, что ты согласился взять мою задачу и ее сделал. Такой крутой инструмент, всё супер-пупер. Очень сильно выручил!
+
+Серёжа Деревянка, дизайнер [студии ONY](https://ony.ru)
 {: .caption}
 
 ### Об обучении
