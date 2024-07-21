@@ -31,6 +31,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2024, Курс генеративной графики в [Летней Школе, в мастерской Science Art](https://www.letnyayashkola.org/science-art/)
 - 2024, Генеративная графика для лайв сессии экспериментального звука soft rave, https://universal-meteoroid-066.notion.site/soft-rave-161e01a201c04bc98e7e2b821ab41303
 - 2023, Лайвкодинг, Inércia Demoparty, Shader Royale Jam [https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc](https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc)
 - 2023, 1 место [в финале](https://demodulation.retroscene.org/competition/?competition_id=27) и [отборочном туре](https://demodulation.retroscene.org/competition/?competition_id=26) Shadershow battle на Демодуляции 
