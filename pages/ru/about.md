@@ -31,6 +31,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2024, Воркшоп «Диджитал-лес» на Код-пленере Яндекса [https://events.yandex.ru/events/kod-plener](https://events.yandex.ru/events/kod-plener)
 - 2024, Курс генеративной графики в [Летней Школе, в мастерской Science Art](https://www.letnyayashkola.org/science-art/)
 - 2024, Генеративная графика для лайв сессии экспериментального звука soft rave, https://universal-meteoroid-066.notion.site/soft-rave-161e01a201c04bc98e7e2b821ab41303
 - 2023, Лайвкодинг, Inércia Demoparty, Shader Royale Jam [https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc](https://livecode.demozoo.org/event/2023_12_01_shader_jam_inercia.html#mc)
