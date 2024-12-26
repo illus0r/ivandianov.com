@@ -31,7 +31,8 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
-- 2024, Лайвкодинг на Ночи открытых библиотек Яндекса [https://events.yandex.ru/events/opensourcenight](https://events.yandex.ru/events/opensourcenight#more), видео готовится.
+- 2024, Лайвкодинг на Ночи открытых библиотек Яндекса [https://events.yandex.ru/events/opensourcenight](https://events.yandex.ru/events/opensourcenight#more), видео: [https://youtu.be/6Ambq6D7cfs](https://youtu.be/6Ambq6D7cfs)
+- 2024, Лайвкодинг-перформанс Проекция пустоты на конференции TimeCode в Екатеринбурге [https://www.youtube.com/watch?v=pRDchZkIGVo&feature=youtu.be](https://www.youtube.com/watch?v=pRDchZkIGVo&feature=youtu.be)
 - 2024, Воркшоп «Диджитал-лес» на Код-пленере Яндекса [https://events.yandex.ru/events/kod-plener](https://events.yandex.ru/events/kod-plener)
 - 2024, Курс генеративной графики в [Летней Школе, в мастерской Science Art](https://www.letnyayashkola.org/science-art/)
 - 2024, Генеративная графика для лайв сессии экспериментального звука soft rave, https://universal-meteoroid-066.notion.site/soft-rave-161e01a201c04bc98e7e2b821ab41303
