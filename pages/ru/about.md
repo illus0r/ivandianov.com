@@ -31,6 +31,7 @@ url: /ru/about/
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2024, Лайвкодинг на Ночи открытых библиотек Яндекса [https://events.yandex.ru/events/opensourcenight](https://events.yandex.ru/events/opensourcenight#more), видео: [https://youtu.be/6Ambq6D7cfs](https://youtu.be/6Ambq6D7cfs)
 - 2024, Перформанс «Проекция пустоты» с лайвкодингом и генеративной музыкой на конференции TIMECODE [https://timecodefest2024.ru/](https://timecodefest2024.ru/)
 - 2024, Воркшоп «Диджитал-лес» на Код-пленере Яндекса [https://events.yandex.ru/events/kod-plener](https://events.yandex.ru/events/kod-plener)
 - 2024, Курс генеративной графики в [Летней Школе, в мастерской Science Art](https://www.letnyayashkola.org/science-art/)
