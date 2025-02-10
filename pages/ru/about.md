@@ -43,7 +43,7 @@ url: /ru/about/
 - 2023, livecoding for shader jam at Sessions
 - 2023, Участие в организации ГенППН (Паверпойнт найт про генеративный арт), [https://youtu.be/RHRBgipFeoo](https://youtu.be/RHRBgipFeoo)
 - 2023, Revision royale jam, [https://youtu.be/4PLvWh8-z2M?t=4109](https://youtu.be/4PLvWh8-z2M?t=4109)
-- 2023, Ливкодинг на Долидзе 77, [https://www.youtube.com/watch?v=QH-iuX4mSs0](https://www.youtube.com/watch?v=QH-iuX4mSs0&t=1843s) 
+- 2023, Лайвкодинг на Долидзе 77, [https://www.youtube.com/watch?v=QH-iuX4mSs0](https://www.youtube.com/watch?v=QH-iuX4mSs0&t=1843s) 
 - 2023, Соавтор и ведущий четырёхнедельного курса генеративного дизайна, [https://setka.design/](https://setka.design)
 - 2022, Shader Royale at Inércia demoparty, [https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html](https://livecode.demozoo.org/event/2022_11_04_shader_royale_inercia.html)
 - 2022, CAFe demofest, Shader showdown, [https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html](https://livecode.demozoo.org/event/2022_10_21_shader_showdown_CAFe.html)
