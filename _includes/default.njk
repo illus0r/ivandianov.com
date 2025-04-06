@@ -1,0 +1,27 @@
+<!doctype html>
+<html class='{{page.data.class}}'>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} · Ivan Dianov</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- FIXME check if it is needed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css">
+    {% include "favicon.njk" %}
+    {% include "metrika.njk" %}
+</head>
+<body{#  class="lang-{{ lang }}{% if page.collection %} type-{{ page.collection }}{% else %}{% if depth > 0 %} page-{{ path | join: '-' }}{% else %} page-front{% endif %}{% endif %}{% if page.class %} {{ page.class }}{% endif %}" #}>
+
+    {% include 'header.njk' %}
+    <main role="main" class="wrap prose">
+        {{ content  | safe}}
+    </main>
+
+    {% include "footer.njk" %}
+
+    <script src="/assets/js/dance-dance.js" type='module'></script>
+    </body>
+
+</html>

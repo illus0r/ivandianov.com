@@ -1,16 +1,25 @@
-@import "https://highlightjs.org/static/demo/styles/color-brewer.css";
-
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono[wght].ttf")
+    format("truetype-variations");
+  font-style: normal;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/assets/fonts/JetBrainsMono-Italic[wght].ttf")
+    format("truetype-variations");
+  font-style: italic;
+}
+/* FIXME recover code styles */
+/* @import "https://highlightjs.org/static/demo/styles/color-brewer.css"; */
 
 * {
-	border: 0px dashed green;
-	
+  border: 0px dashed green;
 }
-
 
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
-
 
 /*
 
@@ -33,6 +42,7 @@ html {
 
 body {
   margin: 0;
+  background: red;
 }
 
 article,
@@ -46,7 +56,6 @@ nav {
   display: block;
 }
 
-
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1500;
@@ -54,9 +63,12 @@ nav {
   --fluid-max-size: 20;
   --fluid-min-ratio: 1.3;
   --fluid-max-ratio: 1.33;
-  
+
   --fluid-screen: 100vw;
-  --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
+  --fluid-bp: calc(
+    (var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) /
+      ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16))
+  );
 }
 
 @media screen and (min-width: 1500px) {
@@ -94,14 +106,43 @@ nav {
   --fluid-max-size-4: (var(--fluid-max-size) * var(--fluid-max-scale-3)) / 16;
   --fluid-max-size-5: (var(--fluid-max-size) * var(--fluid-max-scale-4)) / 16;
 
-  --fluid-0: calc(((var(--fluid-min-size-0) * 1rem) + (var(--fluid-max-size-0) - var(--fluid-min-size-0)) * var(--fluid-bp)));
-  --fluid-1: calc(((var(--fluid-min-size-1) * 1rem) + (var(--fluid-max-size-1) - var(--fluid-min-size-1)) * var(--fluid-bp)));
-  --fluid-2: calc(((var(--fluid-min-size-2) * 1rem) + (var(--fluid-max-size-2) - var(--fluid-min-size-2)) * var(--fluid-bp)));
-  --fluid-3: calc(((var(--fluid-min-size-3) * 1rem) + (var(--fluid-max-size-3) - var(--fluid-min-size-3)) * var(--fluid-bp)));
-  --fluid-4: calc(((var(--fluid-min-size-4) * 1rem) + (var(--fluid-max-size-4) - var(--fluid-min-size-4)) * var(--fluid-bp)));
-  --fluid-5: calc(((var(--fluid-min-size-5) * 1rem) + (var(--fluid-max-size-5) - var(--fluid-min-size-5)) * var(--fluid-bp)));
+  --fluid-0: calc(
+    (
+      (var(--fluid-min-size-0) * 1rem) +
+        (var(--fluid-max-size-0) - var(--fluid-min-size-0)) * var(--fluid-bp)
+    )
+  );
+  --fluid-1: calc(
+    (
+      (var(--fluid-min-size-1) * 1rem) +
+        (var(--fluid-max-size-1) - var(--fluid-min-size-1)) * var(--fluid-bp)
+    )
+  );
+  --fluid-2: calc(
+    (
+      (var(--fluid-min-size-2) * 1rem) +
+        (var(--fluid-max-size-2) - var(--fluid-min-size-2)) * var(--fluid-bp)
+    )
+  );
+  --fluid-3: calc(
+    (
+      (var(--fluid-min-size-3) * 1rem) +
+        (var(--fluid-max-size-3) - var(--fluid-min-size-3)) * var(--fluid-bp)
+    )
+  );
+  --fluid-4: calc(
+    (
+      (var(--fluid-min-size-4) * 1rem) +
+        (var(--fluid-max-size-4) - var(--fluid-min-size-4)) * var(--fluid-bp)
+    )
+  );
+  --fluid-5: calc(
+    (
+      (var(--fluid-min-size-5) * 1rem) +
+        (var(--fluid-max-size-5) - var(--fluid-min-size-5)) * var(--fluid-bp)
+    )
+  );
 }
-
 
 /* Typography */
 
@@ -109,20 +150,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  font: 400 var(--fluid-0) / 1.5 'IBM Plex Mono', monospaced;
+  font:
+    400 var(--fluid-0) / 1.5 "JetBrainsMono",
+    monospaced;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0.5em 0;
 }
 
 h1 {
-  font-size: var(--fluid-4);;
+  font-size: var(--fluid-4);
+}
+
+.big {
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0.5em 0;
+  word-break: break-all;
+  font-size: var(--fluid-4);
 }
 
 h2 {
@@ -189,42 +240,39 @@ h2 {
   margin: var(--space-2) 0;
 }
 
-
 /* ==========================================================================
    1. Fonts and variables
    ========================================================================== */
 
 /* @font-face {
 	font-family: "PPNeueMachina";
-	src: url("/assets/fonts/PPNeueMachina-Regular.woff") format("woff"); 
+	src: url("/assets/fonts/PPNeueMachina-Regular.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "PPNeueMachina";
-	src: url("/assets/fonts/PPNeueMachina-Light.woff") format("woff"); 
+	src: url("/assets/fonts/PPNeueMachina-Light.woff") format("woff");
 	font-weight: lighter;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "PPNeueMachina-Bold";
-	src: url("/assets/fonts/PPNeueMachina-Ultrabold.woff") format("woff"); 
+	src: url("/assets/fonts/PPNeueMachina-Ultrabold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 } */
 
-
-
 :root {
-	--background-RGB: 255, 255, 255;
-	--text-RGB: 32, 32, 32;
-	--link-RGB: 9, 9,175;
-	--hover-RGB: 246, 90, 160;
-	--accent-RGB: 130, 80, 231;
-	--main-RGB: var(--accent-RGB);
-	--surface-RGB: 250, 245, 255;
+  --background-RGB: 255, 255, 255;
+  --text-RGB: 32, 32, 32;
+  --link-RGB: 9, 9, 175;
+  --hover-RGB: 246, 90, 160;
+  --accent-RGB: 130, 80, 231;
+  --main-RGB: var(--accent-RGB);
+  --surface-RGB: 250, 245, 255;
 }
 
 /* ==========================================================================
@@ -239,16 +287,15 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  font-weight: 400;
-  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 200;
+  font-family: "JetBrainsMono", monospace;
   color: rgba(var(--text-RGB), 1);
   background: rgba(var(--background-RGB), 1);
-	
 
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  font-feature-settings: 'kern' 1;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
 }
 
 h1,
@@ -256,22 +303,39 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+h6,
+.big {
+  -webkit-font-feature-settings:
+    "dlig" 1,
+    "liga" 1,
+    "lnum" 1,
+    "kern" 1;
+  -moz-font-feature-settings:
+    "dlig" 1,
+    "liga" 1,
+    "lnum" 1,
+    "kern" 1;
+  -o-font-feature-settings:
+    "dlig" 1,
+    "liga" 1,
+    "lnum" 1,
+    "kern" 1;
+  font-feature-settings:
+    "dlig" 1,
+    "liga" 1,
+    "lnum" 1,
+    "kern" 1;
   margin-top: 1em;
   margin-bottom: 0.4em;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "JetBrainsMono", monospace;
 }
 
 a {
   color: rgba(var(--link-RGB), 1);
   transition: color ease 0s;
   text-decoration: none;
-	border-bottom: 1px solid rgba(var(--link-RGB), 0.3);
-	/* padding-bottom: 0.1em; */
+  border-bottom: 1px solid rgba(var(--link-RGB), 0.3);
+  /* padding-bottom: 0.1em; */
   transition-property: border-bottom, border-color, background, color, fill;
   transition-duration: 0s;
   transition-timing-function: ease-out;
@@ -285,17 +349,15 @@ a:hover {
   transition-property: border-bottom, border-color, background, color, fill;
   /* transition-duration: .33s; */
   transition-timing-function: ease-out;
-	
 }
-
 
 a.link-button {
   color: rgba(var(--link-RGB), 1);
   transition: color ease 0s;
   text-decoration: none;
-	border: 1px solid rgba(var(--link-RGB), 0.1);
-	padding: 0.03em 0.12em 0.02em;
-	border-radius: 0.1em;
+  border: 1px solid rgba(var(--link-RGB), 0.1);
+  padding: 0.03em 0.12em 0.02em;
+  border-radius: 0.1em;
   transition-property: border-bottom, border-color, background, color, fill;
   /* transition-duration: 0.33s; */
   transition-timing-function: ease-out;
@@ -306,15 +368,17 @@ a.link-button:hover {
   transition: color ease 0s;
   text-decoration: none;
   border: 1px solid rgba(var(--hover-RGB), 0.3);
-	padding: 0.03em 0.12em 0.02em;
+  padding: 0.03em 0.12em 0.02em;
   transition-property: border-bottom, border-color, background, color, fill;
   /* transition-duration: .33s; */
   transition-timing-function: ease-out;
 }
 
-img, video {
-  width: 100%;
+img,
+video {
   max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 ol,
@@ -343,7 +407,7 @@ dl dt {
 
 dl dd {
   margin-left: 200px;
-  margin-bottom: 1em
+  margin-bottom: 1em;
 }
 
 li {
@@ -358,7 +422,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: #EFEFEF 1px solid;
+  border-top: #efefef 1px solid;
   margin: 3.2em 0;
   padding: 0;
 }
@@ -366,7 +430,7 @@ hr {
 blockquote {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  
+
   padding: 0 0 0 1em;
 }
 
@@ -378,7 +442,7 @@ blockquote small {
   display: inline-block;
   margin: 0.8em 0 0.8em 1.5em;
   font-size: 0.9em;
-  color: #CCC;
+  color: #ccc;
 }
 
 blockquote small:before {
@@ -394,7 +458,7 @@ blockquote cite a {
 }
 
 mark {
-  background-color: #FFC336;
+  background-color: #ffc336;
 }
 
 code {
@@ -406,7 +470,7 @@ code {
 pre code,
 tt {
   /* padding: 0.3em 0.5em; */
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "JetBrainsMono", monospace;
   /* font-size: 1em; */
   /* white-space: pre-wrap; */
   /* border: #c6c8c9 1px solid; */
@@ -418,7 +482,7 @@ pre {
   /* box-sizing: border-box; */
   /* padding: 0.3em 0.5em; */
   /* width: 100%; */
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "JetBrainsMono", monospace;
   font-size: 0.9em;
   /* white-space: pre; */
   /* overflow: auto; */
@@ -450,9 +514,8 @@ table td {
   padding: 8px;
   text-align: left;
   vertical-align: top;
-  border-top: #EFEFEF 0px solid;
+  border-top: #efefef 0px solid;
 }
-
 
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -464,57 +527,61 @@ table thead:first-child tr:first-child td {
 }
 
 table tbody + tbody {
-  border-top: #EFEFEF 2px solid;
+  border-top: #efefef 2px solid;
 }
-
 
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
   background: transparent;
 }
 
-
 main {
-	margin-top: 2em;
+  margin-top: 2em;
 }
 
 .blog-posts {
-	margin-top: 3em;
+  margin-top: 3em;
 }
-
 
 header {
   padding: 0.5em;
-	font-style: italic;
-	padding-bottom: 4.5em;
+  font-style: italic;
+  padding-bottom: 4.5em;
 }
 
-.logo {
-  float: left;
-  white-space: nowrap;
-}
+/* .logo { */
+/* float: left; */
+/* white-space: nowrap; */
+/* } */
 
 .nav-menu {
-	font-size: 1.3em;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-menu > *:first-child {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .nav-item {
-	margin-left: 0.8em;
-	height: 1.4em;
-	display: block;
-  float: right;
+  margin-left: 0.8em;
+  height: 1.4em;
+  display: block;
   white-space: nowrap;
-	cursor: pointer;	
+  cursor: pointer;
 }
 
-.nav-item-active, .nav-item-active:hover {
+.nav-item-active,
+.nav-item-active:hover {
   color: black;
   border: none;
 }
 
 footer {
   padding: 1em;
-	margin-top: 7em;
+  margin-top: 7em;
 }
 
 /* .text {
@@ -522,28 +589,28 @@ footer {
 } */
 
 .post-title {
-	font-size: 2em;
-	margin-top: 0em;
-	font-weight: 400;
+  font-size: 2em;
+  margin-top: 0em;
+  font-weight: 400;
 }
 
 .post-item {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .post-header {
-	margin-bottom: 2em;
-	margin-top: 2em;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 .post-header h1 {
-	margin-top: 0em;
-	margin-bottom: 0em;
-	line-height: 1em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  line-height: 1em;
 }
 
 .meta {
-	padding-left: 0em;
-	color: rgba(var(--text-RGB), 0.5);
+  padding-left: 0em;
+  color: rgba(var(--text-RGB), 0.5);
 }
 
 .project-grid {
@@ -558,54 +625,49 @@ footer {
   padding-bottom: 2em;
 }
 
-
 /* ==========================================================================
    4. Mobile styles
    ==========================================================================  */
 
+@media only screen and (max-width: 500px) {
+  header {
+    padding: 0.3em;
+    margin-bottom: 1em;
+    height: 3em;
+  }
 
-   @media only screen and (max-width: 500px) {
+  .wrap {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 98%;
+  }
 
-    header {
-      padding: 0.3em;
-      margin-bottom: 1em;
-			height: 3em;
-    }
-
-    .wrap {
-			padding-right: 0;
-			padding-left: 0;
-			margin-right: auto;
-			margin-left: auto;
-			width: 98%;
-		}
-
-		/* .logo {
+  /* .logo {
 			font-size: 2em;
 			margin-top: -0.3em;
       white-space: nowrap;
 		} */
 
-    footer {
-      padding-left: 0.3em;
-      padding-right: 0.3em;
-    }
-
-		.post-title {
-			font-size: 1.6em;
-			margin-top: 0em;
-			font-weight: 400;
-		}
-
-
+  footer {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
   }
+
+  .post-title {
+    font-size: 1.6em;
+    margin-top: 0em;
+    font-weight: 400;
+  }
+}
 
 .utterances {
   margin-top: 80px;
   margin-left: 0;
 }
 
-.works-section{
+.works-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
@@ -613,13 +675,13 @@ footer {
 }
 
 @media (min-width: 600px) {
-  .works-section{
+  .works-section {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .works-section{
+  .works-section {
     gap: 16px;
   }
   .text {
@@ -627,7 +689,8 @@ footer {
   }
 }
 
-.works-section>a, .works-section>a>img{
+.works-section > a,
+.works-section > a > img {
   display: block;
   line-height: 0;
   padding: 0;
@@ -635,21 +698,22 @@ footer {
   border: none;
 }
 
-.works-section a:first-child{
+.works-section a:first-child {
   grid-row-start: span 2;
   grid-column-start: span 2;
 }
 @media (max-width: 600px) {
-  .nav-menu *{
+  .nav-menu * {
     /* display: none; */
   }
 }
 
 /* image caption */
 .caption {
-  font-size: .7em;
+  font-size: 0.7em;
   line-height: 1.3em;
-  margin-top: .5em;
+  margin-top: 0.5em;
+  display: block;
 }
 
 /* .progress{ */
@@ -668,120 +732,211 @@ footer {
 /* 	height: 100%; */
 /* } */
 
-.progress{
-	height: 1em;
-	padding: .1em;
-	vertical-align: -9%;
-	width: 1em;
+.progress {
+  height: 1em;
+  padding: 0.1em;
+  vertical-align: -9%;
+  width: 1em;
   background: conic-gradient(gray var(--progress), #eee 0deg);
   border-radius: 50%;
   display: inline-block;
 }
 
-.progress::before{
-	background: #fff;
-	border-radius: 50%;
-	content: '';
-	display: block;
-	height: 100%;
-	width: 100%;
+.progress::before {
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
 }
-
 
 .katex-display > .katex {
-	text-align: left !important;
+  text-align: left !important;
 }
-
-
 
 /* index page */
 html.index * {
-	color: white;
-	/* background: black; */
+  color: white;
+  /* background: black; */
 }
 html.index a {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 html.index header {
-	text-shadow: 1px 2px black;
-	pointer-events: auto;
+  text-shadow: 1px 2px black;
+  pointer-events: auto;
 }
 html.index body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-	pointer-events: none;
+  pointer-events: none;
 }
 html.index main {
   flex: 1;
 }
 html.index footer {
   margin-top: auto;
-	text-shadow: 1px 2px black;
-	pointer-events: auto;
+  text-shadow: 1px 2px black;
+  pointer-events: auto;
 }
 canvas#julianoise {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	pointer-events: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
+  grid-auto-flow: dense;
+}
+
+/* 5 колонок на широких экранах */
+@media (min-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* 4 колонки на меньших экранах */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 3 колонки для планшетов */
+@media (max-width: 991px) and (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 колонки для маленьких планшетов */
+@media (max-width: 767px) and (min-width: 576px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 колонка для мобильных устройств */
+@media (max-width: 575px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-	position: relative;
-	aspect-ratio: 1 / 1;
-	text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 2em;
 }
 
-.project h3 {
-	position: absolute;
-	top: 0;
-	margin: 0;
+.project > a,
+.project > span {
+  display: flex;
+  flex-direction: column;
 }
+
+/* Классы для определения ширины проекта */
+.project.col-1 {
+  grid-column: span 1;
+}
+
+.project.col-2 {
+  grid-column: span 2;
+}
+
+.project.col-3 {
+  grid-column: span 3;
+}
+
+.project.col-4 {
+  grid-column: span 4;
+}
+
+/* Для адаптивности добавляем правила для переопределения ширины при меньших экранах */
+@media (max-width: 1199px) {
+  .project.col-4 {
+    grid-column: span min(4, 4); /* На 4-колоночной сетке */
+  }
+}
+
+@media (max-width: 991px) {
+  .project.col-4,
+  .project.col-3 {
+    grid-column: span min(3, 3); /* На 3-колоночной сетке */
+  }
+}
+
+@media (max-width: 767px) {
+  .project.col-4,
+  .project.col-3,
+  .project.col-2 {
+    grid-column: span min(2, 2); /* На 2-колоночной сетке */
+  }
+}
+
+@media (max-width: 575px) {
+  .project.col-4,
+  .project.col-3,
+  .project.col-2,
+  .project.col-1 {
+    grid-column: span 1; /* На 1-колоночной сетке */
+  }
+}
+
+.project .caption {
+  margin: 0;
+  margin-top: 8px;
+  text-align: left;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
 .project .cover {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: auto;
+  height: auto;
+  /* width: 100%; /1* Растягивается по ширине колонки *1/ */
+  /* height: auto; /1* Сохраняет пропорции *1/ */
+  /* object-fit: contain; */
+  background-color: #fff;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
+
+.project a {
+  border: none;
+}
+
 .gallery {
-	margin: 2em 0;
-	display: flex;
-	align-items: start;
-	gap: 24px;
-	flex-wrap: wrap;
+  margin: 2em 0;
+  display: flex;
+  align-items: start;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .gallery > * {
-	flex-shrink: 1;
-	flex-grow: 1;
-	/* flex-basis: 256px; */
+  flex-shrink: 1;
+  flex-grow: 1;
+  /* flex-basis: 256px; */
   /* width: calc(50% - 24px); */
   /* margin-right: 24px; */
   /* margin-bottom: 24px; */
   box-sizing: border-box;
 }
 .columns {
-	margin: 3em 0;
-	columns: 2 auto;
-	column-gap: 8px;
-	line-height: 100%;
+  margin: 3em 0;
+  columns: 2 auto;
+  column-gap: 8px;
+  line-height: 100%;
 }
 .columns > * {
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 /* .gallery > img { */
 /*   width: 100%; */
@@ -793,6 +948,5 @@ canvas#julianoise {
   .projects {
     grid-template-columns: 1fr;
   }
-	columns: 1 auto;
+  columns: 1 auto;
 }
-

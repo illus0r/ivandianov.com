@@ -1,0 +1,71 @@
+<header>
+  <div class="nav-menu">
+    {# Language switcher section - shows Russian/English link if a translated version exists #}
+    
+    {# First loop: Display all navigation menu items in the current language #}
+        <a class="nav-item" href="/">
+          Иван Дианов
+        </a>
+    {% for item in collections.menu %}
+      {% if lang == item.data.lang %}
+        {% if item.url != page.url %}
+        {# Regular menu item - not the current item #}
+        <a class="nav-item" href="{{ item.url }}">
+          {{ item.data.menuTitle }}
+        </a>
+        {% else %}
+        {# Active menu item - this is the current page, apply special styling #}
+        <a class="nav-item nav-item-active" href="{{ item.url }}">
+          {{ item.data.menuTitle }}
+        </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    {# Initialize a flag to track if a matching page in the other language is found #}
+    {% set isPageOnAntiLangFound = false %}
+    
+    {# Second loop: Look for a matching page in the alternative language #}
+		{#
+    {% for page in collections.page %}
+      {% if language != page.language %}
+		#}
+      {# Get just the filename part of both paths to compare them #}
+		{#
+			{% set this = page.src.entry.path | lastPart %}
+      {% set that = page.page.src.entry.path | lastPart %}
+        {% if this == that %}
+		#}
+        {# Found a matching page in the other language #}
+		{#
+        {% set isPageOnAntiLangFound = true %}
+		#}
+      {# Create link to the translated version of current page #}
+		{#
+      <a class="nav-item" href="{{ page.url }}">
+        {{ language | antiLang | capitalize }}
+      </a>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+		#}
+    
+    {# Fallback language switch if no matching translation page exists #}
+		{#
+    {% if isPageOnAntiLangFound == false %}
+      {% if language == 'en' %}
+		#}
+      {# If current language is English, provide link to Russian home page #}
+		{#
+      <a class="nav-item" href="/ru">Ru</a>
+      {% else %}
+		#}
+      {# If current language is Russian, provide link to English home page #}
+		{#
+      <a class="nav-item" href="/">En</a>
+      {% endif %}
+    {% endif %}
+		#}
+  </div>
+</header>
+

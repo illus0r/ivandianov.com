@@ -1,0 +1,14 @@
+{% if lang == 'en' %}
+	{% if progress == 3 %}{% set title = "Readable" %}
+	{% elif progress == 2 %}{% set title = "In progress" %}
+	{% else %}{% set title = "Draft" %}
+	{% endif %}
+{% elif lang == 'ru' %}
+	{% if progress == 4 %}{% set title = "Готово" %}
+	{% elif progress == 3 %}{% set title = "Читабельно" %}
+	{% elif progress == 2 %}{% set title = "В процессе" %}
+	{% else %}{% set title = "Черновик" %}
+	{% endif %}
+{% endif %}
+{% set angle = progress * 360 // 4 %}
+<span class="progress" style="--progress: {{ angle }}deg;"></span> {{ title }}
