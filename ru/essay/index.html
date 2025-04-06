@@ -1,0 +1,218 @@
+<!DOCTYPE html><html class=""><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мой путь в генеративном искусстве · Ivan Dianov</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- FIXME check if it is needed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css">
+    <link id="favicon" rel="icon">
+<script>
+		let w = 3
+		let h = 5
+    let svg = `<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="1 0 ${w*2} ${h}"	>`
+		for(let x = 0; x < w; x++) {
+			for(let y = 0; y < h; y++) {
+				let color = Math.random() > 0.5 ? "#000" : "#fff"
+				svg += `<rect x="${w-x}" y="${y}" width="1" height="1" fill="${color}"/>`
+				svg += `<rect x="${w+x}" y="${y}" width="1" height="1" fill="${color}"/>`
+			}
+		}
+
+    svg+=`</svg>`
+console.log('svg:',svg)
+
+    document.getElementById("favicon").setAttribute("href", `data:image/svg+xml,${encodeURIComponent(svg)}`)
+</script>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(94453443, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript></noscript></head><body><div><img src="/.11ty/image/?src=https%3A%2F%2Fmc.yandex.ru%2Fwatch%2F94453443&amp;width=1&amp;format=webp&amp;via=transform" style="position:absolute; left:-9999px;" alt="" loading="lazy" decoding="async" width="1" height="1"></div>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+    <header>
+  <div class="nav-menu">
+    
+    
+    
+        <a class="nav-item" href="/">
+          Иван Дианов
+        </a>
+    
+      
+        
+        
+        <a class="nav-item" href="/">
+          Дизайн
+        </a>
+        
+      
+    
+      
+        
+        
+        <a class="nav-item" href="/ru/show/">
+          Медиа-арт
+        </a>
+        
+      
+    
+      
+        
+        
+        <a class="nav-item" href="/ru/tutor/">
+          Обучение
+        </a>
+        
+      
+    
+      
+        
+        
+        <a class="nav-item" href="/ru/about/">
+          Про меня
+        </a>
+        
+      
+    
+    
+    
+    
+    
+    
+		
+      
+		
+        
+		
+      
+		
+    
+    
+		
+      
+		
+      
+		
+  </div>
+</header>
+
+
+    <main role="main" class="wrap prose">
+        
+<article class="text" role="main">
+    <div class="post-header">
+		<div class="meta">
+    
+		
+	
+	
+
+
+<span class="progress" style="--progress: 360deg;"></span> Готово
+
+    </div>
+    <h1 class="post-name"><span class="dance-dance"><span>М</span><span>о</span><span>й</span><span> </span><span>п</span><span>у</span><span>т</span><span>ь</span><span> </span><span>в</span><span> </span><span>г</span><span>е</span><span>н</span><span>е</span><span>р</span><span>а</span><span>т</span><span>и</span><span>в</span><span>н</span><span>о</span><span>м</span><span> </span><span>и</span><span>с</span><span>к</span><span>у</span><span>с</span><span>с</span><span>т</span><span>в</span><span>е</span></span></h1>
+    </div>
+    <section class="post-content">
+        <h2><span class="dance-dance"><span>Д</span><span>е</span><span>т</span><span>с</span><span>т</span><span>в</span><span>о</span></span></h2>
+<p>В детстве я мечтал стать изобретателем. Компьютера в семье не было, мне его заменяла бумага в клетку. На ней я симулировал клеточные автоматы, придумывал свои пошаговые игры, рисовал чертежи санок с электроприводом и воздушных змеев. А ещё очень любил собирать разные штуки из конструкторов, которые мне дарил папа. Семья была не богатая, конструкторы были бывшими в употреблении, некоторые детали отсутствовали. Иногда для того, чтобы собрать микроскоп или бинокль, не хватало одной единственной детали.</p>
+<p>Компьютер был только у двоюродных братьев, я ходил к ним в гости, смотрел, как они играют, а когда приходила моя очередь, вместо игры создавал HTML-файл и пробовал в нём форматировать текст, ставить картинку на фон и так далее.</p>
+<p>Когда дедушка купил мне компьютер, я сразу установил несколько игр. Но я любил не просто играть в игры, а взламывать их и устанавливать там свои правила, придумывать и программировать свои миссии. Вообще, просто в игры играть было нервно и страшно. Программируя игры я выходил из игровой сансары с её миссиями, врагами и целями. Я переходил на другой уровень, становился властелином виртуального мира! Я мог придумать свои миссии, для развлечения создать миллион врагов и заставить их за мной охотиться, хаотически бегать или шагать как на параде. Писать свои правила гораздо увлекательнее, чем играть по чужим.</p>
+<p>Ещё больше возможностей появилось, когда мы с нердами-однокласниками записались в школьный кружок при университете, там мы на Borland С++ писали простые игры с пиксельной графикой и несложной анимацией.</p>
+<p>Я стал изобретателем, мечта сбылась. Программирование стало для меня волшебным «конструктором», в котором я сам мог создать любую деталь, если мне её не хватало.</p>
+<h2><span class="dance-dance"><span>Б</span><span>э</span><span>к</span><span>г</span><span>р</span><span>а</span><span>у</span><span>н</span><span>д</span></span></h2>
+<p>Это инженерное творчество так меня увлекло, что я поступил в технический университет и закончил магистратуру по САПР.</p>
+<p>У меня нет академического образования по искусству или дизайну, но я ходил в художественную школу и много экспериментировал с разными изобразительными техниками: линогравюрой, цианотипией, фотографией на плёнку и, конечно, рисовал баллончиками через трафареты! Во всех этих процессах больше всего завораживал момент, когда снимаешь трафарет или проявляешь плёнку. Мгновение назад ничего не было, и вдруг скрытое изображение проявляется, оказывается каким-то. Оно зависит не только от моих художественных скиллов, но и от трафарета, от того, как легла краска из баллончика. Предугадать результат заранее невозможно; это моя коллаборация с миром, с невероятно сложной физической реальностью.</p>
+<p>Наверное, поэтому я стал заниматься визуализацией данных, она казалась мне логичным продолжением этой идеи — сделать невидимое видимым. А ещё я постоянно искал занятие, в котором можно было объединить изобразительное искусства и мои скиллы программирования. Визуализация данных тут пришлась очень кстати!</p>
+<p>Иногда в датавиз-скрипте были ошибки и я очень радовался полученным гличам, постил их в соцсетях и гордился ими порой больше, чем финальным результатом. Экспериментировал с дата-артом. Есть шутка, что дата арт — это визуализация данных без легенды. Мне потребовалась пара лет, чтобы признаться себе: визуализация данных гораздо прикольнее, если убрать из неё данные. Я открыл для себя код, который визуализирует лишь сам себя.</p>
+<p>В визуализации данных есть такое понятие как индексная визуализация (indexical visualisation), это когда явление само визуализирует себя. Например, дым в воздухе  показывает своё движение. Генеративный арт — похожее явление: код сам визуализирует свой алгоритм и создавая графические артефакты, выявляет свою природу.</p>
+<p>Примеры генеративных систем, с которыми я люблю экспериментировать — клеточные автоматы, L-системы, симуляции частиц, физарум, фракталы. Они все действуют по простым правилам и при этом порождают сложную и интересную визуализацию, через которую можно исследовать и лучше понять математическую реальность, в которой они существуют.</p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1400" height="1600" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=1400&amp;format=webp&amp;via=transform 1400w" sizes="auto">
+<span class="caption">Эксперименты с модифицированной симуляцией физарума</span></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="886" height="886" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding.webp&amp;width=886&amp;format=webp&amp;via=transform 886w" sizes="auto">
+<span class="caption">Фракальный коридор, сделанный во время лайвкодинга</span></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-sand.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="768" height="768" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-sand.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-sand.webp&amp;width=768&amp;format=webp&amp;via=transform 768w" sizes="auto">
+<span class="caption">детерминированная симуляция песка с применением клеточных автоматов</span></p>
+<h2><span class="dance-dance"><span>Л</span><span>а</span><span>й</span><span>в</span><span>к</span><span>о</span><span>д</span><span>и</span><span>н</span><span>г</span><span> </span><span>и</span><span> </span><span>н</span><span>е</span><span>п</span><span>р</span><span>е</span><span>д</span><span>с</span><span>к</span><span>а</span><span>з</span><span>у</span><span>е</span><span>м</span><span>о</span><span>с</span><span>т</span><span>ь</span></span></h2>
+<p>И в жизни, и в программировании мне важна непредсказуемость. Если всё уже известно заранее, даже не хочется начинать. Поэтому я так люблю выступать на сцене, программируя процедурную графику в реальном времени, импровизируя. Даже если я репетирую перед выступлением, каждая репетиция и само выступление являются для меня сюрпризом. Я могу неожиданно получить какой-то эффект, который меня удивит.</p>
+<p>Даже если код небольшой, мой мозг не способен охватить всю его сложность, поэтому я не могу полностью осознать, как образуется тот или иной фрактал. И это добавляет в работу элемент неожиданности и непредсказуемости.
+А ещё я могу в какой-то момент почувствовать порыв и начать хаотично удалять или дописывать случайные фрагменты кода. Иногда достаточно изменить одну букву и у тебя — хбдщ! — новый экран совсем. Это ощущение наполняет меня адреналином, приковывает к экрану и невероятно увлекает.</p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding2.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1024" height="682" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding2.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding2.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w" sizes="auto">
+<span class="caption">Лайвкодинг-перформанс в галерее Краснохолмской</span></p>
+<p>Ещё один способ отказаться от контроля — концепция «правды материала»</p>
+<h2><span class="dance-dance"><span>П</span><span>р</span><span>а</span><span>в</span><span>д</span><span>а</span><span> </span><span>м</span><span>а</span><span>т</span><span>е</span><span>р</span><span>и</span><span>а</span><span>л</span><span>а</span></span></h2>
+<p>Truth to materials — это архитектурная концепция. Она про то, что природу материала не нужно скрывать. Например, бетон не надо красить или шлифовать неровности от опалубки.</p>
+<p>Мне нравится применять эту концепцию к техникам генеративного искусства: позволять алгоритму определять финальный вид работы.</p>
+<p>Не заниматься украшательством, а писать минимальный код, который способен создать изображение. Простое, чёрно-белое, без сглаживаний и заигрываний. Оно не притворяется рендером из Cinema 4D, поэтому моментально вычисляется, выглядит смело и брутально.</p>
+<p>У цифрового арта своя эстетика, её не надо дополнительно стилизовать, имитировать техники, которыми она не является: живопись, акварельные подтёки краски и прочее.</p>
+<p>Если картинка растровая, пусть пиксели будут заметными. Если это реймаршинг, пусть характерные глитчи лезут в глаза. Зачем стесняться шероховатостей? Можно использовать их как уникальную текстуру, как идею, и отдавать им самое заметное место в работе.</p>
+<h2><span class="dance-dance"><span>В</span><span>л</span><span>и</span><span>я</span><span>н</span><span>и</span><span>е</span><span> </span><span>L</span><span>o</span><span>-</span><span>F</span><span>i</span><span> </span><span>к</span><span>у</span><span>л</span><span>ь</span><span>т</span><span>у</span><span>р</span><span>ы</span></span></h2>
+<p>Мне очень нравилось фотографировать на пинхол Dirkon, а до этого вообще на спичечную коробку, к которой приклеены скотчем катушки с плёнкой, перемотка с помощью скрепки. Этот минимализм, этот лоуфай очень меня вдохновлял. Мне нравилось, что можно не покупать дорогой фотик, а просто взять спичечную коробку и фотографировать на нее, а потом проявить плёнку с помощью крепкого кофе.</p>
+<p>Я люблю достигать результата с помощью примитивных инструментов. В программировании я люблю, когда код предельно короткий. На практике это нужно редко, разве что сайзкодинг как цель. Например, игра つぶやきGLSL в твитере, когда нужно сделать прикольный шейдер размеров в твит. Когда я загружал проект Клик на Артблокс, я получал удовольствие от уменьшения размера кода. Это магическое ощущение, когда исходный код сжимается до небольшого прямоугольника, который целиком видно на экране.</p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-click-code.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1600" height="900" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-click-code.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-click-code.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fessay-click-code.webp&amp;width=1600&amp;format=webp&amp;via=transform 1600w" sizes="auto">
+<span class="caption">Исходный код проекта Клик</span></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-click.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1600" height="790" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-click.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-click.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fessay-click.webp&amp;width=1600&amp;format=webp&amp;via=transform 1600w" sizes="auto">
+<span class="caption">Некоторые результаты работы этого скрипта</span></p>
+<p>Привычка создания минимального кода очень помогает на выступлениях с лайвкодингом и на шейдр батлах: я могу минимальным числом символов написать крошечный движок рейтрейсинга и сэкономить время.</p>
+<p>Ограничение размера кода заставляет изобретать и проявлять находчивость. Например, одну и ту же функцию можно использовать и для макро и для микропаттерна, как в работе Wholeness Mirage.</p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-wholeness-mirage.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="768" height="1243" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-wholeness-mirage.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-wholeness-mirage.webp&amp;width=768&amp;format=webp&amp;via=transform 768w" sizes="auto">
+<span class="caption">Wholeness Mirage использует один и тот же паттерн для микро- и макроуровней</span></p>
+<p>Такие ограничения иногда отражаются на работе: фотографии, трафарете или генеративном искусстве, делают их более грубыми. Я когда-то боролся с этим, стремился к совершенству, но со временем важной темой для меня стало принятие несовершенства своего и своих работ. Это для меня практика и философия: не шлифовать работу до идеала, а заканчивать так же спонтанно, как начал.</p>
+<p>Этот принцип касается и моих инструментов: я использую простой текстовый редактор neovim и не могу пользоваться IDE. Они удобные, но очень визуально нагруженные. При моём СДВГ уменьшение визуального шума — необходимость.</p>
+<h2><span class="dance-dance"><span>С</span><span>Д</span><span>В</span><span>Г</span></span></h2>
+<p>Я не знаю точно, СДВГ у меня или нет, но иногда отвлекаюсь от работы каждую минуту, а иногда так в ней залипну, что клещами не оттащишь.</p>
+<p>Когда-то пробовал себя воспитывать: блокировал соцсети, ставил задачи на каждый день, сам себе писал отчёты о проделанной работе.</p>
+<p>В какой-то момент понял, что себя не надо побеждать, с собой надо дружить и адаптироваться к своим особенностям. Примерно в то же время перестал ставить себе цели, писать списки обязательных задач, и вообще начал использовать свои странности, а не побарывать их.</p>
+<p>Например, я иногда часами не могу уговорить себя взяться за задачу. Тут помогает поставить таймер или — суперчит! — начать задачу и вскоре бросить недоделанной, чтобы руки чесались закончить начатое.</p>
+<p>Даже характерный для СДВГ гиперфокус оказался суперполезным для сосредоточенной работы. Но мне потребовалось время, чтобы научиться в него входить. В случае с генеративным артом, мне нужно загореться идеей, придумать новаторскую комбинацию техник, которую я захочу показать этому миру. Так было, например, с «кривоксельно-гибридным реймаршингом» и ZPG</p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-antigravity.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1582" height="1582" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-antigravity.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-antigravity.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fessay-antigravity.webp&amp;width=1582&amp;format=webp&amp;via=transform 1582w" sizes="auto">
+<span class="caption">Antigravity #35</span></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-zpg.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="768" height="768" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-zpg.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-zpg.webp&amp;width=768&amp;format=webp&amp;via=transform 768w" sizes="auto">
+<span class="caption">Zero-player game #1 — бесконечная плоскость, заполненная неповторяющимся узором</span></p>
+<p>Ещё вариант — найти вдохновляющий референс. Архитектура и биологические процессы для меня —&nbsp;бесконечный источник вдохновения.</p>
+<p>Часто при программировании я не могу удержать в голове всю картину, приходится рисовать схемы на бумажке или меловой доске, для этого я покрасил несколько стен в квартире меловой краской.</p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fessay-drafts.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1470" height="1066" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-drafts.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-drafts.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fessay-drafts.webp&amp;width=1470&amp;format=webp&amp;via=transform 1470w" sizes="auto">
+<span class="caption">Первые наброски для коммерческого проекта</span></p>
+<p>Сохранить концентрацию помогает ощущение потока. Для этого важно, чтобы результат работы появлялся быстро. Я не смог работать с нейросетями: очень много времени требовалось, чтобы получить результат а ещё больше, чтобы обучить нейросеть на своём наборе изображений. Шейдеры и JS — другое дело: результат виден мгновенно.</p>
+<hr>
+<p>Для меня генеративный арт стал инструментом познания себя, работой, отдыхом, ниточкой, которая связывает меня с этим миром.</p>
+<p>Я работаю в трёх направлениях: арт, коммерческие заказы (сотрудничаю с дизайнерами и агентствами) и образование. Мне важно поделиться со студентами вайбом и азартом, который вызвает у меня программирование.</p>
+<p>Тем кто не пробовал, рекомендую попробовать, вдруг понравится. Главное — не стремиться к перфекционизму, и радоваться маленьким победам.</p>
+
+    </section>
+</article>
+
+<script src="https://utteranc.es/client.js" repo="illus0r/ivandianov.com" issue-term="pathname" label="blog-comment" theme="github-light" crossorigin="anonymous" async="">
+</script>
+
+    </main>
+
+    <footer>
+  <section class="copyright">© <a href="/">Иван Дианов</a> 2021—∞ ·
+		<a href="/ru/blog/">Блог</a> ·
+		<a href="https://t.me/ivandianov">Канал в телеге</a> про генеративный арт, алгоритмы и жизнь</section>
+</footer>
+
+
+    <script src="/assets/js/dance-dance.js" type="module"></script>
+    
+
+
+</body></html>

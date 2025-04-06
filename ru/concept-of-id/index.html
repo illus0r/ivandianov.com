@@ -1,83 +1,89 @@
-<!DOCTYPE html>
-<html><head>
+<!DOCTYPE html><html class=""><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Концепт ID в шейдерах</title>
-    <link async="" rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+    <title>Концепт ID в шейдерах · Ivan Dianov</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- FIXME check if it is needed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css">
+    <link id="favicon" rel="icon">
+<script>
+		let w = 3
+		let h = 5
+    let svg = `<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="1 0 ${w*2} ${h}"	>`
+		for(let x = 0; x < w; x++) {
+			for(let y = 0; y < h; y++) {
+				let color = Math.random() > 0.5 ? "#000" : "#fff"
+				svg += `<rect x="${w-x}" y="${y}" width="1" height="1" fill="${color}"/>`
+				svg += `<rect x="${w+x}" y="${y}" width="1" height="1" fill="${color}"/>`
+			}
+		}
 
-</head>
-  <body>
-    
+    svg+=`</svg>`
+console.log('svg:',svg)
+
+    document.getElementById("favicon").setAttribute("href", `data:image/svg+xml,${encodeURIComponent(svg)}`)
+</script>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(94453443, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript></noscript></head><body><div><img src="/.11ty/image/?src=https%3A%2F%2Fmc.yandex.ru%2Fwatch%2F94453443&amp;width=1&amp;format=webp&amp;via=transform" style="position:absolute; left:-9999px;" alt="" loading="lazy" decoding="async" width="1" height="1"></div>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
     <header>
   <div class="nav-menu">
-    <div class="logo">
-        Иван Дианов
-    </div>
-        
     
-
     
-      
-      
+    
+        <a class="nav-item" href="/">
+          Иван Дианов
+        </a>
+    
       
         
         
-      <a class="nav-item" href="/concept-of-id/">
-        En
-      </a>
-      
-      
-    
-      
-    
-      
-    
-      
-    
-      
-      
-      
+        <a class="nav-item" href="/">
+          Дизайн
+        </a>
         
       
     
       
-      
-      
+        
+        
+        <a class="nav-item" href="/ru/show/">
+          Медиа-арт
+        </a>
         
       
     
       
-      
-      
+        
+        
+        <a class="nav-item" href="/ru/tutor/">
+          Обучение
+        </a>
         
       
     
       
-      
-      
         
-      
-    
-      
-    
-      
-    
-      
-    
-
-    
-    
-
-    
-      
-    
-      
-    
-      
         
         <a class="nav-item" href="/ru/about/">
           Про меня
@@ -85,35 +91,47 @@
         
       
     
-      
     
-      
-        
-        <a class="nav-item" href="/ru/works/">
-          Работы
-        </a>
-        
-      
     
-      
     
-      
-        
-        <a class="nav-item" href="/ru/">
-          Блог
-        </a>
-        
-      
     
+    
+		
+      
+		
+        
+		
+      
+		
+    
+    
+		
+      
+		
+      
+		
   </div>
 </header>
+
+
     <main role="main" class="wrap prose">
-      <article class="text" role="main">
+        
+<article class="text" role="main">
     <div class="post-header">
-    <h1 class="post-name">Концепт ID в шейдерах</h1>
+		<div class="meta">
+    
+		
+	
+	
+
+
+<span class="progress" style="--progress: 270deg;"></span> Читабельно
+
+    </div>
+    <h1 class="post-name"><span class="dance-dance"><span>К</span><span>о</span><span>н</span><span>ц</span><span>е</span><span>п</span><span>т</span><span> </span><span>I</span><span>D</span><span> </span><span>в</span><span> </span><span>ш</span><span>е</span><span>й</span><span>д</span><span>е</span><span>р</span><span>а</span><span>х</span></span></h1>
     </div>
     <section class="post-content">
-        <p><img src="/assets/media/2021-09-03-10-49-32.png" alt=""></p>
+        <p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="794" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Расскажу про концепцию идентификатора в шейдерах и покажу, на что она способна. Если вы не знакомы с шейдерами и вам ничего непонятно, начните с <a href="https://thebookofshaders.com/">книги шейдеров</a> — лучшего учебника по сабжу.</p>
 <p>Примеры кода из статьи можно запустить <a href="https://bit.ly/3Jl0Gdj">в клёвом редакторе Твигл</a>, в режиме geekest (es300)</p>
 <hr>
@@ -126,7 +144,7 @@
 <li>Используем id для расчёта цвета, текстуры, скорости анимации, чего угодно.</li>
 </ol>
 <p>Есть два способа вычислять id: аккуратный и хаотичный. Затестим оба:</p>
-<h3>Аккуратный способ сегментации</h3>
+<h3><span class="dance-dance"><span>А</span><span>к</span><span>к</span><span>у</span><span>р</span><span>а</span><span>т</span><span>н</span><span>ы</span><span>й</span><span> </span><span>с</span><span>п</span><span>о</span><span>с</span><span>о</span><span>б</span><span> </span><span>с</span><span>е</span><span>г</span><span>м</span><span>е</span><span>н</span><span>т</span><span>а</span><span>ц</span><span>и</span><span>и</span></span></h3>
 <p>Допустим, мы хотим каждый раз делить картинку на три части. А ещё допустим, что мы аккуратные и хотим гарантировать, что ни у каких двух сегментов айдишники не совпадут, сколько бы их ни было.</p>
 <p>Есть способ добиться желаемого: при первом делении раздадим каждой части айдишники от 0 до 1, чтобы они были «на одинаковом расстоянии» друг от друга:  <code>id = 0</code>, <code>id = 1/3</code>, <code>id = 2/3</code>. При следующем делении каждой трети ещё на три части, прибавим к уже найденным айдишникам уменьшенные значения: <code>id = id + 0</code>, <code>id = id + 1/9</code>, <code>id = id + 2/9</code>.
 Каждое следующее деление должно менять айдишник с меньшим и меньшим шагом.</p>
@@ -151,9 +169,9 @@ k/=3.;
 
 o+=id;
 </code></pre>
-<p><img src="/assets/media/2021-09-02-12-03-24.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-03-24.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="372" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-03-24.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-03-24.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-03-24.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Мы видим, что каждый сегмент имеет свой уникальный цвет, но для этого приходится использовать мультипликатор k, что не всегда удобно. Часто бывает достаточно хаотического подхода.</p>
-<h3>Хаотический способ сегментации</h3>
+<h3><span class="dance-dance"><span>Х</span><span>а</span><span>о</span><span>т</span><span>и</span><span>ч</span><span>е</span><span>с</span><span>к</span><span>и</span><span>й</span><span> </span><span>с</span><span>п</span><span>о</span><span>с</span><span>о</span><span>б</span><span> </span><span>с</span><span>е</span><span>г</span><span>м</span><span>е</span><span>н</span><span>т</span><span>а</span><span>ц</span><span>и</span><span>и</span></span></h3>
 <p>В прошлый раз мы аккуратно прибаляли к разным частям сегмента три разных значения.</p>
 <p>Здесь мы также используем предыдущее значение айдишника сегмента, чтобы найти айдишкики трёх кусочков. Разница в используемой функции, тут это псевдорандом: функция, которая принимает на вход любое число (seed) и возвращает случайное число от 0 до 1. Прикол в том, что для одного и того же аргумента seed она возвращает одно и то же случайное значение.</p>
 <pre><code>↓ id подсегмента             ↓ id сегмента
@@ -164,101 +182,101 @@ id = rnd( floor(uv.y) / 3. + id )
          для разных частей сегмента
 </code></pre>
 <p>Код:</p>
-<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x))</span>
-<span class="hljs-type">vec2</span> uv = FC.xy/r;
+<pre><code class="language-glsl">#define rnd(x) fsnoise(vec2(x))
+vec2 uv = FC.xy/r;
 
-<span class="hljs-type">float</span> id=<span class="hljs-number">0.</span>;
+float id=0.;
 
-uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+uv=fract(uv)*3.;
 
-id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>);  <span class="hljs-comment">// делим на три столбца</span>
-id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+id=rnd(floor(uv.x)/3.);  // делим на три столбца
+id=rnd(floor(uv.y)/3.+id);  // делим на три строки
 
-uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+uv=fract(uv)*3.;
 
-id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три столбца</span>
-id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+id=rnd(floor(uv.x)/3.+id);  // делим на три столбца
+id=rnd(floor(uv.y)/3.+id);  // делим на три строки
 
 o+=id;
 </code></pre>
-<p><img src="/assets/media/2021-09-02-12-10-49.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-10-49.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="372" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-10-49.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-10-49.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-02-12-10-49.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Видим, что сетка получается хаотичной, может у каких-то регионов айдишники и совпадут, но вероятность маленькая.</p>
-<h2>Изменчивость сегментов</h2>
+<h2><span class="dance-dance"><span>И</span><span>з</span><span>м</span><span>е</span><span>н</span><span>ч</span><span>и</span><span>в</span><span>о</span><span>с</span><span>т</span><span>ь</span><span> </span><span>с</span><span>е</span><span>г</span><span>м</span><span>е</span><span>н</span><span>т</span><span>о</span><span>в</span></span></h2>
 <p>Пристегните ремни. Сейчас самое крутое. Можно сделать настройки последующих разбиений зависимыми от текущего айдишника. Буум!</p>
 <p>Например, тут число разбиений может варьировать в зависимости от айди:</p>
-<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
-<span class="hljs-type">vec2</span> uv = FC.xy/r;
+<pre><code class="language-glsl">#define rnd(x) fsnoise(vec2(x)+.1)
+vec2 uv = FC.xy/r;
 
-<span class="hljs-type">float</span> id=<span class="hljs-number">0.</span>;
+float id=0.;
 
-uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+uv=fract(uv)*3.;
 
-id=rnd(<span class="hljs-built_in">floor</span>(uv.x)/<span class="hljs-number">3.</span>);  <span class="hljs-comment">// делим на три столбца</span>
-id=rnd(<span class="hljs-built_in">floor</span>(uv.y)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+id=rnd(floor(uv.x)/3.);  // делим на три столбца
+id=rnd(floor(uv.y)/3.+id);  // делим на три строки
 
-uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
+uv=fract(uv)*3.;
 
-<span class="hljs-comment">//                 ↓ чем меньше, тем гуще</span>
-id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три столбца</span>
-id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);  <span class="hljs-comment">// делим на три строки</span>
+//                 ↓ чем меньше, тем гуще
+id=rnd(floor(uv.x/id)/3.+id);  // делим на три столбца
+id=rnd(floor(uv.y/id)/3.+id);  // делим на три строки
 
 o+=id;
 </code></pre>
-<p><img src="/assets/media/2021-09-03-10-23-52.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-23-52.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="314" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-23-52.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-23-52.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-23-52.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Можно повторять и повторять разбиение сколько угодно. Или лучше добавить цикл, чтобы не копипастить.</p>
-<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
-<span class="hljs-type">vec2</span> uv = FC.xy/r;
+<pre><code class="language-glsl">#define rnd(x) fsnoise(vec2(x)+.1)
+vec2 uv = FC.xy/r;
 
-<span class="hljs-type">float</span> id=<span class="hljs-number">1.</span>;
+float id=1.;
 
-<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">3</span>;i++){
-  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
-  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
-  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+for(int i=0;i&lt;3;i++){
+  uv=fract(uv)*3.;
+  id=rnd(floor(uv.x/id)/3.+id);
+  id=rnd(floor(uv.y/id)/3.+id);
 }
 
 o+=id;
 </code></pre>
-<p><img src="/assets/media/2021-09-03-10-28-11.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-28-11.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="314" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-28-11.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-28-11.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-28-11.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Если увеличить число повторов до 5, останется один мусор:</p>
-<p><img src="/assets/media/2021-09-03-10-29-17.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-29-17.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="314" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-29-17.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-29-17.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-29-17.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Но ведь мы можем сделать число повторов цикла также зависимым от id!</p>
-<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
-<span class="hljs-type">vec2</span> uv = FC.xy/r;
+<pre><code class="language-glsl">#define rnd(x) fsnoise(vec2(x)+.1)
+vec2 uv = FC.xy/r;
 
-<span class="hljs-type">float</span> id=<span class="hljs-number">1.</span>;
+float id=1.;
 
-<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
-  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
-  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
-  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
-  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; id&lt;<span class="hljs-number">.5</span>) <span class="hljs-keyword">break</span>;
+for(int i=0;i&lt;5;i++){
+  uv=fract(uv)*3.;
+  id=rnd(floor(uv.x/id)/3.+id);
+  id=rnd(floor(uv.y/id)/3.+id);
+  if(i&gt;0 &amp;&amp; id&lt;.5) break;
 }
 
 o+=id;
 </code></pre>
-<p><img src="/assets/media/2021-09-03-10-31-37.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-31-37.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="314" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-31-37.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-31-37.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-31-37.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>Картинка потемнела, это что-то вроде ошибки выжившего. Мы вылетаем из цикла, когда айдишник меньше .5, а у таких цвет получается тёмным. Это исправляется заменой условия <code>id &lt; .5</code> на <code>rnd(id) &lt; .5</code></p>
-<p><img src="/assets/media/2021-09-03-10-33-51.png" alt=""></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-33-51.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="314" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-33-51.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-33-51.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-33-51.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto"></p>
 <p>А теперь, когда приём освоен, можно идти и веселиться по-полной.</p>
-<pre><code class="language-glsl hljs"><span class="hljs-meta">#define rnd(x) fsnoise(vec2(x)+.1)</span>
-<span class="hljs-meta">#define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))</span>
+<pre><code class="language-glsl">#define rnd(x) fsnoise(vec2(x)+.1)
+#define rot(a) mat2(cos(a),-sin(a),sin(a),cos(a))
 
-<span class="hljs-type">vec2</span> uv = (FC.xy*<span class="hljs-number">2.</span>-r)/r.x;
+vec2 uv = (FC.xy*2.-r)/r.x;
 
-<span class="hljs-type">float</span> id=<span class="hljs-built_in">floor</span>(<span class="hljs-built_in">length</span>(uv)*<span class="hljs-number">8.</span>)+<span class="hljs-number">1.</span>;
+float id=floor(length(uv)*8.)+1.;
 
-<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">5</span>;i++){
-  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; rnd(id)&lt;<span class="hljs-number">.5</span>) <span class="hljs-keyword">break</span>;
-  uv*=rot(PI/<span class="hljs-number">4.</span>+t*(rnd(id)<span class="hljs-number">-.5</span>));
-  uv=<span class="hljs-built_in">fract</span>(uv)*<span class="hljs-number">3.</span>;
-  id=rnd(<span class="hljs-built_in">floor</span>(uv.x/id)/<span class="hljs-number">3.</span>+id);
-  id=rnd(<span class="hljs-built_in">floor</span>(uv.y/id)/<span class="hljs-number">3.</span>+id);
+for(int i=0;i&lt;5;i++){
+  if(i&gt;0 &amp;&amp; rnd(id)&lt;.5) break;
+  uv*=rot(PI/4.+t*(rnd(id)-.5));
+  uv=fract(uv)*3.;
+  id=rnd(floor(uv.x/id)/3.+id);
+  id=rnd(floor(uv.y/id)/3.+id);
 }
 
 o+=id;
 </code></pre>
-<p><img src="/assets/media/2021-09-03-10-49-32.png" alt="">
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1680" height="794" srcset="/.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2021-09-03-10-49-32.png&amp;width=1680&amp;format=webp&amp;via=transform 1680w" sizes="auto">
 <a href="https://bit.ly/3BE99o9">Посмотрите ссылку</a>, оно ещё и крутится! Скорость вращения каждого кусочка, конечно же, зависит от его айдишника.</p>
 
     </section>
@@ -266,19 +284,18 @@ o+=id;
 
 <script src="https://utteranc.es/client.js" repo="illus0r/ivandianov.com" issue-term="pathname" label="blog-comment" theme="github-light" crossorigin="anonymous" async="">
 </script>
+
     </main>
 
     <footer>
-  <section class="copyright">
-    © <a href="/ru/">Иван Дианов</a> 2021—2022 ·
-    <a href="https://twitter.com/i_dianov">Twitter</a>
-    · <a href="https://objkt.com/profile/ivandianov/created">Objkt</a>
-    
-      · <a href="https://t.me/ivandianov">Канал в телеге</a>
-    
-    
-  </section>
+  <section class="copyright">© <a href="/">Иван Дианов</a> 2021—∞ ·
+		<a href="/ru/blog/">Блог</a> ·
+		<a href="https://t.me/ivandianov">Канал в телеге</a> про генеративный арт, алгоритмы и жизнь</section>
 </footer>
 
-	
+
+    <script src="/assets/js/dance-dance.js" type="module"></script>
+    
+
+
 </body></html>

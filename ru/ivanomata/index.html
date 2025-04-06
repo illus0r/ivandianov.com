@@ -1,82 +1,89 @@
-<!DOCTYPE html>
-<html><head>
+<!DOCTYPE html><html class=""><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Иваноматы — клеточные автоматы с нарастающим разрешением</title>
-    <link async="" rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+    <title>Иваноматы — клеточные автоматы с нарастающим разрешением · Ivan Dianov</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- FIXME check if it is needed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css">
+    <link id="favicon" rel="icon">
+<script>
+		let w = 3
+		let h = 5
+    let svg = `<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="1 0 ${w*2} ${h}"	>`
+		for(let x = 0; x < w; x++) {
+			for(let y = 0; y < h; y++) {
+				let color = Math.random() > 0.5 ? "#000" : "#fff"
+				svg += `<rect x="${w-x}" y="${y}" width="1" height="1" fill="${color}"/>`
+				svg += `<rect x="${w+x}" y="${y}" width="1" height="1" fill="${color}"/>`
+			}
+		}
 
-</head>
-  <body>
-    
+    svg+=`</svg>`
+console.log('svg:',svg)
+
+    document.getElementById("favicon").setAttribute("href", `data:image/svg+xml,${encodeURIComponent(svg)}`)
+</script>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(94453443, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript></noscript></head><body><div><img src="/.11ty/image/?src=https%3A%2F%2Fmc.yandex.ru%2Fwatch%2F94453443&amp;width=1&amp;format=webp&amp;via=transform" style="position:absolute; left:-9999px;" alt="" loading="lazy" decoding="async" width="1" height="1"></div>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
     <header>
   <div class="nav-menu">
-    <div class="logo">
-        Иван Дианов
-    </div>
-        
     
-
     
-      
-      
+    
+        <a class="nav-item" href="/">
+          Иван Дианов
+        </a>
+    
       
         
-      
-    
-      
-    
-      
-    
-      
-    
-      
-      
-      
+        
+        <a class="nav-item" href="/">
+          Дизайн
+        </a>
         
       
     
       
-      
-      
+        
+        
+        <a class="nav-item" href="/ru/show/">
+          Медиа-арт
+        </a>
         
       
     
       
-      
-      
+        
+        
+        <a class="nav-item" href="/ru/tutor/">
+          Обучение
+        </a>
         
       
     
       
-      
-      
         
-      
-    
-      
-    
-      
-    
-      
-    
-
-    
-    
-      
-      <a class="nav-item" href="/">En</a>
-      
-    
-
-    
-      
-    
-      
-    
-      
         
         <a class="nav-item" href="/ru/about/">
           Про меня
@@ -84,60 +91,71 @@
         
       
     
-      
     
-      
-        
-        <a class="nav-item" href="/ru/works/">
-          Работы
-        </a>
-        
-      
     
-      
     
-      
-        
-        <a class="nav-item" href="/ru/">
-          Блог
-        </a>
-        
-      
     
+    
+		
+      
+		
+        
+		
+      
+		
+    
+    
+		
+      
+		
+      
+		
   </div>
 </header>
+
+
     <main role="main" class="wrap prose">
-      <article class="text" role="main">
+        
+<article class="text" role="main">
     <div class="post-header">
-    <h1 class="post-name">Иваноматы — клеточные автоматы с нарастающим разрешением</h1>
+		<div class="meta">
+    
+		
+	
+	
+
+
+<span class="progress" style="--progress: 270deg;"></span> Читабельно
+
+    </div>
+    <h1 class="post-name"><span class="dance-dance"><span>И</span><span>в</span><span>а</span><span>н</span><span>о</span><span>м</span><span>а</span><span>т</span><span>ы</span><span> </span><span>—</span><span> </span><span>к</span><span>л</span><span>е</span><span>т</span><span>о</span><span>ч</span><span>н</span><span>ы</span><span>е</span><span> </span><span>а</span><span>в</span><span>т</span><span>о</span><span>м</span><span>а</span><span>т</span><span>ы</span><span> </span><span>с</span><span> </span><span>н</span><span>а</span><span>р</span><span>а</span><span>с</span><span>т</span><span>а</span><span>ю</span><span>щ</span><span>и</span><span>м</span><span> </span><span>р</span><span>а</span><span>з</span><span>р</span><span>е</span><span>ш</span><span>е</span><span>н</span><span>и</span><span>е</span><span>м</span></span></h1>
     </div>
     <section class="post-content">
-        <p><img src="/assets/media/2022-11-26-15-22-41.png" alt=""></p>
+        <p><img src="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-22-41.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="2048" height="1028" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-22-41.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-22-41.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-22-41.png&amp;width=2048&amp;format=webp&amp;via=transform 2048w" sizes="auto"></p>
 <p>Иваноматы — клеточные автоматы с нарастающим разрешением. Вроде бы, таких раньше не было, поэтому назвал в свою честь. Если вы что-то похожее уже видели<!-- до ноября 2021 года-->, дайте знать, перееименую.</p>
 <p>Как-то раз читал на ночь книжку «The Algorithmic Beauty of Plants»  <!--про L-системы. Оказывается, их придумал биолог Аристид Линденмайер для описания структуры растений, буква L именно от его фамилии. И от генеративных грамматик Хомского они отличаются тем, что все правила применяются к токенам одновременно. Прямо как в шейдерах. А у Хомского — по очереди, как в JS. Шок. Оказалось--> и понял, что клеточные автоматы — частный случай контекстно-зависимых L-систем! А ведь я два года пытался и не мог придумать, как сделать генеративные грамматики двумерными.</p>
 <p>Так вдохновился, что следующим утром написал прототип.</p>
-<h1>Как работает</h1>
+<h2><span class="dance-dance"><span>К</span><span>а</span><span>к</span><span> </span><span>р</span><span>а</span><span>б</span><span>о</span><span>т</span><span>а</span><span>е</span><span>т</span></span></h2>
 <p>Клеточному автомату нужны правила, по которым клетки меняют цвета.</p>
 <p>Цветов у нас всего два: ■ и □. Чтобы найти новый цвет клетки, посмотрим, какого цвета она сама и её четыре соседа. Возможны 32 комбинации:</p>
-<p><img src="/assets/media/2022-11-26-13-59-46.png" alt=""></p>
-<!-- https://editor.p5js.org -->
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-13-59-46.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1518" height="922" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-13-59-46.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-13-59-46.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-13-59-46.png&amp;width=1518&amp;format=webp&amp;via=transform 1518w" sizes="auto"></p>
 <p>Каждой из этих комбинаций сопоставим цвет, в который перекрасим центральную клетку, это и будут наши правила. Например, такие:</p>
-<p :="" class="caption"><img src="/assets/media/2022-11-26-14-26-13.png" alt="">
+<p :="" class="caption"><img src="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-14-26-13.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1806" height="468" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-14-26-13.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-14-26-13.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-14-26-13.png&amp;width=1806&amp;format=webp&amp;via=transform 1806w" sizes="auto">
 Это один из 2<sup>32</sup> = 4&nbsp;294&nbsp;967&nbsp;296 возможных вариантов правил</p>
 <!-- https://editor.p5js.org/illus0r/sketches/myfquQUaF -->
 <p>Дальше просто. Берём табличку 4×4 клетки, рандомно заполняем □ и ■.</p>
 <p>Проходимся по ней правилами, находим новые цвета для каждой ячейки. Обратите внимание, как центральная клетка заштрихованного участка использовала подходящее правило, чтобы узнать свой новый цвет.</p>
 <p>И, наконец, увеличиваем разрешение таблицы: каждую клетку делим на четыре.</p>
-<p :="" class="caption"><img src="/assets/media/2022-11-26-15-11-26.png" alt="">
+<p :="" class="caption"><img src="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-11-26.png&amp;width=512&amp;format=webp&amp;via=transform" alt="" loading="lazy" decoding="async" width="1298" height="472" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-11-26.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-11-26.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-26-15-11-26.png&amp;width=1298&amp;format=webp&amp;via=transform 1298w" sizes="auto">
 На третьей картинке получилось непонятно, разделились чёрные клетки или нет. Поверьте мне, что разделились. Не переделывать же картинку.</p>
 <!-- https://www.figma.com/file/abzo0bhPE5EJIuaZtJgWEd/Untitled?node-id=2%3A404&t=XQ7fThdoqwVCctyV-0 -->
 <p>Повторяем процедуру несколько раз. Будет получаться что-то такое:</p>
-<p><img src="/assets/media/ivanomata.gif" alt="" :="" style="width:512px;image-rendering: pixelated;"></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fivanomata.gif&amp;width=256&amp;format=webp&amp;via=transform" alt="" :="" style="width:512px;image-rendering: pixelated;" loading="lazy" decoding="async" width="256" height="256"></p>
 <p>Или такое:</p>
-<p><img src="/assets/media/ivanomata2.gif" alt="" :="" style="width:512px;image-rendering: pixelated;"></p>
+<p><img src="/.11ty/image/?src=assets%2Fmedia%2Fivanomata2.gif&amp;width=256&amp;format=webp&amp;via=transform" alt="" :="" style="width:512px;image-rendering: pixelated;" loading="lazy" decoding="async" width="256" height="256"></p>
 <!-- https://bit.ly/3EDBkXq -->
 <p>Дальше можно придумать правила раскрашивания, совмещать результаты работы нескольких автоматов с разными правилами, менять правила на полдороге, накладывать картинку на её предыдущие итерации, веселиться по-полной!</p>
-<video controls="">
+<video controls="" muted="" loop="" preload="auto">
   <source src="/assets/media/ivanomata-oculus.mp4" type="video/mp4">
 </video>
 <p>Одна печаль, в 3д иваноматы совсем не такие прикольные.</p>
@@ -209,19 +227,18 @@ https://t.me/ivandianov/448
 
 <script src="https://utteranc.es/client.js" repo="illus0r/ivandianov.com" issue-term="pathname" label="blog-comment" theme="github-light" crossorigin="anonymous" async="">
 </script>
+
     </main>
 
     <footer>
-  <section class="copyright">
-    © <a href="/ru/">Иван Дианов</a> 2021—2022 ·
-    <a href="https://twitter.com/i_dianov">Twitter</a>
-    · <a href="https://objkt.com/profile/ivandianov/created">Objkt</a>
-    
-      · <a href="https://t.me/ivandianov">Канал в телеге</a>
-    
-    
-  </section>
+  <section class="copyright">© <a href="/">Иван Дианов</a> 2021—∞ ·
+		<a href="/ru/blog/">Блог</a> ·
+		<a href="https://t.me/ivandianov">Канал в телеге</a> про генеративный арт, алгоритмы и жизнь</section>
 </footer>
 
-	
+
+    <script src="/assets/js/dance-dance.js" type="module"></script>
+    
+
+
 </body></html>

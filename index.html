@@ -1,153 +1,141 @@
-<!DOCTYPE html>
-<html><head>
+<!DOCTYPE html><html class=""><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
-    <link async="" rel="stylesheet" type="text/css" href="../../assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+    <title> · Ivan Dianov</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- FIXME check if it is needed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css">
+    <link id="favicon" rel="icon">
+<script>
+		let w = 3
+		let h = 5
+    let svg = `<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" viewBox="1 0 ${w*2} ${h}"	>`
+		for(let x = 0; x < w; x++) {
+			for(let y = 0; y < h; y++) {
+				let color = Math.random() > 0.5 ? "#000" : "#fff"
+				svg += `<rect x="${w-x}" y="${y}" width="1" height="1" fill="${color}"/>`
+				svg += `<rect x="${w+x}" y="${y}" width="1" height="1" fill="${color}"/>`
+			}
+		}
 
-</head>
-  <body>
-    
+    svg+=`</svg>`
+console.log('svg:',svg)
+
+    document.getElementById("favicon").setAttribute("href", `data:image/svg+xml,${encodeURIComponent(svg)}`)
+</script>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(94453443, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript></noscript></head><body><div><img src="/.11ty/image/?src=https%3A%2F%2Fmc.yandex.ru%2Fwatch%2F94453443&amp;width=1&amp;format=webp&amp;via=transform" style="position:absolute; left:-9999px;" alt="" loading="lazy" decoding="async" width="1" height="1"></div>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
     <header>
   <div class="nav-menu">
-    <div class="logo">
-        Ivan Dianov
-    </div>
-        
-    
-
-    
-      
-    
-      
-      
-      
-        
-      
-    
-      
-      
-      
-        
-      
-    
-      
-      
-      
-        
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-      
-      
-        
-      
-    
-      
-      
-      
-        
-      
-    
-      
-      
-      
-        
-        
-      <a class="nav-item" href="/ru/">
-        Ru
-      </a>
-      
-      
-    
-
     
     
-
     
-      
-        
-        <a class="nav-item" href="/tutor/">
-          Tutor
+        <a class="nav-item" href="/">
+          Иван Дианов
         </a>
-        
-      
     
       
         
-        <a class="nav-item" href="/about/">
-          About
-        </a>
-        
-      
-    
-      
-    
-      
-        
-        <a class="nav-item" href="/works/">
-          Works
-        </a>
-        
-      
-    
-      
-    
-      
         
         <a class="nav-item nav-item-active" href="/">
-          Blog
+          Дизайн
         </a>
         
       
     
       
+        
+        
+        <a class="nav-item" href="/ru/show/">
+          Медиа-арт
+        </a>
+        
+      
     
+      
+        
+        
+        <a class="nav-item" href="/ru/tutor/">
+          Обучение
+        </a>
+        
+      
+    
+      
+        
+        
+        <a class="nav-item" href="/ru/about/">
+          Про меня
+        </a>
+        
+      
+    
+    
+    
+    
+    
+    
+		
+      
+		
+        
+		
+      
+		
+    
+    
+		
+      
+		
+      
+		
   </div>
 </header>
+
+
     <main role="main" class="wrap prose">
-      <h1>Blog</h1>
-
-<section class="blog-posts">
-  
-   <div class="post-item">
-     <div class="time">2021 Sep 02</div>
-     <h2 class="post-title">
-       <a href="/concept-of-id/">
-        The concept of ID in shaders
-       </a>
-     </h2>
-   
-
-    
-</div></section>
-
-
- 
+        <p class="big"><span class="dance-dance"><span>Д</span><span>е</span><span>л</span><span>а</span><span>ю</span><span> </span><span>и</span><span>н</span><span>с</span><span>т</span><span>р</span><span>у</span><span>м</span><span>е</span><span>н</span><span>т</span><span>ы</span><span> </span><span>д</span><span>л</span><span>я</span><span> </span><span>а</span><span>в</span><span>т</span><span>о</span><span>м</span><span>а</span><span>т</span><span>и</span><span>з</span><span>а</span><span>ц</span><span>и</span><span>и</span><span> </span><span>д</span><span>и</span><span>з</span><span>а</span><span>й</span><span>н</span><span>а</span><span>,</span><span> </span><span>д</span><span>и</span><span>н</span><span>а</span><span>м</span><span>и</span><span>ч</span><span>е</span><span>с</span><span>к</span><span>у</span><span>ю</span><span> </span><span>а</span><span>й</span><span>д</span><span>е</span><span>н</span><span>т</span><span>и</span><span>к</span><span>у</span><span> </span><span>и</span><span> </span><span>л</span><span>о</span><span>г</span><span>о</span><span>т</span><span>и</span><span>п</span><span>ы</span><span>,</span><span> </span><span>и</span><span>н</span><span>т</span><span>е</span><span>р</span><span>а</span><span>к</span><span>т</span><span>и</span><span>в</span><span>н</span><span>ы</span><span>е</span><span> </span><span>а</span><span>н</span><span>и</span><span>м</span><span>а</span><span>ц</span><span>и</span><span>и</span><span> </span><span>н</span><span>а</span><span> </span><span>с</span><span>а</span><span>й</span><span>т</span><span>а</span><span>х</span><span> </span><span>д</span><span>л</span><span>я</span><span> </span><span>п</span><span>р</span><span>и</span><span>в</span><span>л</span><span>е</span><span>ч</span><span>е</span><span>н</span><span>и</span><span>я</span><span> </span><span>в</span><span>н</span><span>и</span><span>м</span><span>а</span><span>н</span><span>и</span><span>я</span><span> </span><span>и</span><span>л</span><span>и</span><span> </span><span>и</span><span>л</span><span>л</span><span>ю</span><span>с</span><span>т</span><span>р</span><span>а</span><span>ц</span><span>и</span><span>и</span><span> </span><span>а</span><span>б</span><span>с</span><span>т</span><span>р</span><span>а</span><span>к</span><span>т</span><span>н</span><span>ы</span><span>х</span><span> </span><span>к</span><span>о</span><span>н</span><span>ц</span><span>е</span><span>п</span><span>ц</span><span>и</span><span>й</span><span>.</span><span> </span><span>Р</span><span>а</span><span>б</span><span>о</span><span>т</span><span>а</span><span>ю</span><span> </span><span>с</span><span> </span><span>д</span><span>и</span><span>з</span><span>а</span><span>й</span><span>н</span><span>е</span><span>р</span><span>а</span><span>м</span><span>и</span><span> </span><span>и</span><span> </span><span>а</span><span>г</span><span>е</span><span>н</span><span>т</span><span>с</span><span>т</span><span>в</span><span>а</span><span>м</span><span>и</span></span></p>
+<hr>
+<div class="projects">
+  <div class="project col-3"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fdodo1.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Генеративные обои и панно для Додо" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 3), (max-width: 991px) calc(90vw / 3 * 3), (max-width: 1199px) calc(90vw / 4 * 3), calc(min(1330px, 90vw) / 5 * 3)  " loading="lazy" decoding="async" width="1024" height="576" srcset="/.11ty/image/?src=assets%2Fmedia%2Fdodo1.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fdodo1.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Генеративные обои и панно для Додо</div></span></div><div class="project col-2"><span><video class="cover" src="/assets/media/walbi.mp4" loop="" autoplay="" muted=""></video><div class="caption">Динамическая айдентика для стартапа Walbi</div></span></div><div class="project col-2"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fwb-growth1.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Генератор растущих штук для Вайлдбериз" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="749" height="526" srcset="/.11ty/image/?src=assets%2Fmedia%2Fwb-growth1.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fwb-growth1.png&amp;width=749&amp;format=webp&amp;via=transform 749w"><div class="caption">Генератор растущих штук для Вайлдбериз</div></span></div><div class="project col-2"><span><video class="cover" src="/assets/media/renetica.mp4" loop="" autoplay="" muted=""></video><div class="caption">Генеративная айдентика для Renetica</div></span></div><div class="project col-1"><a href="/ru/floatery/"><video class="cover" src="/assets/media/floatery.mp4" loop="" autoplay="" muted=""></video><div class="caption">Сайт, который из имени делает поплавок</div></a></div><div class="project col-2"><a href="/ru/squarify/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fsquarify.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Интерактивный фон на сайте Squarify" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="1024" height="636" srcset="/.11ty/image/?src=assets%2Fmedia%2Fsquarify.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fsquarify.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Интерактивный фон на сайте Squarify</div></a></div><div class="project col-1"><a href="/ru/granola/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fgranola.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Интервью и генарт в датавиз-журнале" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1024" srcset="/.11ty/image/?src=assets%2Fmedia%2Fgranola.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fgranola.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Интервью и генарт в датавиз-журнале</div></a></div><div class="project col-2"><a href="/ru/roses-are-grey/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Froses-are-grey.jpg&amp;width=500&amp;format=webp&amp;via=transform" alt="Видео для клипа Ильи Бирмана Roses are grey" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="500" height="500"><div class="caption">Видео для клипа Ильи Бирмана Roses are grey</div></a></div><div class="project col-2"><a href="/ru/iterate/"><video class="cover" src="/assets/media/iterate08_small.mp4" loop="" autoplay="" muted=""></video><div class="caption">Iterate — айдентика для дизайн-бутика Pre-logo</div></a></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fabyss.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Abyss — клип на 100% сделанный кодом" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1459" height="2505" srcset="/.11ty/image/?src=assets%2Fmedia%2Fabyss.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fabyss.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fabyss.png&amp;width=1459&amp;format=webp&amp;via=transform 1459w"><div class="caption">Abyss — клип на 100% сделанный кодом</div></span></div><div class="project col-2"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fpixel-sort.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Онлайновый дизайн-тул для глитча картинок" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="1024" height="575" srcset="/.11ty/image/?src=assets%2Fmedia%2Fpixel-sort.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fpixel-sort.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Онлайновый дизайн-тул для глитча картинок</div></span></div><div class="project col-2"><a href="/ru/open-eye/"><video class="cover" src="/assets/media/prj-open-eye_small.mp4" loop="" autoplay="" muted=""></video><div class="caption">Динамическая айдентика Open Eye для дизайн-бутика Pre-logo</div></a></div><div class="project col-2"><a href="/ru/yomqo/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fyomqo.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Динамическая айдентика Yomqo для дизайн-бутика Pre-logo" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="1024" height="1024" srcset="/.11ty/image/?src=assets%2Fmedia%2Fyomqo.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fyomqo.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Динамическая айдентика Yomqo для дизайн-бутика Pre-logo</div></a></div><div class="project col-1"><span><video class="cover" src="/assets/media/greybeard.mp4" loop="" autoplay="" muted=""></video><div class="caption">Динамический логотип для консатлингового агентства Greybeard</div></span></div><div class="project col-1"><a href="/ru/calligraphy/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fcalligraphy.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Алгоритмическая каллиграфия" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1024" srcset="/.11ty/image/?src=assets%2Fmedia%2Fcalligraphy.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fcalligraphy.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Алгоритмическая каллиграфия</div></a></div><div class="project col-1"><a href="/ru/kruglendar/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fkruglendar.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Круглендарь — круглый плакат-ежедневник" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1022" srcset="/.11ty/image/?src=assets%2Fmedia%2Fkruglendar.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fkruglendar.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Круглендарь — круглый плакат-ежедневник</div></a></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fpeople.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Онлайн-рисовалка странных векторных шейпов" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="812" height="802" srcset="/.11ty/image/?src=assets%2Fmedia%2Fpeople.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fpeople.png&amp;width=812&amp;format=webp&amp;via=transform 812w"><div class="caption">Онлайн-рисовалка странных векторных шейпов</div></span></div><div class="project col-2"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fround-pixels.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Рисовалка круглых пикселей" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="1024" height="809" srcset="/.11ty/image/?src=assets%2Fmedia%2Fround-pixels.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fround-pixels.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Рисовалка круглых пикселей</div></span></div><div class="project col-2"><a href="/ru/pereverstka/"><video class="cover" src="/assets/media/pereverstka.mp4" loop="" autoplay="" muted=""></video><div class="caption">Генератор постеров для «Переверстки» Игоря Штанга</div></a></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fmaze-font.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Веб-генератор криптошрифтов" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="903" srcset="/.11ty/image/?src=assets%2Fmedia%2Fmaze-font.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fmaze-font.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Веб-генератор криптошрифтов</div></span></div><div class="project col-3"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fspinner.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Прикольная интерактивная крутилка на сайте" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 3), (max-width: 991px) calc(90vw / 3 * 3), (max-width: 1199px) calc(90vw / 4 * 3), calc(min(1330px, 90vw) / 5 * 3)  " loading="lazy" decoding="async" width="2048" height="656" srcset="/.11ty/image/?src=assets%2Fmedia%2Fspinner.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fspinner.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fspinner.png&amp;width=2048&amp;format=webp&amp;via=transform 2048w"><div class="caption">Прикольная интерактивная крутилка на сайте</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fall-encompassing.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Клип для трека Ильи Бирмана All-encompassing" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1734" height="974" srcset="/.11ty/image/?src=assets%2Fmedia%2Fall-encompassing.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fall-encompassing.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fall-encompassing.png&amp;width=1734&amp;format=webp&amp;via=transform 1734w"><div class="caption">Клип для трека Ильи Бирмана All-encompassing</div></span></div><div class="project col-1"><a href="/ru/pull/"><video class="cover" src="/assets/media/pull_small.mp4" loop="" autoplay="" muted=""></video><div class="caption">Генеративная айдентика для дизайн-бутика Pre-logo</div></a></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fony-waves.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Генеративная айдентика на основе симуляции волн" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="512" height="512"><div class="caption">Генеративная айдентика на основе симуляции волн</div></span></div><div class="project col-2"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fccexcellence.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Анимации для сайта CCExcellence" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="2048" height="1169" srcset="/.11ty/image/?src=assets%2Fmedia%2Fccexcellence.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fccexcellence.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fccexcellence.png&amp;width=2048&amp;format=webp&amp;via=transform 2048w"><div class="caption">Анимации для сайта CCExcellence</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fweekends-after-all.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Рисовалка кривуль, вдохновлённая работой Дениса Башева" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="479" srcset="/.11ty/image/?src=assets%2Fmedia%2Fweekends-after-all.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fweekends-after-all.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Рисовалка кривуль, вдохновлённая работой Дениса Башева</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fstudies.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Куча экспериментов с программируемой графикой" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="585" srcset="/.11ty/image/?src=assets%2Fmedia%2Fstudies.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fstudies.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Куча экспериментов с программируемой графикой</div></span></div></div>
+<hr>
+<h1><span class="dance-dance"><span>Н</span><span>Ф</span><span>Т</span><span> </span><span>и</span><span> </span><span>г</span><span>н</span><span>е</span><span>р</span><span>а</span><span>т</span><span>и</span><span>в</span><span>н</span><span>ы</span><span>й</span><span> </span><span>а</span><span>р</span><span>т</span></span></h1>
+<div class="projects">
+  <div class="project col-1"><span><video class="cover" src="/assets/media/yinyang1.mp4" loop="" autoplay="" muted=""></video><div class="caption">Encircling the yin yang — коллаборация с художником Yoni Alter</div></span></div><div class="project col-3"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Frayhatcher1.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Сверхкомпактная функция для рейхетчера Питера Пасмы" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 3), (max-width: 991px) calc(90vw / 3 * 3), (max-width: 1199px) calc(90vw / 4 * 3), calc(min(1330px, 90vw) / 5 * 3)  " loading="lazy" decoding="async" width="1920" height="1080" srcset="/.11ty/image/?src=assets%2Fmedia%2Frayhatcher1.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Frayhatcher1.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Frayhatcher1.png&amp;width=1920&amp;format=webp&amp;via=transform 1920w"><div class="caption">Сверхкомпактная функция для рейхетчера Питера Пасмы</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fessay-wholeness-mirage.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="Wholeness mirage" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="768" height="1243" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-wholeness-mirage.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-wholeness-mirage.webp&amp;width=768&amp;format=webp&amp;via=transform 768w"><div class="caption">Wholeness mirage</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2F2022-02-14-21-03-45.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Жутковатый интерактивный фрактал, управляемый мышкой" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1024" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-02-14-21-03-45.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-02-14-21-03-45.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Жутковатый интерактивный фрактал, управляемый мышкой</div></span></div><div class="project col-2"><a href="/ru/sand-nft/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fessay-sand.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="Песок, который можно сыпать мышкой" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 2), (max-width: 991px) calc(90vw / 3 * 2), (max-width: 1199px) calc(90vw / 4 * 2), calc(min(1330px, 90vw) / 5 * 2)  " loading="lazy" decoding="async" width="768" height="768" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-sand.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-sand.webp&amp;width=768&amp;format=webp&amp;via=transform 768w"><div class="caption">Песок, который можно сыпать мышкой</div></a></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="Сломанный физарум" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1400" height="1600" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=1024&amp;format=webp&amp;via=transform 1024w, /.11ty/image/?src=assets%2Fmedia%2Fessay-physarum.webp&amp;width=1400&amp;format=webp&amp;via=transform 1400w"><div class="caption">Сломанный физарум</div></span></div><div class="project col-1"><a href="/ru/zero-player-game-nft/"><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fzpg1.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Zero-player game. Бесконечный неповторяющийся узор" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1170" srcset="/.11ty/image/?src=assets%2Fmedia%2Fzpg1.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fzpg1.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Zero-player game. Бесконечный неповторяющийся узор</div></a></div><div class="project col-3"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fantigravity.jpg&amp;width=512&amp;format=webp&amp;via=transform" alt="Антигравитация" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 3), (max-width: 991px) calc(90vw / 3 * 3), (max-width: 1199px) calc(90vw / 4 * 3), calc(min(1330px, 90vw) / 5 * 3)  " loading="lazy" decoding="async" width="1024" height="585" srcset="/.11ty/image/?src=assets%2Fmedia%2Fantigravity.jpg&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fantigravity.jpg&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Антигравитация</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2F2022-11-27-16-54-36.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Клик — 1024 уникальных конструкций с глазками и без" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1024" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-11-27-16-54-36.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-11-27-16-54-36.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Клик — 1024 уникальных конструкций с глазками и без</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding.webp&amp;width=512&amp;format=webp&amp;via=transform" alt="Фрактальный тоннель" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="886" height="886" srcset="/.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding.webp&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2Fessay-livecoding.webp&amp;width=886&amp;format=webp&amp;via=transform 886w"><div class="caption">Фрактальный тоннель</div></span></div><div class="project col-1"><span><img class="cover" src="/.11ty/image/?src=assets%2Fmedia%2F2022-02-14-22-07-13.png&amp;width=512&amp;format=webp&amp;via=transform" alt="Круги. Каждый клик —&nbsp;новая композиция" sizes="(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * 1), (max-width: 991px) calc(90vw / 3 * 1), (max-width: 1199px) calc(90vw / 4 * 1), calc(min(1330px, 90vw) / 5 * 1)  " loading="lazy" decoding="async" width="1024" height="1024" srcset="/.11ty/image/?src=assets%2Fmedia%2F2022-02-14-22-07-13.png&amp;width=512&amp;format=webp&amp;via=transform 512w, /.11ty/image/?src=assets%2Fmedia%2F2022-02-14-22-07-13.png&amp;width=1024&amp;format=webp&amp;via=transform 1024w"><div class="caption">Круги. Каждый клик —&nbsp;новая композиция</div></span></div></div>
+<p class="big">Иногда я выступаю с лайвкодингом — прямо на сцене пишу код, который создаёт на экране ритмичную картинку под музыку. Это гиковская тема: меня зовут на айтишные митапы и конференции. <a href="/ru/show/">Подробнее про лайвкодинг</a></p>
 
     </main>
 
     <footer>
-  <section class="copyright">
-    © <a href="/">Ivan Dianov</a> 2021—2022 ·
-    <a href="https://twitter.com/i_dianov">Twitter</a>
-    · <a href="https://objkt.com/profile/ivandianov/created">Objkt</a>
-    
-    
-  </section>
+  <section class="copyright">© <a href="/">Иван Дианов</a> 2021—∞ ·
+		<a href="/ru/blog/">Блог</a> ·
+		<a href="https://t.me/ivandianov">Канал в телеге</a> про генеративный арт, алгоритмы и жизнь</section>
 </footer>
 
-	
+
+    <script src="/assets/js/dance-dance.js" type="module"></script>
+    
+
+
 </body></html>
