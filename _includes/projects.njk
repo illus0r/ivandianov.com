@@ -1,0 +1,22 @@
+{% set type = type or 'nft' -%}
+<div class="projects">
+  {% for project in collections.projects -%}
+		{% if project.data.type == type -%}
+			{%- set isLink = project.content.length > 0 -%}
+			{%- set span = project.data.span | default("1") -%}
+				<div class="project col-{{span}}">{%- if isLink -%}<a href="{{ project.url }}">{% else %}<span>{%- endif -%}
+				{%- if project.data.cover -%} 
+					{%- set ext = project.data.cover.split('.').pop() -%}
+					{%- if ext == 'jpg' or ext == 'jpeg' or ext == 'png' or ext == 'webp' -%}
+          {%- set sizes = '(max-width: 575px) 90vw, (max-width: 767px) calc(90vw / 2 * ' + span + '), (max-width: 991px) calc(90vw / 3 * ' + span + '), (max-width: 1199px) calc(90vw / 4 * ' + span + '), calc(min(1330px, 90vw) / 5 * ' + span + ')' -%}
+						<img class="cover" src="{{ project.data.cover }}" alt="{{ project.data.caption }}" sizes="{{ sizes }}  " />
+					{%- else -%}
+						<video class="cover" src="{{ project.data.cover }}" loop autoplay muted></video>
+					{%- endif -%} 
+				{%- endif -%}
+				<div class="caption">{{ project.data.caption }}</div>
+				{%- if isLink -%}</a>{%- else -%}</span>{%- endif -%}
+				</div>
+		{%- endif -%}
+	{%- endfor -%}
+</div>

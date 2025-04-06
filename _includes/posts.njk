@@ -1,0 +1,16 @@
+<section class="blog-posts">
+	{% for post in collections.posts %}
+	<div class="post-item">
+		<div class='meta'>
+			{% set progress = post.data.progress %}
+			{% include "progress.njk" %}
+			{# <span class="time">{{ post.date | date('yyyy MMM dd') }}</span> #}
+		</div>
+		<h2 class="post-title">
+			<a href="{{ post.url }}">
+				{{ post.data.title }}
+			</a>
+		</h2>
+	</div>
+	{% endfor %}
+</section>

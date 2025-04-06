@@ -1,0 +1,12 @@
+FIXME DELETE THIS
+{% if type %}
+    <div class="previews previews-{{type}}">
+{% else %}
+    <div class="previews">
+{% endif %}
+{% for item in collections.all %}
+    {% if item.data.lang == "ru" and item.data.type == "design" %}
+        {% include 'preview' %}
+    {% endif %}
+{% endfor %}
+</div>
