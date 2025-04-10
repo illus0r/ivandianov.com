@@ -10,23 +10,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          deno-version: v1.x
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Build site
-        run: deno task build --allow-scripts=sharp
-      
+        run: npx @11ty/eleventy
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
