@@ -25,7 +25,7 @@ jobs:
         run: pnpm install
 
       - name: Build site
-        run: pnpm exec @11ty/eleventy
+        run: pnpm exec eleventy
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
