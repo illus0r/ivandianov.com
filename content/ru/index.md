@@ -14,7 +14,7 @@ menuTitle: Дизайн
 
 ---
 
-# НФТ и гнеративный арт
+# НФТ и генеративный арт
 
 {% set type = "nft" %}
 {% include 'projects.njk' %}
