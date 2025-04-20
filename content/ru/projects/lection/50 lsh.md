@@ -1,7 +1,6 @@
 ---
 caption: Мастерская science art на Летней школе
 cover: /assets/media/lsh.jpg
-type: lection
 span: 3
 ---
 
