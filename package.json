@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve"
+    "serve": "npx @11ty/eleventy --serve --incremental --watch"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,13 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.1",
     "clean-css": "^5.3.3",
+    "debug": "^4.4.0",
     "jsdom": "^26.0.0",
     "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.3.1",
-    "markdown-it-bracketed-spans": "^1.0.1"
+    "markdown-it-bracketed-spans": "^1.0.1",
+    "minimist": "^1.2.8",
+    "ms": "^2.1.3"
   },
   "type": "module"
 }
