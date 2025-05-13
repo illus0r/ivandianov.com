@@ -1,0 +1,22 @@
+---
+menuTitle: Блог
+# menu: 20
+---
+
+<h1>Блог</h1>
+<p>Статьи на разной стадии готовности: есть и черновики, и почти готовые. Смотрите на значки у заголовков, они намекают.</p>
+
+{% include "posts.njk" %}
+
+
+{# <div class="project-grid"> #}
+{# {% assign items = site.projects | sort: 'date' %}
+{% for item in items reversed %}
+
+    <div class="project-item">
+      <img src="{{item.img-url}}">
+      <span>{{item.title}}</span>
+    </div>
+    {% endfor %}
+  </div>
+#}

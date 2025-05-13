@@ -1,5 +1,5 @@
 ---
-permalink: /
+permalink: /ru/
 menu: 0
 menuTitle: Дизайн
 ---
