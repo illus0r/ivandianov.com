@@ -1,7 +1,7 @@
 {% set type = type or 'nft' -%}
 <div class="projects">
   {% for project in collections.projects -%}
-		{% if project.data.type == type -%}
+		{% if project.data.type == type and project.data.lang == lang -%}
 			{%- set isLink = project.content.length > 0 -%}
 			{%- set span = project.data.span | default("1") -%}
 				<div class="project col-{{span}}">{%- if isLink -%}<a href="{{ project.url }}">{% else %}<span>{%- endif -%}
