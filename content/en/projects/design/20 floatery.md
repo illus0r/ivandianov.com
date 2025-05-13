@@ -1,9 +1,9 @@
 ---
-caption: Сайт, который из имени делает поплавок
+caption: A website that turns a name into a float
 cover: /assets/media/floatery.mp4
 ---
 
-# Сайт, который из имени делает поплавок
+# A website that turns a name into a float
 
 Floattery takes a name and smack! Creates a float based on it. At last, you can learn more about yourself and your friends.
 
@@ -23,9 +23,9 @@ The sequence is random, but this randomness depends on the text field content. T
 <video src="/assets/media/floatery.mp4" width="100%" height="100%" muted autoplay></video>
 
 ## The team
-- Ivan Dianov — a programmer and project menager
+- Ivan Dianov — a programmer and project manager
 - Maxim Gryaznov — an inspirer, illustrator and section combinator
 - Stepan Shashero — floats animation programmer
-- Masha Kozikova  — an artist
+- Masha Kozikova — an artist
 - Dmitry Moskovskiy — an interface designer
 - Eugene Arutyunov — an adviser

@@ -1,14 +1,14 @@
 ---
-caption: Динамическая айдентика Yomqo для дизайн-бутика Pre-logo
+caption: Dynamic Yomqo branding for the Pre-logo design boutique
 cover: /assets/media/yomqo.jpg
 span: 2
 ---
 
-# Динамическая айдентика Yomqo для дизайн-бутика Pre-logo
+# Dynamic Yomqo Branding for Pre-logo Design Boutique
 
 A collaboration with [Kirill Belyaev](https://kirillbelyaev.com) for his project Pre-logo.
 
-I created the iridescent blob generator and Kirill used it in his design. Find out more about this project at [kirillbelyaev.com/pre-logo/yomqo/](https://kirillbelyaev.com/pre-logo/yomqo/) or [instagram](https://www.instagram.com/p/CFzvEzuBI-o/)
+I created the iridescent blob generator and Kirill used it in his design. Find out more about this project at [kirillbelyaev.com/pre-logo/yomqo/](https://kirillbelyaev.com/pre-logo/yomqo/) or [Instagram](https://www.instagram.com/p/CFzvEzuBI-o/)
 
 ![Yomqo](/assets/media/yomqo3.jpg)
 
@@ -22,4 +22,3 @@ I created the iridescent blob generator and Kirill used it in his design. Find o
 
 [Launch the blob generator](https://regl-svelte.dianov.org/#Yomqo)
 {: .caption}
-

@@ -1,11 +1,11 @@
 ---
-caption: Лайвкодинг под техно у Яндекса на ночи открытых библиотек
+caption: Live coding to techno at Yandex during the Night of Open Libraries
 cover: /assets/media/opensourcenight.jpg
 span: 3
 ---
 {#
-# Лайвкодинг под техно у Яндекса на ночи открытых библиотек
+# Live coding to techno at Yandex during the Night of Open Libraries
 
-<!-- FIXME добавить фоток от  17 дек 2024 -->
+<!-- FIXME add photos from Dec 17, 2024 -->
 
 #}

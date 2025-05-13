@@ -1,5 +1,5 @@
 ---
-caption: Генератор постеров для «Переверстки» Игоря Штанга
+caption: Poster Generator for Igor Shtang's “Pereverstka”
 cover: /assets/media/pereverstka.mp4
 span: 2
 ---
@@ -23,6 +23,12 @@ Text
 - Small text is editable.
 - Font lettering for each header line is chosen randomly out of 3 grotesque and 3 antiqua.
 
+## Implementation
+
+The whole thing is an html page, no canvas used. All blocks are div elements aligned with CSS grid. I used its ability to pack rects automatically to fill the space with minimal amount of gaps.
+
+To save the resulting image I use [html2canvas](https://html2canvas.hertzen.com) library.
+
 ![](/assets/media/pereverstka2.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
@@ -32,8 +38,3 @@ Text
 ![](/assets/media/pereverstka4.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-## Implementation
-
-The whole thing is an html page, no canvas used. All blocks are div elements aligned with CSS grid. I used its ability to pack rects automatically to fill the space with minimal amount of gaps.
-
-To save the resulting image I use [html2canvas](https://html2canvas.hertzen.com) library.

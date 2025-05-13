@@ -1,4 +1,4 @@
 ---
-caption: Генеративная айдентика на основе симуляции волн
+caption: Generative Identity Based on Wave Simulation
 cover: /assets/media/ony-waves.png
 ---

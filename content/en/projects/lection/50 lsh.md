@@ -1,11 +1,11 @@
 ---
-caption: Мастерская science art на Летней школе
+caption: Science art workshop at the Summer School
 cover: /assets/media/lsh.jpg
 span: 3
 ---
 
-# Мастерская science art на Летней школе
+# Science Art Workshop at the Summer School
 
 https://letnyayashkola.org/science-art/
 
-![Мастерская science art на Летней школе](/assets/media/lsh.jpg)
+![Science Art Workshop at the Summer School](/assets/media/lsh.jpg)

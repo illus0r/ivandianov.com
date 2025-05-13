@@ -1,5 +1,5 @@
 ---
-caption: Онлайн-рисовалка странных векторных шейпов
+caption: Online Drawing Tool for Strange Vector Shapes
 cover: /assets/media/people.png
 ---
 

@@ -1,5 +1,4 @@
 ---
-caption: Encircling the yin yang — коллаборация с художником Yoni Alter
+caption: Encircling the Yin Yang — collaboration with artist Yoni Alter
 cover: /assets/media/yinyang1.mp4
 ---
-

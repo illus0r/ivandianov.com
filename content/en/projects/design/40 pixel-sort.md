@@ -1,17 +1,17 @@
 ---
-caption: Онлайновый дизайн-тул для глитча картинок
+caption: Online design tool for glitching images
 cover: /assets/media/pixel-sort.jpg
 span: 2
 ---
 
-# Пиксельсорт
+# PixelSort
+
+Adam Arutyunov and I created a tool for glitching images. Adam developed the interface, and I wrote the shader that shuffles the pixels.
+
+You don’t have to sort all the pixels at once — you can use a mask image. The boundaries on this image will stop the pixels, making the sorting uneven. An interesting effect is created if you use the same image both as a mask and as a source for sorting. You can also choose one of the suggested masks or upload your own.
+
+For sorting, I didn’t use the slow bubble sort, but instead comb sort: this algorithm is not only faster but also creates a cool animation.
+
+Try sorting your own photo on the website <a href="https://setka.design/pixelsort/">setka.design/pixelsort</a>
 
 ![](/assets/media/pixel-sort.jpg)
-
-Мы с Адамом Арутюновым сделали инструмент для глитчинга изображений. Адам разработал интерфейс, а я — шейдер, который перемешивает пиксели.
-
-Необязательно сортировать все пиксели подряд — можно использовать картинку-маску. Границы на этой картинке будут останавливать пиксели, и сортировка станет неоднородной. Интересный эффект получается, если одну и ту же картинку использовать и как маску, и как источник для сортировки. Также можно выбрать одну из предложенных масок или загрузить свою.
-
-Для сортировки я использовал не медленную пузырьковую сортировку, а comb sort: этот алгоритм не только работает быстрее, но и создаёт интересную анимацию.
-
-Попробуйте отсортировать свою фотографию на сайте <a href="https://setka.design/pixelsort/">setka.design/pixelsort</a>

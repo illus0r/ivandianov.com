@@ -1,10 +1,10 @@
 ---
-caption: Песок, который можно сыпать мышкой
+caption: Sand that can be poured with the mouse
 cover: /assets/media/essay-sand.webp
 span: 2
 ---
 
-# Песок, который можно сыпать мышкой
+# Sand that can be poured with the mouse
 
 ![](/assets/media/sand2.jpg)
 

@@ -1,13 +1,11 @@
 ---
-caption: Анимации для сайта CCExcellence
+caption: Animations for the CCExcellence Website
 cover: /assets/media/ccexcellence.png
 span: 2
 ---
 
 {#
-# Анимации для сайта CCExcellence
+# Animations for the CCExcellence Website
 
 https://ccexcellence.ai/
 #}
-
-
