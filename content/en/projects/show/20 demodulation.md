@@ -1,5 +1,4 @@
 ---
-caption: Первое место в шейдер-батле на Демодуляции Яндекса
+caption: First place in the shader battle at Yandex's Demodulation
 cover: /assets/media/demodulation.jpg
 ---
-

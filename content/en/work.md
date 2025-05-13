@@ -1,7 +1,6 @@
 ---
-menuTitle: Позвать работать
-draft: true
+menuTitle: Work with me  
+draft: true  
 ---
 
-# Позвать работать
-
+# Work With Me

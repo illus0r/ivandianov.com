@@ -1,31 +1,31 @@
 ---
 menu: 4
-menuTitle: Медиа-арт
+menuTitle: Media art
 ---
 
-# Медиа-арт
+# Media Art
 
-Работаю с художниками и кураторами выставок. Если хотите позвать меня в свой проект, напишите мне в [телеграм](https://t.me/ivan_dianov) или на [почту](mailto:zor667@gmail.com)
+I collaborate with artists and exhibition curators. If you’d like to invite me to your project, message me on [Telegram](https://t.me/ivan_dianov) or [email me](mailto:zor667@gmail.com)
 
 ---
 
 {% set type = "media-art" %}
 {% include 'projects.njk' %}
 
-# Лайвкодинг
+# Live Coding
 
-Иногда я выступаю с лайвкодингом — прямо на сцене пишу код, который создаёт на экране ритмичную картинку под музыку. Это гиковская тема: меня зовут на айтишные митапы и конференции. Подробнее про лайвкодинг
+Sometimes I perform live coding — writing code on stage that generates rhythmic visuals in sync with music. It’s a geeky thing: I get invited to tech meetups and conferences. More about live coding
 
-Для выступления нужны:
-- проектор или большой экран,
-- HDMI кабель, который я воткну в свой ноут,
-- стул и стол рядом с экраном,
+For a performance, I’ll need:
+- a projector or a large screen,  
+- an HDMI cable to plug into my laptop,  
+- a chair and table near the screen,  
 
-Обычно выступаю с музыкантом или диджеем под техно. В этом случае мы заранее свяжемся и выберем музыку. Могу найти в вашем городе или привезти своего знакомого музыканта с модульными синтезаторами, это будет дальше от тусовки и ближе к арту.
+I usually perform with a musician or a techno DJ. In this case, we’ll get in touch beforehand and pick the music. I can also find a musician in your city or bring one with modular synths — this will lean more toward art than a party vibe.
 
-Уже выступал в Москве, Казани, Екатеринбурге, Тбилиси и Волгограде, буду рад расширить список!
+I’ve already performed in Moscow, Kazan, Yekaterinburg, Tbilisi, and Volgograd, and I’d love to add more cities to the list!
 
-Чтобы позвать меня на свой ивент, напишите в [телеграм](https://t.me/ivan_dianov) или на [почту](mailto:zor667@gmail.com)
+To invite me to your event, message me on [Telegram](https://t.me/ivan_dianov) or [email me](mailto:zor667@gmail.com)
 
 ---
 

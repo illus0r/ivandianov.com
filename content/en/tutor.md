@@ -1,17 +1,17 @@
 ---
 menu: 11
-menuTitle: Обучение
+menuTitle: Teaching
 ---
 
-# Обучение
+# Teaching
 
-Я преподаю дата-арт в [Вышке](https://www.hse.ru) и генеративный дизайн в [Сетке](https://setka.design).
+I teach data art at [HSE University](https://www.hse.ru) and generative design at [Setka](https://setka.design).
 
-Иногда меня зовут куда-нибудь прилететь и провести мастер-класс или прочитать лекцию, а то и курс на нескольно дней. Вообще я люблю всё объяснять и студентам обычно это нравится.
+Sometimes I’m invited to fly somewhere to give a workshop, lecture, or even a multi-day course. I genuinely enjoy explaining things, and students usually like that.
 
-А ещё иногда провожу индивидуальное обучение и консультации.
+I also occasionally offer one-on-one training and consultations.
 
-Чтобы записаться на консультацию, позвать меня с лекцией или вокршопом, напишите в [телеграм](https://t.me/ivan_dianov) или на [почту](mailto:zor667@gmail.com)
+To book a consultation or invite me for a lecture or workshop, message me on [Telegram](https://t.me/ivan_dianov) or [email me](mailto:zor667@gmail.com)
 
 ---
 

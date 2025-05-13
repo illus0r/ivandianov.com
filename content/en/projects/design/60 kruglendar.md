@@ -1,9 +1,9 @@
 ---
-caption: Круглендарь — круглый плакат-ежедневник
-cover: /assets/media/kruglendar.jpg
+caption: Kruglendar — Round Poster-Calendar  
+cover: /assets/media/kruglendar.jpg  
 ---
 
-# Круглый плакат-ежедневник
+# Round Poster-Calendar
 
 ![Kruglendar](/assets/media/kruglendar.jpg)
 

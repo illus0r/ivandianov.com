@@ -1,5 +1,5 @@
 ---
-caption: Генеративная айдентика для дизайн-бутика Pre-logo
+caption: Generative Identity for the Design Boutique Pre-logo
 cover: /assets/media/pull_small.mp4
 ---
 

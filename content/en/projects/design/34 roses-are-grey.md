@@ -1,12 +1,12 @@
 ---
-caption: Видео для клипа Ильи Бирмана Roses are grey
-cover: /assets/media/roses-are-grey.jpg
-span: 2
+caption: Video for Ilya Birman’s clip Roses are grey  
+cover: /assets/media/roses-are-grey.jpg  
+span: 2  
 ---
 
-# Видео для клипа Ильи Бирмана Roses are grey
+# Video for Ilya Birman’s clip Roses are grey
 
-Listen to techno track Roses Are Grey by [Ilya Birman](http://ilyabirman.ru) and watch a video featuring generative art by me.
+Listen to the techno track Roses Are Grey by [Ilya Birman](http://ilyabirman.ru) and watch a video featuring generative art by me.
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow: hidden;">
     <iframe 
@@ -19,5 +19,5 @@ Listen to techno track Roses Are Grey by [Ilya Birman](http://ilyabirman.ru) and
     ></iframe>
 </div>
 
-![Roses Are Grey](/assets/media/roses-are-grey.jpg)
+![Roses Are Grey](/assets/media/roses-are-grey.jpg)  
 {: style="max-width: 256px; width: 100%;"}

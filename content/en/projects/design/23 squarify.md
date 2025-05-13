@@ -1,17 +1,17 @@
 ---
-caption: Интерактивный фон на сайте Squarify
-cover: /assets/media/squarify.png
-span: 2
+caption: Interactive background on the Squarify website  
+cover: /assets/media/squarify.png  
+span: 2  
 ---
 
-# Интерактивный фон на сайте Squarify
+# Interactive Background on the Squarify Website
 
-Сделал код для вставки на тильду, придумал, как без моей помощи его можно кастомизировать:
+I created the code for embedding on Tilda website, trained the client to customize it.
 
-Основной код (столько-то символов) встравляется на все страницы сайта в настройках, для любого элемента на страницы можно задать специальное свойство с настройками, чтобы получить градиент нужного цвета.
+The main code is inserted on all pages in the site settings. For any element on the page, you can set a special property with configurations to get a gradient of the desired color.
 
-На всякий случай добавил фолбэк — если вдруг webgl не работает, загрузится картинка.
-
-![Squarify](/assets/media/squarify.png)
+Just in case, I added a fallback — if WebGL doesn’t work, an image will load instead.
 
 [squarefi.co](https://squarefi.co)
+
+![Squarify](/assets/media/squarify.png)

@@ -1,5 +1,4 @@
 ---
-caption: Abyss — клип на 100% сделанный кодом
+caption: Abyss — A video entirely made with code
 cover: /assets/media/abyss.png
 ---
-

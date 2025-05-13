@@ -3,9 +3,15 @@
     {# Language switcher section - shows Russian/English link if a translated version exists #}
     
     {# First loop: Display all navigation menu items in the current language #}
+				{% if lang == 'en' %}
         <a class="nav-item" href="/">
-          Иван Дианов
+          Ivan Dianov
         </a>
+				{% else %}
+				<a class="nav-item" href="/ru">
+					Иван Дианов
+				</a>
+				{% endif %}
     {% for item in collections.menu %}
       {% if lang == item.data.lang %}
         {% if item.url != page.url %}
@@ -26,46 +32,32 @@
     {% set isPageOnAntiLangFound = false %}
     
     {# Second loop: Look for a matching page in the alternative language #}
-		{#
-    {% for page in collections.page %}
-      {% if language != page.language %}
-		#}
+    {% for p in collections.page %}
+      {% if lang != p.lang %}
       {# Get just the filename part of both paths to compare them #}
-		{#
-			{% set this = page.src.entry.path | lastPart %}
-      {% set that = page.page.src.entry.path | lastPart %}
-        {% if this == that %}
-		#}
-        {# Found a matching page in the other language #}
-		{#
+			{% set this = page.url | lastPart %}
+      {% set that = p.page.url | lastPart %}
+			{% set alang = lang | antiLang %}
+        {% if this == that and p.data.lang == alang %}
+        {# Found a matching p in the other lang #}
         {% set isPageOnAntiLangFound = true %}
-		#}
-      {# Create link to the translated version of current page #}
-		{#
-      <a class="nav-item" href="{{ page.url }}">
-        {{ language | antiLang | capitalize }}
+      <a class="nav-item" href="{{ p.url }}">
+        {{ lang | antiLang | capitalize }}
       </a>
       {% endif %}
       {% endif %}
     {% endfor %}
-		#}
     
-    {# Fallback language switch if no matching translation page exists #}
-		{#
+    {# Fallback lang switch if no matching translation p exists #}
     {% if isPageOnAntiLangFound == false %}
-      {% if language == 'en' %}
-		#}
-      {# If current language is English, provide link to Russian home page #}
-		{#
+      {% if lang == 'en' %}
+      {# If current lang is English, provide link to Russian home p #}
       <a class="nav-item" href="/ru">Ru</a>
       {% else %}
-		#}
-      {# If current language is Russian, provide link to English home page #}
-		{#
+      {# If current lang is Russian, provide link to English home p #}
       <a class="nav-item" href="/">En</a>
       {% endif %}
     {% endif %}
-		#}
   </div>
 </header>
 

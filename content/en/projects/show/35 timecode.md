@@ -1,4 +1,4 @@
 ---
-caption: Алгоритмическая светомузыкальная импровизация на конференции TIMECODE в Екатеринбурге
+caption: Algorithmic light and sound improvisation at the TIMECODE conference in Yekaterinburg
 cover: /assets/media/timecode.png
 ---

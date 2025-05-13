@@ -1,45 +1,44 @@
 ---
-caption: Динамическая айдентика для стартапа Walbi
+caption: Dynamic identity for the startup Walbi
 cover: /assets/media/walbi.mp4
 span: 2
 ---
 
-# Динамическая айдентика для Walbi
+# Dynamic Identity for Walbi
 
-Совместно с дизайнером и арт-директором Дмитрием Костюченко мы разработали визуальную айдентику для Walbi — крипто-финтех-компании, создающей инструменты для поддержки принятия решений на рынке.
+Together with designer and art director Dmitry Kostyuchenko, we developed the visual identity for Walbi — a crypto-fintech company creating tools for decision-making in the market.
 
-В основе айдентики — идея децентрализации и коллективного поведения. Мы создали систему автономных агентов, которые взаимодействуют друг с другом на основе простых правил, формируя живые узоры или пиксель-арт.
+The identity is based on the idea of decentralization and collective behavior. We created a system of autonomous agents that interact with each other based on simple rules, forming living patterns or pixel art.
 
-В качестве агента использовали букву I из логотипа.
+We used the letter "I" from the logo as the agent.
 
 ![](/assets/media/walbi/idea5.jpg)
 
-
-Создали онлайновый редактор с несколькими визуальными стилями. Вот чёрно-белая версия реагирует на движение мыши:
+We created an online editor with several visual styles. Here is the black-and-white version that reacts to mouse movement:
 
 <video autoplay muted loop src="/assets/media/result-2mouse.mp4"></video>
 {style="width: 50%"}
 
-Перламутровая версия живёт и непрерывно меняет форму:
+The pearlescent version continuously changes its shape:
 
 <video autoplay muted loop src="/assets/media/result-3clusterize.mp4"></video>
 {style="width: 50%"}
 
-Любое изображение может быть «децентрализовано» с помощью нашего инструмента:
+Any image can be "decentralized" using our tool:
 
 <video autoplay muted loop src="/assets/media/result-5background.mp4"></video>
 {style="width: 50%"}
 
-Агенты могут становиться символами и зашифровывать любые послания:
+Agents can become symbols and encrypt any messages:
 
 <video autoplay muted loop src="/assets/media/result-4text.mp4"></video>
 
-А ещё агенты выстраиваются в графики, пиксельные картинки и даже визуализируют настроение рынка. Мы предложили такой вариант использования айдентики на сайте. Смотрите, как прямоугольники бегут занять свои места в пиксельных картинках!
+Agents can also form graphs, pixel images, and even visualize market sentiment. We suggested using the identity this way on the website. See how the rectangles rush to take their places in pixel pictures!
 
 <video autoplay muted loop src="/assets/media/site.mp4"></video>
 {style="width: 50%"}
 
-Крупная пиксельная графика хорошо читается, даже если её уменьшить до размеров телеграмовской иконки. Конечно, мы сделали и набор иконок и стикерпак. Вот [демо-канал, в котором мы их демонстрируем.](https://t.me/+NvQVFGTOnjcxZWY6)
+Large pixel graphics are easy to read, even when reduced to the size of a Telegram icon. Of course, we also created an icon set and a sticker pack. Here is the [demo channel where we showcase them.](https://t.me/+NvQVFGTOnjcxZWY6)
 
 <video autoplay muted loop src="/assets/media/cat.mp4"></video>
 {style="width: 50%"}

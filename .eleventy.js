@@ -39,6 +39,18 @@ export default function (eleventyConfig) {
     console.log("value:", value);
   });
 
+  eleventyConfig.addFilter("antiLang", function (value) {
+    if (value == "ru") return "en";
+    return "ru";
+  });
+
+  eleventyConfig.addFilter("lastPart", function (value) {
+    if (!value) return "";
+    let arr = value.split("/");
+    arr.pop();
+    return arr.pop();
+  });
+
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });

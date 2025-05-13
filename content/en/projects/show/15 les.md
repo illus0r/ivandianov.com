@@ -1,5 +1,4 @@
 ---
-caption: Лайвкодинг в шатре на опен-эйр фестивале LES
+caption: Live coding in a tent at the LES open-air festival
 cover: /assets/media/les.jpg
 ---
-

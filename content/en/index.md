@@ -21,5 +21,5 @@ I'm open to new projects — message me on [Telegram](https://t.me/ivan_dianov) 
 {% set type = "nft" %}
 {% include 'projects.njk' %}
 
-Sometimes I perform live coding — writing code on stage that generates rhythmic visuals in sync with music. It’s a geeky thing: I get invited to tech meetups and conferences. [More about live coding](/ru/show/)
+Sometimes I perform live coding — writing code on stage that generates rhythmic visuals in sync with music. It’s a geeky thing: I get invited to tech meetups and conferences. [More about live coding](/show/)
 {.big}

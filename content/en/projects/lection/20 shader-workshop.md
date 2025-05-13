@@ -1,6 +1,5 @@
 ---
-caption: "Введение в шейдеры: от самых основ до 3д фрактала"
+caption: "Introduction to Shaders: From the Basics to 3D Fractals"
 cover: /assets/media/shader-workshop.jpg
 span: 2
 ---
-
