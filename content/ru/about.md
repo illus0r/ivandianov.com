@@ -31,6 +31,7 @@ menuTitle: Про меня
 - 2020, Соавтор инсталляции «Душевный разговор» в галерее «Пересветов переулок», Москва, Россия
 
 ## Выступления
+- 2025, HolyJS, Алгоритмическая графика: JS для дизайна и искусства [youtube.com/watch?v=FomI7h3fS5M](https://www.youtube.com/watch?v=FomI7h3fS5M)
 - 2024, Лайвкодинг на Ночи открытых библиотек Яндекса [https://events.yandex.ru/events/opensourcenight](https://events.yandex.ru/events/opensourcenight#more), видео: [https://youtu.be/6Ambq6D7cfs](https://youtu.be/6Ambq6D7cfs)
 - 2024, Перформанс «Проекция пустоты» с лайвкодингом и генеративной музыкой на конференции TIMECODE [https://timecodefest2024.ru/](https://timecodefest2024.ru/). Видео [https://www.youtube.com/watch?v=pRDchZkIGVo&feature=youtu.be](https://www.youtube.com/watch?v=pRDchZkIGVo&feature=youtu.be)
 - 2024, Воркшоп «Диджитал-лес» на Код-пленере Яндекса [https://events.yandex.ru/events/kod-plener](https://events.yandex.ru/events/kod-plener)
