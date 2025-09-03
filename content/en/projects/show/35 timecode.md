@@ -8,6 +8,6 @@ cover: /assets/media/timecode.png
 Livecoder — Ivan Dianov<br>
 Musician — Artem Dultsev
 
-Full video: https://youtu.be/l33JmM0mviY
+[Full video](https://youtu.be/l33JmM0mviY)
 
 2024, Ekaterinburg

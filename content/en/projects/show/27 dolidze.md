@@ -11,7 +11,7 @@ cover: /assets/media/dolidze.png
 - [Mikhail Lobanov](https://www.instagram.com/off_morra?igshid=YmMyMTA2M2Y%3D)
 - [Dina (singer)](https://www.instagram.com/khom.yak?igshid=YmMyMTA2M2Y%3D)
 - [Denis (plays ambient at the end)](https://www.instagram.com/dencastro?igshid=YmMyMTA2M2Y%3D)
-
+
 Dolidze 77 [linktr.ee/dolidze77](https://linktr.ee/dolidze77)
 
 04.04.2023
