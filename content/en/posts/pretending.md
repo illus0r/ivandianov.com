@@ -1,6 +1,6 @@
 ---
 title: Как въехать в трансформации пространства
-date: 2022-07-06 14:00:00
+date: 2022-07-06
 progress: 2
 ---
 
@@ -29,9 +29,9 @@ void main(){
   vec2 uv=(gl_FragCoord.xy*2.-resolution)/resolution.y*2.; // find UV coordinates of a pixel
   outColor.rg+=fract(uv); // draw grid while space is not transformed yet
   outColor.b=1.; // nice colors!
-  
+
   // TRANSFORMATIONS WILL BE HERE
-  
+
   outColor+=step(length(uv),1.); // draw circle in transformed space
   // it's like pixel is saying “if my distance to the origin is less than 1, I go white”
 }
@@ -71,4 +71,3 @@ void main(){
 ---
 
 _Что думаете про такой способ думать о трансформациях пространства? Что осталось непонятным? А может, вы знаете, как проще трансформации объяснить? Расскажите тут в комментариях или напишите [мне в телеграм](https://t.me/ivan_dianov)._
-
