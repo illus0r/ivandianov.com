@@ -47,6 +47,17 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("getTranslationUrl", function (collections, page, targetLang) {
+    // Special handling for thread pages
+    if (page.url && page.url.includes('/threads/')) {
+      if (targetLang === 'ru' && !page.url.startsWith('/ru/')) {
+        // EN -> RU: /threads/xxx -> /ru/threads/xxx
+        return '/ru' + page.url;
+      } else if (targetLang === 'en' && page.url.startsWith('/ru/')) {
+        // RU -> EN: /ru/threads/xxx -> /threads/xxx
+        return page.url.replace(/^\/ru/, '');
+      }
+    }
+    
     const match = collections.find(p =>
       p.fileSlug === page.fileSlug &&
       p.data.lang === targetLang &&
