@@ -8,6 +8,7 @@ import markdownItBracketedSpans from "markdown-it-bracketed-spans";
 import jsdom from "jsdom";
 
 export default function (eleventyConfig) {
+  eleventyConfig.ignores.add("_docs/**/*");
   eleventyConfig.addPassthroughCopy({
     "assets/media/**/*.mp4": "assets/media",
     "assets/js/**/*.js": "assets/js",
