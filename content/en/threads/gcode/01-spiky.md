@@ -1,7 +1,7 @@
 ---
 date: 2026-01-25
 images:
-  - /assets/threads/gcode/05-spiky/spiky.jpg
+  - /assets/threads/gcode/01-spiky/spiky.jpg
 ---
 
 Geometric organic. Wanted to make something tactilely interesting, seems it worked out.

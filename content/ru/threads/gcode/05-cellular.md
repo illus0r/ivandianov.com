@@ -1,7 +1,7 @@
 ---
 date: 2026-01-19
 images:
-  - /assets/threads/gcode/01-cellular/cellular.jpg
+  - /assets/threads/gcode/05-cellular/cellular.jpg
 ---
 
 Низкоуровневое управление 3D принтером через G-code. Это язык, на котором компьютер говорит принтеру, что печатать — длинный список команд куда подвинуться и сколько пластика выдавить.

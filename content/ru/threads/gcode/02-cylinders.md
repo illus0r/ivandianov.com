@@ -1,7 +1,7 @@
 ---
 date: 2026-01-24
 images:
-  - /assets/threads/gcode/04-cylinders/cylinders.jpg
+  - /assets/threads/gcode/02-cylinders/cylinders.jpg
 ---
 
 Кошмар перфекциониста. Переход в 3D оказался сложнее, чем казалось.
