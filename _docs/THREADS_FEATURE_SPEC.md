@@ -28,17 +28,22 @@
 ```
 content/ru/threads/
   gcode/
-    01-setup/
-      index.md
-    02-matrix/
-      index.md
+    01-setup.md
+    02-matrix.md
+    gcode.njk          ← индексная страница треда
+    gcode.11tydata.js  ← настройки (layout, permalink)
 content/en/threads/
   gcode/
-    01-setup/
-      index.md
-    02-matrix/
-      index.md
+    01-setup.md
+    02-matrix.md
+    gcode.njk
+    gcode.11tydata.js
 ```
+
+**Почему файлы, а не папки:**
+- ✅ Проще: не нужны вложенные `index.md`
+- ✅ Чище: меньше уровней вложенности
+- ✅ `01-setup.md` → URL `/ru/threads/gcode/setup/`
 
 ### Картинки (язык-независимые)
 
