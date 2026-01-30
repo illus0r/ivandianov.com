@@ -100,7 +100,7 @@ export default function (eleventyConfig) {
 
   // Thread collections
   eleventyConfig.addCollection("threadGcode", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*/index.md")
+    return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*.md")
       .sort((a, b) => {
         const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
         const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
@@ -110,7 +110,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addCollection("allThreads", function (collectionApi) {
     const threads = new Map();
-    collectionApi.getFilteredByGlob("content/ru/threads/*/*/index.md")
+    collectionApi.getFilteredByGlob("content/ru/threads/*/*.md")
       .forEach(post => {
         const match = post.filePathStem.match(/threads\/([^\/]+)\//);
         if (match) {
