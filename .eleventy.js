@@ -98,7 +98,7 @@ export default function (eleventyConfig) {
       .sort((a, b) => a.page.fileSlug.localeCompare(b.page.fileSlug));
   });
 
-  // Thread collections
+  // Thread collections - Russian
   eleventyConfig.addCollection("threadGcode", function (collectionApi) {
     return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*.md")
       .sort((a, b) => {
@@ -108,6 +108,17 @@ export default function (eleventyConfig) {
       });
   });
 
+  // Thread collections - English
+  eleventyConfig.addCollection("threadGcodeEn", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content/en/threads/gcode/*.md")
+      .sort((a, b) => {
+        const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
+        const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
+        return aNum - bNum;
+      });
+  });
+
+  // All threads - Russian
   eleventyConfig.addCollection("allThreads", function (collectionApi) {
     const threads = new Map();
     collectionApi.getFilteredByGlob("content/ru/threads/*/*.md")
@@ -119,6 +130,25 @@ export default function (eleventyConfig) {
             threads.set(threadName, {
               name: threadName,
               url: `/ru/threads/${threadName}/`,
+            });
+          }
+        }
+      });
+    return Array.from(threads.values()).sort((a, b) => a.name.localeCompare(b.name));
+  });
+
+  // All threads - English
+  eleventyConfig.addCollection("allThreadsEn", function (collectionApi) {
+    const threads = new Map();
+    collectionApi.getFilteredByGlob("content/en/threads/*/*.md")
+      .forEach(post => {
+        const match = post.filePathStem.match(/threads\/([^\/]+)\//);
+        if (match) {
+          const threadName = match[1];
+          if (!threads.has(threadName)) {
+            threads.set(threadName, {
+              name: threadName,
+              url: `/threads/${threadName}/`,
             });
           }
         }
