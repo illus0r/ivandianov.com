@@ -8,6 +8,7 @@ import markdownItBracketedSpans from "markdown-it-bracketed-spans";
 import jsdom from "jsdom";
 
 export default function (eleventyConfig) {
+  eleventyConfig.ignores.add("_docs/**/*");
   eleventyConfig.addPassthroughCopy({
     "assets/media/**/*.mp4": "assets/media",
     "assets/js/**/*.js": "assets/js",
@@ -42,6 +43,16 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("antiLang", function (value) {
     if (value == "ru") return "en";
     return "ru";
+  });
+
+  eleventyConfig.addFilter("getTranslationUrl", function (collections, page, targetLang) {
+    const match = collections.find(p =>
+      p.fileSlug === page.fileSlug &&
+      p.data.lang === targetLang &&
+      p.url !== page.url &&
+      p.url && p.url !== false // страница должна реально генерироваться
+    );
+    return match ? match.url : (targetLang === 'en' ? '/' : '/ru/');
   });
 
   eleventyConfig.addFilter("lastPart", function (value) {

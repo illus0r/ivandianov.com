@@ -1,6 +1,6 @@
 <section class="blog-posts">
 	{% for post in collections.posts %}
-		{% if post.data.draft != true %} 
+		{% if post.data.lang == lang and post.data.draft != true %} 
 		<div class="post-item">
 			<div class='meta'>
 				{% set progress = post.data.progress %}
