@@ -13,7 +13,7 @@ export default function (eleventyConfig) {
     "assets/media/**/*.mp4": "assets/media",
     "assets/js/**/*.js": "assets/js",
     "assets/fonts/*": "assets/fonts",
-    "content/**/threads/**/*.{jpg,jpeg,png,gif,webp}": "assets/threads",
+    "assets/threads/**/*": "assets/threads",
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
