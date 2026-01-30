@@ -1,122 +1,125 @@
 ---
-title: Мой путь в генеративном искусстве
-date: 2024-12-27
-progress: 4
+title: My Journey Through Generative Art
+date: 2024-12-27 11:55:00
+progress: 3
 ---
 
-## Детство
+## How It All Began
 
-В детстве я мечтал стать изобретателем. Компьютера в семье не было, мне его заменяла бумага в клетку. На ней я симулировал клеточные автоматы, придумывал свои пошаговые игры, рисовал чертежи санок с электроприводом и воздушных змеев. А ещё очень любил собирать разные штуки из конструкторов, которые мне дарил папа. Семья была не богатая, конструкторы были бывшими в употреблении, некоторые детали отсутствовали. Иногда для того, чтобы собрать микроскоп или бинокль, не хватало одной единственной детали.
+When I was a kid, I dreamed of being an inventor.
 
-Компьютер был только у двоюродных братьев, я ходил к ним в гости, смотрел, как они играют, а когда приходила моя очередь, вместо игры создавал HTML-файл и пробовал в нём форматировать текст, ставить картинку на фон и так далее.
+There was no computer at home, so I used grid paper instead. On it, I simulated cellular automata, invented my own step-by-step games, drew schematics for sleds with electric drives, and kites. I also loved building things from old construction kits that my dad gave me. Our family wasn’t wealthy, so the kits were secondhand and often missing parts. Sometimes, to build a microscope or binoculars, just one small part would be missing.
 
-Когда дедушка купил мне компьютер, я сразу установил несколько игр. Но я любил не просто играть в игры, а взламывать их и устанавливать там свои правила, придумывать и программировать свои миссии. Вообще, просто в игры играть было нервно и страшно. Программируя игры я выходил из игровой сансары с её миссиями, врагами и целями. Я переходил на другой уровень, становился властелином виртуального мира! Я мог придумать свои миссии, для развлечения создать миллион врагов и заставить их за мной охотиться, хаотически бегать или шагать как на параде. Писать свои правила гораздо увлекательнее, чем играть по чужим.
+My cousins had a computer, and when I went to visit them, I would watch them play games. But when my turn finally came, instead of playing games, I preferred to code simple HTML pages.
 
-Ещё больше возможностей появилось, когда мы с нердами-однокласниками записались в школьный кружок при университете, там мы на Borland С++ писали простые игры с пиксельной графикой и несложной анимацией.
+When my grandfather bought me a computer, I immediately installed several games. But instead of just playing, I loved hacking them. Honestly, just playing games felt stressful and a bit scary. By programming games I was stepping out of the game's samsara with its missions, enemies, and goals. I moved up to another level — I became the master of this virtual world! I could invent my own missions, create a million enemies to run around chaotically or march in parade-like lines. Writing my own rules was far more thrilling than playing by someone else’s.
 
-Я стал изобретателем, мечта сбылась. Программирование стало для меня волшебным «конструктором», в котором я сам мог создать любую деталь, если мне её не хватало.
+Things got even more interesting when a few nerd friends and I signed up for the school's computer club, which was affiliated with the university. There, we used Borland C++ to create simple games with pixel art and basic animation.
 
-## Бэкграунд
+I had become an inventor — my dream had come true. Programming became a magic construction kit where I could create any missing part myself.
 
-Это инженерное творчество так меня увлекло, что я поступил в технический университет и закончил магистратуру по САПР.
+## Background
 
-У меня нет академического образования по искусству или дизайну, но я ходил в художественную школу и много экспериментировал с разными изобразительными техниками: линогравюрой, цианотипией, фотографией на плёнку и, конечно, рисовал баллончиками через трафареты! Во всех этих процессах больше всего завораживал момент, когда снимаешь трафарет или проявляешь плёнку. Мгновение назад ничего не было, и вдруг скрытое изображение проявляется, оказывается каким-то. Оно зависит не только от моих художественных скиллов, но и от трафарета, от того, как легла краска из баллончика. Предугадать результат заранее невозможно; это моя коллаборация с миром, с невероятно сложной физической реальностью.
+This engineering creativity captivated me to the point that I entered a technical university and completed a master’s degree in Computer-aided design.
 
-Наверное, поэтому я стал заниматься визуализацией данных, она казалась мне логичным продолжением этой идеи — сделать невидимое видимым. А ещё я постоянно искал занятие, в котором можно было объединить изобразительное искусства и мои скиллы программирования. Визуализация данных тут пришлась очень кстати!
+I don't have formal education in art or design, but I did attend art school and experimented with various visual techniques: linocut, cyanotype, film photography, and, of course, stencils for street art! In all of these processes, the most mesmerizing part was the moment of unveiling — when you lift the stencil or develop the film. A moment ago, nothing was there, and suddenly, an image appears. The result depends not only on my skills but also on the stencil itself, on how the spray paint lands. It's impossible to predict the outcome entirely; it's a collaboration with the world, with the complex, unpredictable nature of physical reality.
 
-Иногда в датавиз-скрипте были ошибки и я очень радовался полученным гличам, постил их в соцсетях и гордился ими порой больше, чем финальным результатом. Экспериментировал с дата-артом. Есть шутка, что дата арт — это визуализация данных без легенды. Мне потребовалась пара лет, чтобы признаться себе: визуализация данных гораздо прикольнее, если убрать из неё данные. Я открыл для себя код, который визуализирует лишь сам себя.
+Maybe that’s why I gravitated towards data visualization — it seemed like a logical extension of this idea of making the invisible visible. I was also searching for a way to combine visual art with my programming skills, and data visualization fit perfectly!
 
-В визуализации данных есть такое понятие как индексная визуализация (indexical visualisation), это когда явление само визуализирует себя. Например, дым в воздухе  показывает своё движение. Генеративный арт — похожее явление: код сам визуализирует свой алгоритм и создавая графические артефакты, выявляет свою природу.
+Sometimes, my data visualization scripts had bugs, and the resulting glitches delighted me. I’d post them on social media and often felt prouder of them than of the final, polished results. I even began experimenting with data art, which some joke is “data visualization without a legend.” It took me a couple of years to admit that data visualization is often way more exciting when you take out the data. That’s when I discovered code that visualizes only itself.
 
-Примеры генеративных систем, с которыми я люблю экспериментировать — клеточные автоматы, L-системы, симуляции частиц, физарум, фракталы. Они все действуют по простым правилам и при этом порождают сложную и интересную визуализацию, через которую можно исследовать и лучше понять математическую реальность, в которой они существуют.
+In data visualization, there’s a concept called “indexical visualization” — where a phenomenon visualizes itself. For example, smoke in the air shows its own movement. Generative art is a similar concept: code visualizes its algorithm, and the resulting artifacts reveal its nature.
+
+Some of my favorite generative systems to experiment with include cellular automata, L‑systems, particle simulations, slime mold, and fractals. They all follow simple rules, but create complex and interesting visualisations that allow you to explore the mathematical reality in which they exist.
 
 ![](/assets/media/essay-physarum.webp)
-[Эксперименты с модифицированной симуляцией физарума]{.caption}
+A modification of a physarum simulation algorithm{.caption}
 
 ![](/assets/media/essay-livecoding.webp)
-[Фракальный коридор, сделанный во время лайвкодинга]{.caption}
+A fractal corridor made during a livecoding session{.caption}
 
 ![](/assets/media/essay-sand.webp)
-[детерминированная симуляция песка с применением клеточных автоматов]{.caption}
+A deterministic sand simulation with cellular automata{.caption}
 
-## Лайвкодинг и непредсказуемость
+## Live Coding and Unpredictability
 
-И в жизни, и в программировании мне важна непредсказуемость. Если всё уже известно заранее, даже не хочется начинать. Поэтому я так люблю выступать на сцене, программируя процедурную графику в реальном времени, импровизируя. Даже если я репетирую перед выступлением, каждая репетиция и само выступление являются для меня сюрпризом. Я могу неожиданно получить какой-то эффект, который меня удивит.
+Both in life and programming, unpredictability matters to me. If everything’s predetermined, I lose interest. That's why I enjoy livecoding so much, when I program procedural graphics on stage in real time and improvise. Even if I rehearse before a performance, every rehearsal and the performance itself is a surprise to me. I can suddenly get some effect that amazes me.
 
-Даже если код небольшой, мой мозг не способен охватить всю его сложность, поэтому я не могу полностью осознать, как образуется тот или иной фрактал. И это добавляет в работу элемент неожиданности и непредсказуемости.
- А ещё я могу в какой-то момент почувствовать порыв и начать хаотично удалять или дописывать случайные фрагменты кода. Иногда достаточно изменить одну букву и у тебя — хбдщ! — новый экран совсем. Это ощущение наполняет меня адреналином, приковывает к экрану и невероятно увлекает.
+Even when the code is small, my brain can’t grasp all its complexity, so I can’t fully understand how a given fractal forms. This adds an element of unexpectedness and unpredictability. Sometimes, I feel a sudden urge to delete or randomly modify code fragments, and sometimes a single character change transforms the screen completely. It’s thrilling and hypnotic, keeping me glued to the screen.
 
 ![](/assets/media/essay-livecoding2.webp)
-[Лайвкодинг-перформанс в галерее Краснохолмской]{.caption}
+Livecoding performance at the museum{.caption}
 
-Ещё один способ отказаться от контроля — концепция «правды материала»
+In livecoding, the concept of “Truth to Materials” is also important to me.
 
-## Правда материала
+## Truth to Materials
 
-Truth to materials — это архитектурная концепция. Она про то, что природу материала не нужно скрывать. Например, бетон не надо красить или шлифовать неровности от опалубки.
+Truth to Materials — an architectural concept emphasizing the importance of not concealing the natural properties of materials. For example, concrete should not be painted or polished to hide the traces of formwork.
 
-Мне нравится применять эту концепцию к техникам генеративного искусства: позволять алгоритму определять финальный вид работы.
+I like applying this concept to generative art techniques: letting the algorithm determine the final look.
 
-Не заниматься украшательством, а писать минимальный код, который способен создать изображение. Простое, чёрно-белое, без сглаживаний и заигрываний. Оно не притворяется рендером из Cinema 4D, поэтому моментально вычисляется, выглядит смело и брутально.
+Instead of embellishment, I aim to write minimal code that can create an image. Something simple, black-and-white, without smoothing or frills. It doesn’t pretend to be a render from Cinema 4D; it calculates instantly and looks bold and raw.
 
-У цифрового арта своя эстетика, её не надо дополнительно стилизовать, имитировать техники, которыми она не является: живопись, акварельные подтёки краски и прочее.
+Digital art has its own aesthetic that doesn’t need to be styled to mimic other techniques like painting or watercolor drips.
 
-Если картинка растровая, пусть пиксели будут заметными. Если это реймаршинг, пусть характерные глитчи лезут в глаза. Зачем стесняться шероховатостей? Можно использовать их как уникальную текстуру, как идею, и отдавать им самое заметное место в работе.
+If the image is a raster image, let the pixels be noticeable. If it's a raymarched image, let the signature glitches be eye-catching. Why shy away from roughness? You can use it as a unique texture, as an idea, and give them the most prominent place in your work.
 
-## Влияние Lo-Fi культуры
+## The Influence of Lo-Fi Culture
 
-Мне очень нравилось фотографировать на пинхол Dirkon, а до этого вообще на спичечную коробку, к которой приклеены скотчем катушки с плёнкой, перемотка с помощью скрепки. Этот минимализм, этот лоуфай очень меня вдохновлял. Мне нравилось, что можно не покупать дорогой фотик, а просто взять спичечную коробку и фотографировать на нее, а потом проявить плёнку с помощью крепкого кофе.
+I used to love taking pictures with a Dirkon, a pinhole paper camera. Before that, I used to take photos on a matchbox with taped reels and a paper clip to advance the film. This downshifted, lo-fi approach was inspiring, I liked that you didn’t need an expensive camera — just a matchbox, and then you could develop the film with some strong coffee.
 
-Я люблю достигать результата с помощью примитивных инструментов. В программировании я люблю, когда код предельно короткий. На практике это нужно редко, разве что сайзкодинг как цель. Например, игра つぶやきGLSL в твитере, когда нужно сделать прикольный шейдер размеров в твит. Когда я загружал проект Клик на Артблокс, я получал удовольствие от уменьшения размера кода. Это магическое ощущение, когда исходный код сжимается до небольшого прямоугольника, который целиком видно на экране.
+I enjoy achieving results with primitive tools. In programming, I like it when the code is as short as possible. In practice, it's rarely needed, except when sizecoding is valuable in itself. For example, there's a Twitter challenge #つぶぶやきGLSL when you need to fit a fancy shader into a tweet. When I was preparing the Click project for Art Blocks I also was enthusiastic about shrinking the code size. It's a magical feeling when the source code is condensed to a small rectangle that is entirely visible on the screen.
 
 ![](/assets/media/essay-click-code.webp)
-[Исходный код проекта Клик]{.caption}
+The source code of the Click project{.caption}
 
 ![](/assets/media/essay-click.webp)
-[Некоторые результаты работы этого скрипта]{.caption}
+Several outputs generated with the code above{.caption}
 
-Привычка создания минимального кода очень помогает на выступлениях с лайвкодингом и на шейдр батлах: я могу минимальным числом символов написать крошечный движок рейтрейсинга и сэкономить время.
+Some results of the above script
 
-Ограничение размера кода заставляет изобретать и проявлять находчивость. Например, одну и ту же функцию можно использовать и для макро и для микропаттерна, как в работе Wholeness Mirage.
+This practice of creating minimal code is handy for livecoding performances and shader battles as well. I can quickly write a tiny ray-tracing engine with just a few characters, saving time.
+
+The limitation of the code size makes you creative and resourceful. For example, one and the same function can be used for both macro and micropattern, as in Wholeness Mirage.
 
 ![](/assets/media/essay-wholeness-mirage.webp)
-[Wholeness Mirage использует один и тот же паттерн для микро- и макроуровней]{.caption}
+Wholeness Mirage uses the same pattern for micro and marco levels{.caption}
 
-Такие ограничения иногда отражаются на работе: фотографии, трафарете или генеративном искусстве, делают их более грубыми. Я когда-то боролся с этим, стремился к совершенству, но со временем важной темой для меня стало принятие несовершенства своего и своих работ. Это для меня практика и философия: не шлифовать работу до идеала, а заканчивать так же спонтанно, как начал.
+Such limitations can affect the work making a photo, stencil, or generative art piece coarser. I used to struggle with this, striving for perfection, but over time, accepting the imperfections in myself and my work has become an important theme. It’s a practice and philosophy for me — not polishing a piece to perfection but finishing it as spontaneously as I started it.
 
-Этот принцип касается и моих инструментов: я использую простой текстовый редактор neovim и не могу пользоваться IDE. Они удобные, но очень визуально нагруженные. При моём СДВГ уменьшение визуального шума — необходимость.
+This principle also applies to my tools: I use a simple text editor neovim and can't use IDEs. They are convenient, but very visually heavy. With my ADHD, reducing visual noise is a necessity.
 
-## СДВГ
+## ADHD
 
-Я не знаю точно, СДВГ у меня или нет, но иногда отвлекаюсь от работы каждую минуту, а иногда так в ней залипну, что клещами не оттащишь.
+I’m not sure if I have ADHD, but sometimes I get distracted every minute, while at other times, I get so absorbed in my work that I’m impossible to pull away.
 
-Когда-то пробовал себя воспитывать: блокировал соцсети, ставил задачи на каждый день, сам себе писал отчёты о проделанной работе.
+I once tried to discipline myself — blocking social media, setting daily goals, writing myself progress reports.
 
-В какой-то момент понял, что себя не надо побеждать, с собой надо дружить и адаптироваться к своим особенностям. Примерно в то же время перестал ставить себе цели, писать списки обязательных задач, и вообще начал использовать свои странности, а не побарывать их.
+At some point, I realized that I didn’t need to defeat myself but rather adapt to my peculiarities. Around that time, I stopped setting rigid goals or making task lists. I began using my oddities instead of fighting them.
 
-Например, я иногда часами не могу уговорить себя взяться за задачу. Тут помогает поставить таймер или — суперчит! — начать задачу и вскоре бросить недоделанной, чтобы руки чесались закончить начатое.
+For example, I sometimes can't talk myself into a task for hours. It helps to set a timer or — supercheat! — to start a task and soon leave it unfinished, so that I can itch to finish it.
 
-Даже характерный для СДВГ гиперфокус оказался суперполезным для сосредоточенной работы. Но мне потребовалось время, чтобы научиться в него входить. В случае с генеративным артом, мне нужно загореться идеей, придумать новаторскую комбинацию техник, которую я захочу показать этому миру. Так было, например, с «кривоксельно-гибридным реймаршингом» и ZPG
+Even the hyperfocus characteristic of ADHD has been super helpful for focused work. But it took me a while to learn how to get into it. In the case of generative art, I need to get excited about an idea, to come up with an innovative combination of techniques that I want to show to the world. This was the case, for example, with curvoxel-hybrid raymarching and Zero-player game
 
 ![](/assets/media/essay-antigravity.webp)
-[Antigravity #35]{.caption}
+Antigravity #35{.caption}
 
 ![](/assets/media/essay-zpg.webp)
-[Zero-player game #1 — бесконечная плоскость, заполненная неповторяющимся узором]{.caption}
+Zero-player game #1 is an infinite plane filled with never repeating pattern{.caption}
 
-Ещё вариант — найти вдохновляющий референс. Архитектура и биологические процессы для меня — бесконечный источник вдохновения.
+Another way is to find an inspiring reference. Architecture and biological processes are an endless source of inspiration for me.
 
-Часто при программировании я не могу удержать в голове всю картину, приходится рисовать схемы на бумажке или меловой доске, для этого я покрасил несколько стен в квартире меловой краской.
+Often when programming I can't keep the whole picture in my head, I have to draw diagrams on a piece of paper or a chalkboard, for this purpose I painted some walls in my flat with black board paint.
 
 ![](/assets/media/essay-drafts.webp)
-[Первые наброски для коммерческого проекта]{.caption}
+First sketches for a commercial project{.caption}
 
-Сохранить концентрацию помогает ощущение потока. Для этого важно, чтобы результат работы появлялся быстро. Я не смог работать с нейросетями: очень много времени требовалось, чтобы получить результат а ещё больше, чтобы обучить нейросеть на своём наборе изображений. Шейдеры и JS — другое дело: результат виден мгновенно.
+Another way to stay focused is through the sense of flow, and a quick result is essential for that. I couldn’t get into working with neural networks — they take too long to yield results, let alone training one on a custom dataset. Shaders and javascript, on the other hand, show results instantly, and that's what hooks me.
 
----
+* * *
 
-Для меня генеративный арт стал инструментом познания себя, работой, отдыхом, ниточкой, которая связывает меня с этим миром.
+Generative art has become a tool for self-discovery, a job, a way to relax, a bundle of threads connecting me to this world.
 
-Я работаю в трёх направлениях: арт, коммерческие заказы (сотрудничаю с дизайнерами и агентствами) и образование. Мне важно поделиться со студентами вайбом и азартом, который вызвает у меня программирование.
+I work in three areas: art, commercial commissions (I collaborate with designers and agencies), and education. It’s important to me to share with students the vibe and excitement that programming brings me.
 
-Тем кто не пробовал, рекомендую попробовать, вдруг понравится. Главное — не стремиться к перфекционизму, и радоваться маленьким победам.
+For those who haven’t tried it, I recommend giving it a go. You might just enjoy it! The key is not to strive for perfection and to appreciate small victories.
