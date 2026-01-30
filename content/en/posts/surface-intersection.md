@@ -169,7 +169,7 @@ https://bit.ly/3uT3ZSu
 ```
 ↓
 ```
-#define SDF(p) length(http://p.xyz)-.9
+#define SDF(p) length(p.xyz)-.9
 ```
 ↓
 ```
