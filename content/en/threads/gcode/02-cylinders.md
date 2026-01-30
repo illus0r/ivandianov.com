@@ -1,7 +1,7 @@
 ---
 date: 2026-01-24
 images:
-  - /assets/threads/gcode/04-cylinders/cylinders.jpg
+  - /assets/threads/gcode/02-cylinders/cylinders.jpg
 ---
 
 Perfectionist's nightmare. Moving to 3D turned out harder than expected.
