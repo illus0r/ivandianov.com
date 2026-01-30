@@ -22,7 +22,7 @@ layout: default.njk
 
   {% if date %}
   <div class="meta">
-    <span class="time">{{ date.toISOString().split('T')[0] }}</span>
+    <a href="{{ page.url }}" class="time">{{ date.toISOString().split('T')[0] }}</a>
   </div>
   {% endif %}
 

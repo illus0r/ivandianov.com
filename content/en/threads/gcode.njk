@@ -17,7 +17,7 @@ permalink: /threads/gcode/
 
     {% if post.data.date %}
     <div class="meta">
-      <span class="time">{{ post.data.date.toISOString().split('T')[0] }}</span>
+      <a href="{{ post.url }}" class="time">{{ post.data.date.toISOString().split('T')[0] }}</a>
     </div>
     {% endif %}
 
