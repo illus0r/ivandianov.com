@@ -1,7 +1,7 @@
 ---
 date: 2026-01-22
 images:
-  - /assets/threads/gcode/02-matrix/matrix.jpg
+  - /assets/threads/gcode/03-matrix/matrix.jpg
 ---
 
 Матрица пупочек. Экспериментирую, выдавливал разный объём пластика с разной высоты.
