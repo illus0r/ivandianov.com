@@ -1,63 +1,40 @@
 <header>
   <div class="nav-menu">
-    {# Language switcher section - shows Russian/English link if a translated version exists #}
+    {# Имя/логотип #}
+    <a class="nav-item" href="{{ '/' if lang == 'en' else '/ru/' }}">
+      {{ 'Ivan Dianov' if lang == 'en' else 'Иван Дианов' }}
+    </a>
     
-    {# First loop: Display all navigation menu items in the current language #}
-				{% if lang == 'en' %}
-        <a class="nav-item" href="/">
-          Ivan Dianov
-        </a>
-				{% else %}
-				<a class="nav-item" href="/ru">
-					Иван Дианов
-				</a>
-				{% endif %}
+    {# Пункты меню #}
     {% for item in collections.menu %}
       {% if lang == item.data.lang %}
-        {% if item.url != page.url %}
-        {# Regular menu item - not the current item #}
-        <a class="nav-item" href="{{ item.url }}">
+        <a class="nav-item{% if item.url == page.url %} nav-item-active{% endif %}" 
+           href="{{ item.url }}">
           {{ item.data.menuTitle }}
         </a>
-        {% else %}
-        {# Active menu item - this is the current page, apply special styling #}
-        <a class="nav-item nav-item-active" href="{{ item.url }}">
-          {{ item.data.menuTitle }}
-        </a>
-        {% endif %}
       {% endif %}
     {% endfor %}
     
-    {# Initialize a flag to track if a matching page in the other language is found #}
-    {% set isPageOnAntiLangFound = false %}
+    {# Переключатель языка - простая логика #}
+    {% set otherLang = 'ru' if lang == 'en' else 'en' %}
+    {% set otherUrl = page.url | replace('/' + lang + '/', '/') if lang == 'ru' else '/ru' + page.url %}
     
-    {# Second loop: Look for a matching page in the alternative language #}
-    {% for p in collections.page %}
-      {% if lang != p.lang %}
-      {# Get just the filename part of both paths to compare them #}
-			{% set this = page.url | lastPart %}
-      {% set that = p.page.url | lastPart %}
-			{% set alang = lang | antiLang %}
-        {% if this == that and p.data.lang == alang %}
-        {# Found a matching p in the other lang #}
-        {% set isPageOnAntiLangFound = true %}
-      <a class="nav-item" href="{{ p.url }}">
-        {{ lang | antiLang | capitalize }}
-      </a>
-      {% endif %}
+    {# Проверяем, существует ли перевод #}
+    {% set translationExists = false %}
+    {% for p in collections.all %}
+      {% if p.fileSlug == page.fileSlug and p.data.lang == otherLang %}
+        {% set translationExists = true %}
+        {% set otherUrl = p.url %}
       {% endif %}
     {% endfor %}
     
-    {# Fallback lang switch if no matching translation p exists #}
-    {% if isPageOnAntiLangFound == false %}
-      {% if lang == 'en' %}
-      {# If current lang is English, provide link to Russian home p #}
-      <a class="nav-item" href="/ru">Ru</a>
-      {% else %}
-      {# If current lang is Russian, provide link to English home p #}
-      <a class="nav-item" href="/">En</a>
-      {% endif %}
+    {# Если перевода нет - ведем на главную #}
+    {% if not translationExists %}
+      {% set otherUrl = '/' if otherLang == 'en' else '/ru/' %}
     {% endif %}
+    
+    <a class="nav-item" href="{{ otherUrl }}">
+      {{ otherLang | upper }}
+    </a>
   </div>
 </header>
-
