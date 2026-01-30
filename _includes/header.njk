@@ -15,26 +15,9 @@
       {% endif %}
     {% endfor %}
     
-    {# Переключатель языка - простая логика #}
+    {# Переключатель языка #}
     {% set otherLang = 'ru' if lang == 'en' else 'en' %}
-    {% set otherUrl = page.url | replace('/' + lang + '/', '/') if lang == 'ru' else '/ru' + page.url %}
-    
-    {# Проверяем, существует ли перевод #}
-    {% set translationExists = false %}
-    {% for p in collections.all %}
-      {% if p.fileSlug == page.fileSlug and p.data.lang == otherLang %}
-        {% set translationExists = true %}
-        {% set otherUrl = p.url %}
-      {% endif %}
-    {% endfor %}
-    
-    {# Если перевода нет - ведем на главную #}
-    {% if not translationExists %}
-      {% set otherUrl = '/' if otherLang == 'en' else '/ru/' %}
-    {% endif %}
-    
-    <a class="nav-item" href="{{ otherUrl }}">
-      {{ otherLang | upper }}
-    </a>
+    {% set otherUrl = collections.all | getTranslationUrl(page, otherLang) %}
+    <a class="nav-item" href="{{ otherUrl }}">{{ otherLang | upper }}</a>
   </div>
 </header>

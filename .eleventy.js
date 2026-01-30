@@ -45,6 +45,16 @@ export default function (eleventyConfig) {
     return "ru";
   });
 
+  eleventyConfig.addFilter("getTranslationUrl", function (collections, page, targetLang) {
+    const match = collections.find(p =>
+      p.fileSlug === page.fileSlug &&
+      p.data.lang === targetLang &&
+      p.url !== page.url &&
+      p.url && p.url !== false // страница должна реально генерироваться
+    );
+    return match ? match.url : (targetLang === 'en' ? '/' : '/ru/');
+  });
+
   eleventyConfig.addFilter("lastPart", function (value) {
     if (!value) return "";
     let arr = value.split("/");
