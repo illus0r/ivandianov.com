@@ -6,6 +6,16 @@ menuTitle: Blog
 <h1>Blog</h1>
 <p>Posts in various stages of completion — some are rough drafts, others are nearly finished. Check the icons next to the titles for hints.</p>
 
+{% if collections.allThreads.length > 0 %}
+<div class="threads-links">
+  <strong>Threads:</strong>
+  {% for thread in collections.allThreads %}
+    <a href="{{ thread.url }}">{{ thread.name }}</a>{% if not loop.last %} · {% endif %}
+  {% endfor %}
+</div>
+<hr>
+{% endif %}
+
 {% include "posts.njk" %}
 
 
