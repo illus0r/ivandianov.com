@@ -1,0 +1,48 @@
+---
+layout: default.njk
+---
+
+<article class="thread-post">
+  {%- set threadName = threadName or "gcode" -%}
+  {%- set allPosts = collections["thread" + (threadName | capitalize)] -%}
+  {%- set currentIndex = -1 -%}
+  {%- for post in allPosts -%}
+    {%- if post.url == page.url -%}
+      {%- set currentIndex = loop.index0 -%}
+    {%- endif -%}
+  {%- endfor -%}
+  
+  <div class="thread-nav-back">
+    <a href="/ru/threads/{{ threadName }}/">← {{ threadName }}</a>
+  </div>
+
+  {% if title %}
+  <h1>{{ title }}</h1>
+  {% endif %}
+
+  {% if date %}
+  <div class="meta">
+    <span class="time">{{ date.toISOString().split('T')[0] }}</span>
+  </div>
+  {% endif %}
+
+  {% if images %}
+    {% for img in images %}
+    <img src="{{ img }}" class="thread-image" alt="" loading="lazy">
+    {% endfor %}
+  {% endif %}
+
+  <div class="thread-content">
+    {{ content | safe }}
+  </div>
+
+  <nav class="thread-nav-posts">
+    {% if currentIndex > 0 %}
+    <a href="{{ allPosts[currentIndex - 1].url }}">← Предыдущий</a>
+    {% endif %}
+    
+    {% if currentIndex < (allPosts.length - 1) %}
+    <a href="{{ allPosts[currentIndex + 1].url }}">Следующий →</a>
+    {% endif %}
+  </nav>
+</article>

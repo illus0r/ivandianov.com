@@ -13,6 +13,7 @@ export default function (eleventyConfig) {
     "assets/media/**/*.mp4": "assets/media",
     "assets/js/**/*.js": "assets/js",
     "assets/fonts/*": "assets/fonts",
+    "content/**/threads/**/*.{jpg,jpeg,png,gif,webp}": "assets/threads",
   });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
@@ -66,6 +67,10 @@ export default function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  eleventyConfig.addFilter("removeNumber", function (slug) {
+    return slug.replace(/^\d+-/, '');
+  });
+
   eleventyConfig.addCollection("posts", function (collectionsApi) {
     return collectionsApi
       .getAll()
@@ -91,6 +96,34 @@ export default function (eleventyConfig) {
         return item.data?.tags?.includes("projects");
       })
       .sort((a, b) => a.page.fileSlug.localeCompare(b.page.fileSlug));
+  });
+
+  // Thread collections
+  eleventyConfig.addCollection("threadGcode", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*/index.md")
+      .sort((a, b) => {
+        const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
+        const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
+        return aNum - bNum;
+      });
+  });
+
+  eleventyConfig.addCollection("allThreads", function (collectionApi) {
+    const threads = new Map();
+    collectionApi.getFilteredByGlob("content/ru/threads/*/*/index.md")
+      .forEach(post => {
+        const match = post.filePathStem.match(/threads\/([^\/]+)\//);
+        if (match) {
+          const threadName = match[1];
+          if (!threads.has(threadName)) {
+            threads.set(threadName, {
+              name: threadName,
+              url: `/ru/threads/${threadName}/`,
+            });
+          }
+        }
+      });
+    return Array.from(threads.values()).sort((a, b) => a.name.localeCompare(b.name));
   });
 
   eleventyConfig.setLibrary(
