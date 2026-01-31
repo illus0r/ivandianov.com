@@ -1,7 +1,7 @@
 ---
 date: 2026-01-20
 images:
-  - /assets/threads/gcode/04-one-line/one-line.jpg
+  - /assets/threads/gcode/05-one-line/one-line.jpg
 ---
 
 Одна непрерывная линия, выползающая из принтера. Приложил непропорциональные усилия, чтобы сделать этот ролтон.
