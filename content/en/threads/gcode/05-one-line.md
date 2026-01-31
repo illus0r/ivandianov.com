@@ -1,7 +1,7 @@
 ---
 date: 2026-01-20
 images:
-  - /assets/threads/gcode/04-one-line/one-line.jpg
+  - /assets/threads/gcode/05-one-line/one-line.jpg
 ---
 
 One continuous line crawling out of the printer. Put in disproportionate effort to make this instant noodle mess.

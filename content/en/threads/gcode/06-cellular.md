@@ -1,7 +1,7 @@
 ---
 date: 2026-01-19
 images:
-  - /assets/threads/gcode/05-cellular/cellular.jpg
+  - /assets/threads/gcode/06-cellular/cellular.jpg
 ---
 
 Low-level 3D printer control via G-code. It's the language computers use to tell printers what to print — a long list of commands for where to move and how much plastic to extrude.
