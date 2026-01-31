@@ -1,5 +1,6 @@
 ---
 date: 2026-01-06
+draft: true
 videos:
   - /assets/threads/3d-print/06-chandelier/06-chandelier.mp4
 ---
