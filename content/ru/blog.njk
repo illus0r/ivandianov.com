@@ -6,16 +6,6 @@ menuTitle: Блог
 <h1>Блог</h1>
 <p>Статьи на разной стадии готовности: есть и черновики, и почти готовые. Смотрите на значки у заголовков, они намекают.</p>
 
-{% if collections.allThreads.length > 0 %}
-<div class="threads-links">
-  <strong>Треды:</strong>
-  {% for thread in collections.allThreads %}
-    <a href="{{ thread.url }}">{{ thread.name }}</a>{% if not loop.last %} · {% endif %}
-  {% endfor %}
-</div>
-<hr>
-{% endif %}
-
 {% include "posts.njk" %}
 
 
