@@ -12,7 +12,7 @@ layout: default.njk
     {%- endif -%}
   {%- endfor -%}
   
-  {# Найти родительский тред-пост для получения его title #}
+  {# Найти родительский тред-пост для получения его title и URL #}
   {%- set threadPost = null -%}
   {%- for post in collections.posts -%}
     {%- if post.data.threadName == threadName and post.data.lang == lang -%}
@@ -20,27 +20,20 @@ layout: default.njk
     {%- endif -%}
   {%- endfor -%}
   {%- set threadTitle = threadPost.data.title if threadPost else (threadName | upper) -%}
-  
-  {# Построить URL треда #}
-  {%- set threadUrl = "/" -%}
-  {%- if lang == 'ru' -%}
-    {%- set threadUrl = threadUrl + "ru/" -%}
-  {%- endif -%}
-  {%- set threadUrl = threadUrl + "threads/" + threadName + "/" -%}
+  {%- set threadUrl = threadPost.url if threadPost else "/" -%}
   
   <h1>
     <a href="{{ threadUrl }}">{{ threadTitle | upper }}</a>
     →
     {% if title %}
       {{ title }}
-    {% elif date %}
-      {{ date.toISOString().split('T')[0] }}
     {% else %}
-      U・ᴥ・U
+      {{ date.toISOString().split('T')[0] if date else 'U・ᴥ・U' }}
     {% endif %}
   </h1>
 
-  {% if date %}
+  {# Показываем мету только если есть title (иначе дата уже в заголовке) #}
+  {% if date and title %}
   <div class="meta">
     <a href="{{ page.url }}" class="time">{{ date.toISOString().split('T')[0] }}</a>
   </div>
