@@ -12,13 +12,33 @@ layout: default.njk
     {%- endif -%}
   {%- endfor -%}
   
-  <div class="thread-nav-back">
-    <a href="/ru/threads/{{ threadName }}/">← {{ threadName }}</a>
-  </div>
-
-  {% if title %}
-  <h1>{{ title }}</h1>
-  {% endif %}
+  {# Найти родительский тред-пост для получения его title #}
+  {%- set threadPost = null -%}
+  {%- for post in collections.posts -%}
+    {%- if post.data.threadName == threadName and post.data.lang == lang -%}
+      {%- set threadPost = post -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- set threadTitle = threadPost.data.title if threadPost else (threadName | upper) -%}
+  
+  {# Построить URL треда #}
+  {%- set threadUrl = "/" -%}
+  {%- if lang == 'ru' -%}
+    {%- set threadUrl = threadUrl + "ru/" -%}
+  {%- endif -%}
+  {%- set threadUrl = threadUrl + "threads/" + threadName + "/" -%}
+  
+  <h1>
+    <a href="{{ threadUrl }}">{{ threadTitle | upper }}</a>
+    →
+    {% if title %}
+      {{ title }}
+    {% elif date %}
+      {{ date.toISOString().split('T')[0] }}
+    {% else %}
+      U・ᴥ・U
+    {% endif %}
+  </h1>
 
   {% if date %}
   <div class="meta">
@@ -35,14 +55,4 @@ layout: default.njk
   <div class="thread-content">
     {{ content | safe }}
   </div>
-
-  <nav class="thread-nav-posts">
-    {% if currentIndex > 0 %}
-    <a href="{{ allPosts[currentIndex - 1].url }}">← Предыдущий</a>
-    {% endif %}
-    
-    {% if currentIndex < (allPosts.length - 1) %}
-    <a href="{{ allPosts[currentIndex + 1].url }}">Следующий →</a>
-    {% endif %}
-  </nav>
 </article>
