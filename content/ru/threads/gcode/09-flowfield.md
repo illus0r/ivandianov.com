@@ -1,5 +1,6 @@
 ---
 date: 2026-01-22
+draft: true
 images:
   - /assets/threads/gcode/09-flowfield/09-flowfield.jpg
 ---

@@ -1,5 +1,6 @@
 ---
 date: 2026-01-03
+draft: true
 videos:
   - /assets/threads/3d-print/02-fibonacci-lamp/02-fibonacci-lamp.mp4
 ---
