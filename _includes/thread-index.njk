@@ -3,13 +3,19 @@ layout: default.njk
 ---
 
 <article class="thread-index">
-  <h1>🧵 {{ title }}</h1>
+  <h1>{{ title }}</h1>
+  
+  <div class="meta">
+    <span class="progress" style="--progress: 360deg;"></span> {{ 'Тред' if lang == 'ru' else 'Thread' }}
+  </div>
 
   {% if content %}
   <div class="thread-description">
     {{ content | safe }}
   </div>
   {% endif %}
+
+  <hr>
 
   <div class="thread-feed">
     {%- set collectionName = "thread" + (threadName | capitalize) -%}
