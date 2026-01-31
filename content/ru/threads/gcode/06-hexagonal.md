@@ -1,7 +1,6 @@
 ---
 date: 2026-01-21
 images:
-  - /assets/threads/gcode/06-hexagonal/01.jpg
   - /assets/threads/gcode/06-hexagonal/02.jpg
 ---
 
