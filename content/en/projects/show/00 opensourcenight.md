@@ -11,7 +11,13 @@ span: 3
 Livecoder — Ivan Dianov<br>
 DJ — Vlada Goldberg
 
-{#
-2024.12.14
-<!-- FIXME add photos from Dec 17, 2024 -->
-#}
+![](/assets/media/opensourcenight-01.jpg)
+![](/assets/media/opensourcenight-02.jpg)
+![](/assets/media/opensourcenight-03.jpg)
+![](/assets/media/opensourcenight-04.jpg)
+![](/assets/media/opensourcenight-05.jpg)
+![](/assets/media/opensourcenight-06.jpg)
+![](/assets/media/opensourcenight-07.jpg)
+![](/assets/media/opensourcenight-08.jpg)
+![](/assets/media/opensourcenight-09.jpg)
+![](/assets/media/opensourcenight-10.jpg)
