@@ -6,6 +6,41 @@ import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItBracketedSpans from "markdown-it-bracketed-spans";
 import jsdom from "jsdom";
+import fs from "fs";
+
+// Автоматическая генерация коллекций для тредов
+function setupThreadCollections(eleventyConfig) {
+  const langs = ['ru', 'en'];
+  
+  langs.forEach(lang => {
+    const threadsDir = `content/${lang}/threads`;
+    
+    if (!fs.existsSync(threadsDir)) return;
+    
+    const threadDirs = fs.readdirSync(threadsDir, { withFileTypes: true })
+      .filter(d => d.isDirectory())
+      .map(d => d.name);
+    
+    threadDirs.forEach(threadName => {
+      const collectionName = lang === 'en' 
+        ? `thread${capitalize(threadName)}En`
+        : `thread${capitalize(threadName)}`;
+      
+      eleventyConfig.addCollection(collectionName, function (api) {
+        return api.getFilteredByGlob(`content/${lang}/threads/${threadName}/*.md`)
+          .sort((a, b) => {
+            const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
+            const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
+            return aNum - bNum;
+          });
+      });
+    });
+  });
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 export default function (eleventyConfig) {
   eleventyConfig.ignores.add("_docs/**/*");
@@ -83,12 +118,37 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("posts", function (collectionsApi) {
-    return collectionsApi
+    const posts = collectionsApi
       .getAll()
       .filter((item) => {
         return item.data?.tags?.includes("post");
-      })
-      .sort((a, b) => b.data.date - a.data.date);
+      });
+    
+    // Для постов-тредов вычисляем дату из последнего поста треда
+    posts.forEach(post => {
+      if (post.data.threadName) {
+        const lang = post.data.lang || 'ru';
+        const threadName = post.data.threadName;
+        const collectionName = lang === 'en' 
+          ? `thread${capitalize(threadName)}En`
+          : `thread${capitalize(threadName)}`;
+        
+        const threadPosts = collectionsApi.getFilteredByGlob(
+          `content/${lang}/threads/${threadName}/*.md`
+        );
+        
+        if (threadPosts.length > 0) {
+          // Находим максимальную дату среди постов треда
+          const maxDate = threadPosts.reduce((max, p) => {
+            return p.data.date > max ? p.data.date : max;
+          }, threadPosts[0].data.date);
+          
+          post.data.date = maxDate;
+        }
+      }
+    });
+    
+    return posts.sort((a, b) => b.data.date - a.data.date);
   });
 
   eleventyConfig.addCollection("menu", function (collectionsApi) {
@@ -109,63 +169,8 @@ export default function (eleventyConfig) {
       .sort((a, b) => a.page.fileSlug.localeCompare(b.page.fileSlug));
   });
 
-  // Thread collections - Russian
-  eleventyConfig.addCollection("threadGcode", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*.md")
-      .sort((a, b) => {
-        const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
-        const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
-        return aNum - bNum;
-      });
-  });
-
-  // Thread collections - English
-  eleventyConfig.addCollection("threadGcodeEn", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("content/en/threads/gcode/*.md")
-      .sort((a, b) => {
-        const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
-        const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
-        return aNum - bNum;
-      });
-  });
-
-  // All threads - Russian
-  eleventyConfig.addCollection("allThreads", function (collectionApi) {
-    const threads = new Map();
-    collectionApi.getFilteredByGlob("content/ru/threads/*/*.md")
-      .forEach(post => {
-        const match = post.filePathStem.match(/threads\/([^\/]+)\//);
-        if (match) {
-          const threadName = match[1];
-          if (!threads.has(threadName)) {
-            threads.set(threadName, {
-              name: threadName,
-              url: `/ru/threads/${threadName}/`,
-            });
-          }
-        }
-      });
-    return Array.from(threads.values()).sort((a, b) => a.name.localeCompare(b.name));
-  });
-
-  // All threads - English
-  eleventyConfig.addCollection("allThreadsEn", function (collectionApi) {
-    const threads = new Map();
-    collectionApi.getFilteredByGlob("content/en/threads/*/*.md")
-      .forEach(post => {
-        const match = post.filePathStem.match(/threads\/([^\/]+)\//);
-        if (match) {
-          const threadName = match[1];
-          if (!threads.has(threadName)) {
-            threads.set(threadName, {
-              name: threadName,
-              url: `/threads/${threadName}/`,
-            });
-          }
-        }
-      });
-    return Array.from(threads.values()).sort((a, b) => a.name.localeCompare(b.name));
-  });
+  // Автоматическая генерация коллекций для всех тредов
+  setupThreadCollections(eleventyConfig);
 
   eleventyConfig.setLibrary(
     "md",

@@ -2,11 +2,22 @@
 layout: default.njk
 ---
 
-<div class="thread-index">
-  <h1>{{ title }}</h1>
+<article class="thread-index">
+  <h1>🧵 {{ title }}</h1>
+
+  {% if content %}
+  <div class="thread-description">
+    {{ content | safe }}
+  </div>
+  {% endif %}
 
   <div class="thread-feed">
-    {% for post in posts %}
+    {%- set collectionName = "thread" + (threadName | capitalize) -%}
+    {%- if lang == "en" -%}
+      {%- set collectionName = collectionName + "En" -%}
+    {%- endif -%}
+    
+    {% for post in collections[collectionName] %}
     <article class="thread-feed-item">
       {% if post.data.title %}
       <h2>
@@ -16,7 +27,9 @@ layout: default.njk
 
       {% if post.data.date %}
       <div class="meta">
-        <span class="time">{{ post.data.date.toISOString().split('T')[0] }}</span>
+        <a href="{{ post.url }}" class="time">
+          {{ post.data.date.toISOString().split('T')[0] }}
+        </a>
       </div>
       {% endif %}
 
@@ -32,4 +45,10 @@ layout: default.njk
     </article>
     {% endfor %}
   </div>
-</div>
+
+  <footer class="thread-footer">
+    <p><a href="{{ '/' + lang + '/blog' if lang == 'ru' else '/blog' }}">
+      ← {{ 'Вернуться в блог' if lang == 'ru' else 'Back to blog' }}
+    </a></p>
+  </footer>
+</article>
