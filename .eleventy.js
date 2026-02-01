@@ -29,9 +29,10 @@ function setupThreadCollections(eleventyConfig) {
       eleventyConfig.addCollection(collectionName, function (api) {
         return api.getFilteredByGlob(`content/${lang}/threads/${threadName}/*.md`)
           .sort((a, b) => {
+            // Обратная сортировка: большие номера сверху (свежие посты первые)
             const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
             const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
-            return aNum - bNum;
+            return bNum - aNum;
           });
       });
     });

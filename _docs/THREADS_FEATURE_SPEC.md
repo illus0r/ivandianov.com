@@ -28,14 +28,16 @@
 ```
 content/ru/threads/
   gcode/
-    01-setup.md
-    02-matrix.md
+    01-spiky.md        ← номер только для сортировки
+    02-cylinders.md
+    03-matrix.md
     gcode.njk          ← индексная страница треда
     gcode.11tydata.js  ← настройки (layout, permalink)
 content/en/threads/
   gcode/
-    01-setup.md
-    02-matrix.md
+    01-spiky.md        ← те же номера, что и в ru
+    02-cylinders.md
+    03-matrix.md
     gcode.njk
     gcode.11tydata.js
 ```
@@ -43,22 +45,33 @@ content/en/threads/
 **Почему файлы, а не папки:**
 - ✅ Проще: не нужны вложенные `index.md`
 - ✅ Чище: меньше уровней вложенности
-- ✅ `01-setup.md` → URL `/ru/threads/gcode/setup/`
+- ✅ `01-spiky.md` → URL `/ru/threads/gcode/spiky/`
+
+**Номера в именах файлов:**
+- 🔢 Цифры временные — можно менять для изменения порядка
+- 📁 Папки картинок **без номеров** — при изменении порядка не нужно переименовывать
 
 ### Картинки (язык-независимые)
 
 ```
 assets/threads/
   gcode/
-    01-setup/
-      photo1.jpg
-      photo2.jpg
-    02-matrix/
-      matrix.jpg
+    spiky/           ← имя папки БЕЗ номера (просто слово)
+      spiky.jpg      ← файлы именуются по содержанию или номерами (1.jpg, 2.jpg)
+    cylinders/
+      cylinders.jpg
+    matrix/
+      01.jpg
+      02.jpg
   shaders/
-    01-noise/
+    noise/
       demo.gif
 ```
+
+**Правила именования:**
+- 📁 Папка с картинками называется **без цифр**, просто слово (slug поста)
+- 🖼️ Файлы внутри папки именуются либо по содержанию (`photo.jpg`), либо номерами (`1.jpg`, `2.jpg`)
+- 🔢 Цифры в именах md-файлов (`01-spiky.md`) — только для сортировки, временные, легко менять
 
 **Почему картинки в assets, а не в content:**
 - ✅ Нет дублирования для ru/en версий
@@ -89,12 +102,18 @@ eleventyConfig.addPassthroughCopy({
 /ru/threads/gcode/fan/      → content/ru/threads/gcode/02-fan/index.md
 ```
 
-**Slug:** Берётся из имени папки БЕЗ номера.
-- `01-setup` → slug: `setup`
-- `02-fan` → slug: `fan`
-- `03-long-name` → slug: `long-name`
+**Slug:** Берётся из имени файла БЕЗ номера.
+- `01-spiky.md` → slug: `spiky`
+- `02-cylinders.md` → slug: `cylinders`
+- `03-matrix.md` → slug: `matrix`
 
-**Номер в имени папки** — только для сортировки (не показывается в UI).
+**Номер в имени файла** — только для сортировки (не показывается в UI).
+
+**Порядок сортировки:** Обратный — чем **меньше** цифра, тем **ниже** в треде (свежие посты сверху).
+- `01-spiky` — самый нижний пост (самый старый)
+- `06-cellular` — самый верхний пост (самый свежий)
+
+Цифры временные, их можно менять для изменения порядка. Не нужно переименовывать папки с картинками — они именуются без цифр.
 
 ---
 
@@ -117,8 +136,8 @@ eleventyConfig.addPassthroughCopy({
 title: "Настройка вентилятора"
 date: 2026-01-30
 images:
-  - /assets/threads/gcode/02-fan/before.jpg
-  - /assets/threads/gcode/02-fan/after.jpg
+  - /assets/threads/gcode/fan/before.jpg
+  - /assets/threads/gcode/fan/after.jpg
 ---
 
 Заменил вентилятор на Noctua. Стало тише!
@@ -211,12 +230,13 @@ images:
 ```js
 // .eleventy.js
 eleventyConfig.addCollection("threadGcode", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*/index.md")
+  return collectionApi.getFilteredByGlob("content/ru/threads/gcode/*.md")
     .sort((a, b) => {
-      // Сортировка по номеру в имени папки
+      // ОБРАТНАЯ сортировка по номеру в имени файла
+      // Меньше номер → ниже в списке (старые посты внизу)
       const aNum = parseInt(a.filePathStem.match(/(\d+)-/)?.[1] || 0);
       const bNum = parseInt(b.filePathStem.match(/(\d+)-/)?.[1] || 0);
-      return aNum - bNum;
+      return bNum - aNum; // Обратный порядок!
     });
 });
 ```
@@ -249,7 +269,7 @@ eleventyConfig.addPassthroughCopy({
 ```js
 eleventyConfig.addCollection("allThreads", function(collectionApi) {
   const threads = new Set();
-  collectionApi.getFilteredByGlob("content/ru/threads/*/*/index.md")
+  collectionApi.getFilteredByGlob("content/ru/threads/*/*.md")
     .forEach(post => {
       const match = post.filePathStem.match(/threads\/([^\/]+)\//);
       if (match) threads.add(match[1]);
@@ -270,15 +290,15 @@ eleventyConfig.addCollection("allThreads", function(collectionApi) {
 
 **Структура:**
 ```
-content/ru/threads/gcode/01-setup/index.md  ← русская версия
-content/en/threads/gcode/01-setup/index.md  ← английская версия
-assets/threads/gcode/01-setup/photo.jpg      ← общая картинка
+content/ru/threads/gcode/01-spiky.md   ← русская версия
+content/en/threads/gcode/01-spiky.md   ← английская версия
+assets/threads/gcode/spiky/photo.jpg   ← общая картинка (папка без номера!)
 ```
 
 **Оба поста ссылаются на одну картинку:**
 ```yaml
 images:
-  - /assets/threads/gcode/01-setup/photo.jpg
+  - /assets/threads/gcode/spiky/photo.jpg
 ```
 
 **URL:**
@@ -315,11 +335,13 @@ images:
 ## ✅ Чек-лист реализации
 
 ### Файловая структура
-- [x] Создать `/content/ru/threads/gcode/01-test/index.md` (пример)
-- [x] Добавить картинки в `assets/threads/gcode/`
+- [x] Создать `/content/ru/threads/gcode/01-spiky.md` (пример)
+- [x] Добавить картинки в `assets/threads/gcode/spiky/` (папка без номера!)
 - [x] Настроить passthrough для картинок
 
-**Важно:** Картинки хранятся в `assets/threads/`, не в `content/`. Это предотвращает дублирование для ru/en.
+**Важно:**
+- Картинки хранятся в `assets/threads/`, не в `content/`. Это предотвращает дублирование для ru/en.
+- Папки с картинками именуются **без номеров** (просто `spiky/`, не `01-spiky/`).
 
 ### Eleventy конфигурация
 - [ ] Коллекции для каждого треда
@@ -357,41 +379,41 @@ images:
 
 ### Пост 1: Полный (с заголовком, датой, фото, текстом)
 
-**Файл:** `content/ru/threads/gcode/01-setup/index.md`
+**Файл:** `content/ru/threads/gcode/01-setup.md`
 ```yaml
 ---
 title: "Настройка принтера"
 date: 2026-01-30
 images:
-  - /assets/threads/gcode/01-setup/photo1.jpg
-  - /assets/threads/gcode/01-setup/photo2.jpg
+  - /assets/threads/gcode/setup/photo1.jpg
+  - /assets/threads/gcode/setup/photo2.jpg
 ---
 
 Первый запуск принтера. Калибровка стола.
 ```
 
-**Фото:** `assets/threads/gcode/01-setup/photo1.jpg`, `photo2.jpg`
+**Фото:** `assets/threads/gcode/setup/photo1.jpg`, `photo2.jpg` (папка без номера!)
 
 ### Пост 2: Без заголовка (только дата, фото, текст)
 
-**Файл:** `content/ru/threads/gcode/02-matrix/index.md`
+**Файл:** `content/ru/threads/gcode/02-matrix.md`
 ```yaml
 ---
 date: 2026-01-22
 images:
-  - /assets/threads/gcode/02-matrix/matrix.jpg
+  - /assets/threads/gcode/matrix/matrix.jpg
 ---
 
 Матрица пупочек. Экспериментирую, выдавливал разный объём пластика с разной высоты.
 ```
 
-**Фото:** `assets/threads/gcode/02-matrix/matrix.jpg`
+**Фото:** `assets/threads/gcode/matrix/matrix.jpg`
 
 ### Пост 3: Только картинка (без заголовка, даты, текста)
 ```yaml
 ---
 images:
-  - /assets/threads/gcode/03-print/final.jpg
+  - /assets/threads/gcode/print/final.jpg
 ---
 ```
 
