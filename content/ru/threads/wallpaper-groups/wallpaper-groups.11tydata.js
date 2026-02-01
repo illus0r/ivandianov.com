@@ -5,6 +5,6 @@ export default {
   permalink: function(data) {
     // Remove number prefix from filename for URL
     const slug = data.page.fileSlug.replace(/^\d+-/, '');
-    return `/ru/threads/wallpaper-groups/${slug}/`;
+    return `/ru/wallpaper-groups/${slug}/`;
   }
 };

@@ -83,28 +83,30 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("getTranslationUrl", function (collections, page, targetLang) {
-    // Special handling for thread pages — проверяем, существует ли перевод
-    if (page.url && page.url.includes('/threads/')) {
-      let targetUrl;
-      if (targetLang === 'ru' && page.url.startsWith('/en/')) {
-        targetUrl = page.url.replace(/^\/en/, '/ru');
-      } else if (targetLang === 'en' && page.url.startsWith('/ru/')) {
-        targetUrl = page.url.replace(/^\/ru/, '/en');
-      }
-      if (targetUrl) {
-        // Проверяем, существует ли целевая страница
-        const exists = collections.some(p => p.url === targetUrl);
-        if (exists) return targetUrl;
-        // Если перевода нет — возвращаем главную
-        return targetLang === 'en' ? '/' : '/ru/';
-      }
+    // Определяем тред по данным страницы, а не по URL
+    const pageData = collections.find(p => p.url === page.url);
+    const isThreadMicropost = pageData?.data?.threadName &&
+                              pageData?.data?.layout === 'thread-post.njk';
+
+    if (isThreadMicropost) {
+      const threadName = pageData.data.threadName;
+      const urlParts = page.url.split('/').filter(Boolean);
+      const slug = urlParts[urlParts.length - 1];
+      const targetUrl = targetLang === 'en'
+        ? `/${threadName}/${slug}/`
+        : `/${targetLang}/${threadName}/${slug}/`;
+
+      const exists = collections.some(p => p.url === targetUrl);
+      if (exists) return targetUrl;
+      return targetLang === 'en' ? '/' : '/ru/';
     }
 
+    // Обычные страницы — без изменений
     const match = collections.find(p =>
       p.fileSlug === page.fileSlug &&
       p.data.lang === targetLang &&
       p.url !== page.url &&
-      p.url && p.url !== false // страница должна реально генерироваться
+      p.url && p.url !== false
     );
     return match ? match.url : (targetLang === 'en' ? '/' : '/ru/');
   });

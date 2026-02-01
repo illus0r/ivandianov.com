@@ -8,7 +8,20 @@
     {# Пункты меню #}
     {% for item in collections.menu %}
       {% if lang == item.data.lang %}
-        <a class="nav-item{% if item.url == page.url %} nav-item-active{% endif %}" 
+        {% set isActive = item.url == page.url %}
+
+        {% if item.data.menuTitle == 'Блог' or item.data.menuTitle == 'Blog' %}
+          {% for post in collections.posts %}
+            {% if post.url == page.url and post.data.lang == lang %}
+              {% set isActive = true %}
+            {% endif %}
+          {% endfor %}
+          {% if '/threads/' in page.inputPath %}
+            {% set isActive = true %}
+          {% endif %}
+        {% endif %}
+
+        <a class="nav-item{% if isActive %} nav-item-active{% endif %}"
            href="{{ item.url }}">
           {{ item.data.menuTitle }}
         </a>
