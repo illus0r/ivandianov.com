@@ -3,11 +3,11 @@ layout: default.njk
 ---
 
 <article class="thread-index">
-  <h1>{{ title }}</h1>
-  
   <div class="meta">
-    <span class="progress" style="--progress: 360deg;"></span> {{ 'Тред' if lang == 'ru' else 'Thread' }}
+    <span class="progress" style="--progress: 360deg;"></span> {{ i18n[lang].thread }}
   </div>
+
+  <h1>{{ title }}</h1>
 
   {% if content %}
   <div class="thread-description">
@@ -22,15 +22,9 @@ layout: default.njk
     {%- if lang == "en" -%}
       {%- set collectionName = collectionName + "En" -%}
     {%- endif -%}
-    
+
     {% for post in collections[collectionName] %}
     <article class="thread-feed-item">
-      {% if post.data.title %}
-      <h2>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </h2>
-      {% endif %}
-
       {% if post.data.date %}
       <div class="meta">
         <a href="{{ post.url }}" class="time">
@@ -39,9 +33,23 @@ layout: default.njk
       </div>
       {% endif %}
 
+      {% if post.data.title %}
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+      {% endif %}
+
       {% if post.data.images %}
         {% for img in post.data.images %}
         <img src="{{ img }}" class="thread-image" alt="" loading="lazy">
+        {% endfor %}
+      {% endif %}
+
+      {% if post.data.videos %}
+        {% for vid in post.data.videos %}
+        <video controls muted loop preload="auto" class="thread-video">
+          <source src="{{ vid }}" type="video/mp4">
+        </video>
         {% endfor %}
       {% endif %}
 
@@ -49,12 +57,8 @@ layout: default.njk
         {{ post.templateContent | safe }}
       </div>
     </article>
+    {% if not loop.last %}<hr>{% endif %}
     {% endfor %}
   </div>
 
-  <footer class="thread-footer">
-    <p><a href="{{ '/' + lang + '/blog' if lang == 'ru' else '/blog' }}">
-      ← {{ 'Вернуться в блог' if lang == 'ru' else 'Back to blog' }}
-    </a></p>
-  </footer>
 </article>
