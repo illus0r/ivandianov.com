@@ -5,6 +5,6 @@ export default {
   permalink: function(data) {
     // Remove number prefix from filename for URL
     const slug = data.page.fileSlug.replace(/^\d+-/, '');
-    return `/ru/threads/3d-print/${slug}/`;
+    return `/ru/3d-print/${slug}/`;
   }
 };
