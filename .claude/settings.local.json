@@ -7,7 +7,22 @@
       "Bash(git rm:*)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nMerge branch ''openclaw-fix'': multilingual fixes and draft system\n\n- Add content.11tydata.js for automatic draft detection \\(empty pages\\)\n- Update getTranslationUrl filter to handle pages without permalink\n- Remove English post stubs without translations\n- Add new English blog posts\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(npx eleventy --quiet)",
+      "Bash(grep:*)",
+      "Bash(while read link)",
+      "Bash(do)",
+      "Bash(if [ -z \"$link\" ])",
+      "Bash(then continue)",
+      "Bash(fi)",
+      "Bash(target=\"_site$link\")",
+      "Bash(if [ \"$link: -1\" = \"/\" ])",
+      "Bash(then)",
+      "Bash(target=\"$targetindex.html\")",
+      "Bash(else)",
+      "Bash(target=\"$target/index.html\")",
+      "Bash(if [ ! -f \"$target\" ])",
+      "Bash(echo:*)"
     ]
   }
 }
