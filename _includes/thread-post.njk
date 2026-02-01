@@ -11,7 +11,7 @@ layout: default.njk
       {%- set currentIndex = loop.index0 -%}
     {%- endif -%}
   {%- endfor -%}
-  
+
   {# Найти родительский тред-пост для получения его title и URL #}
   {%- set threadPost = null -%}
   {%- for post in collections.posts -%}
@@ -21,7 +21,14 @@ layout: default.njk
   {%- endfor -%}
   {%- set threadTitle = threadPost.data.title if threadPost else (threadName | upper) -%}
   {%- set threadUrl = threadPost.url if threadPost else "/" -%}
-  
+
+  {# Meta над заголовком #}
+  {% if date %}
+  <div class="meta">
+    <a href="{{ page.url }}" class="time">{{ date.toISOString().split('T')[0] }}</a>
+  </div>
+  {% endif %}
+
   <h1>
     <a href="{{ threadUrl }}">{{ threadTitle | upper }}</a>
     →
@@ -32,16 +39,17 @@ layout: default.njk
     {% endif %}
   </h1>
 
-  {# Показываем мету только если есть title (иначе дата уже в заголовке) #}
-  {% if date and title %}
-  <div class="meta">
-    <a href="{{ page.url }}" class="time">{{ date.toISOString().split('T')[0] }}</a>
-  </div>
-  {% endif %}
-
   {% if images %}
     {% for img in images %}
     <img src="{{ img }}" class="thread-image" alt="" loading="lazy">
+    {% endfor %}
+  {% endif %}
+
+  {% if videos %}
+    {% for vid in videos %}
+    <video controls muted loop preload="auto" class="thread-video">
+      <source src="{{ vid }}" type="video/mp4">
+    </video>
     {% endfor %}
   {% endif %}
 
