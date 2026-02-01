@@ -48,8 +48,8 @@ export default function (eleventyConfig) {
     "assets/media/**/*.mp4": "assets/media",
     "assets/js/**/*.js": "assets/js",
     "assets/fonts/*": "assets/fonts",
-    "assets/threads/**/*": "assets/threads",
   });
+  eleventyConfig.addPassthroughCopy("assets/threads");
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     // output image dir
