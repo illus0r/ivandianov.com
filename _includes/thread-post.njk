@@ -22,14 +22,15 @@ layout: default.njk
   {%- set threadTitle = threadPost.data.title if threadPost else (threadName | upper) -%}
   {%- set threadUrl = threadPost.url if threadPost else "/" -%}
 
-  {# Meta над заголовком #}
-  {% if date %}
-  <div class="meta">
-    <a href="{{ page.url }}" class="time">{{ date.toISOString().split('T')[0] }}</a>
-  </div>
-  {% endif %}
+  <div class="post-header">
+    {# Meta над заголовком — только если есть title, иначе дата уже в заголовке #}
+    {% if date and title %}
+    <div class="meta">
+      <a href="{{ page.url }}" class="time">{{ date.toISOString().split('T')[0] }}</a>
+    </div>
+    {% endif %}
 
-  <h1>
+    <h1>
     <a href="{{ threadUrl }}">{{ threadTitle | upper }}</a>
     →
     {% if title %}
@@ -37,7 +38,8 @@ layout: default.njk
     {% else %}
       {{ date.toISOString().split('T')[0] if date else 'U・ᴥ・U' }}
     {% endif %}
-  </h1>
+    </h1>
+  </div>
 
   {% if images %}
     {% for img in images %}

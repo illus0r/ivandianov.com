@@ -3,11 +3,12 @@ layout: default.njk
 ---
 
 <article class="thread-index">
-  <div class="meta">
-    <span class="progress" style="--progress: 360deg;"></span> {{ i18n[lang].thread }}
+  <div class="post-header">
+    <div class="meta">
+      <span class="progress" style="--progress: 360deg;"></span> {{ i18n[lang].thread }}
+    </div>
+    <h1>{{ title }}</h1>
   </div>
-
-  <h1>{{ title }}</h1>
 
   {% if content %}
   <div class="thread-description">
