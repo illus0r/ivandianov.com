@@ -382,6 +382,46 @@ video {
   display: block;
 }
 
+/* Галерея — явно указанная через ::: gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin: 1rem 0;
+}
+
+.gallery p {
+  display: contents;
+}
+
+.gallery img {
+  display: block;
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+  .gallery img {
+    height: 300px;
+  }
+}
+
+/* Картинки в ленте треда — компактные */
+.thread-feed img {
+  height: 250px;
+  width: auto;
+  max-width: 100%;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .thread-feed img {
+    height: 400px;
+  }
+}
+
 ol,
 ul {
   padding-left: 2em;

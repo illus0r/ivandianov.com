@@ -5,6 +5,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItBracketedSpans from "markdown-it-bracketed-spans";
+import markdownItContainer from "markdown-it-container";
 import jsdom from "jsdom";
 import fs from "fs";
 
@@ -185,7 +186,8 @@ export default function (eleventyConfig) {
     "md",
     markdownIt({ html: true })
       .use(markdownItBracketedSpans)
-      .use(markdownItAttrs),
+      .use(markdownItAttrs)
+      .use(markdownItContainer, 'gallery'),
   );
 
   eleventyConfig.addTransform("danceHeaders", function (content, outputPath) {

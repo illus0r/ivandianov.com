@@ -23,7 +23,9 @@
       "Bash(target=\"$target/index.html\")",
       "Bash(if [ ! -f \"$target\" ])",
       "Bash(echo:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm add:*)"
     ]
   }
 }

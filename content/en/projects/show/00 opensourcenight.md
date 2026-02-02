@@ -11,6 +11,7 @@ span: 3
 Livecoder — Ivan Dianov<br>
 DJ — Vlada Goldberg
 
+::: gallery
 ![](/assets/media/projects/opensourcenight-01.jpg)
 ![](/assets/media/projects/opensourcenight-02.jpg)
 ![](/assets/media/projects/opensourcenight-03.jpg)
@@ -21,3 +22,4 @@ DJ — Vlada Goldberg
 ![](/assets/media/projects/opensourcenight-08.jpg)
 ![](/assets/media/projects/opensourcenight-09.jpg)
 ![](/assets/media/projects/opensourcenight-10.jpg)
+:::
