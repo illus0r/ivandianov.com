@@ -21,4 +21,8 @@ https://letnyayashkola.org/science-art/
 ![](/assets/media/projects/lsh/lsh-08.jpg)
 ![](/assets/media/projects/lsh/lsh-09.jpg)
 ![](/assets/media/projects/lsh/lsh-10.jpg)
+![](/assets/media/projects/lsh/lsh-11.jpg)
+![](/assets/media/projects/lsh/lsh-12.jpg)
+![](/assets/media/projects/lsh/lsh-13.jpg)
+![](/assets/media/projects/lsh/lsh-14.jpg)
 :::
