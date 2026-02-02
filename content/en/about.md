@@ -4,7 +4,7 @@ menuTitle: About
 url: /about/
 ---
 
-![](/assets/media/photo.jpg){style=width:256px}
+![](/assets/media/posts/photo.jpg){style=width:256px}
 
 Hi! I'm Ivan Dianov (pronounced [eye-van dee-ah-nov]), a generative artist and educator. I teach data art at [HSE University](https://www.hse.ru/en/) and am a co-founder of the educational platform [Setka](https://setka.design). I organize shader-based generative live-coding performances where I write code on stage that creates visuals synchronized with music.
 

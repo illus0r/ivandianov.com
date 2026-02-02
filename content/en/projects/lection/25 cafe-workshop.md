@@ -1,6 +1,6 @@
 ---
 caption: "Workshop: First Shader in Bonzomatic"
-cover: /assets/media/cafe-workshop.jpg
+cover: /assets/media/projects/cafe-workshop.jpg
 span: 2
 ---
 

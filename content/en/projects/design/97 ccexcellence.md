@@ -1,6 +1,6 @@
 ---
 caption: Animations for the CCExcellence Website
-cover: /assets/media/ccexcellence.png
+cover: /assets/media/projects/ccexcellence.png
 span: 2
 ---
 

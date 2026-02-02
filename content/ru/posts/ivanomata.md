@@ -4,7 +4,7 @@ date: 2022-11-21
 progress: 3
 ---
 
-![](/assets/media/2022-11-26-15-22-41.png)
+![](/assets/media/posts/2022-11-26-15-22-41.png)
 
 Иваноматы — клеточные автоматы с нарастающим разрешением. Вроде бы, таких раньше не было, поэтому назвал в свою честь. Если вы что-то похожее уже видели<!-- до ноября 2021 года-->, дайте знать, перееименую.
 
@@ -19,11 +19,11 @@ progress: 3
 
 Цветов у нас всего два: ■ и □. Чтобы найти новый цвет клетки, посмотрим, какого цвета она сама и её четыре соседа. Возможны 32 комбинации:
 
-![](/assets/media/2022-11-26-13-59-46.png)
+![](/assets/media/posts/2022-11-26-13-59-46.png)
 
 Каждой из этих комбинаций сопоставим цвет, в который перекрасим центральную клетку, это и будут наши правила. Например, такие:
 
-![](/assets/media/2022-11-26-14-26-13.png)
+![](/assets/media/posts/2022-11-26-14-26-13.png)
 Это один из 2<sup>32</sup> = 4 294 967 296 возможных вариантов правил{: .caption}
 <!-- https://editor.p5js.org/illus0r/sketches/myfquQUaF -->
 
@@ -33,17 +33,17 @@ progress: 3
 
 И, наконец, увеличиваем разрешение таблицы: каждую клетку делим на четыре.
 
-![](/assets/media/2022-11-26-15-11-26.png)
+![](/assets/media/posts/2022-11-26-15-11-26.png)
 На третьей картинке получилось непонятно, разделились чёрные клетки или нет. Поверьте мне, что разделились. Не переделывать же картинку. {: .caption}
 <!-- https://www.figma.com/file/abzo0bhPE5EJIuaZtJgWEd/Untitled?node-id=2%3A404&t=XQ7fThdoqwVCctyV-0 -->
 
 Повторяем процедуру несколько раз. Будет получаться что-то такое:
 
-![](/assets/media/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
+![](/assets/media/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
 
 Или такое:
 
-![](/assets/media/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
+![](/assets/media/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
 
 <!-- https://bit.ly/3EDBkXq -->
 

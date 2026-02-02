@@ -23,13 +23,13 @@ Text
 - Small text is editable.
 - Font lettering for each header line is chosen randomly out of 3 grotesque and 3 antiqua.
 
-![](/assets/media/pereverstka2.jpeg)
+![](/assets/media/projects/pereverstka2.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](/assets/media/pereverstka3.jpeg)
+![](/assets/media/projects/pereverstka3.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](/assets/media/pereverstka4.jpeg)
+![](/assets/media/projects/pereverstka4.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
 ## Implementation

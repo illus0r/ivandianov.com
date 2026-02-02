@@ -1,12 +1,12 @@
 ---
 caption: Онлайновый дизайн-тул для глитча картинок
-cover: /assets/media/pixel-sort.jpg
+cover: /assets/media/projects/pixel-sort.jpg
 span: 2
 ---
 
 # Пиксельсорт
 
-![](/assets/media/pixel-sort.jpg)
+![](/assets/media/projects/pixel-sort.jpg)
 
 Мы с Адамом Арутюновым сделали инструмент для глитчинга изображений. Адам разработал интерфейс, а я — шейдер, который перемешивает пиксели.
 

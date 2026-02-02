@@ -4,7 +4,7 @@ menuTitle: Про меня
 ---
 
 
-![](/assets/media/photo.jpg)
+![](/assets/media/posts/photo.jpg)
 
 Телеграм <a href='https://t.me/ivan_dianov'>@ivan_dianov</a>  
 Почта <a href='mailto:zor667@gmail.com'>zor667@gmail.com</a>

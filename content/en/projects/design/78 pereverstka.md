@@ -29,12 +29,12 @@ The whole thing is an html page, no canvas used. All blocks are div elements ali
 
 To save the resulting image I use [html2canvas](https://html2canvas.hertzen.com) library.
 
-![](/assets/media/pereverstka2.jpeg)
+![](/assets/media/projects/pereverstka2.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](/assets/media/pereverstka3.jpeg)
+![](/assets/media/projects/pereverstka3.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](/assets/media/pereverstka4.jpeg)
+![](/assets/media/projects/pereverstka4.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 

@@ -1,6 +1,6 @@
 ---
 caption: "Воркшоп: Первый шейдер в bonzomatic"
-cover: /assets/media/cafe-workshop.jpg
+cover: /assets/media/projects/cafe-workshop.jpg
 span: 2
 ---
 

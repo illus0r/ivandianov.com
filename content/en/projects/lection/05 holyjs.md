@@ -1,6 +1,6 @@
 ---
 caption: "Talk at HolyJS: Algorithmic Graphics: JS for Design and Art"
-cover: /assets/media/holyjs.jpg
+cover: /assets/media/projects/holyjs.jpg
 span: 3
 ---
 

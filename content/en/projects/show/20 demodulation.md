@@ -1,6 +1,6 @@
 ---
 caption: First place in the shader battle at Yandex's Demodulation
-cover: /assets/media/demodulation.jpg
+cover: /assets/media/projects/demodulation.jpg
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cTQSy76EPSM?si=q1DdY7gLanwtmYxi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

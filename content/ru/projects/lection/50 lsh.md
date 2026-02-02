@@ -1,6 +1,6 @@
 ---
 caption: Мастерская science art на Летней школе
-cover: /assets/media/lsh.jpg
+cover: /assets/media/projects/lsh.jpg
 span: 3
 ---
 
@@ -8,4 +8,4 @@ span: 3
 
 https://letnyayashkola.org/science-art/
 
-![Мастерская science art на Летней школе](/assets/media/lsh.jpg)
+![Мастерская science art на Летней школе](/assets/media/projects/lsh.jpg)

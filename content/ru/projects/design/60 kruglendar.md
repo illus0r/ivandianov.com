@@ -1,11 +1,11 @@
 ---
 caption: Круглендарь — круглый плакат-ежедневник
-cover: /assets/media/kruglendar.jpg
+cover: /assets/media/projects/kruglendar.jpg
 ---
 
 # Круглый плакат-ежедневник
 
-![Kruglendar](/assets/media/kruglendar.jpg)
+![Kruglendar](/assets/media/projects/kruglendar.jpg)
 
 [Kruglendar](https://kruglendar.ru/) is my personal project. Its goal is to provide a convenient way to have a general view of the whole year.
 
