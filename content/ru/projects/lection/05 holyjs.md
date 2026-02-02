@@ -11,11 +11,9 @@ span: 3
 
 Было много нового и интересного: новые люди, локации. И инструменты. Например, презу делал в sli.dev, вот тут [лог-чат про процесс](https://t.me/ivandianov_log/649)
 
-
 [Видео на ютубе](https://youtu.be/FomI7h3fS5M) и в [ВК](https://vkvideo.ru/video-119450242_456240389)
 
-![Спикеры](/assets/media/projects/holyjs-speakers.jpg)
-А на груповое фото я не попал, потом как-нибудь прифотошоплю. {.caption}
+[Презентация на сайте HolyJS](https://holyjs.ru/archive/2025%20Spring/talks/6b81e401c9fc4a4b85d16c59cf1fc9c2/?referer=%2Farchive%2F2025%2520Spring%2Fschedule%2Ftable%2F)
 
 ![Алгоритмическая графика: JS для дизайна и искусства](/assets/media/projects/holyjs.jpg)
 
@@ -26,3 +24,6 @@ span: 3
 ![](/assets/media/projects/holyjs/holyjs-04.jpg)
 ![](/assets/media/projects/holyjs/holyjs-05.jpg)
 :::
+
+![Спикеры](/assets/media/projects/holyjs-speakers.jpg)
+А на груповое фото я не попал, потом как-нибудь прифотошоплю. {.caption}
