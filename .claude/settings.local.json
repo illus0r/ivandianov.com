@@ -22,7 +22,8 @@
       "Bash(else)",
       "Bash(target=\"$target/index.html\")",
       "Bash(if [ ! -f \"$target\" ])",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(tree:*)"
     ]
   }
 }

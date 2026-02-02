@@ -6,7 +6,7 @@ progress: 3
 
 <!--autotranslate-->
 
-![](/assets/media/2022-11-26-15-22-41.png)
+![](/assets/media/posts/2022-11-26-15-22-41.png)
 
 Ivanomata are cellular automata with increasing resolution. Apparently, these didn't exist before, so I named them after myself. If you've seen something similar<!-- before November 2021-->, let me know and I'll rename them.
 
@@ -21,11 +21,11 @@ A cellular automaton needs rules by which cells change colors.
 
 We only have two colors: ■ and □. To find a new cell color, we look at the color of the cell itself and its four neighbors. There are 32 possible combinations:
 
-![](/assets/media/2022-11-26-13-59-46.png)
+![](/assets/media/posts/2022-11-26-13-59-46.png)
 
 Each of these combinations is matched with a color to repaint the central cell — these are our rules. For example, like these:
 
-![](/assets/media/2022-11-26-14-26-13.png)
+![](/assets/media/posts/2022-11-26-14-26-13.png)
 This is one of 2<sup>32</sup> = 4,294,967,296 possible rule variants{: .caption}
 <!-- https://editor.p5js.org/illus0r/sketches/myfquQUaF -->
 
@@ -35,17 +35,17 @@ Apply the rules, find new colors for each cell. Notice how the central cell of t
 
 Finally, increase the grid resolution: divide each cell into four.
 
-![](/assets/media/2022-11-26-15-11-26.png)
+![](/assets/media/posts/2022-11-26-15-11-26.png)
 In the third picture it's unclear whether black cells divided or not. Trust me, they did. Not going to redo the picture. {: .caption}
 <!-- https://www.figma.com/file/abzo0bhPE5EJIuaZtJgWEd/Untitled?node-id=2%3A404&t=XQ7fThdoqwVCctyV-0 -->
 
 Repeat the procedure a few times. You'll get something like this:
 
-![](/assets/media/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
+![](/assets/media/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
 
 Or this:
 
-![](/assets/media/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
+![](/assets/media/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
 
 <!-- https://bit.ly/3EDBkXq -->
 

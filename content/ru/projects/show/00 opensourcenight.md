@@ -1,6 +1,6 @@
 ---
 caption: Лайвкодинг под техно у Яндекса на ночи открытых библиотек
-cover: /assets/media/opensourcenight.jpg
+cover: /assets/media/projects/opensourcenight.jpg
 span: 3
 ---
 
@@ -11,13 +11,13 @@ span: 3
 Лайвкодер — Иван Дианов<br>
 DJ — Влада Голдберг
 
-![](/assets/media/opensourcenight-01.jpg)
-![](/assets/media/opensourcenight-02.jpg)
-![](/assets/media/opensourcenight-03.jpg)
-![](/assets/media/opensourcenight-04.jpg)
-![](/assets/media/opensourcenight-05.jpg)
-![](/assets/media/opensourcenight-06.jpg)
-![](/assets/media/opensourcenight-07.jpg)
-![](/assets/media/opensourcenight-08.jpg)
-![](/assets/media/opensourcenight-09.jpg)
-![](/assets/media/opensourcenight-10.jpg)
+![](/assets/media/projects/opensourcenight-01.jpg)
+![](/assets/media/projects/opensourcenight-02.jpg)
+![](/assets/media/projects/opensourcenight-03.jpg)
+![](/assets/media/projects/opensourcenight-04.jpg)
+![](/assets/media/projects/opensourcenight-05.jpg)
+![](/assets/media/projects/opensourcenight-06.jpg)
+![](/assets/media/projects/opensourcenight-07.jpg)
+![](/assets/media/projects/opensourcenight-08.jpg)
+![](/assets/media/projects/opensourcenight-09.jpg)
+![](/assets/media/projects/opensourcenight-10.jpg)

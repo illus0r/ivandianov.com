@@ -6,7 +6,7 @@ progress: 3
 
 Я сделал эту статью из своего твиттер-треда [https://twitter.com/i_dianov/status/1367136469853351944](https://twitter.com/i_dianov/status/1367136469853351944)
 
-![](/assets/media/2022-02-17-11-09-37.png)
+![](/assets/media/posts/2022-02-17-11-09-37.png)
 Пересечение сферы с пересечением гироида и сферы {.caption}
 
 Привет! Это туториал о том, как найти пересечение двух или более поверхностей (не объёмов), чтобы делать сложные #SDF формы для #raymarching.
@@ -36,7 +36,7 @@ vec3 p; float d=0.,i,e=1.; for(;i++<99.&&e>.01; p=d*normalize(vec3((FC.xy-.5*r)/
 #define SDF(p) SPHERE
 ```
 
-![](/assets/media/2022-02-17-11-07-46.png)
+![](/assets/media/posts/2022-02-17-11-07-46.png)
 
 ---
 
@@ -46,7 +46,7 @@ vec3 p; float d=0.,i,e=1.; for(;i++<99.&&e>.01; p=d*normalize(vec3((FC.xy-.5*r)/
 #define PLANE_Z -p.z
 #define SDF(p) PLANE_Z
 ```
-![](/assets/media/surface-intersection-2.gif)
+![](/assets/media/posts/surface-intersection-2.gif)
 
 ---
 
@@ -60,7 +60,7 @@ vec3 p; float d=0.,i,e=1.; for(;i++<99.&&e>.01; p=d*normalize(vec3((FC.xy-.5*r)/
 
 Дело в том, что `length` двух SDF близок к нулю, только если оба SDF близки к нулю.
 
-![](/assets/media/surface-intersection-3.gif)
+![](/assets/media/posts/surface-intersection-3.gif)
 
 ---
 
@@ -73,7 +73,7 @@ vec3 p; float d=0.,i,e=1.; for(;i++<99.&&e>.01; p=d*normalize(vec3((FC.xy-.5*r)/
 Обратите внимание на `-.2` в конце формулы.
 https://bit.ly/3bXGTBJ
 
-![](/assets/media/surface-intersection-4.gif)
+![](/assets/media/posts/surface-intersection-4.gif)
 
 ---
 
@@ -91,7 +91,7 @@ https://bit.ly/3bXGTBJ
 
 https://bit.ly/30me4cZ
 
-![](/assets/media/surface-intersection-6.gif)
+![](/assets/media/posts/surface-intersection-6.gif)
 
 ---
 
@@ -106,7 +106,7 @@ SPHERE))-.01
 
 https://bit.ly/3883WbT
 
-![](/assets/media/surface-intersection-7.gif)
+![](/assets/media/posts/surface-intersection-7.gif)
 
 ---
 
@@ -119,7 +119,7 @@ https://bit.ly/3883WbT
 
 Сложно понять его форму, потому что гироид бесконечен и мы внутри него https://bit.ly/3070hqe
 
-![](/assets/media/surface-intersection-8.gif)
+![](/assets/media/posts/surface-intersection-8.gif)
 
 ---
 
@@ -133,7 +133,7 @@ https://bit.ly/30a2scU
 
 Подробнее о гироидах можно узнать на https://en.wikipedia.org/wiki/Gyroid
 
-![](/assets/media/surface-intersection-9.gif)
+![](/assets/media/posts/surface-intersection-9.gif)
 
 ---
 
@@ -146,7 +146,7 @@ https://bit.ly/30a2scU
 
 https://bit.ly/3kGYWjr
 
-![](/assets/media/surface-intersection-10.gif)
+![](/assets/media/posts/surface-intersection-10.gif)
 
 ---
 
@@ -158,7 +158,7 @@ https://bit.ly/3kGYWjr
 
 https://bit.ly/3uT3ZSu
 
-![](/assets/media/surface-intersection-11.gif)
+![](/assets/media/posts/surface-intersection-11.gif)
 
 ---
 
@@ -184,4 +184,4 @@ https://bit.ly/3uT3ZSu
 
 Это мой первый туториал-тред. Буду благодарен, если поделитесь мыслями по теме, зададите вопросы или похвастаетесь SDF, которые откроете.
 
-![](/assets/media/surface-intersection-13.gif)
+![](/assets/media/posts/surface-intersection-13.gif)

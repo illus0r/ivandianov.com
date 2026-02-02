@@ -1,6 +1,6 @@
 ---
 caption: "Доклад на HolyJS: Алгоритмическая графика: JS для дизайна и искусства"
-cover: /assets/media/holyjs.jpg
+cover: /assets/media/projects/holyjs.jpg
 span: 3
 ---
 
@@ -14,7 +14,7 @@ span: 3
 
 [Видео на ютубе](https://youtu.be/FomI7h3fS5M) и в [ВК](https://vkvideo.ru/video-119450242_456240389)
 
-![Спикеры](/assets/media/holyjs-speakers.jpg)
+![Спикеры](/assets/media/projects/holyjs-speakers.jpg)
 А на груповое фото я не попал, потом как-нибудь прифотошоплю. {.caption}
 
-![Алгоритмическая графика: JS для дизайна и искусства](/assets/media/holyjs.jpg)
+![Алгоритмическая графика: JS для дизайна и искусства](/assets/media/projects/holyjs.jpg)

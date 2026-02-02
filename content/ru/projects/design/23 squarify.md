@@ -1,6 +1,6 @@
 ---
 caption: Интерактивный фон на сайте Squarify
-cover: /assets/media/squarify.png
+cover: /assets/media/projects/squarify.png
 span: 2
 
 ---
@@ -15,5 +15,5 @@ span: 2
 
 [squarefi.co](https://squarefi.co)
 
-![Squarify](/assets/media/squarify.png)
+![Squarify](/assets/media/projects/squarify.png)
 

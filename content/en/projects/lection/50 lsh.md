@@ -1,6 +1,6 @@
 ---
 caption: Science art workshop at the Summer School
-cover: /assets/media/lsh.jpg
+cover: /assets/media/projects/lsh.jpg
 span: 3
 ---
 
@@ -8,4 +8,4 @@ span: 3
 
 https://letnyayashkola.org/science-art/
 
-![Science Art Workshop at the Summer School](/assets/media/lsh.jpg)
+![Science Art Workshop at the Summer School](/assets/media/projects/lsh.jpg)

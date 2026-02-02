@@ -12,7 +12,7 @@ The identity is based on the idea of decentralization and collective behavior. W
 
 We used the letter "I" from the logo as the agent.
 
-![](/assets/media/walbi/idea5.jpg)
+![](/assets/media/projects/walbi/idea5.jpg)
 
 We created an online editor with several visual styles. Here is the black-and-white version that reacts to mouse movement:
 

@@ -1,5 +1,5 @@
 ---
 caption: Фрактальный тоннель
-cover: /assets/media/essay-livecoding.webp
+cover: /assets/media/posts/essay-livecoding.webp
 ---
 

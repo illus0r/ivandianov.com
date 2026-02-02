@@ -1,5 +1,5 @@
 ---
 caption: Round Pixel Drawing Tool
-cover: /assets/media/round-pixels.jpg
+cover: /assets/media/projects/round-pixels.jpg
 span: 2
 ---

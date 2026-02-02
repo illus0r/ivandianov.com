@@ -32,13 +32,13 @@ In data visualization, there’s a concept called “indexical visualization” 
 
 Some of my favorite generative systems to experiment with include cellular automata, L‑systems, particle simulations, slime mold, and fractals. They all follow simple rules, but create complex and interesting visualisations that allow you to explore the mathematical reality in which they exist.
 
-![](/assets/media/essay-physarum.webp)
+![](/assets/media/posts/essay-physarum.webp)
 A modification of a physarum simulation algorithm{.caption}
 
-![](/assets/media/essay-livecoding.webp)
+![](/assets/media/posts/essay-livecoding.webp)
 A fractal corridor made during a livecoding session{.caption}
 
-![](/assets/media/essay-sand.webp)
+![](/assets/media/posts/essay-sand.webp)
 A deterministic sand simulation with cellular automata{.caption}
 
 ## Live Coding and Unpredictability
@@ -47,7 +47,7 @@ Both in life and programming, unpredictability matters to me. If everything’s 
 
 Even when the code is small, my brain can’t grasp all its complexity, so I can’t fully understand how a given fractal forms. This adds an element of unexpectedness and unpredictability. Sometimes, I feel a sudden urge to delete or randomly modify code fragments, and sometimes a single character change transforms the screen completely. It’s thrilling and hypnotic, keeping me glued to the screen.
 
-![](/assets/media/essay-livecoding2.webp)
+![](/assets/media/posts/essay-livecoding2.webp)
 Livecoding performance at the museum{.caption}
 
 In livecoding, the concept of “Truth to Materials” is also important to me.
@@ -70,10 +70,10 @@ I used to love taking pictures with a Dirkon, a pinhole paper camera. Before tha
 
 I enjoy achieving results with primitive tools. In programming, I like it when the code is as short as possible. In practice, it's rarely needed, except when sizecoding is valuable in itself. For example, there's a Twitter challenge #つぶぶやきGLSL when you need to fit a fancy shader into a tweet. When I was preparing the Click project for Art Blocks I also was enthusiastic about shrinking the code size. It's a magical feeling when the source code is condensed to a small rectangle that is entirely visible on the screen.
 
-![](/assets/media/essay-click-code.webp)
+![](/assets/media/posts/essay-click-code.webp)
 The source code of the Click project{.caption}
 
-![](/assets/media/essay-click.webp)
+![](/assets/media/posts/essay-click.webp)
 Several outputs generated with the code above{.caption}
 
 Some results of the above script
@@ -82,7 +82,7 @@ This practice of creating minimal code is handy for livecoding performances and 
 
 The limitation of the code size makes you creative and resourceful. For example, one and the same function can be used for both macro and micropattern, as in Wholeness Mirage.
 
-![](/assets/media/essay-wholeness-mirage.webp)
+![](/assets/media/posts/essay-wholeness-mirage.webp)
 Wholeness Mirage uses the same pattern for micro and marco levels{.caption}
 
 Such limitations can affect the work making a photo, stencil, or generative art piece coarser. I used to struggle with this, striving for perfection, but over time, accepting the imperfections in myself and my work has become an important theme. It’s a practice and philosophy for me — not polishing a piece to perfection but finishing it as spontaneously as I started it.
@@ -101,17 +101,17 @@ For example, I sometimes can't talk myself into a task for hours. It helps to se
 
 Even the hyperfocus characteristic of ADHD has been super helpful for focused work. But it took me a while to learn how to get into it. In the case of generative art, I need to get excited about an idea, to come up with an innovative combination of techniques that I want to show to the world. This was the case, for example, with curvoxel-hybrid raymarching and Zero-player game
 
-![](/assets/media/essay-antigravity.webp)
+![](/assets/media/posts/essay-antigravity.webp)
 Antigravity #35{.caption}
 
-![](/assets/media/essay-zpg.webp)
+![](/assets/media/posts/essay-zpg.webp)
 Zero-player game #1 is an infinite plane filled with never repeating pattern{.caption}
 
 Another way is to find an inspiring reference. Architecture and biological processes are an endless source of inspiration for me.
 
 Often when programming I can't keep the whole picture in my head, I have to draw diagrams on a piece of paper or a chalkboard, for this purpose I painted some walls in my flat with black board paint.
 
-![](/assets/media/essay-drafts.webp)
+![](/assets/media/posts/essay-drafts.webp)
 First sketches for a commercial project{.caption}
 
 Another way to stay focused is through the sense of flow, and a quick result is essential for that. I couldn’t get into working with neural networks — they take too long to yield results, let alone training one on a custom dataset. Shaders and javascript, on the other hand, show results instantly, and that's what hooks me.

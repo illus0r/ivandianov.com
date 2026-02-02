@@ -1,5 +1,5 @@
 ---
 caption: Cool Interactive Spinner on the Website
-cover: /assets/media/spinner.png
+cover: /assets/media/projects/spinner.png
 span: 3
 ---
