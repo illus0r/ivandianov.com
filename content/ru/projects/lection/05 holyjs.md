@@ -18,3 +18,11 @@ span: 3
 А на груповое фото я не попал, потом как-нибудь прифотошоплю. {.caption}
 
 ![Алгоритмическая графика: JS для дизайна и искусства](/assets/media/projects/holyjs.jpg)
+
+::: gallery
+![](/assets/media/projects/holyjs/holyjs-01.jpg)
+![](/assets/media/projects/holyjs/holyjs-02.jpg)
+![](/assets/media/projects/holyjs/holyjs-03.jpg)
+![](/assets/media/projects/holyjs/holyjs-04.jpg)
+![](/assets/media/projects/holyjs/holyjs-05.jpg)
+:::
