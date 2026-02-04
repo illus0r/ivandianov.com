@@ -12,8 +12,8 @@
 					{%- set isImageKit = project.data.cover.includes('ik.imagekit.io') -%}
 					{%- if isImageKit -%}
 						<img class="cover" 
-							src="{{ project.data.cover }}?tr=w-1024,f-webp" 
-							srcset="{{ project.data.cover }}?tr=w-512,f-webp 512w, {{ project.data.cover }}?tr=w-1024,f-webp 1024w, {{ project.data.cover }}?tr=w-2048,f-webp 2048w"
+							src="{{ project.data.cover }}?tr=w-1024,c-at_max,f-webp" 
+							srcset="{{ project.data.cover }}?tr=w-512,c-at_max,f-webp 512w, {{ project.data.cover }}?tr=w-1024,c-at_max,f-webp 1024w, {{ project.data.cover }}?tr=w-2048,c-at_max,f-webp 2048w"
 							alt="{{ project.data.caption }}" 
 							sizes="{{ sizes }}"
 							loading="lazy"
