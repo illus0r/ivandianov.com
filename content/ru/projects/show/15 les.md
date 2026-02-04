@@ -1,5 +1,5 @@
 ---
 caption: Лайвкодинг в шатре на опен-эйр фестивале LES
-cover: /assets/media/projects/les.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/les.jpg
 ---
 

@@ -1,11 +1,11 @@
 ---
 caption: Песок, который можно сыпать мышкой
-cover: /assets/media/posts/essay-sand.webp
+cover: https://ik.imagekit.io/ivandianov/posts/essay-sand.webp
 span: 2
 ---
 
 # Песок, который можно сыпать мышкой
 
-![](/assets/media/projects/sand2.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/sand2.jpg)
 
-![](/assets/media/posts/essay-sand.webp)
+![](https://ik.imagekit.io/ivandianov/posts/essay-sand.webp)

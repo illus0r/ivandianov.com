@@ -5,7 +5,7 @@ date: 2022-12-18 02:43:00
 progress: 3
 ---
 
-![](/assets/media/posts/2022-11-26-15-22-41.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-15-22-41.png)
 
 ## Идея
 
@@ -25,12 +25,12 @@ progress: 3
 
 У нас только два цвета: ■ и □. Чтобы найти новый цвет клетки, смотрим на цвет самой клетки и её четырёх соседей. Возможны 32 комбинации:
 
-![](/assets/media/posts/2022-11-26-13-59-46.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-13-59-46.png)
 <!-- https://editor.p5js.org -->
 
 Каждой из этих комбинаций сопоставляется цвет, в который мы перекрашиваем центральную клетку: это и будут наши правила. Например, такие:
 
-![](/assets/media/posts/2022-11-26-14-26-13.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-14-26-13.png)
 Это один из 2^32 = 4 294 967 296 возможных вариантов правил{: .caption}
 <!-- https://editor.p5js.org/illus0r/sketches/myfquQUaF -->
 
@@ -40,17 +40,17 @@ progress: 3
 
 Наконец, увеличиваем разрешение сетки, деля каждую клетку на четыре.
 
-![](/assets/media/posts/2022-11-26-15-11-26.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-15-11-26.png)
 На третьей картинке непонятно, разделились чёрные клетки или нет. Поверьте, разделились! {: .caption}
 <!-- https://www.figma.com/file/abzo0bhPE5EJIuaZtJgWEd/Untitled?node-id=2%3A404&t=XQ7fThdoqwVCctyV-0 -->.
 
 Повторяем эту процедуру несколько раз. Должно получиться что-то вроде этого:
 
-![](/assets/media/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
+![](https://ik.imagekit.io/ivandianov/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
 
 Или этого:
 
-![](/assets/media/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
+![](https://ik.imagekit.io/ivandianov/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
 
 <!-- https://bit.ly/3EDBkXq -->
 

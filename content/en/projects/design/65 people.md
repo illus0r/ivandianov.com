@@ -1,5 +1,5 @@
 ---
 caption: Online Drawing Tool for Strange Vector Shapes
-cover: /assets/media/projects/people.png
+cover: https://ik.imagekit.io/ivandianov/projects/people.png
 ---
 

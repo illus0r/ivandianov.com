@@ -1,6 +1,6 @@
 ---
 caption: "Workshop: First Shader in Bonzomatic"
-cover: /assets/media/projects/cafe-workshop.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/cafe-workshop.jpg
 span: 2
 ---
 

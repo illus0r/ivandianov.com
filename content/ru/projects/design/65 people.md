@@ -1,5 +1,5 @@
 ---
 caption: Онлайн-рисовалка странных векторных шейпов
-cover: /assets/media/projects/people.png
+cover: https://ik.imagekit.io/ivandianov/projects/people.png
 ---
 

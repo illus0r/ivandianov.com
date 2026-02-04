@@ -40,7 +40,7 @@ If before we moved along the ray no more than one voxel at a time, now we can ch
 
 For example, this image
 
-![](/assets/media/posts/2023-02-23-20-25-01.jpg)
+![](https://ik.imagekit.io/ivandianov/posts/2023-02-23-20-25-01.jpg)
 
 has this SDF:
 
@@ -48,9 +48,9 @@ has this SDF:
 
 Actually I use a 2D texture to store it. To make this work, I slice the volumetric map into horizontal one-voxel layers and lay them left to right. The result is a texture with height voxSize and width voxSize²
 
-![](/assets/media/posts/2023-02-23-21-02-58.png)
+![](https://ik.imagekit.io/ivandianov/posts/2023-02-23-21-02-58.png)
 This isn't `<hr>`, it's a narrow image{: .caption}
 
 As you can see, you can barely see anything. Too small. Zooming in on a piece:
 
-![](/assets/media/posts/2023-02-23-21-04-28.png)
+![](https://ik.imagekit.io/ivandianov/posts/2023-02-23-21-04-28.png)

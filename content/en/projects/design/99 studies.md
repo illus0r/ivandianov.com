@@ -1,4 +1,4 @@
 ---
 caption: Loads of Experiments with Programmable Graphics
-cover: /assets/media/projects/studies.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/studies.jpg
 ---

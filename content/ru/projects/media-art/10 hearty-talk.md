@@ -1,6 +1,6 @@
 ---
 caption: Душевный разговор — аудиореактивная проекция
-cover: /assets/media/projects/hearty-talk.png
+cover: https://ik.imagekit.io/ivandianov/projects/hearty-talk.png
 type: media-art
 span: 2
 ---

@@ -95,7 +95,7 @@ For simulating cellular life, the fragment shader is more convenient: they can m
 
 ## Data storage { #data}
 
-![](/assets/media/posts/2023-02-22-02-11-58.jpg)
+![](https://ik.imagekit.io/ivandianov/posts/2023-02-22-02-11-58.jpg)
 [Picture shows many tiny cells, each secreting colored substances. Which ones depends on DNA, as does cell behavior: turns, speed changes. Genes are passed to offspring during division]{.caption}
 
 I liked [TechnoShaman's idea about DNA interpretation](https://www.youtube.com/watch?v=jXa5IASmlkg). In short: each cell has "DNA" — an array of 64 elements, each can take one of 64 values. The cell also remembers the number of its current command. Commands can be simple: "move", "reproduce", or tricky: "if energy is above 10 units, go to command 5, otherwise — to command 43".

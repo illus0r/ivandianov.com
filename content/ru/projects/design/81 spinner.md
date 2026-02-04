@@ -1,6 +1,6 @@
 ---
 caption: Прикольная интерактивная крутилка на сайте
-cover: /assets/media/projects/spinner.png
+cover: https://ik.imagekit.io/ivandianov/projects/spinner.png
 span: 3
 ---
 

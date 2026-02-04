@@ -1,6 +1,6 @@
 ---
 caption: "Доклад на HolyJS: Алгоритмическая графика: JS для дизайна и искусства"
-cover: /assets/media/projects/holyjs.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/holyjs.jpg
 span: 3
 ---
 
@@ -15,7 +15,7 @@ span: 3
 
 [Презентация на сайте HolyJS](https://holyjs.ru/archive/2025%20Spring/talks/6b81e401c9fc4a4b85d16c59cf1fc9c2/?referer=%2Farchive%2F2025%2520Spring%2Fschedule%2Ftable%2F)
 
-![Алгоритмическая графика: JS для дизайна и искусства](/assets/media/projects/holyjs.jpg)
+![Алгоритмическая графика: JS для дизайна и искусства](https://ik.imagekit.io/ivandianov/projects/holyjs.jpg)
 
 ::: gallery
 ![](/assets/media/projects/holyjs/holyjs-01.jpg)
@@ -25,5 +25,5 @@ span: 3
 ![](/assets/media/projects/holyjs/holyjs-05.jpg)
 :::
 
-![Спикеры](/assets/media/projects/holyjs-speakers.jpg)
+![Спикеры](https://ik.imagekit.io/ivandianov/projects/holyjs-speakers.jpg)
 А на груповое фото я не попал, потом как-нибудь прифотошоплю. {.caption}

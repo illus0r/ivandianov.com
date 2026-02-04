@@ -1,5 +1,5 @@
 ---
 caption: Generator of growing things for Wildberries
-cover: /assets/media/projects/wb-growth1.png
+cover: https://ik.imagekit.io/ivandianov/projects/wb-growth1.png
 span: 2
 ---

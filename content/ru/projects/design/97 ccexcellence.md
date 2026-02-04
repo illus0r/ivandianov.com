@@ -1,6 +1,6 @@
 ---
 caption: Анимации для сайта CCExcellence
-cover: /assets/media/projects/ccexcellence.png
+cover: https://ik.imagekit.io/ivandianov/projects/ccexcellence.png
 span: 2
 ---
 
