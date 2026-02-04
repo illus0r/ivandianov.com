@@ -395,7 +395,8 @@ video {
   display: contents;
 }
 
-.gallery img {
+.gallery img,
+.gallery video {
   display: block;
   height: 200px;
   width: auto;
@@ -403,7 +404,8 @@ video {
 }
 
 @media (min-width: 600px) {
-  .gallery img {
+  .gallery img,
+  .gallery video {
     height: 300px;
   }
 }
