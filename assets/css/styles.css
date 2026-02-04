@@ -340,6 +340,8 @@ a {
   transition-property: border-bottom, border-color, background, color, fill;
   transition-duration: 0s;
   transition-timing-function: ease-out;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 a:hover {
