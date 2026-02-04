@@ -1,4 +1,4 @@
 ---
 caption: Fractal tunnel
-cover: /assets/media/posts/essay-livecoding.webp
+cover: https://ik.imagekit.io/ivandianov/posts/essay-livecoding.webp
 ---

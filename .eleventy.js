@@ -1,6 +1,6 @@
 // const Image = require("@11ty/eleventy-img");
 import CleanCSS from "clean-css";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+// import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"; // Disabled - using ImageKit CDN
 // for classes in md
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
@@ -53,26 +53,17 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("assets/threads");
 
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // output image dir
-    urlPath: "/assets/media",
-    // output image formats
-    formats: ["webp"],
-    sharpOptions: {
-      webp: {
-        quality: 100,
-      },
-    },
-    widths: ["512", "1024", "2048"],
-
-    htmlOptions: {
-      imgAttributes: {
-        loading: "lazy",
-        decoding: "async",
-      },
-      pictureAttributes: {},
-    },
-  });
+  // Disabled - using ImageKit CDN instead
+  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+  //   urlPath: "/assets/media",
+  //   formats: ["webp"],
+  //   sharpOptions: { webp: { quality: 100 } },
+  //   widths: ["512", "1024", "2048"],
+  //   htmlOptions: {
+  //     imgAttributes: { loading: "lazy", decoding: "async" },
+  //     pictureAttributes: {},
+  //   },
+  // });
 
   eleventyConfig.addFilter("dump", function (value) {
     console.log("value:", value);
@@ -125,6 +116,28 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("removeNumber", function (slug) {
     return slug.replace(/^\d+-/, '');
+  });
+
+  // ImageKit shortcode for CDN images with responsive srcset
+  eleventyConfig.addShortcode("img", function(url, alt = "", sizes = "auto") {
+    const widths = [512, 1024, 2048];
+    const srcset = widths
+      .map(w => `${url}?tr=w-${w},f-webp ${w}w`)
+      .join(", ");
+    
+    return `<img 
+      src="${url}?tr=w-1024,f-webp" 
+      srcset="${srcset}"
+      sizes="${sizes}"
+      alt="${alt}"
+      loading="lazy"
+      decoding="async"
+    >`;
+  });
+
+  // ImageKit video shortcode (no transforms, just hosting)
+  eleventyConfig.addShortcode("video", function(url, attrs = "") {
+    return `<video src="${url}" ${attrs} loop autoplay muted playsinline></video>`;
   });
 
   eleventyConfig.addCollection("posts", function (collectionsApi) {

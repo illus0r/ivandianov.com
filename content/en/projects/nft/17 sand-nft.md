@@ -1,11 +1,11 @@
 ---
 caption: Sand that can be poured with the mouse
-cover: /assets/media/posts/essay-sand.webp
+cover: https://ik.imagekit.io/ivandianov/posts/essay-sand.webp
 span: 2
 ---
 
 # Sand that can be poured with the mouse
 
-![](/assets/media/projects/sand2.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/sand2.jpg)
 
-![](/assets/media/posts/essay-sand.webp)
+![](https://ik.imagekit.io/ivandianov/posts/essay-sand.webp)

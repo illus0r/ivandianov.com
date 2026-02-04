@@ -1,12 +1,12 @@
 ---
 date: 2025-09-28
 images:
-  - /assets/threads/3d-print/10-knife-handle/01.jpg
-  - /assets/threads/3d-print/10-knife-handle/02.jpg
-  - /assets/threads/3d-print/10-knife-handle/03.jpg
-  - /assets/threads/3d-print/10-knife-handle/04.jpg
-  - /assets/threads/3d-print/10-knife-handle/05.jpg
-  - /assets/threads/3d-print/10-knife-handle/06.jpg
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/10-knife-handle/01.jpg
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/10-knife-handle/02.jpg
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/10-knife-handle/03.jpg
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/10-knife-handle/04.jpg
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/10-knife-handle/05.jpg
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/10-knife-handle/06.jpg
 ---
 
 Идея запечатать нож в новую ручку на 3D принтере

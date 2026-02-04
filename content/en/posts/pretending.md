@@ -10,7 +10,7 @@ In school we studied graphs of various functions, for example, parabolas: `y = x
 
 Then it got worse: turns out when multiplying x, `y = (2x)²`, the graph doesn't stretch along the x-axis but instead compresses.
 
-![](/assets/media/posts/2022-07-06-14-33-35.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-14-33-35.png)
 
 If you don't believe me, [check for yourself](https://www.desmos.com/calculator/plcsrckgof).
 
@@ -20,7 +20,7 @@ Now I think I've figured it out, let me explain.
 
 Take a shader that draws a circle:
 
-![](/assets/media/posts/2022-07-06-15-28-04.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-15-28-04.png)
 
 ```GLSL
 precision highp float;
@@ -42,12 +42,12 @@ void main(){
 
 Indeed, `uv*=2.;` shrinks the image:
 
-![](/assets/media/posts/2022-07-06-15-29-33.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-15-29-33.png)
 [https://bit.ly/3PbJyK9](https://bit.ly/3PbJyK9) {.caption }
 
 and `uv/=2.;` stretches it:
 
-![](/assets/media/posts/2022-07-06-15-34-52.png)
+![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-15-34-52.png)
 [https://bit.ly/3yKkCDU](https://bit.ly/3yKkCDU) {.caption }
 
 Similarly `uv.x += 1.;` shifts the graph left, and `uv.x -= 1.` — right. Where's the logic, where's reason?

@@ -1,6 +1,6 @@
 ---
 caption: Антигравитация
-cover: /assets/media/projects/antigravity.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/antigravity.jpg
 span: 3
 ---
 

@@ -1,6 +1,6 @@
 ---
 caption: Генеративные обои и панно для Додо
-cover: /assets/media/projects/dodo1.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/dodo1.jpg
 span: 3
 ---
 

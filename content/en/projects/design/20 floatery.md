@@ -10,7 +10,7 @@ Floattery takes a name and smack! Creates a float based on it. At last, you can 
 Don't trust the word, try it yourself:  
 [floats.dianov.org](https://floats.dianov.org)
 
-![Floatery](/assets/media/projects/floatery.png)
+![Floatery](https://ik.imagekit.io/ivandianov/projects/floatery.png)
 
 The floats are combined from the sections we have created. They are not combined at random, but according to the generative grammar rules. They define floats variations: the sections they consist of and the order these sections appear in.
 

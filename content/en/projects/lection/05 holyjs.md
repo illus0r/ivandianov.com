@@ -1,6 +1,6 @@
 ---
 caption: "Talk at HolyJS: Algorithmic Graphics: JS for Design and Art"
-cover: /assets/media/projects/holyjs.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/holyjs.jpg
 span: 3
 ---
 
@@ -14,7 +14,7 @@ There was a lot of new and interesting things: new people, locations. And tools.
 
 [Presentation on HolyJS website](https://holyjs.ru/archive/2025%20Spring/talks/6b81e401c9fc4a4b85d16c59cf1fc9c2/?referer=%2Farchive%2F2025%2520Spring%2Fschedule%2Ftable%2F)
 
-![Algorithmic Graphics: JS for Design and Art](/assets/media/projects/holyjs.jpg)
+![Algorithmic Graphics: JS for Design and Art](https://ik.imagekit.io/ivandianov/projects/holyjs.jpg)
 
 ::: gallery
 ![](/assets/media/projects/holyjs/holyjs-01.jpg)
@@ -24,5 +24,5 @@ There was a lot of new and interesting things: new people, locations. And tools.
 ![](/assets/media/projects/holyjs/holyjs-05.jpg)
 :::
 
-![Speakers](/assets/media/projects/holyjs-speakers.jpg)
+![Speakers](https://ik.imagekit.io/ivandianov/projects/holyjs-speakers.jpg)
 I didn't make it to the group photo, I'll photoshop myself in sometime. {.caption}

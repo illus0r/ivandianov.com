@@ -1,5 +1,5 @@
 ---
 caption: Первое место в шейдер-батле на Демодуляции Яндекса
-cover: /assets/media/projects/demodulation.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/demodulation.jpg
 ---
 

@@ -1,5 +1,5 @@
 ---
 caption: Сломанный физарум
-cover: /assets/media/posts/essay-physarum.webp
+cover: https://ik.imagekit.io/ivandianov/posts/essay-physarum.webp
 ---
 

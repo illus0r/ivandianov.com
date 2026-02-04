@@ -1,7 +1,7 @@
 ---
 date: 2026-01-19
 images:
-  - /assets/threads/gcode/cellular/result.jpg
+  - https://ik.imagekit.io/ivandianov/threads/gcode/cellular/result.jpg
 ---
 
 <!--autotranslate-->
@@ -15,7 +15,7 @@ Though if you mess up a digit, the printer will crash into the part at full spee
 Tinkered for two days, got something cool. This is a one-dimensional cellular automaton — different steps are visible along the cylinder axis. I like the texture, like it's knitted.
 
 In G-code viewer it looks like this
-<img src="/assets/threads/gcode/cellular/fullcontrol.jpg" alt="Full Control gcode visualization">
+<img src="https://ik.imagekit.io/ivandianov/threads/gcode/cellular/fullcontrol.jpg" alt="Full Control gcode visualization">
 
 And in slicer like this
-<img src="/assets/threads/gcode/cellular/slicer.jpg" alt="Slicer view gcode visualization">
+<img src="https://ik.imagekit.io/ivandianov/threads/gcode/cellular/slicer.jpg" alt="Slicer view gcode visualization">

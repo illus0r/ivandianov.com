@@ -1,7 +1,7 @@
 ---
 date: 2026-01-25
 images:
-  - /assets/threads/gcode/spiky/spiky.jpg
+  - https://ik.imagekit.io/ivandianov/threads/gcode/spiky/spiky.jpg
 ---
 
 Геометрическая органика. Хотелось сделать что-нибудь тактильно интересное, кажется, вышло.

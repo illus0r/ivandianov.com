@@ -1,6 +1,6 @@
 ---
 caption: Interactive background on the Squarify website  
-cover: /assets/media/projects/squarify.png  
+cover: https://ik.imagekit.io/ivandianov/projects/squarify.png  
 span: 2  
 ---
 
@@ -14,4 +14,4 @@ Just in case, I added a fallback — if WebGL doesn’t work, an image will load
 
 [squarefi.co](https://squarefi.co)
 
-![Squarify](/assets/media/projects/squarify.png)
+![Squarify](https://ik.imagekit.io/ivandianov/projects/squarify.png)

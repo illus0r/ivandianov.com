@@ -1,4 +1,4 @@
 ---
 caption: Генеративная айдентика на основе симуляции волн
-cover: /assets/media/projects/ony-waves.png
+cover: https://ik.imagekit.io/ivandianov/projects/ony-waves.png
 ---

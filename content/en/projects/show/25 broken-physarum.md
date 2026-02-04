@@ -1,5 +1,5 @@
 ---
 caption: Parametrically controlled emergent improvisation
-cover: /assets/media/projects/broken-physarum-live.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/broken-physarum-live.jpg
 span: 3
 ---

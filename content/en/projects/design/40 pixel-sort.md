@@ -1,6 +1,6 @@
 ---
 caption: Online design tool for glitching images
-cover: /assets/media/projects/pixel-sort.jpg
+cover: https://ik.imagekit.io/ivandianov/projects/pixel-sort.jpg
 span: 2
 ---
 
@@ -14,4 +14,4 @@ For sorting, I didn’t use the slow bubble sort, but instead comb sort: this al
 
 Try sorting your own photo on the website <a href="https://setka.design/pixelsort/">setka.design/pixelsort</a>
 
-![](/assets/media/projects/pixel-sort.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/pixel-sort.jpg)

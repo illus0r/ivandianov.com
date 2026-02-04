@@ -1,5 +1,5 @@
 ---
 caption: Abyss — клип на 100% сделанный кодом
-cover: /assets/media/projects/abyss.png
+cover: https://ik.imagekit.io/ivandianov/projects/abyss.png
 ---
 

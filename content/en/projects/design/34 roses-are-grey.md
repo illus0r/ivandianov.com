@@ -1,6 +1,6 @@
 ---
 caption: Video for Ilya Birman’s clip Roses are grey  
-cover: /assets/media/projects/roses-are-grey.jpg  
+cover: https://ik.imagekit.io/ivandianov/projects/roses-are-grey.jpg  
 span: 2  
 ---
 
@@ -19,5 +19,5 @@ Listen to the techno track Roses Are Grey by [Ilya Birman](http://ilyabirman.ru)
     ></iframe>
 </div>
 
-![Roses Are Grey](/assets/media/projects/roses-are-grey.jpg)  
+![Roses Are Grey](https://ik.imagekit.io/ivandianov/projects/roses-are-grey.jpg)  
 {: style="max-width: 256px; width: 100%;"}
