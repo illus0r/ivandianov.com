@@ -52,7 +52,7 @@ Or this:
 Then you can create coloring rules, combine results from several automata with different rules, switch rules halfway through, overlay the picture on its previous iterations, have full-on fun!
 
 <video controls muted loop preload="auto">
-  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4" type="video/mp4">
+  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4?tr=orig-true" type="video/mp4">
 </video>
 
 

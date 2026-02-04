@@ -9,4 +9,4 @@ span: 2
 
 Галерея «Пересветов переулок», Москва, 2020 г.
 
-<video src="https://ik.imagekit.io/ivandianov/videos/hearty-talk.mp4" muted controls autoplay loop></video>
+<video src="https://ik.imagekit.io/ivandianov/videos/hearty-talk.mp4?tr=orig-true" muted controls autoplay loop></video>

@@ -1,6 +1,6 @@
 ---
 caption: Сайт, который из имени делает поплавок
-cover: https://ik.imagekit.io/ivandianov/videos/floatery.mp4
+cover: https://ik.imagekit.io/ivandianov/videos/floatery.mp4?tr=orig-true
 ---
 
 # Сайт, который из имени делает поплавок
@@ -20,7 +20,7 @@ The sequence is random, but this randomness depends on the text field content. T
 
 [Code on Github](https://github.com/illus0r/floats)
 
-<video src="https://ik.imagekit.io/ivandianov/videos/floatery.mp4" width="100%" height="100%" muted autoplay></video>
+<video src="https://ik.imagekit.io/ivandianov/videos/floatery.mp4?tr=orig-true" width="100%" height="100%" muted autoplay></video>
 
 ## The team
 - Ivan Dianov — a programmer and project menager

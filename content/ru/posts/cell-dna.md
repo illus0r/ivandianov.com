@@ -74,7 +74,7 @@ progress: 1
 
 ## Частицы на фрагментном шейдере { #frag}
 
-<video controls muted loop preload="auto"><source src="https://ik.imagekit.io/ivandianov/videos/cell-dna-1.mp4" type="video/mp4"></video>
+<video controls muted loop preload="auto"><source src="https://ik.imagekit.io/ivandianov/videos/cell-dna-1.mp4?tr=orig-true" type="video/mp4"></video>
 
 Идею алгоритма взял [из блога Михайло Мороза](https://michaelmoroz.github.io/Reintegration-Tracking/): четыре канала пикселя (RGBA) можно использовать для хранения координат и скорости частицы на плоскости. Интересно сравнить такой способ с более популярным способом управления частицами — вершинным шейдером.
 

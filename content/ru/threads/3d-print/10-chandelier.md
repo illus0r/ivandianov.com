@@ -1,7 +1,7 @@
 ---
 date: 2026-01-06
 videos:
-  - https://ik.imagekit.io/ivandianov/threads/3d-print/06-chandelier/06-chandelier.mp4
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/06-chandelier/06-chandelier.mp4?tr=orig-true
 ---
 
 **Генварь 6: свет вкл/выкл**
