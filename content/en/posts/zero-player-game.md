@@ -57,7 +57,7 @@ Or this:
 Then you can make up coloring rules, combine different rules, switch the rules halfway through, overlay the picture on its previous less detaled iterations, and have all the fun you want!
 
 <video controls muted loop preload="auto">
-  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4" type="video/mp4">
+  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4?tr=orig-true" type="video/mp4">
 </video>
 <!-- 
 ## Going big

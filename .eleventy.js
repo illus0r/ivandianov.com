@@ -135,9 +135,11 @@ export default function (eleventyConfig) {
     >`;
   });
 
-  // ImageKit video shortcode (no transforms, just hosting)
+  // ImageKit video shortcode (original quality, no compression)
   eleventyConfig.addShortcode("video", function(url, attrs = "") {
-    return `<video src="${url}" ${attrs} loop autoplay muted playsinline></video>`;
+    // Add orig-true to preserve original quality for ImageKit URLs
+    const videoUrl = url.includes('ik.imagekit.io') ? `${url}?tr=orig-true` : url;
+    return `<video src="${videoUrl}" ${attrs} loop autoplay muted playsinline></video>`;
   });
 
   eleventyConfig.addCollection("posts", function (collectionsApi) {

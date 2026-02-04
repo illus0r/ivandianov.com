@@ -1,7 +1,7 @@
 ---
 date: 2026-01-03
 videos:
-  - https://ik.imagekit.io/ivandianov/threads/3d-print/02-fibonacci-lamp/02-fibonacci-lamp.mp4
+  - https://ik.imagekit.io/ivandianov/threads/3d-print/02-fibonacci-lamp/02-fibonacci-lamp.mp4?tr=orig-true
 ---
 
 **Генварь 3, числа Фиббоначи**

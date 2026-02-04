@@ -76,7 +76,7 @@ More details to come about:
 
 ## Particles on fragment shader { #frag}
 
-<video controls muted loop preload="auto"><source src="https://ik.imagekit.io/ivandianov/videos/cell-dna-1.mp4" type="video/mp4"></video>
+<video controls muted loop preload="auto"><source src="https://ik.imagekit.io/ivandianov/videos/cell-dna-1.mp4?tr=orig-true" type="video/mp4"></video>
 
 I took the algorithm idea [from Mikhailo Moroz's blog](https://michaelmoroz.github.io/Reintegration-Tracking/): four pixel channels (RGBA) can be used to store particle coordinates and velocity on a plane. It's interesting to compare this method with the more popular particle control method — the vertex shader.
 

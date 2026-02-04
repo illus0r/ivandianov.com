@@ -44,7 +44,7 @@ For example, this image
 
 has this SDF:
 
-<video controls muted loop autoplay><source src="https://ik.imagekit.io/ivandianov/videos/voxel-marching-sdf.mp4" type="video/mp4"></video>
+<video controls muted loop autoplay><source src="https://ik.imagekit.io/ivandianov/videos/voxel-marching-sdf.mp4?tr=orig-true" type="video/mp4"></video>
 
 Actually I use a 2D texture to store it. To make this work, I slice the volumetric map into horizontal one-voxel layers and lay them left to right. The result is a texture with height voxSize and width voxSize²
 

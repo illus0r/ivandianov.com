@@ -1,6 +1,6 @@
 ---
 caption: A website that turns a name into a float
-cover: https://ik.imagekit.io/ivandianov/videos/floatery.mp4
+cover: https://ik.imagekit.io/ivandianov/videos/floatery.mp4?tr=orig-true
 ---
 
 # A website that turns a name into a float
@@ -20,7 +20,7 @@ The sequence is random, but this randomness depends on the text field content. T
 
 [Code on Github](https://github.com/illus0r/floats)
 
-<video src="https://ik.imagekit.io/ivandianov/videos/floatery.mp4" width="100%" height="100%" muted autoplay></video>
+<video src="https://ik.imagekit.io/ivandianov/videos/floatery.mp4?tr=orig-true" width="100%" height="100%" muted autoplay></video>
 
 ## The team
 - Ivan Dianov — a programmer and project manager

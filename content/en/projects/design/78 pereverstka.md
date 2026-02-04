@@ -1,12 +1,12 @@
 ---
 caption: Poster Generator for Igor Shtang's “Pereverstka”
-cover: https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4
+cover: https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4?tr=orig-true
 span: 2
 ---
 
 # Poster Generator for Igor Shtang's “Pereverstka”
 
-<video src="https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4" loop mute autoplay></video>
+<video src="https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4?tr=orig-true" loop mute autoplay></video>
 
 The layout is built on a grid of 15 square modules: 5×3.
 
