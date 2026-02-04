@@ -119,14 +119,15 @@ export default function (eleventyConfig) {
   });
 
   // ImageKit shortcode for CDN images with responsive srcset
+  // c-at_max prevents upscaling small images beyond their original size
   eleventyConfig.addShortcode("img", function(url, alt = "", sizes = "auto") {
     const widths = [512, 1024, 2048];
     const srcset = widths
-      .map(w => `${url}?tr=w-${w},f-webp ${w}w`)
+      .map(w => `${url}?tr=w-${w},c-at_max,f-webp ${w}w`)
       .join(", ");
     
     return `<img 
-      src="${url}?tr=w-1024,f-webp" 
+      src="${url}?tr=w-1024,c-at_max,f-webp" 
       srcset="${srcset}"
       sizes="${sizes}"
       alt="${alt}"
