@@ -73,6 +73,47 @@ assets/threads/gcode/  # Images shared across languages (no ru/en split)
 5. Run `npm run serve` to verify both languages
 6. After build, validate links but **don't auto-fix broken links** — warn user instead
 
-## Media
+## Media (ImageKit CDN)
 
-Git LFS handles large files (jpg, mp4, etc.). Images processed to WebP automatically.
+All media hosted on **ImageKit** (`https://ik.imagekit.io/ivandianov/`).
+
+### Image URLs
+Images auto-convert to WebP and resize via URL params:
+```
+https://ik.imagekit.io/ivandianov/projects/image.jpg?tr=w-1024,f-webp
+```
+
+### Video URLs
+Videos need `?tr=orig-true` to preserve original quality:
+```
+https://ik.imagekit.io/ivandianov/videos/video.mp4?tr=orig-true
+```
+
+### Shortcodes (in templates)
+```njk
+{% img "https://ik.imagekit.io/ivandianov/path/image.jpg", "alt text" %}
+{% video "https://ik.imagekit.io/ivandianov/path/video.mp4" %}
+```
+
+### Adding New Media
+
+1. Upload to ImageKit (dashboard or API)
+2. Use URL in content markdown
+3. For images: srcset auto-generated with 512/1024/2048 widths
+4. For videos: add `?tr=orig-true` to preserve quality
+
+### Upload Script
+```bash
+# Upload single file
+curl -X POST "https://upload.imagekit.io/api/v1/files/upload" \
+  -u "$IMAGEKIT_PRIVATE_KEY:" \
+  -F "file=@path/to/file.jpg" \
+  -F "fileName=file.jpg" \
+  -F "folder=/projects/" \
+  -F "useUniqueFileName=false"
+```
+
+Credentials: `/root/.imagekit_credentials`
+
+### Backup
+Original files backed up to local before upload. Mapping in `scripts/imagekit-mapping.json`.
