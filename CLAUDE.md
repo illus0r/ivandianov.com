@@ -77,10 +77,16 @@ assets/threads/gcode/  # Images shared across languages (no ru/en split)
 
 All media hosted on **ImageKit** (`https://ik.imagekit.io/ivandianov/`).
 
+### ImageKit Transformations
+Common URL params:
+- `?tr=w-1024,f-webp` — resize + WebP format
+- `?tr=c-at_max` — prevent upscaling small images beyond original size
+- `?tr=orig-true` — preserve original quality (required for videos)
+
 ### Image URLs
 Images auto-convert to WebP and resize via URL params:
 ```
-https://ik.imagekit.io/ivandianov/projects/image.jpg?tr=w-1024,f-webp
+https://ik.imagekit.io/ivandianov/projects/image.jpg?tr=w-1024,c-at_max,f-webp
 ```
 
 ### Video URLs
@@ -115,3 +121,25 @@ curl -X POST "https://upload.imagekit.io/api/v1/files/upload" \
 
 ### Backup
 Original files backed up to local before upload. Mapping in `scripts/imagekit-mapping.json`.
+
+## Galleries
+
+Two ways to create image/video galleries:
+
+### Container syntax (recommended)
+```md
+::: gallery
+![](https://ik.imagekit.io/ivandianov/projects/image1.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/image2.jpg)
+<video src="https://ik.imagekit.io/ivandianov/videos/video.mp4?tr=orig-true" loop autoplay muted playsinline></video>
+:::
+```
+
+### Attribute syntax
+```md
+![](image1.jpg)
+![](image2.jpg)
+{.gallery}
+```
+
+Both create a responsive grid. Videos in galleries need full HTML tags with `loop autoplay muted playsinline` attributes.
