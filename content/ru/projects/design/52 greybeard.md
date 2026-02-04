@@ -1,5 +1,5 @@
 ---
 caption: Динамический логотип для консатлингового агентства Greybeard
-cover: /assets/media/greybeard.mp4
+cover: https://ik.imagekit.io/ivandianov/videos/greybeard.mp4
 ---
 

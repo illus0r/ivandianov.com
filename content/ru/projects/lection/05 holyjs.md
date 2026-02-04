@@ -18,11 +18,11 @@ span: 3
 ![Алгоритмическая графика: JS для дизайна и искусства](https://ik.imagekit.io/ivandianov/projects/holyjs.jpg)
 
 ::: gallery
-![](/assets/media/projects/holyjs/holyjs-01.jpg)
-![](/assets/media/projects/holyjs/holyjs-02.jpg)
-![](/assets/media/projects/holyjs/holyjs-03.jpg)
-![](/assets/media/projects/holyjs/holyjs-04.jpg)
-![](/assets/media/projects/holyjs/holyjs-05.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/holyjs/holyjs-01.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/holyjs/holyjs-02.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/holyjs/holyjs-03.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/holyjs/holyjs-04.jpg)
+![](https://ik.imagekit.io/ivandianov/projects/holyjs/holyjs-05.jpg)
 :::
 
 ![Спикеры](https://ik.imagekit.io/ivandianov/projects/holyjs-speakers.jpg)

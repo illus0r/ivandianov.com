@@ -1,12 +1,12 @@
 ---
 caption: Генератор постеров для «Переверстки» Игоря Штанга
-cover: /assets/media/pereverstka.mp4
+cover: https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4
 span: 2
 ---
 
 # Poster Generator for Igor Shtang's “Pereverstka”
 
-<video src="/assets/media/pereverstka.mp4" loop mute autoplay></video>
+<video src="https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4" loop mute autoplay></video>
 
 The layout is built on a grid of 15 square modules: 5×3.
 
@@ -23,13 +23,13 @@ Text
 - Small text is editable.
 - Font lettering for each header line is chosen randomly out of 3 grotesque and 3 antiqua.
 
-![](/assets/media/projects/pereverstka2.jpeg)
+![](https://ik.imagekit.io/ivandianov/projects/pereverstka2.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](/assets/media/projects/pereverstka3.jpeg)
+![](https://ik.imagekit.io/ivandianov/projects/pereverstka3.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](/assets/media/projects/pereverstka4.jpeg)
+![](https://ik.imagekit.io/ivandianov/projects/pereverstka4.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
 ## Implementation

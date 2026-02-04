@@ -57,5 +57,5 @@ progress: 3
 Дальше можно придумать правила раскрашивания, комбинировать разные правила, переключать правила на полпути, накладывать картинку на её предыдущие менее детализированные итерации, и веселиться как угодно!
 
 <video controls muted loop preload="auto">
-  <source src="/assets/media/ivanomata-oculus.mp4" type="video/mp4">
+  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4" type="video/mp4">
 </video>
