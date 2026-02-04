@@ -113,7 +113,5 @@ curl -X POST "https://upload.imagekit.io/api/v1/files/upload" \
   -F "useUniqueFileName=false"
 ```
 
-Credentials: `/root/.imagekit_credentials`
-
 ### Backup
 Original files backed up to local before upload. Mapping in `scripts/imagekit-mapping.json`.
