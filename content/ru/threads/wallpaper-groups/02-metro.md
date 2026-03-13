@@ -2,7 +2,7 @@
 date: 2025-12-01
 draft: true
 images:
-  - https://ik.imagekit.io/ivandianov/threads/wallpaper-groups/02-metro/02-metro.jpg
+  - https://media.ivandianov.com/threads/wallpaper-groups/02-metro/02-metro.jpg
 ---
 
 Это та, что у вас в подземке нарисована

@@ -2,7 +2,7 @@
 date: 2025-12-01
 draft: true
 videos:
-  - https://ik.imagekit.io/ivandianov/threads/wallpaper-groups/01-symmetry-22/01-symmetry-22.mp4?tr=orig-true
+  - https://media.ivandianov.com/threads/wallpaper-groups/01-symmetry-22/01-symmetry-22.mp4?tr=orig-true
 ---
 
 А я закодил симметрию 22×

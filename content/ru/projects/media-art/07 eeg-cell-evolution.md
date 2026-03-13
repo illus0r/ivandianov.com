@@ -1,13 +1,13 @@
 ---
 caption: "Сайнс арт в Русском музее: сигналы мозга управляют эволюцией виртуальных клеток"
-cover: https://ik.imagekit.io/ivandianov/projects/eeg-cell-evolution.jpg
+cover: https://media.ivandianov.com/projects/eeg-cell-evolution.jpg
 type: media-art
 span: 3
 ---
 
 # Сайнс арт в Русском музее: сигналы мозга управляют эволюцией виртуальных клеток
 
-![Сайнс арт в Русском музее: сигналы мозга управляют эволюцией виртуальных клеток](https://ik.imagekit.io/ivandianov/projects/eeg-cell-evolution.jpg)
+![Сайнс арт в Русском музее: сигналы мозга управляют эволюцией виртуальных клеток](https://media.ivandianov.com/projects/eeg-cell-evolution.jpg)
 
 Электроэнцефалограммы записаны у художников, создающих картины, и у зрителей, смотрящих на произведения искусства.
 

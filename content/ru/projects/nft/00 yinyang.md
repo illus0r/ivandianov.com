@@ -1,5 +1,5 @@
 ---
 caption: Encircling the yin yang — коллаборация с художником Yoni Alter
-cover: https://ik.imagekit.io/ivandianov/videos/yinyang1.mp4?tr=orig-true
+cover: https://media.ivandianov.com/videos/yinyang1.mp4?tr=orig-true
 ---
 

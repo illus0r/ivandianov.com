@@ -1,6 +1,6 @@
 ---
 caption: Сайт, который из имени делает поплавок
-cover: https://ik.imagekit.io/ivandianov/videos/floatery.mp4?tr=orig-true
+cover: https://media.ivandianov.com/videos/floatery.mp4?tr=orig-true
 ---
 
 # Сайт, который из имени делает поплавок
@@ -10,7 +10,7 @@ Floattery takes a name and smack! Creates a float based on it. At last, you can 
 Don't trust the word, try it yourself:  
 [floats.dianov.org](https://floats.dianov.org)
 
-![Floatery](https://ik.imagekit.io/ivandianov/projects/floatery.png)
+![Floatery](https://media.ivandianov.com/projects/floatery.png)
 
 The floats are combined from the sections we have created. They are not combined at random, but according to the generative grammar rules. They define floats variations: the sections they consist of and the order these sections appear in.
 
@@ -20,7 +20,7 @@ The sequence is random, but this randomness depends on the text field content. T
 
 [Code on Github](https://github.com/illus0r/floats)
 
-<video src="https://ik.imagekit.io/ivandianov/videos/floatery.mp4?tr=orig-true" width="100%" height="100%" muted autoplay></video>
+<video src="https://media.ivandianov.com/videos/floatery.mp4?tr=orig-true" width="100%" height="100%" muted autoplay></video>
 
 ## The team
 - Ivan Dianov — a programmer and project menager

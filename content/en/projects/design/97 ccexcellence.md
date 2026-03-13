@@ -1,6 +1,6 @@
 ---
 caption: Animations for the CCExcellence Website
-cover: https://ik.imagekit.io/ivandianov/projects/ccexcellence.png
+cover: https://media.ivandianov.com/projects/ccexcellence.png
 span: 2
 ---
 

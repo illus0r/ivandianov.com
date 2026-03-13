@@ -1,5 +1,5 @@
 ---
 caption: Веб-генератор криптошрифтов
-cover: https://ik.imagekit.io/ivandianov/projects/maze-font.jpg
+cover: https://media.ivandianov.com/projects/maze-font.jpg
 ---
 

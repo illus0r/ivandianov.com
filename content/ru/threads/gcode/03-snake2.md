@@ -1,7 +1,7 @@
 ---
 date: 2026-01-21
 images:
-  - https://ik.imagekit.io/ivandianov/threads/gcode/snake2/02.jpg
+  - https://media.ivandianov.com/threads/gcode/snake2/02.jpg
 ---
 
 Ещё одна штука тем же алгоритмом, что и вчерашняя — клеточный автомат, но теперь упакованный в гексагональную решётку. Размер 4 см.

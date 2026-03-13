@@ -1,12 +1,12 @@
 ---
 caption: Параметрически управляемая эмерджентная импровизация
-cover: https://ik.imagekit.io/ivandianov/projects/broken-physarum-live.jpg
+cover: https://media.ivandianov.com/projects/broken-physarum-live.jpg
 span: 3
 ---
 
 # Broken Physarum: параметрически управляемая эмерджентная импровизация
 
-![Параметрически управляемая эмерджентная импровизация](https://ik.imagekit.io/ivandianov/projects/broken-physarum-live.jpg)
+![Параметрически управляемая эмерджентная импровизация](https://media.ivandianov.com/projects/broken-physarum-live.jpg)
 
 Выступление в креативном кластере Икра, Волгоград. Визуал создаётся системой симуляции физарума, запрограммированной автором. Система частиц управляется миди-контроллером.
 

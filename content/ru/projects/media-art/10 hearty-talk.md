@@ -1,6 +1,6 @@
 ---
 caption: Душевный разговор — аудиореактивная проекция
-cover: https://ik.imagekit.io/ivandianov/projects/hearty-talk.png
+cover: https://media.ivandianov.com/projects/hearty-talk.png
 type: media-art
 span: 2
 ---
@@ -9,4 +9,4 @@ span: 2
 
 Галерея «Пересветов переулок», Москва, 2020 г.
 
-<video src="https://ik.imagekit.io/ivandianov/videos/hearty-talk.mp4?tr=orig-true" muted controls autoplay loop></video>
+<video src="https://media.ivandianov.com/videos/hearty-talk.mp4?tr=orig-true" muted controls autoplay loop></video>

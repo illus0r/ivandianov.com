@@ -1,6 +1,6 @@
 ---
 caption: Динамическая айдентика Open Eye для дизайн-бутика Pre-logo 
-cover: https://ik.imagekit.io/ivandianov/videos/prj-open-eye_small.mp4?tr=orig-true
+cover: https://media.ivandianov.com/videos/prj-open-eye_small.mp4?tr=orig-true
 span: 2
 ---
 
@@ -10,4 +10,4 @@ A collaboration with [Kirill Belyaev](https://kirillbelyaev.com) for his project
 
 More info [on instagram](https://www.instagram.com/p/CDRLL05hu2x/)
 
-<video src="https://ik.imagekit.io/ivandianov/videos/prj-open-eye.mp4?tr=orig-true" muted autoplay ></video>
+<video src="https://media.ivandianov.com/videos/prj-open-eye.mp4?tr=orig-true" muted autoplay ></video>

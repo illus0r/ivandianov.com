@@ -1,9 +1,9 @@
 ---
 caption: Zero-player game. Бесконечный неповторяющийся узор
-cover: https://ik.imagekit.io/ivandianov/projects/zpg1.jpg
+cover: https://media.ivandianov.com/projects/zpg1.jpg
 span: 1
 ---
 
 # Zero-player game. Бесконечный неповторяющийся узор
 
-![ZPG](https://ik.imagekit.io/ivandianov/posts/essay-zpg.webp)
+![ZPG](https://media.ivandianov.com/posts/essay-zpg.webp)
