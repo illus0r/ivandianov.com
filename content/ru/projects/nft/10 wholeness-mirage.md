@@ -1,5 +1,5 @@
 ---
 caption: Wholeness mirage
-cover: https://ik.imagekit.io/ivandianov/posts/essay-wholeness-mirage.webp
+cover: https://media.ivandianov.com/posts/essay-wholeness-mirage.webp
 ---
 

@@ -5,7 +5,7 @@ progress: 3
 ---
 
 
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-49-32.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-49-32.png)
 
 I'll tell you about the concept of id in shaders and show you what it is for. If you're not familiar with shaders, start with [The Book of Shaders](https://thebookofshaders.com/) — the best tutorial on the subject.
 
@@ -54,7 +54,7 @@ k/=3.;
 
 o+=id;
 ```
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-02-12-03-24.png)
+![](https://media.ivandianov.com/posts/2021-09-02-12-03-24.png)
 
 We see that each segment has its own unique color, but we have to use the multiplier k, which is not always convenient. A chaotic approach is often sufficient.
 
@@ -92,7 +92,7 @@ id=rnd(floor(uv.y)/3.+id);  // split into three rows
 
 o+=id;
 ```
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-02-12-10-49.png)
+![](https://media.ivandianov.com/posts/2021-09-02-12-10-49.png)
 
 We can see that the grid is chaotic, maybe some regions will have the same IDs, but unlikely.
 
@@ -122,7 +122,7 @@ id=rnd(floor(uv.y/id)/3.+id);  // split into three rows
 
 o+=id;
 ```
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-23-52.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-23-52.png)
 
 You can repeat and repeat the split as much as you like. Or better add a loop, so as not to duplicate the code for each iteration.
 
@@ -140,11 +140,11 @@ for(int i=0;i<3;i++){
 
 o+=id;
 ```
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-28-11.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-28-11.png)
 
 If we increase the number of iterations to 5, there will be only noise left:
 
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-29-17.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-29-17.png)
 
 We can make the number of loop repetitions dependent on the id as well!
 
@@ -163,11 +163,11 @@ for(int i=0;i<5;i++){
 
 o+=id;
 ```
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-31-37.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-31-37.png)
 
 The picture went dark, it' s something of a survivorship bias. We exit the loop when the id is less than .5, and those pixels get a darker color. This can be fixed by replacing the `id < .5` condition with `rnd(id) < .5`.
 
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-33-51.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-33-51.png)
 
 And now that the technique is mastered, you can go and have fun all the way!
 
@@ -190,5 +190,5 @@ for(int i=0;i<5;i++){
 o+=id;
 ```
 
-![](https://ik.imagekit.io/ivandianov/posts/2021-09-03-10-49-32.png)
+![](https://media.ivandianov.com/posts/2021-09-03-10-49-32.png)
 [Check out the link](https://bit.ly/3BE99o9), it spins! And, surely, the rotation speed of each piece depends on its id :-)

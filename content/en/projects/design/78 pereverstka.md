@@ -1,12 +1,12 @@
 ---
 caption: Poster Generator for Igor Shtang's “Pereverstka”
-cover: https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4?tr=orig-true
+cover: https://media.ivandianov.com/videos/pereverstka.mp4?tr=orig-true
 span: 2
 ---
 
 # Poster Generator for Igor Shtang's “Pereverstka”
 
-<video src="https://ik.imagekit.io/ivandianov/videos/pereverstka.mp4?tr=orig-true" loop mute autoplay></video>
+<video src="https://media.ivandianov.com/videos/pereverstka.mp4?tr=orig-true" loop mute autoplay></video>
 
 The layout is built on a grid of 15 square modules: 5×3.
 
@@ -29,12 +29,12 @@ The whole thing is an html page, no canvas used. All blocks are div elements ali
 
 To save the resulting image I use [html2canvas](https://html2canvas.hertzen.com) library.
 
-![](https://ik.imagekit.io/ivandianov/projects/pereverstka2.jpeg)
+![](https://media.ivandianov.com/projects/pereverstka2.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](https://ik.imagekit.io/ivandianov/projects/pereverstka3.jpeg)
+![](https://media.ivandianov.com/projects/pereverstka3.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 
-![](https://ik.imagekit.io/ivandianov/projects/pereverstka4.jpeg)
+![](https://media.ivandianov.com/projects/pereverstka4.jpeg)
 {: style="width: 500px;max-width: 100%; display: inline-block;"}
 

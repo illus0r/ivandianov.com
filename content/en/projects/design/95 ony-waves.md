@@ -1,4 +1,4 @@
 ---
 caption: Generative Identity Based on Wave Simulation
-cover: https://ik.imagekit.io/ivandianov/projects/ony-waves.png
+cover: https://media.ivandianov.com/projects/ony-waves.png
 ---

@@ -6,7 +6,7 @@ progress: 3
 
 I've made this article out of my twitter thread [https://twitter.com/i_dianov/status/1367136469853351944](https://twitter.com/i_dianov/status/1367136469853351944)
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-02-17-11-09-37.png)
+![](https://media.ivandianov.com/posts/2022-02-17-11-09-37.png)
 Intersection of sphere with intersaction of gyroid and sphere {.caption}
 
 Hey! This is a tutorial thread on how to find the intersection of two or more surfaces (not volumes) to make complicated #SDF shapes you can use for #raymarching.
@@ -36,7 +36,7 @@ It defines the shape to render. Here's a sphere:
 #define SDF(p) SPHERE
 ```
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-02-17-11-07-46.png)
+![](https://media.ivandianov.com/posts/2022-02-17-11-07-46.png)
 
 ---
 
@@ -46,7 +46,7 @@ It defines the shape to render. Here's a sphere:
 #define PLANE_Z -p.z
 #define SDF(p) PLANE_Z
 ```
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-2.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-2.gif)
 
 ---
 
@@ -60,7 +60,7 @@ And BOOM!💥 The circle is here! https://bit.ly/3bXGTBJ
 
 The thing is that `length` of two SDFs is close to zero only if both SDFs are close to zero.
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-3.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-3.gif)
 
 ---
 
@@ -73,7 +73,7 @@ The thing is that `length` of two SDFs is close to zero only if both SDFs are cl
 Please, pay attention to terminal `-.2` in the formula.
 https://bit.ly/3bXGTBJ
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-4.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-4.gif)
 
 ---
 
@@ -91,7 +91,7 @@ They often shorten this to just `length(p.xz)-1.2` which is effectively the same
 
 https://bit.ly/30me4cZ
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-6.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-6.gif)
 
 ---
 
@@ -106,7 +106,7 @@ SPHERE))-.01
 
 https://bit.ly/3883WbT
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-7.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-7.gif)
 
 ---
 
@@ -119,7 +119,7 @@ https://bit.ly/3883WbT
 
 It is not easy to understand its shape because gyroid is borderless and we are inside https://bit.ly/3070hqe
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-8.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-8.gif)
 
 ---
 
@@ -133,7 +133,7 @@ https://bit.ly/30a2scU
 
 You can learn more about gyroids on https://en.wikipedia.org/wiki/Gyroid
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-9.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-9.gif)
 
 ---
 
@@ -146,7 +146,7 @@ You can learn more about gyroids on https://en.wikipedia.org/wiki/Gyroid
 
 https://bit.ly/3kGYWjr
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-10.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-10.gif)
 
 ---
 
@@ -158,7 +158,7 @@ https://bit.ly/3kGYWjr
 
 https://bit.ly/3uT3ZSu
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-11.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-11.gif)
 
 ---
 
@@ -184,4 +184,4 @@ I was shocked to learn about it! 🤯
 
 It's my first tutorial thread. I would be grateful if you could share your thoughts on the subject, ask questions or brag about the SDFs you discover.
 
-![](https://ik.imagekit.io/ivandianov/posts/surface-intersection-13.gif)
+![](https://media.ivandianov.com/posts/surface-intersection-13.gif)

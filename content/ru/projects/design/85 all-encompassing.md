@@ -1,5 +1,5 @@
 ---
 caption: Клип для трека Ильи Бирмана All-encompassing
-cover: https://ik.imagekit.io/ivandianov/projects/all-encompassing.png
+cover: https://media.ivandianov.com/projects/all-encompassing.png
 ---
 

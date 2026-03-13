@@ -1,12 +1,12 @@
 ---
 caption: Онлайновый дизайн-тул для глитча картинок
-cover: https://ik.imagekit.io/ivandianov/projects/pixel-sort.jpg
+cover: https://media.ivandianov.com/projects/pixel-sort.jpg
 span: 2
 ---
 
 # Пиксельсорт
 
-![](https://ik.imagekit.io/ivandianov/projects/pixel-sort.jpg)
+![](https://media.ivandianov.com/projects/pixel-sort.jpg)
 
 Мы с Адамом Арутюновым сделали инструмент для глитчинга изображений. Адам разработал интерфейс, а я — шейдер, который перемешивает пиксели.
 

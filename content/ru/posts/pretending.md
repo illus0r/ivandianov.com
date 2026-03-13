@@ -8,7 +8,7 @@ progress: 2
 
 Дальше хуже: оказалось, что при умножении икса `y = (2x)²` график не растягивается вдоль оси x а наоборот, сужается.
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-14-33-35.png)
+![](https://media.ivandianov.com/posts/2022-07-06-14-33-35.png)
 
 Если не верите, [проверьте сами](https://www.desmos.com/calculator/plcsrckgof).
 
@@ -18,7 +18,7 @@ progress: 2
 
 Возьмём шейдер, который рисует кружочек:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-15-28-04.png)
+![](https://media.ivandianov.com/posts/2022-07-06-15-28-04.png)
 
 ```GLSL
 precision highp float;
@@ -40,12 +40,12 @@ void main(){
 
 Действительно, `uv*=2.;` уменьшает картинку:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-15-29-33.png)
+![](https://media.ivandianov.com/posts/2022-07-06-15-29-33.png)
 [https://bit.ly/3PbJyK9](https://bit.ly/3PbJyK9) {.caption }
 
 а `uv/=2.;` растягивает её:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-07-06-15-34-52.png)
+![](https://media.ivandianov.com/posts/2022-07-06-15-34-52.png)
 [https://bit.ly/3yKkCDU](https://bit.ly/3yKkCDU) {.caption }
 
 Аналогично `uv.x += 1.;`. сдвигает график влево, а `uv.x -= 1.` — вправо. Где логика, где разум?

@@ -1,7 +1,7 @@
 ---
 date: 2026-01-24
 images:
-  - https://ik.imagekit.io/ivandianov/threads/gcode/cylinders/cylinders.jpg
+  - https://media.ivandianov.com/threads/gcode/cylinders/cylinders.jpg
 ---
 
 <!--autotranslate-->

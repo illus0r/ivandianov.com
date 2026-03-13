@@ -76,7 +76,7 @@ More details to come about:
 
 ## Particles on fragment shader { #frag}
 
-<video controls muted loop preload="auto"><source src="https://ik.imagekit.io/ivandianov/videos/cell-dna-1.mp4?tr=orig-true" type="video/mp4"></video>
+<video controls muted loop preload="auto"><source src="https://media.ivandianov.com/videos/cell-dna-1.mp4?tr=orig-true" type="video/mp4"></video>
 
 I took the algorithm idea [from Mikhailo Moroz's blog](https://michaelmoroz.github.io/Reintegration-Tracking/): four pixel channels (RGBA) can be used to store particle coordinates and velocity on a plane. It's interesting to compare this method with the more popular particle control method — the vertex shader.
 
@@ -95,7 +95,7 @@ For simulating cellular life, the fragment shader is more convenient: they can m
 
 ## Data storage { #data}
 
-![](https://ik.imagekit.io/ivandianov/posts/2023-02-22-02-11-58.jpg)
+![](https://media.ivandianov.com/posts/2023-02-22-02-11-58.jpg)
 [Picture shows many tiny cells, each secreting colored substances. Which ones depends on DNA, as does cell behavior: turns, speed changes. Genes are passed to offspring during division]{.caption}
 
 I liked [TechnoShaman's idea about DNA interpretation](https://www.youtube.com/watch?v=jXa5IASmlkg). In short: each cell has "DNA" — an array of 64 elements, each can take one of 64 values. The cell also remembers the number of its current command. Commands can be simple: "move", "reproduce", or tricky: "if energy is above 10 units, go to command 5, otherwise — to command 43".

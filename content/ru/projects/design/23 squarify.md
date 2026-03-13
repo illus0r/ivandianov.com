@@ -1,6 +1,6 @@
 ---
 caption: Интерактивный фон на сайте Squarify
-cover: https://ik.imagekit.io/ivandianov/projects/squarify.png
+cover: https://media.ivandianov.com/projects/squarify.png
 span: 2
 
 ---
@@ -15,5 +15,5 @@ span: 2
 
 [squarefi.co](https://squarefi.co)
 
-![Squarify](https://ik.imagekit.io/ivandianov/projects/squarify.png)
+![Squarify](https://media.ivandianov.com/projects/squarify.png)
 

@@ -5,7 +5,7 @@ date: 2022-12-18 02:43:00
 progress: 3
 ---
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-15-22-41.png)
+![](https://media.ivandianov.com/posts/2022-11-26-15-22-41.png)
 
 ## Idea
 
@@ -25,12 +25,12 @@ A cellular automaton needs rules by which cells change colors!
 
 We only have two colors: ■ and □. To find a new color of a cell, we see the color of the cell itself and its four neighbors. There are 32 possible combinations:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-13-59-46.png)
+![](https://media.ivandianov.com/posts/2022-11-26-13-59-46.png)
 <!-- https://editor.p5js.org -->
 
 Each of these combinations is matched with a color, in which we repaint the central cell: that will be our rules. For example, these are:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-14-26-13.png)
+![](https://media.ivandianov.com/posts/2022-11-26-14-26-13.png)
 This is one of 2^32 = 4 294 967 296 possible rule variants{: .caption}
 <!-- https://editor.p5js.org/illus0r/sketches/myfquQUaF -->
 
@@ -40,24 +40,24 @@ Then for each cell we find a new color according to rules. Pay attention to how 
 
 Finally, we increase the resolution of the grid by dividing each cell into four.
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-15-11-26.png)
+![](https://media.ivandianov.com/posts/2022-11-26-15-11-26.png)
 In the third picture, it's not clear if the black cells are divided or not. Believe me, they are! {: .caption}
 <!-- https://www.figma.com/file/abzo0bhPE5EJIuaZtJgWEd/Untitled?node-id=2%3A404&t=XQ7fThdoqwVCctyV-0 -->.
 
 Repeat this procedure a few times. You should get something like this:
 
-![](https://ik.imagekit.io/ivandianov/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
+![](https://media.ivandianov.com/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
 
 Or this:
 
-![](https://ik.imagekit.io/ivandianov/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
+![](https://media.ivandianov.com/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
 
 <!-- https://bit.ly/3EDBkXq -->
 
 Then you can make up coloring rules, combine different rules, switch the rules halfway through, overlay the picture on its previous less detaled iterations, and have all the fun you want!
 
 <video controls muted loop preload="auto">
-  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4?tr=orig-true" type="video/mp4">
+  <source src="https://media.ivandianov.com/videos/ivanomata-oculus.mp4?tr=orig-true" type="video/mp4">
 </video>
 <!-- 
 ## Going big

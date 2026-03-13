@@ -1,7 +1,7 @@
 ---
 date: 2026-01-20
 images:
-  - https://ik.imagekit.io/ivandianov/threads/gcode/snake/snake.jpg
+  - https://media.ivandianov.com/threads/gcode/snake/snake.jpg
 ---
 
 <!--autotranslate-->

@@ -1,5 +1,5 @@
 ---
 caption: Broken Physarum
-cover: https://ik.imagekit.io/ivandianov/posts/essay-physarum.webp
+cover: https://media.ivandianov.com/posts/essay-physarum.webp
 ---
 

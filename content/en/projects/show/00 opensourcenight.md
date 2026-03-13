@@ -1,6 +1,6 @@
 ---
 caption: Live coding to techno at Yandex during the Night of Open Libraries
-cover: https://ik.imagekit.io/ivandianov/projects/opensourcenight.jpg
+cover: https://media.ivandianov.com/projects/opensourcenight.jpg
 span: 3
 ---
 
@@ -12,14 +12,14 @@ Livecoder — Ivan Dianov<br>
 DJ — Vlada Goldberg
 
 ::: gallery
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-01.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-02.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-03.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-04.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-05.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-06.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-07.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-08.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-09.jpg)
-![](https://ik.imagekit.io/ivandianov/projects/opensourcenight-10.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-01.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-02.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-03.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-04.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-05.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-06.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-07.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-08.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-09.jpg)
+![](https://media.ivandianov.com/projects/opensourcenight-10.jpg)
 :::

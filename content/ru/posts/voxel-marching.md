@@ -38,17 +38,17 @@ progress: 1
 
 Например, у этой картинки
 
-![](https://ik.imagekit.io/ivandianov/posts/2023-02-23-20-25-01.jpg)
+![](https://media.ivandianov.com/posts/2023-02-23-20-25-01.jpg)
 
 вот такой СДФ:
 
-<video controls muted loop autoplay><source src="https://ik.imagekit.io/ivandianov/videos/voxel-marching-sdf.mp4?tr=orig-true" type="video/mp4"></video>
+<video controls muted loop autoplay><source src="https://media.ivandianov.com/videos/voxel-marching-sdf.mp4?tr=orig-true" type="video/mp4"></video>
 
 На самом деле я использую 2д текстуру для его хранения. Чтобы это получилось, я разрезаю объёмную карту на горизонтальные слои в один воксель и кладу их слева направо. Получается текстура высотой voxSize и шириной voxSize²
 
-![](https://ik.imagekit.io/ivandianov/posts/2023-02-23-21-02-58.png)
+![](https://media.ivandianov.com/posts/2023-02-23-21-02-58.png)
 Это не `<hr>`, это узкая картинка{: .caption}
 
 Как видите, вы почти ничего не видите. Слишком мелко. Если призумить кусочек, будет так:
 
-![](https://ik.imagekit.io/ivandianov/posts/2023-02-23-21-04-28.png)
+![](https://media.ivandianov.com/posts/2023-02-23-21-04-28.png)

@@ -1,11 +1,11 @@
 ---
 caption: Круглендарь — круглый плакат-ежедневник
-cover: https://ik.imagekit.io/ivandianov/projects/kruglendar.jpg
+cover: https://media.ivandianov.com/projects/kruglendar.jpg
 ---
 
 # Круглый плакат-ежедневник
 
-![Kruglendar](https://ik.imagekit.io/ivandianov/projects/kruglendar.jpg)
+![Kruglendar](https://media.ivandianov.com/projects/kruglendar.jpg)
 
 [Kruglendar](https://kruglendar.ru/) is my personal project. Its goal is to provide a convenient way to have a general view of the whole year.
 

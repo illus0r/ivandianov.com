@@ -5,7 +5,7 @@ date: 2022-12-18 02:43:00
 progress: 3
 ---
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-15-22-41.png)
+![](https://media.ivandianov.com/posts/2022-11-26-15-22-41.png)
 
 ## Идея
 
@@ -25,12 +25,12 @@ progress: 3
 
 У нас только два цвета: ■ и □. Чтобы найти новый цвет клетки, смотрим на цвет самой клетки и её четырёх соседей. Возможны 32 комбинации:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-13-59-46.png)
+![](https://media.ivandianov.com/posts/2022-11-26-13-59-46.png)
 <!-- https://editor.p5js.org -->
 
 Каждой из этих комбинаций сопоставляется цвет, в который мы перекрашиваем центральную клетку: это и будут наши правила. Например, такие:
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-14-26-13.png)
+![](https://media.ivandianov.com/posts/2022-11-26-14-26-13.png)
 Это один из 2^32 = 4 294 967 296 возможных вариантов правил{: .caption}
 <!-- https://editor.p5js.org/illus0r/sketches/myfquQUaF -->
 
@@ -40,22 +40,22 @@ progress: 3
 
 Наконец, увеличиваем разрешение сетки, деля каждую клетку на четыре.
 
-![](https://ik.imagekit.io/ivandianov/posts/2022-11-26-15-11-26.png)
+![](https://media.ivandianov.com/posts/2022-11-26-15-11-26.png)
 На третьей картинке непонятно, разделились чёрные клетки или нет. Поверьте, разделились! {: .caption}
 <!-- https://www.figma.com/file/abzo0bhPE5EJIuaZtJgWEd/Untitled?node-id=2%3A404&t=XQ7fThdoqwVCctyV-0 -->.
 
 Повторяем эту процедуру несколько раз. Должно получиться что-то вроде этого:
 
-![](https://ik.imagekit.io/ivandianov/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
+![](https://media.ivandianov.com/posts/ivanomata.gif){: style="width:512px;image-rendering: pixelated;"}
 
 Или этого:
 
-![](https://ik.imagekit.io/ivandianov/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
+![](https://media.ivandianov.com/posts/ivanomata2.gif){: style="width:512px;image-rendering: pixelated;"}
 
 <!-- https://bit.ly/3EDBkXq -->
 
 Дальше можно придумать правила раскрашивания, комбинировать разные правила, переключать правила на полпути, накладывать картинку на её предыдущие менее детализированные итерации, и веселиться как угодно!
 
 <video controls muted loop preload="auto">
-  <source src="https://ik.imagekit.io/ivandianov/videos/ivanomata-oculus.mp4?tr=orig-true" type="video/mp4">
+  <source src="https://media.ivandianov.com/videos/ivanomata-oculus.mp4?tr=orig-true" type="video/mp4">
 </video>

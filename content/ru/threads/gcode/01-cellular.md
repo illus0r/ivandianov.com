@@ -1,7 +1,7 @@
 ---
 date: 2026-01-19
 images:
-  - https://ik.imagekit.io/ivandianov/threads/gcode/cellular/result.jpg
+  - https://media.ivandianov.com/threads/gcode/cellular/result.jpg
 ---
 
 Учусь управлять 3D принтером через G-code. Это язык, на котором компьютер говорит принтеру, что печатать — длинный список команд куда подвинуться и сколько пластика выдавить.
@@ -13,7 +13,7 @@ images:
 Два дня ковырялся, получилось что-то прикольное. Это одномерный клеточный автомат — разные его шаги видны вдоль оси цилиндра. Нравится текстура, как будто вязаная.
 
 В джикоде выглядит так
-<img src="https://ik.imagekit.io/ivandianov/threads/gcode/cellular/fullcontrol.jpg" alt="Full Control gcode visualization">
+<img src="https://media.ivandianov.com/threads/gcode/cellular/fullcontrol.jpg" alt="Full Control gcode visualization">
 
 А в слейсере так
-<img src="https://ik.imagekit.io/ivandianov/threads/gcode/cellular/slicer.jpg" alt="Slicer view gcode visualization">
+<img src="https://media.ivandianov.com/threads/gcode/cellular/slicer.jpg" alt="Slicer view gcode visualization">
