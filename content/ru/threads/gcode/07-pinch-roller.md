@@ -1,8 +1,5 @@
 ---
 date: 2026-03-17
-images:
-  - https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-1_9Hxs9sMcP.jpg
-  - https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-2_2TYOlkIdn.jpg
 ---
 
 ## Pinch roller
@@ -14,3 +11,8 @@ images:
 Можно, конечно, включить режим вазы. В этом режиме головка поднимается плавно по спирали и швов нет. Но стенка печатается в один слой, а мне надо было заполнить всю деталь кроме центрального отверстия.
 
 И тут впервые g-code сыграл роль в решении прикладной задачи! Я подобрал уравнение циклоиды и распечатал нужную деталь без швов одной спиралью. С первого раза кривовато, но идея рабочая.
+
+<div class="gallery">
+<img src="https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-1_9Hxs9sMcP.jpg" alt="Pinch roller напечатанный">
+<img src="https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-2_2TYOlkIdn.jpg" alt="Pinch roller код">
+</div>
