@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**⚠️ IMPORTANT: Read this file BEFORE making any changes to the site!**
+
 ## Project Overview
 
 Personal portfolio/blog for a generative artist, built with **Eleventy (11ty) v3.0.0**. Bilingual site (Russian/English) featuring projects, blog posts, and a "Threads" feature (micro-post chains like Twitter/Tumblr).
