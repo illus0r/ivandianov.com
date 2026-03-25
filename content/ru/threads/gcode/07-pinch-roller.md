@@ -12,7 +12,7 @@ date: 2026-03-17
 
 И тут впервые g-code сыграл роль в решении прикладной задачи! Я подобрал уравнение циклоиды и распечатал нужную деталь без швов одной спиралью. С первого раза кривовато, но идея рабочая.
 
-<div class="gallery">
-<img src="https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-1_9Hxs9sMcP.jpg" alt="Pinch roller напечатанный">
-<img src="https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-2_2TYOlkIdn.jpg" alt="Pinch roller код">
-</div>
+::: gallery
+![Pinch roller напечатанный](https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-1_9Hxs9sMcP.jpg)
+![Pinch roller код](https://media.ivandianov.com/threads/gcode/pinch-roller/pinch-roller-2_2TYOlkIdn.jpg)
+:::
