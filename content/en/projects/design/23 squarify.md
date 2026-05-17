@@ -12,6 +12,6 @@ The main code is inserted on all pages in the site settings. For any element on 
 
 Just in case, I added a fallback — if WebGL doesn’t work, an image will load instead.
 
-[squarefi.co](https://squarefi.co)
+Check out at ~~squarify.io~~ [mosta.io](https://mosta.io)
 
 ![Squarify](https://media.ivandianov.com/projects/squarify.png)

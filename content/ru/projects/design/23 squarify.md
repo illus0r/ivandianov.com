@@ -13,7 +13,6 @@ span: 2
 
 На всякий случай добавил фолбэк — если вдруг webgl не работает, загрузится картинка.
 
-[squarefi.co](https://squarefi.co)
+Посмотреть можно на ~~squarify.io~~ [mosta.io](https://mosta.io), переименовали
 
 ![Squarify](https://media.ivandianov.com/projects/squarify.png)
-
