@@ -1,5 +1,6 @@
 // const Image = require("@11ty/eleventy-img");
 import CleanCSS from "clean-css";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 // import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"; // Disabled - using ImageKit CDN
 // for classes in md
 import markdownIt from "markdown-it";
@@ -44,7 +45,47 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// Markdown-it plugin: :::glsl ... ::: → <canvas data-glsl="...">
+function glslPlugin(md) {
+  md.block.ruler.before('fence', 'glsl_preview', (state, startLine, endLine, silent) => {
+    const lineText = state.src.slice(
+      state.bMarks[startLine] + state.tShift[startLine],
+      state.eMarks[startLine]
+    ).trim();
+    if (!/^:::?\s*glsl/.test(lineText)) return false;
+    if (silent) return true;
+    let nextLine = startLine + 1;
+    while (nextLine < endLine) {
+      const text = state.src.slice(
+        state.bMarks[nextLine] + state.tShift[nextLine],
+        state.eMarks[nextLine]
+      ).trim();
+      if (text === ':::') break;
+      nextLine++;
+    }
+    const lines = [];
+    for (let i = startLine + 1; i < nextLine; i++) {
+      lines.push(state.src.slice(state.bMarks[i], state.eMarks[i]));
+    }
+    const extraClass = lineText.replace(/^:::?\s*glsl\s*/, '').trim();
+    const token = state.push('glsl_canvas', 'div', 0);
+    token.content = lines.join('\n');
+    token.attrSet('class', extraClass);
+    token.map = [startLine, nextLine];
+    state.line = nextLine + 1;
+    return true;
+  });
+  md.renderer.rules.glsl_canvas = (tokens, idx) => {
+    const token = tokens[idx];
+    const code = md.utils.escapeHtml(token.content).replace(/"/g, '&quot;');
+    const extra = token.attrGet('class');
+    const cls = extra ? ` ${extra}` : '';
+    return `<div class="glsl-preview${cls}"><canvas class="glsl-canvas" data-glsl="${code}"></canvas></div>\n`;
+  };
+}
+
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.ignores.add("_docs/**/*");
   eleventyConfig.addPassthroughCopy({
     "assets/media/**/*.mp4": "assets/media",
@@ -201,6 +242,7 @@ export default function (eleventyConfig) {
   eleventyConfig.setLibrary(
     "md",
     markdownIt({ html: true })
+      .use(glslPlugin)
       .use(markdownItBracketedSpans)
       .use(markdownItAttrs)
       .use(markdownItContainer, 'gallery'),

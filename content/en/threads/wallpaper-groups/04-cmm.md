@@ -1,0 +1,26 @@
+---
+title: "2*22 (cmm)"
+date: 2026-06-18
+---
+
+<!--autotranslate-->
+
+Reflections along both axes and 2-fold rotations on a centered rectangular lattice.
+
+::: glsl
+vec2 uv=(FC.xy*2.-r)/min(r.x,r.y)*3.+.001;
+if((int(floor(uv.y/2.))&1)==0){uv.x=1.-uv.x;}
+uv=abs(mod(uv,2.)-1.);
+vec3 a=vec3(0,.85,.5),b=vec3(.9,0,.6),c=vec3(.95,.85,0);
+o.rgb+=mix(mix(a,b,uv.x),c,uv.y*1.4);
+:::
+
+```glsl
+vec2 uv=(FC.xy*2.-r)/min(r.x,r.y)*3.+.001;
+if((int(floor(uv.y/2.))&1)==0){uv.x=1.-uv.x;}
+uv=abs(mod(uv,2.)-1.);
+vec3 a=vec3(0,.85,.5),b=vec3(.9,0,.6),c=vec3(.95,.85,0);
+o.rgb+=mix(mix(a,b,uv.x),c,uv.y*1.4);
+```
+
+[Live demo on twigl.app](https://twigl.app?ol=true&ss=-OvTk5_m2IPIKjRBsVi1)
