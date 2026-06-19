@@ -5,8 +5,6 @@ date: 2026-06-18
 
 <!--autotranslate-->
 
-2-fold rotations and glide reflections. Every other row is point-flipped — rotated 180° — then the columns fold with a mirror.
-
 ::: glsl
 vec2 uv=(FC.xy*2.-r)/min(r.x,r.y)*3.+.001;
 if(mod(floor(uv.y),2.)==0.){uv=1.-uv;}
