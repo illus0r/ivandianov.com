@@ -21,10 +21,14 @@
 
     {% include "footer.njk" %}
 
+    <script src="/assets/js/prism.js" data-manual></script>
+    <script src="/assets/js/prism-clike.js"></script>
+    <script src="/assets/js/prism-c.js"></script>
+    <script src="/assets/js/prism-glsl.js"></script>
     <script src="/assets/js/dance-dance.js" type='module'></script>
     <script src="/assets/js/glsl-preview.js"></script>
     <script>
-    document.querySelectorAll('pre').forEach(pre => {
+    document.querySelectorAll('pre:not(.glsl-editor-pre):not(.glsl-errors)').forEach(pre => {
       const btn = document.createElement('button');
       btn.className = 'copy-btn';
       btn.textContent = 'copy';

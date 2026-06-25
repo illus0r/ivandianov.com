@@ -46,6 +46,7 @@ function capitalize(str) {
 }
 
 // Markdown-it plugin: :::glsl ... ::: → <canvas data-glsl="...">
+// Токены после "glsl": classic, editor, collapsed — служебные; остальное → CSS класс
 function glslPlugin(md) {
   md.block.ruler.before('fence', 'glsl_preview', (state, startLine, endLine, silent) => {
     const lineText = state.src.slice(
@@ -67,20 +68,41 @@ function glslPlugin(md) {
     for (let i = startLine + 1; i < nextLine; i++) {
       lines.push(state.src.slice(state.bMarks[i], state.eMarks[i]));
     }
-    const extraClass = lineText.replace(/^:::?\s*glsl\s*/, '').trim();
+    const rest = lineText.replace(/^:::?\s*glsl\s*/, '').trim();
+    const tokens = rest ? rest.split(/\s+/) : [];
+    const KNOWN = new Set(['classic', 'editor', 'collapsed']);
+    const mode = tokens.includes('classic') ? 'classic300' : 'geekest300';
+    const editorState = tokens.includes('collapsed') ? 'collapsed'
+                      : tokens.includes('editor')    ? 'open'
+                      : '';
+    const extraClass = tokens.filter(t => !KNOWN.has(t)).join(' ');
+
     const token = state.push('glsl_canvas', 'div', 0);
     token.content = lines.join('\n');
-    token.attrSet('class', extraClass);
+    token.attrSet('data-mode', mode);
+    if (editorState) token.attrSet('data-editor', editorState);
+    if (extraClass) token.attrSet('data-class', extraClass);
     token.map = [startLine, nextLine];
     state.line = nextLine + 1;
     return true;
   });
   md.renderer.rules.glsl_canvas = (tokens, idx) => {
     const token = tokens[idx];
-    const code = md.utils.escapeHtml(token.content).replace(/"/g, '&quot;');
-    const extra = token.attrGet('class');
-    const cls = extra ? ` ${extra}` : '';
-    return `<div class="glsl-preview${cls}"><canvas class="glsl-canvas" data-glsl="${code}"></canvas></div>\n`;
+    const rawCode = token.content;
+    const escapedCode = md.utils.escapeHtml(rawCode).replace(/"/g, '&quot;');
+    const mode = token.attrGet('data-mode') || 'geekest300';
+    const editorState = token.attrGet('data-editor') || '';
+    const extraClass = token.attrGet('data-class') || '';
+    const cls = extraClass ? ` ${extraClass}` : '';
+    const editorAttr = editorState ? ` data-editor="${editorState}"` : '';
+
+    const canvasHtml = editorState
+      ? `<div class="glsl-canvas-wrap"><canvas class="glsl-canvas" data-glsl="${escapedCode}"></canvas><button class="glsl-editor-toggle">${editorState === 'collapsed' ? 'show code' : 'hide code'}</button></div>`
+      : `<canvas class="glsl-canvas" data-glsl="${escapedCode}"></canvas>`;
+    const editorWrapHtml = editorState
+      ? `<div class="glsl-editor-wrap"${editorState === 'collapsed' ? ' style="display:none"' : ''}><pre class="glsl-editor-pre"><code class="language-glsl glsl-code">${rawCode.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</code></pre><pre class="glsl-errors" style="display:none"></pre></div>`
+      : '';
+    return `<div class="glsl-preview${cls}" data-mode="${mode}"${editorAttr}>${canvasHtml}${editorWrapHtml}</div>\n`;
   };
 }
 

@@ -514,7 +514,7 @@ code {
 
 pre {
   position: relative;
-  font-family: "JetBrainsMono", monospace;
+  font-family: monospace;
   font-size: 0.88em;
   background: #fff;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08), inset 0 2px 6px rgba(0,0,0,0.05);
@@ -553,11 +553,61 @@ pre code {
 .glsl-preview {
   margin-bottom: 1em;
 }
+.glsl-canvas-wrap {
+  position: relative;
+}
 .glsl-canvas {
   display: block;
   width: 100%;
   height: 200px;
   border-radius: 6px;
+}
+.glsl-editor-toggle {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .8em;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6), 0 0 10px rgba(0,0,0,0.3);
+  padding: 0;
+  line-height: 1;
+}
+.glsl-editor-toggle:hover { opacity: .8; }
+/* When editor is open: flush join between canvas and editor */
+.glsl-preview.editor-open .glsl-canvas {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.glsl-preview.editor-open .glsl-editor-pre {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/* CodeJar editor — inherits pre styles automatically */
+.glsl-editor-pre {
+  margin-top: .3em;
+  max-height: 400px;
+  overflow-y: auto;
+  caret-color: #333;
+  tab-size: 2;
+}
+.glsl-editor-pre .glsl-code {
+  display: block;
+  outline: none;
+  font-family: monospace;
+}
+.glsl-errors {
+  margin: .3em 0 0;
+  padding: .5em .6em;
+  font-family: monospace;
+  font-size: .8em;
+  color: #c0392b;
+  background: #fff0ee;
+  border-radius: 4px;
+  white-space: pre-wrap;
 }
 
 /* Prism token colors */

@@ -1,6 +1,6 @@
 (function () {
-  const canvases = document.querySelectorAll('.glsl-canvas');
-  if (!canvases.length) return;
+  const previews = document.querySelectorAll('.glsl-preview');
+  if (!previews.length) return;
 
   const VS = `#version 300 es
 in vec2 a;
@@ -155,7 +155,17 @@ const float PI=3.141592653589793;
 const float PI2=PI*2.;
 `;
 
-  function makeFS(code) {
+  // Lines in geekest300 header before user code (for error line correction)
+  const GEEKEST_HEADER_LINES = (
+    '#version 300 es\nprecision highp float;\nuniform vec2 r;\nuniform float t;\n' +
+    'uniform vec2 m;\nuniform float f;\nuniform sampler2D b;\nout vec4 o;\n' +
+    SNIPPETS + '\nvoid main(){\nvec2 FC=gl_FragCoord.xy;\no=vec4(0.,0.,0.,1.);\n'
+  ).split('\n').length - 1;
+
+  function makeFS(code, mode) {
+    if (mode === 'classic300') {
+      return code.trimStart().startsWith('#version') ? code : '#version 300 es\n' + code;
+    }
     return `#version 300 es
 precision highp float;
 uniform vec2 r;
@@ -176,17 +186,45 @@ ${code}
     const sh = gl.createShader(type);
     gl.shaderSource(sh, src);
     gl.compileShader(sh);
-    if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS))
-      console.warn('GLSL:', gl.getShaderInfoLog(sh));
     return sh;
   }
 
-  function link(gl, vs, fs) {
+  function buildProg(gl, code, mode) {
+    const fsSrc = makeFS(code, mode);
+    const fsSh = compile(gl, gl.FRAGMENT_SHADER, fsSrc);
+    const vsSh = compile(gl, gl.VERTEX_SHADER, VS);
     const prog = gl.createProgram();
-    gl.attachShader(prog, compile(gl, gl.VERTEX_SHADER, vs));
-    gl.attachShader(prog, compile(gl, gl.FRAGMENT_SHADER, fs));
+    gl.attachShader(prog, vsSh);
+    gl.attachShader(prog, fsSh);
     gl.linkProgram(prog);
-    return prog;
+
+    let errors = null;
+    if (!gl.getShaderParameter(fsSh, gl.COMPILE_STATUS)) {
+      errors = gl.getShaderInfoLog(fsSh) || '';
+      if (mode !== 'classic300') {
+        errors = errors.replace(/ERROR:\s*\d+:(\d+)/g, (match, line) => {
+          const corrected = parseInt(line) - GEEKEST_HEADER_LINES;
+          return match.replace(`:${line}`, `:${corrected}`);
+        });
+      }
+    }
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+      errors = (errors || '') + (gl.getProgramInfoLog(prog) || '');
+    }
+    return { prog, errors };
+  }
+
+  function getUniLocs(gl, prog, mode) {
+    const get = (long, short) =>
+      gl.getUniformLocation(prog, mode === 'classic300' ? long : short) ||
+      gl.getUniformLocation(prog, short);
+    return {
+      r: get('resolution', 'r'),
+      t: get('time', 't'),
+      m: get('mouse', 'm'),
+      f: get('frame', 'f'),
+      b: get('backbuffer', 'b'),
+    };
   }
 
   function makeFBO(gl, w, h) {
@@ -209,15 +247,20 @@ ${code}
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
   }
 
-  function initCanvas(canvas) {
+  function link(gl, vs, fs) {
+    const prog = gl.createProgram();
+    gl.attachShader(prog, compile(gl, gl.VERTEX_SHADER, vs));
+    gl.attachShader(prog, compile(gl, gl.FRAGMENT_SHADER, fs));
+    gl.linkProgram(prog);
+    return prog;
+  }
+
+  function initCanvas(canvas, code, mode) {
     const gl = canvas.getContext('webgl2', { antialias: false, alpha: false });
     if (!gl) return null;
 
-    const prog = link(gl, VS, makeFS(canvas.dataset.glsl));
-    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-      console.warn('Link:', gl.getProgramInfoLog(prog));
-      return null;
-    }
+    const { prog, errors } = buildProg(gl, code, mode);
+    if (errors) console.warn('GLSL:', errors);
 
     const blitProg = link(gl, BLIT_VS, BLIT_FS);
 
@@ -230,19 +273,16 @@ ${code}
       gl.enableVertexAttribArray(a);
       gl.vertexAttribPointer(a, 2, gl.FLOAT, false, 0, 0);
     }
-
     gl.useProgram(prog); bindQuad(prog);
     gl.useProgram(blitProg); bindQuad(blitProg);
 
     return {
       gl, prog, blitProg,
-      rLoc: gl.getUniformLocation(prog, 'r'),
-      tLoc: gl.getUniformLocation(prog, 't'),
-      mLoc: gl.getUniformLocation(prog, 'm'),
-      fLoc: gl.getUniformLocation(prog, 'f'),
-      bLoc: gl.getUniformLocation(prog, 'b'),
+      uni: getUniLocs(gl, prog, mode),
       blitTexLoc: gl.getUniformLocation(blitProg, 'tex'),
       fbos: [makeFBO(gl, 1, 1), makeFBO(gl, 1, 1)],
+      mode,
+      initialErrors: errors,
     };
   }
 
@@ -260,7 +300,7 @@ ${code}
     if (s.raf) return;
     function draw(now) {
       if (!s.t0) s.t0 = now;
-      const { gl, prog, blitProg, rLoc, tLoc, mLoc, fLoc, bLoc, blitTexLoc, fbos } = s;
+      const { gl, prog, blitProg, uni, blitTexLoc, fbos } = s;
       const w = canvas.clientWidth | 0;
       const h = canvas.clientHeight | 0;
       if (canvas.width !== w || canvas.height !== h) {
@@ -279,11 +319,11 @@ ${code}
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, readFBO.tex);
-      gl.uniform1i(bLoc, 0);
-      gl.uniform2f(rLoc, w, h);
-      gl.uniform1f(tLoc, (now - s.t0) / 1000);
-      gl.uniform2f(mLoc, mouse.x, mouse.y);
-      gl.uniform1f(fLoc, fi);
+      gl.uniform1i(uni.b, 0);
+      gl.uniform2f(uni.r, w, h);
+      gl.uniform1f(uni.t, (now - s.t0) / 1000);
+      gl.uniform2f(uni.m, mouse.x, mouse.y);
+      gl.uniform1f(uni.f, fi);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
       gl.bindFramebuffer(gl.FRAMEBUFFER, null);
@@ -305,15 +345,96 @@ ${code}
     s.raf = null;
   }
 
+  function showErrors(wrap, errors) {
+    const errEl = wrap?.querySelector('.glsl-errors');
+    if (!errEl) return;
+    errEl.textContent = errors || '';
+    errEl.style.display = errors ? 'block' : 'none';
+  }
+
+  function recompile(canvas, code) {
+    const s = state.get(canvas);
+    if (!s) return;
+    const { gl, mode, blitProg } = s;
+    const wrap = canvas.closest('.glsl-preview');
+
+    const { prog: newProg, errors } = buildProg(gl, code, mode);
+    showErrors(wrap, errors);
+
+    if (!errors) {
+      if (s.prog) gl.deleteProgram(s.prog);
+      s.prog = newProg;
+      s.uni = getUniLocs(gl, newProg, mode);
+      gl.useProgram(newProg);
+      const a = gl.getAttribLocation(newProg, 'a');
+      gl.enableVertexAttribArray(a);
+      gl.vertexAttribPointer(a, 2, gl.FLOAT, false, 0, 0);
+      gl.useProgram(blitProg);
+    }
+  }
+
+  async function setupEditor(wrap, canvas) {
+    const codeEl = wrap.querySelector('.glsl-code');
+    const toggleBtn = wrap.querySelector('.glsl-editor-toggle');
+    const editorWrap = wrap.querySelector('.glsl-editor-wrap');
+    if (!codeEl) return;
+
+    const glslPreview = wrap.closest('.glsl-preview');
+    // Set initial class for open editors
+    if (editorWrap && editorWrap.style.display !== 'none') {
+      glslPreview?.classList.add('editor-open');
+    }
+
+    if (toggleBtn && editorWrap) {
+      toggleBtn.addEventListener('click', () => {
+        const hidden = editorWrap.style.display === 'none';
+        editorWrap.style.display = hidden ? '' : 'none';
+        toggleBtn.textContent = hidden ? 'hide code' : 'show code';
+        glslPreview?.classList.toggle('editor-open', hidden);
+      });
+    }
+
+    let debounceTimer;
+    const onChange = (code) => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => recompile(canvas, code), 400);
+    };
+
+    const { CodeJar } = await import('/assets/js/codejar.js');
+
+    const highlight = (el) => {
+      if (window.Prism && Prism.languages.glsl) {
+        el.innerHTML = Prism.highlight(el.textContent, Prism.languages.glsl, 'glsl');
+      }
+    };
+
+    const initialCode = codeEl.textContent;
+    const jar = CodeJar(codeEl, highlight, { tab: '  ' });
+    jar.onUpdate(onChange);
+    // Trigger initial syntax highlight without firing recompile
+    jar.updateCode(initialCode, false);
+  }
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const canvas = entry.target;
       if (entry.isIntersecting) {
         if (!state.has(canvas)) {
-          const ctx = initCanvas(canvas);
+          const wrap = canvas.closest('.glsl-preview');
+          const mode = wrap?.dataset.mode || 'geekest300';
+          const codeEl = wrap?.querySelector('.glsl-code');
+          const code = codeEl ? codeEl.textContent : canvas.dataset.glsl;
+
+          const ctx = initCanvas(canvas, code, mode);
           if (!ctx) return;
-          const s = { ...ctx, raf: null, t0: null, frame: 0 };
-          state.set(canvas, s);
+
+          state.set(canvas, { ...ctx, raf: null, t0: null, frame: 0 });
+
+          // Show initial compile errors
+          if (ctx.initialErrors) showErrors(wrap, ctx.initialErrors);
+
+          // Setup editor async (fire and forget)
+          setupEditor(wrap, canvas);
         }
         startLoop(canvas);
       } else {
@@ -322,5 +443,8 @@ ${code}
     });
   });
 
-  canvases.forEach(c => observer.observe(c));
+  previews.forEach(wrap => {
+    const canvas = wrap.querySelector('.glsl-canvas');
+    if (canvas) observer.observe(canvas);
+  });
 })();
