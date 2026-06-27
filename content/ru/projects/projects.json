@@ -1,4 +1,3 @@
 {
-	"tags": ["projects"],
-	"permalink": "/ru/{{ page.fileSlug.split(' ').pop() }}/"
+	"tags": ["projects"]
 }

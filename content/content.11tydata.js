@@ -37,6 +37,13 @@ export default {
         }
       }
 
+      // For projects: strip numeric prefix from slug (e.g. "04 walbi" → "walbi")
+      if (data.tags?.includes("projects") && data.page?.fileSlug) {
+        const lang = data.lang || "en";
+        const slug = data.page.fileSlug.replace(/^\d+\s+/, "");
+        return `/${lang}/${slug}/`;
+      }
+
       return data.permalink;
     },
   },
