@@ -412,6 +412,10 @@ video {
   }
 }
 
+.thread-feed-item > h2 {
+  margin-top: 0;
+}
+
 /* Картинки в ленте треда — компактные */
 .thread-feed img {
   height: 250px;
