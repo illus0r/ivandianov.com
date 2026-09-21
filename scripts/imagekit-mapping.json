@@ -854,5 +854,13 @@
   {
     "local": "assets/media/_archive/prj-open-eye.png",
     "remote": "https://ik.imagekit.io/ivandianov/archive/prj-open-eye.png"
+  },
+  {
+    "local": "assets/media/posts/gcode-return-preview.jpg",
+    "remote": "https://ik.imagekit.io/ivandianov/threads/gcode/return/gcode-return-preview.jpg"
+  },
+  {
+    "local": "assets/media/posts/gcode-return-result.jpg",
+    "remote": "https://ik.imagekit.io/ivandianov/threads/gcode/return/gcode-return-result.jpg"
   }
 ]
