@@ -1,6 +1,5 @@
 ---
 date: 2026-09-22
-collapsible: true
 images:
   - /assets/media/gcode-droplet-wall-01.jpg
   - /assets/media/gcode-droplet-wall-02.jpg
