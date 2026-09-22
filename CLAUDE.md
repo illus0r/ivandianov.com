@@ -71,9 +71,10 @@ assets/threads/gcode/  # Images shared across languages (no ru/en split)
 1. Create content in both `content/ru/` and `content/en/`
 2. Keep frontmatter identical between languages
 3. For threads: place images in `assets/threads/[threadname]/` (shared across languages)
-4. Use `draft: true` in frontmatter to exclude from build
-5. Run `npm run serve` to verify both languages
-6. After build, validate links but **don't auto-fix broken links** — warn user instead
+4. For multiple thread images, use `::: gallery` in the Markdown body; do not list them in frontmatter `images`, which renders them full-size without gallery spacing on individual pages
+5. Use `draft: true` in frontmatter to exclude from build
+6. Run `npm run serve` to verify both languages
+7. After build, validate links but **don't auto-fix broken links** — warn user instead
 
 ## Media (ImageKit CDN)
 

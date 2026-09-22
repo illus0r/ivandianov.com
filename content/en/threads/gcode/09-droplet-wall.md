@@ -1,11 +1,13 @@
 ---
 date: 2026-09-22
-images:
-  - /assets/threads/gcode/droplet-wall/preview.webp
-  - /assets/threads/gcode/droplet-wall/result.webp
 ---
 
 <!--autotranslate-->
+
+::: gallery
+![Droplet wall web preview](/assets/threads/gcode/droplet-wall/preview.webp)
+![Printed result](/assets/threads/gcode/droplet-wall/result.webp)
+:::
 
 A droplet wall: droplet volume increases within each revolution, while the spiral pitch gradually grows from bottom to top. In the upper section, the connecting strand could no longer hold the droplets together, and the structure unraveled into loops.
 

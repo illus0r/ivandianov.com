@@ -1,9 +1,11 @@
 ---
 date: 2026-09-22
-images:
-  - /assets/threads/gcode/droplet-wall/preview.webp
-  - /assets/threads/gcode/droplet-wall/result.webp
 ---
+
+::: gallery
+![Веб-превью капельной стенки](/assets/threads/gcode/droplet-wall/preview.webp)
+![Результат печати](/assets/threads/gcode/droplet-wall/result.webp)
+:::
 
 Капельная стенка: объём капли растёт в пределах каждого оборота, а шаг спирали плавно увеличивается снизу вверх. В верхней части соединительная нить перестала удерживать капли вместе, и конструкция распалась на петли.
 
