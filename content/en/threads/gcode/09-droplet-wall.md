@@ -1,6 +1,6 @@
 ---
 date: 2026-09-22
-feedExcerpt: "A droplet wall: droplet volume increases within each revolution, while the spiral pitch gradually grows from bottom to top. Full experiment parameters are inside."
+collapsible: true
 images:
   - /assets/media/gcode-droplet-wall-01.jpg
   - /assets/media/gcode-droplet-wall-02.jpg

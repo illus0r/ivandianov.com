@@ -55,9 +55,11 @@ layout: default.njk
       {% endif %}
 
       <div class="thread-content">
-        {% if post.data.feedExcerpt %}
-          <p>{{ post.data.feedExcerpt }}</p>
-          <p><a href="{{ post.url }}">{% if lang == "ru" %}Подробнее →{% else %}Read more →{% endif %}</a></p>
+        {% if post.data.collapsible %}
+          <details>
+            <summary>{% if lang == "ru" %}Описание и параметры{% else %}Description and parameters{% endif %}</summary>
+            {{ post.templateContent | safe }}
+          </details>
         {% else %}
           {{ post.templateContent | safe }}
         {% endif %}

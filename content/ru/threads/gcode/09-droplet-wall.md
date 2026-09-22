@@ -1,6 +1,6 @@
 ---
 date: 2026-09-22
-feedExcerpt: "Капельная стенка: объём капли растёт в пределах каждого оборота, а шаг спирали плавно увеличивается снизу вверх. Полные параметры эксперимента — внутри."
+collapsible: true
 images:
   - /assets/media/gcode-droplet-wall-01.jpg
   - /assets/media/gcode-droplet-wall-02.jpg
