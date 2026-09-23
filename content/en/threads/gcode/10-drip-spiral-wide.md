@@ -52,7 +52,7 @@ Pitch is how far each turn sits above the previous one, i.e. the height from whi
 
 **Observations**
 
-- The larger the droplet, the higher the wall remains intact and the later the pearl-like beads turn into knots.
+- The larger the droplet, the higher the wall remains intact and the later smooth droplets turn into knots.
 - In every sector, the wall breaks within 0–5 revolutions after the knots begin to appear.
 
 </details>
