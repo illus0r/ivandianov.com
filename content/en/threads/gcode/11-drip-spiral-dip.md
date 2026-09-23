@@ -4,6 +4,8 @@ date: 2026-09-23
 
 <!--autotranslate-->
 
+![The first three turns of the droplet spiral with a nozzle dip](/assets/threads/gcode/drip-spiral-dip/01.webp)
+
 Droplet spiral with a nozzle dip: before each droplet, the nozzle drops down to the droplet on the previous turn.
 
 I printed the first 3 turns. Every droplet came out smooth, no knots. When the nozzle moves sideways after a droplet, the strand at the droplet thins almost to breaking.
