@@ -1,8 +1,8 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to agents working with code in this repository.
 
-**⚠️ IMPORTANT: Read this file BEFORE making any changes to the site!**
+**⚠️ IMPORTANT: Read this file completely BEFORE making any changes to the site!**
 
 ## Project Overview
 
@@ -70,7 +70,7 @@ assets/threads/gcode/  # Images shared across languages (no ru/en split)
 
 1. Create content in both `content/ru/` and `content/en/`
 2. Keep frontmatter identical between languages
-3. For threads: place images in `assets/threads/[threadname]/` (shared across languages)
+3. For threads: upload new media to ImageKit and reference its ImageKit URL from both language versions; do not commit new photos or videos under `assets/threads/`
 4. For multiple thread images, use `::: gallery` in the Markdown body; do not list them in frontmatter `images`, which renders them full-size without gallery spacing on individual pages
 5. Use `draft: true` in frontmatter to exclude from build
 6. Run `npm run serve` to verify both languages
@@ -78,7 +78,7 @@ assets/threads/gcode/  # Images shared across languages (no ru/en split)
 
 ## Media (ImageKit CDN)
 
-All media hosted on **ImageKit** (`https://ik.imagekit.io/ivandianov/`).
+All new photos and videos must be hosted on **ImageKit** (`https://ik.imagekit.io/ivandianov/`). Do not place them in the site repository or serve them through GitHub Pages. Repository-native visual assets such as icons and CSS backgrounds are the only exception.
 
 ### ImageKit Transformations
 Common URL params:
