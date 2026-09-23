@@ -21,15 +21,17 @@ An idea for the next iteration: touch the previous turn with the nozzle before e
 <details>
 <summary>Experiment data</summary>
 
-| Droplet, mm³ | Maximum height, mm | Knots begin at, mm |
+Pitch is how far each turn sits above the previous one, i.e. the height from which a droplet is extruded onto the turn below.
+
+| Droplet, mm³ | Knots begin at pitch, mm | Maximum pitch, mm |
 |---|---|---|
-| 1.00 | 2.8 | — (no knots) |
-| 1.50 | 3.0 | 3.0 |
-| 2.00 | 6.8 | 4.3 |
-| 2.50 | 8.4 | 4.5 |
-| 3.13 | 10.2 | 8.7 |
-| 3.63 | 17.0 | 8.9 |
-| 4.00 | 17.2 | 12.1 |
+| 1.00 | — (no knots) | 1.14 |
+| 1.50 | 1.14 | 1.14 |
+| 2.00 | 1.21 | 1.35 |
+| 2.50 | 1.21 | 1.41 |
+| 3.13 | 1.41 | 1.48 |
+| 3.63 | 1.41 | 1.76 |
+| 4.00 | 1.55 | 1.76 |
 
 **Print parameters**
 
