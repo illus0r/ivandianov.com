@@ -1,5 +1,5 @@
 ---
-title: "Odds and Ends"
+title: "Random sketches"
 lang: en
 tags: [post]
 threadName: random-stuff
