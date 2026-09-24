@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#e9e7e2">
+  <title>Ориентированная экструзия</title>
+  <style>
+    :root { color-scheme: light; --ink:#171717; --paper:#e9e7e2; --panel:rgba(244,243,239,.9); --line:rgba(20,20,20,.14); }
+    * { box-sizing:border-box; }
+    html,body { margin:0; width:100%; height:100%; overflow:hidden; background:var(--paper); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); }
+    #view { position:fixed; inset:0; touch-action:none; }
+    .top { position:fixed; z-index:5; left:14px; top:max(14px,env(safe-area-inset-top)); right:14px; display:flex; justify-content:space-between; align-items:flex-start; pointer-events:none; }
+    .title { font-size:16px; font-weight:650; letter-spacing:-.02em; line-height:1.05; }
+    .title small { display:block; margin-top:5px; font-size:11px; font-weight:450; opacity:.58; letter-spacing:0; }
+    button,.button { border:1px solid var(--line); background:rgba(255,255,255,.86); color:var(--ink); border-radius:12px; min-height:42px; padding:0 14px; font:600 13px/1 inherit; box-shadow:0 4px 18px rgba(0,0,0,.06); -webkit-tap-highlight-color:transparent; }
+    button:active { transform:translateY(1px); }
+    .icon { width:42px; padding:0; pointer-events:auto; font-size:18px; }
+    .panel { position:fixed; z-index:6; left:10px; right:10px; bottom:max(10px,env(safe-area-inset-bottom)); max-height:min(53vh,480px); overflow:auto; background:var(--panel); border:1px solid rgba(255,255,255,.8); backdrop-filter:blur(22px) saturate(1.2); border-radius:18px; box-shadow:0 14px 42px rgba(0,0,0,.16); padding:14px; transition:transform .25s ease; }
+    .panel.closed { transform:translateY(calc(100% + 24px)); }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px; }
+    .row > *, .controls > * { min-width:0; }
+    label { display:block; font-size:11px; opacity:.64; margin:0 0 5px 2px; }
+    input[type=text],input[type=number] { width:100%; height:40px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.72); padding:0 11px; font:500 14px/1 ui-monospace,SFMono-Regular,Menlo,monospace; color:var(--ink); }
+    input[type=range] { width:100%; accent-color:#222; }
+    .rangehead { display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px; }
+    .controls { display:grid; grid-template-columns:1fr 1fr 42px; gap:8px; }
+    .primary { background:#161616; color:white; }
+    .stats { display:flex; gap:10px; flex-wrap:wrap; margin:10px 2px 0; font-size:11px; opacity:.62; }
+    .inspect { position:fixed; z-index:4; top:max(82px,calc(env(safe-area-inset-top) + 70px)); left:14px; max-width:76vw; padding:9px 11px; border-radius:11px; background:rgba(255,255,255,.78); backdrop-filter:blur(12px); font:11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace; display:none; }
+    .legend { position:fixed; z-index:3; right:14px; top:78px; font-size:10px; line-height:1.6; text-align:right; opacity:.48; pointer-events:none; }
+    @media (min-width:760px) { .panel { left:auto; width:380px; max-height:calc(100vh - 28px); top:14px; bottom:14px; } .icon { display:none; } .top { right:410px; } }
+  </style>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <canvas id="view"></canvas>
+  <div class="top">
+    <div class="title">Ориентированная экструзия<small>рекурсивная скульптура без пересечений</small></div>
+    <button class="icon" id="toggle">☰</button>
+  </div>
+  <div class="inspect" id="inspect"></div>
+  <div class="legend">↑ верх<br>← лево · право →<br>вперёд = +Z</div>
+  <section class="panel" id="panel">
+    <div class="row">
+      <div><label for="seed">Seed</label><input id="seed" type="text" value="normal-vector"></div>
+      <div><label for="count">Экструзий</label><input id="count" type="number" min="4" max="90" value="34"></div>
+    </div>
+    <div class="row">
+      <div><div class="rangehead"><span>Минимальная доля грани</span><b id="shareV">45%</b></div><input id="share" type="range" min="25" max="90" value="45"></div>
+      <div><div class="rangehead"><span>Ветвление</span><b id="branchV">62%</b></div><input id="branch" type="range" min="15" max="95" value="62"></div>
+    </div>
+    <div class="row">
+      <div><div class="rangehead"><span>Сужение</span><b id="taperV">42%</b></div><input id="taper" type="range" min="0" max="85" value="42"></div>
+      <div><div class="rangehead"><span>Длина</span><b id="lengthV">1.0×</b></div><input id="length" type="range" min="60" max="180" value="100"></div>
+    </div>
+    <div class="controls">
+      <button class="primary" id="generate">Сгенерировать</button>
+      <button id="colors">ID граней</button>
+      <button id="random">↻</button>
+    </div>
+    <div class="stats"><span id="placed"></span><span id="rejected"></span><span>тап по форме → lineage</span></div>
+  </section>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    const $ = id => document.getElementById(id);
+    const canvas = $('view');
+    const renderer = new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});
+    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+    renderer.setClearColor(0xe9e7e2,1);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.08;
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0xe9e7e2,42,105);
+    const camera = new THREE.PerspectiveCamera(38,1,.1,200);
+    camera.position.set(23,19,27);
+    const controls = new OrbitControls(camera,canvas);
+    controls.enableDamping = true; controls.dampingFactor=.075; controls.target.set(0,7,0); controls.minDistance=8; controls.maxDistance=85;
+    scene.add(new THREE.HemisphereLight(0xffffff,0x756f65,2.2));
+    const key = new THREE.DirectionalLight(0xffffff,3.4); key.position.set(-18,30,20); key.castShadow=true; key.shadow.mapSize.set(2048,2048); scene.add(key);
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(180,180),new THREE.MeshStandardMaterial({color:0xdedbd4,roughness:1}));
+    floor.rotation.x=-Math.PI/2; floor.position.y=-.03; floor.receiveShadow=true; scene.add(floor);
+    const grid = new THREE.GridHelper(80,40,0x9b978f,0xc9c5bd); grid.material.opacity=.22; grid.material.transparent=true; scene.add(grid);
+    const sculpture = new THREE.Group(); scene.add(sculpture);
+
+    const WHITE = new THREE.MeshStandardMaterial({color:0xf6f4ee,roughness:.72,metalness:0,side:THREE.DoubleSide});
+    const palette=[0xe05d4f,0xe49b38,0xd2c844,0x58a66b,0x3d9eaa,0x4978be,0x705fbd,0xac5ba1,0x9b684e];
+    let colored=false, segments=[], rejected=0, rng=Math.random;
+
+    function hashString(s){let h=2166136261>>>0;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+    function mixId(parent,label,index){return hashString(parent+'|'+label+'|'+index).toString(36).slice(0,6)}
+    function mulberry32(a){return()=>{let t=a+=0x6D2B79F5;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
+    const dirs={top:new THREE.Vector3(0,1,0),right:new THREE.Vector3(1,0,0),left:new THREE.Vector3(-1,0,0),front:new THREE.Vector3(0,0,1),back:new THREE.Vector3(0,0,-1)};
+    function axesFor(dir){if(Math.abs(dir.y)>.5)return [new THREE.Vector3(1,0,0),new THREE.Vector3(0,0,1)];if(Math.abs(dir.x)>.5)return [new THREE.Vector3(0,0,1),new THREE.Vector3(0,1,0)];return [new THREE.Vector3(1,0,0),new THREE.Vector3(0,1,0)]}
+
+    function frustumGeometry(seg){
+      const {center,dir,u,v,length,start,end}=seg; const p=[];
+      for(const along of [-.5,.5]){const s=along<0?start:end;const c=center.clone().addScaledVector(dir,along*length);for(const [a,b] of [[-1,-1],[1,-1],[1,1],[-1,1]])p.push(c.clone().addScaledVector(u,a*s.x/2).addScaledVector(v,b*s.y/2))}
+      const faces=[[0,3,2,1],[4,5,6,7],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7]];
+      const pos=[]; for(const f of faces){pos.push(...p[f[0]].toArray(),...p[f[1]].toArray(),...p[f[2]].toArray(),...p[f[0]].toArray(),...p[f[2]].toArray(),...p[f[3]].toArray())}
+      const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3)); g.computeVertexNormals(); for(let i=0;i<6;i++)g.addGroup(i*6,6,i); return g;
+    }
+    function matsFor(seg){if(!colored)return [WHITE,WHITE,WHITE,WHITE,WHITE,WHITE];return seg.faceIds.map(id=>new THREE.MeshStandardMaterial({color:palette[hashString(id)%palette.length],roughness:.66,side:THREE.DoubleSide}))}
+    function aabbFor(seg){const half=new THREE.Vector3();const maxS=new THREE.Vector2(Math.max(seg.start.x,seg.end.x),Math.max(seg.start.y,seg.end.y));half.addScaledVector(seg.dir,seg.length/2);half.x=Math.abs(half.x);half.y=Math.abs(half.y);half.z=Math.abs(half.z);const hu=seg.u.clone().multiplyScalar(maxS.x/2),hv=seg.v.clone().multiplyScalar(maxS.y/2);half.x+=Math.abs(hu.x)+Math.abs(hv.x);half.y+=Math.abs(hu.y)+Math.abs(hv.y);half.z+=Math.abs(hu.z)+Math.abs(hv.z);return new THREE.Box3(seg.center.clone().sub(half),seg.center.clone().add(half))}
+    function collides(seg,parent){const b=aabbFor(seg).expandByScalar(-.035);if(b.min.y<-.001)return true;for(const s of segments){if(s===parent)continue;const other=s.box.clone().expandByScalar(-.035);if(b.intersectsBox(other))return true}return false}
+
+    function endFace(seg){return seg.center.clone().addScaledVector(seg.dir,seg.length/2)}
+    function faceSpec(seg,name){
+      const maxEnd=seg.end, mid=new THREE.Vector2((seg.start.x+seg.end.x)/2,(seg.start.y+seg.end.y)/2);
+      if(name==='top') return {normal:seg.dir.clone(),center:endFace(seg),w:maxEnd.x,h:maxEnd.y,parentId:seg.faceIds[1]};
+      const sideways={right:[seg.u,1,mid.y,seg.length,3],left:[seg.u,-1,mid.y,seg.length,5],front:[seg.v,1,mid.x,seg.length,4],back:[seg.v,-1,mid.x,seg.length,2]}[name];
+      const [axis,sign,width,height,fi]=sideways; return {normal:axis.clone().multiplyScalar(sign),center:seg.center.clone().addScaledVector(axis,sign*width/2),w:width,h:height,parentId:seg.faceIds[fi]};
+    }
+    function addSegment(seg,parent){seg.parent=parent;seg.box=aabbFor(seg);seg.faceIds=['base','cap','sideA','sideB','sideC','sideD'].map((x,i)=>mixId(seg.lineage,x,i));const mesh=new THREE.Mesh(frustumGeometry(seg),matsFor(seg));mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.seg=seg;seg.mesh=mesh;sculpture.add(mesh);segments.push(seg)}
+    function tryChild(parent,index){
+      const faceNames=['top','right','left','front','back']; let name;
+      if(rng()<Number($('branch').value)/100) name=faceNames[Math.floor(rng()*faceNames.length)]; else name='top';
+      const f=faceSpec(parent,name), dir=f.normal, [u,v]=axesFor(dir);
+      const minShare=Number($('share').value)/100, sw=minShare+rng()*(1-minShare), sh=minShare+rng()*(1-minShare);
+      let w=Math.max(.75,f.w*sw),h=Math.max(.75,f.h*sh); const offU=(rng()-.5)*Math.max(0,f.w-w)*.85,offV=(rng()-.5)*Math.max(0,f.h-h)*.85;
+      const len=(1.5+rng()*5.4)*(Number($('length').value)/100); const taperMax=Number($('taper').value)/100; const taper=1-taperMax*rng();
+      const faceCenter=f.center.clone().addScaledVector(u,offU).addScaledVector(v,offV); const center=faceCenter.clone().addScaledVector(dir,len/2);
+      const lineage=f.parentId+'>'+mixId(f.parentId,name,index);
+      const seg={center,dir,u,v,length:len,start:new THREE.Vector2(w,h),end:new THREE.Vector2(Math.max(.45,w*taper),Math.max(.45,h*taper)),lineage,sourceFace:name};
+      if(collides(seg,parent)){rejected++;return false} addSegment(seg,parent);return true;
+    }
+    function clear(){for(const s of segments){sculpture.remove(s.mesh);s.mesh.geometry.dispose();for(const m of new Set(Array.isArray(s.mesh.material)?s.mesh.material:[s.mesh.material]))if(m!==WHITE)m.dispose()}segments=[];rejected=0}
+    function generate(){
+      clear(); rng=mulberry32(hashString($('seed').value));
+      const root={center:new THREE.Vector3(0,2.6,0),dir:dirs.top.clone(),...(()=>{const [u,v]=axesFor(dirs.top);return{u,v}})(),length:5.2,start:new THREE.Vector2(5.5,5.5),end:new THREE.Vector2(4.5,4.5),lineage:'root',sourceFace:'ground'}; addSegment(root,null);
+      const target=Math.max(4,Math.min(90,Number($('count').value)||34));let attempts=0;
+      while(segments.length<target&&attempts<target*35){attempts++;const bias=Math.pow(rng(),.56),idx=Math.min(segments.length-1,Math.floor(bias*segments.length));tryChild(segments[idx],attempts)}
+      $('placed').textContent=segments.length+' объёмов';$('rejected').textContent=rejected+' пересечений отклонено';$('inspect').style.display='none'; frameObject();
+    }
+    function frameObject(){const box=new THREE.Box3().setFromObject(sculpture),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());controls.target.copy(center);const d=Math.max(size.x,size.y,size.z)*1.65;camera.position.copy(center).add(new THREE.Vector3(d*.75,d*.62,d));camera.near=Math.max(.05,d/100);camera.far=d*8;camera.updateProjectionMatrix()}
+    function rebuildMaterials(){for(const s of segments){const old=s.mesh.material;s.mesh.material=matsFor(s);for(const m of new Set(Array.isArray(old)?old:[old]))if(m!==WHITE)m.dispose()}}
+    function randomSeed(){const words=['echo','hinge','quarry','relay','monolith','pulse','archive','signal','rift','orbit'];$('seed').value=words[Math.floor(Math.random()*words.length)]+'-'+Math.floor(Math.random()*9999);generate()}
+
+    $('generate').onclick=generate;$('random').onclick=randomSeed;$('colors').onclick=()=>{colored=!colored;$('colors').textContent=colored?'Белая форма':'ID граней';rebuildMaterials()};
+    $('toggle').onclick=()=>$('panel').classList.toggle('closed');
+    for(const id of ['share','branch','taper','length'])$(id).oninput=()=>{const val=$(id).value;$(id+'V').textContent=id==='length'?(val/100).toFixed(1)+'×':val+'%'};
+    const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();canvas.addEventListener('pointerup',e=>{if(Math.abs(e.movementX)>4||Math.abs(e.movementY)>4)return;const r=canvas.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(pointer,camera);const hit=ray.intersectObjects(sculpture.children)[0];if(hit){const s=hit.object.userData.seg;$('inspect').textContent=`${s.sourceFace} · ${s.lineage}`;$('inspect').style.display='block'}});
+    function resize(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix()}addEventListener('resize',resize);resize();
+    function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera)}loop();generate();
+  </script>
+</body>
+</html>

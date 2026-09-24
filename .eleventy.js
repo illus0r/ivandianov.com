@@ -115,6 +115,7 @@ export default function (eleventyConfig) {
     "assets/fonts/*": "assets/fonts",
   });
   eleventyConfig.addPassthroughCopy("assets/threads");
+  eleventyConfig.addPassthroughCopy({ "assets/apps": "apps" });
 
   // Disabled - using ImageKit CDN instead
   // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
