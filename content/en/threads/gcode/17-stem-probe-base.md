@@ -22,20 +22,26 @@ The stems need to be extruded slowly: only the bottom two rows came out properly
 <details>
 <summary>Print parameters</summary>
 
-**Stem-with-base test — 2026-09-26** (sketch `2026.09.26 stem probe base`, no commit)
+**Stem probe — 2026-09-25** (sketch `2026.09.25 stem probe`, commit `8c2a9b4`)
 
 - Bambu Lab P1S, 0.4 mm nozzle, Textured PEI Plate
-- Syntech PETG White, Ø1.75 mm
-- Temperatures: nozzle at 235 / 245 / 255 / 265 °C by block, bed at 70 °C
+- Syntech PETG White, Ø1.75 mm, donor `_donor_3mf/L.gcode.3mf`
+- Temperatures: nozzle at 255 °C for the base grid (the donor temperature), then 235 / 245 / 255 / 265 °C by block; bed at 70 °C
 - Part cooling fan: 100%
-- Four blocks in a 2 × 2 arrangement, each 48 × 60 mm, with a 16 mm gap, centered at X128 Y128; 235 °C front left, 245 °C front right, 255 °C rear left, 265 °C rear right
-- Base grid: rows at Z 0.5, columns at Z 0.7, 0.8 × 0.5 line with a 1.2 over-extrusion factor, 20 mm/s; the field corner is marked by a 5 mm tail extending left from the front line
-- Parameter grid: along X, extrusion 0.2 / 0.5 / 0.8 / 1.1 / 1.4 mm³/mm; along Y, upward speed 0.25 / 0.5 / 1 / 2 / 4 / 8 mm/s
+- Four blocks in a 2 × 2 arrangement, each 48 × 60 mm, with a 16 mm gap between blocks, centered at X128 Y128; 235 °C front left, 245 °C front right, 255 °C rear left, 265 °C rear right
+- One base grid shared by all blocks: rows at Z 0.5, columns at Z 0.7, 0.8 × 0.5 mm line with a 1.2 over-extrusion factor (0.48 mm³/mm), 20 mm/s; the front-left corner is marked by a tail, with the front line extending 5 mm left beyond the field
+- Parameter grid: along X, extrusion 0.2 / 0.5 / 0.8 / 1.1 / 1.4 mm³ per mm of upward travel; along Y (front to back), upward speed 0.25 / 0.5 / 1 / 2 / 4 / 8 mm/s
 - Stem spacing 12 mm, 30 stems per block, 120 total
-- Each stem: descend to Z 1.0, leaving a 0.3 mm gap above the grid node; extrude a 1 mm³ base in place at 6 mm³/s; rise to Z 5.0, a 4 mm move with the column’s extrusion rate and the row’s speed; pause for 1.5 s at the top.
-- Travel moves: retract 0.8 mm, lift 1 mm above the stem tips, travel at 60 mm/s, descend, unretract
-- Order: print the entire base grid first, then the blocks from coldest to hottest; stems are printed in rows from left to right
+- Each stem:
+  1. Descend to Z 0.7, directly to the base-grid node with no gap.
+  2. Unretract 0.8 mm; there is no separate base.
+  3. Rise to Z 5.7, a 5 mm move with the column’s extrusion rate and the row’s speed.
+  4. Pause for 1.5 s at the top.
+- Travel moves: retract 0.8 mm, lift 1 mm above the stem tips, travel at 60 mm/s, descend, unretract 0.8 mm
+- Order: print the entire base grid at the donor temperature, then print the blocks from coldest to hottest while waiting for each target temperature (M109); within each block, print the stems in a snake pattern, with even rows left to right and odd rows right to left
 - Peak flow 11.2 mm³/s, calculated for the 1.4 mm³/mm × 8 mm/s cell
-- Print time: 17 min 8 s; filament: 750 mm
+- Print time: 19 min 15 s; filament: 740 mm
+
+Generator — `run.py`.
 
 </details>
